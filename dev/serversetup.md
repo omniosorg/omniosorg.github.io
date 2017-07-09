@@ -304,6 +304,57 @@ openssl ca -config omniosca.cnf \
 
 and send the certificate back.
 
+## Acme Fetch Config
+
+```json
+{
+    "GENERAL": {
+        "ACMEstaging": "acme-staging.api.letsencrypt.org",
+        "ACMEservice": "acme-v01.api.letsencrypt.org",
+        "accountKeyPath": "/etc/ssl/private/letsencryptAccountKey.key"
+    },
+    "CERTS": [
+        {
+            "certOutput": "/etc/ssl/certs/acme-omniosce.org.pem",
+            "certFormat": "PEM",
+            "keyOutput": "/etc/ssl/private/acme-omniosce.org.key",
+            "keyFormat": "PEM",
+            "commonName": "pkg.omniosce.org",
+            "SITES": {
+                "pkg.omniosce.org": {
+                    "challengeConfig": {
+                        "www_root": "/var/www/html/",
+                    },
+                     "challengeHandler" : "LocalFile"
+                },
+                "mirrors.omniosce.org": {
+                    "challengeConfig": {
+                        "www_root": "/var/www/html/",
+                    },
+                    "challengeHandler" : "LocalFile"
+
+                },
+               "downloads.omniosce.org": {
+                    "challengeConfig": {
+                        "www_root": "/var/www/html/",
+                    },
+                    "challengeHandler" : "LocalFile"
+
+                },
+
+                "crl.omniosce.org": {
+                    "challengeConfig": {
+                        "www_root": "/var/www/html/",
+                    },
+                    "challengeHandler" : "LocalFile"
+
+                }
+            }
+        }
+    ]
+}
+```
+
 ## Userful Commands
 
 Copy a Repo
