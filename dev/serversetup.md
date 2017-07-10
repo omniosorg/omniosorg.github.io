@@ -57,6 +57,7 @@ http {
     types_hash_max_size 2048;
     server_tokens off;
     client_max_body_size 200M;
+    proxy_http_version 1.1;
 
         ##
     # SSL Settings
@@ -93,42 +94,52 @@ http {
         ssl_certificate_key /etc/ssl/private/acme-omniosce.org.key;
         # ssl_client_certificate /etc/ssl/certs/omniosce-client-ca.pem
         # ssl_verify_client optional
-        set $auth_and_method "$ssl_client_verify$request_method";
-
+        set $auth_and_method "$request_method$ssl_client_verify";
+	
         location /r151022/core {
-            if ($auth_and_method ~ "FAILED.+(POST|PUT|DELETE)"){
+            if ($auth_and_method ~ "(POST|PUT|DELETE)(NONE|FAILED)"){
 		return 404;
 	    }
-            proxy_pass http://127.0.0.1:10001/;
+	    if ($request_url ~ "/[^/]+/[^/]+(.*)"){
+	        proxy_pass http://127.0.0.1:10001$1;
+	    }
         }
 
         location /r151022/extra {
-            if ($auth_and_method ~ "FAILED.+(POST|PUT|DELETE)"){
+            if ($auth_and_method ~ "(POST|PUT|DELETE)(NONE|FAILED)"){
 		return 404;
 	    }
-            proxy_pass http://127.0.0.1:10002/;
+	    if ($request_url ~ "/[^/]+/[^/]+(.*)"){
+	        proxy_pass http://127.0.0.1:10002$1;
+	    }
         }
 
                 
         location /r151022/staging {
-            if ($auth_and_method ~ "FAILED.+(POST|PUT|DELETE)"){
-                return 404;
-            }
-            proxy_pass http://127.0.0.1:10003/;
+            if ($auth_and_method ~ "(POST|PUT|DELETE)(NONE|FAILED)"){
+		return 404;
+	    }
+	    if ($request_url ~ "/[^/]+/[^/]+(.*)"){
+                proxy_pass http://127.0.0.1:10003$1;
+	    }
         }
 
         location /bloody/core {
-            if ($auth_and_method ~ "FAILED.+(POST|PUT|DELETE)"){
-                return 404;
-            }
-            proxy_pass http://127.0.0.1:10004/;
+            if ($auth_and_method ~ "(POST|PUT|DELETE)(NONE|FAILED)"){
+		return 404;
+	    }
+	    if ($request_url ~ "/[^/]+/[^/]+(.*)"){
+                proxy_pass http://127.0.0.1:10004$1;
+	    }
         }
         
         location /bloody/extra {
-            if ($auth_and_method ~ "FAILED.+(POST|PUT|DELETE)"){
-                return 404;
-            }
-            proxy_pass http://127.0.0.1:10005/;
+            if ($auth_and_method ~ "(POST|PUT|DELETE)(NONE|FAILED)"){
+		return 404;
+	    }
+	    if ($request_url ~ "/[^/]+/[^/]+(.*)"){
+                proxy_pass http://127.0.0.1:10005$1;
+	    }
         }
         location /r151022 {
             return 301 https://$host/r151022/core;
