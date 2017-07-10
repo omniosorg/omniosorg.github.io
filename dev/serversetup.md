@@ -26,7 +26,7 @@ for release in r151022 bloody; do
 	svccfg -s pkg/server:${release}_$arch setprop pkg/inst_root = /pkg/$release/$arch
 	svccfg -s pkg/server:${release}_$arch setprop pkg/content_root = /pkg/content_root
 	svccfg -s pkg/server:${release}_$arch setprop pkg/threads = 1200
-	
+	svccfg -s pkg/server:${release}_$arch setprop pkg/readonly = false
 	svccfg -s pkg/server:${release}_$arch setprop pkg/port = $port
 	svccfg -s pkg/server:${release}_$arch setprop pkg/proxy_base = https://pkg.omniosce.org/$release/$arch
 	svccfg -s pkg/server:${release}_$arch setprop pkg/address = 127.0.0.1
@@ -359,6 +359,36 @@ and send the certificate back.
         }
     ]
 }
+```
+
+## Allowing Users to sftp to the archive
+
+Convert the cert into ssh authorized_keys compatible format
+
+```
+openssl x509 -in newcerts/1002.pem -pubkey -noout | ssh-keygen -i  -m PKCS8 -f /dev/stdin
+```
+
+Add the result to the `~archive/.ssh/authorized_keys` file.
+
+Users will only get access to `/archive` because of this setting in
+`/etc/ssh/sshd_config`
+
+```
+Match User archive
+	ForceCommand internal-sftp
+	ChrootDirectory /archive
+```
+
+To access the archive, the guardian will put the following into
+`.ssh/config`
+
+```
+Host omniosce-archive
+     Hostname omniosce.ee.ethz.ch
+     User archive
+     IdentityFile ~/.ssh/omniosce.key.pem     
+     Port 8114
 ```
 
 ## Userful Commands
