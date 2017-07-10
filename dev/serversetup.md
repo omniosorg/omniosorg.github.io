@@ -25,6 +25,8 @@ for release in r151022 bloody; do
 	svccfg -s pkg/server:${release}_$arch addpg pkg application
 	svccfg -s pkg/server:${release}_$arch setprop pkg/inst_root = /pkg/$release/$arch
 	svccfg -s pkg/server:${release}_$arch setprop pkg/content_root = /pkg/content_root
+	svccfg -s pkg/server:${release}_$arch setprop pkg/threads = 1200
+	
 	svccfg -s pkg/server:${release}_$arch setprop pkg/port = $port
 	svccfg -s pkg/server:${release}_$arch setprop pkg/proxy_base = https://pkg.omniosce.org/$release/$arch
 	svccfg -s pkg/server:${release}_$arch setprop pkg/address = 127.0.0.1
@@ -174,7 +176,7 @@ http {
 }
 ```
 
-## Setup CA and Certs
+## Setup OmniOS CA
 
 ```bash
 mkdir ca
@@ -185,13 +187,14 @@ touch index.txt
 echo 1000 > serial
 ```
 
+omniosce-ca.cnf:
 ```
 [ ca ]
 default_ca = CA_default
 
 [ CA_default ]
 # Directory and file locations.
-dir               = /data/omnios-build/ca
+dir               = /path-to/omniosce-ca
 certs             = $dir/certs
 crl_dir           = $dir/crl
 new_certs_dir     = $dir/newcerts
@@ -219,13 +222,13 @@ preserve          = no
 policy            = policy_loose
 
 [ policy_loose ]
-countryName             = optional
+countryName             = supplied
 stateOrProvinceName     = optional
-localityName            = optional
-organizationName        = optional
+localityName            = supplied
+organizationName        = supplied
 organizationalUnitName  = optional
 commonName              = supplied
-emailAddress            = optional
+emailAddress            = supplied
 
 [ req ]
 default_bits        = 2048
@@ -245,9 +248,10 @@ emailAddress                    = Email Address
 
 # Optionally, specify some defaults.
 countryName_default             = GB
-stateOrProvinceName_default     = England
+stateOrProvinceName_default     = 
 localityName_default            =
-0.organizationName_default      = OmniOS
+0.organizationName_default      = OmniOSce or MyCompany
+emailAddress			= github-id@omniosce.org or me@mycompany.com
 
 [ omniosce_ca ]
 subjectKeyIdentifier = hash
@@ -261,11 +265,10 @@ basicConstraints = CA:FALSE
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer
 keyUsage = digitalSignature
+extendedKeyUsage = codeSigning
 ```
 
-* edit this to change the dir= line to the ca location ...
-* also look at the omniosce_ca section for the values I've chosen ...
-* and ips_cert for the parameters for issued certificates ...
+edit this to change the dir= line to the ca location
 
 ```bash
 openssl genrsa -aes256 -out private/ca.key.pem 4096
@@ -273,7 +276,7 @@ openssl genrsa -aes256 -out private/ca.key.pem 4096
 enter passphrase when prompted
 
 ```bash
-openssl req -config omniosca.cnf -key private/ca.key.pem \
+openssl req -config omniosce-ca.cnf -key private/ca.key.pem \
         -new -x509 -days 7300 -sha256 -extensions omniosce_ca \
         -out certs/ca.cert.pem
 ```
@@ -284,22 +287,25 @@ answer questions for information in request
 chmod 444 certs/ca.cert.pem
 ```
 
-Guardians then do:
+## Create Cert for a Guardian
+
+First the Guardian creates a CSR
 
 ```bash
+wget https://downloads.omniosce.org/omniosce-ca.cnf
 openssl genrsa -aes256 -out key.pem 2048
-openssl req -config omniosca.cnf \
+openssl req -config omniosce-ca.cnf \
         -key key.pem -new -sha256 -out csr.pem
 ```
 
-and send you the `csr.pem`
+and sends it to ca@ommniosce.org
 
-You sign the csr with:
+The CA then sign the csr with:
 
 ```bash
-openssl ca -config omniosca.cnf \
-        -extensions ips_cert -days 90 -notext \
-        -md sha256 -in csr.pem -out cert.pem
+openssl ca -config omniosce-ca.cnf \
+        -extensions ips_cert -days 366 -notext \
+        -md sha256 -in csr.pem
 ```
 
 and send the certificate back.
@@ -358,6 +364,10 @@ and send the certificate back.
 ## Userful Commands
 
 Copy a Repo
-`pkgrecv -v -s https://pkg.omniti.com/omnios/r151023 -d /pkg/bloody/core -m all-timestamps '*'`
+
+```bash
+pkgrecv -v -s https://pkg.omniti.com/omnios/r151023 -d /pkg/bloody/core -m all-timestamps '*'
+```
+
 
 
