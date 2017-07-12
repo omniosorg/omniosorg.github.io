@@ -35,7 +35,7 @@ The new release contains the following fixes:
 Our work does not stop here though. First we are committed to quickly releasing updates for r151022 as the need arises. We are also working towards releasing r151024 on schedule. To that end, we have already updated the bloody environment with all the latest goodies from upstream illumos and joyent-lx repositories. 
 
 
-OmniOS community edition hosts its sources on [ https://github.com/omniosorg/ | https://github.com/omniosorg/ ] and if you want to get in touch, you can find us on [ https://gitter.im/omniosorg/Lobby | https://gitter.im/omniosorg/Lobby ] 
+OmniOS community edition hosts its sources on https://github.com/omniosorg/ and if you want to get in touch, you can find us on https://gitter.im/omniosorg/Lobby 
 
 
 ## Release Schedule 
