@@ -117,7 +117,7 @@ OmniOS Community Edition Association (OmniOSce) is a Swiss association, dedicate
 
 Citrus IT is a UK company that provides a managed email service platform to companies around the world. For many years they ran their systems on Solaris with SPARC hardware but transitioned to OmniOS in 2012. www.citrus-it.net 
 
-#About OETIKER+PARTNER AG 
+## About OETIKER+PARTNER AG 
 
 OETIKER+PARTNER is a Swiss system management and software development company. Employees from O+P are involved in many Open Source Software projects. O+P runs most of their server hardware on OmniOS. www.oetiker.ch 
 
@@ -126,7 +126,4 @@ Press inquiries to info@omniosce.org
 
 Published July 12, 2017 
 
-OmniOSce 
-Aarweg 17 
-4600 Olten 
-Switzerland
+OmniOSce, Aarweg 17, 4600 Olten, Switzerland
