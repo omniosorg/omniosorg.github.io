@@ -14,23 +14,16 @@ Andy Fiddaman (www.citrus-it.net), Tobias Oetiker (www.oetiker.ch) and Dominik H
 
 We have forked the OmniOS repos and pulled in bugfixes and security fixes that have been published since the release of OmniOS r151022. After setting up our own package repository and updating the build infrastructure, we are finally ready to go public. We are following the established OmniOS release naming scheme by releasing 
 
-
-OmniOSce r151022h, 12th July 2017 
-
+*OmniOSce r151022h, 12th July 2017*
 
 The new release contains the following fixes: 
 
-
-    * expat updated to version 2.2.1 (fixes CVE-2017-9233) 
-    * openssl updated to version 1.0.2l 
-    * curl updated to version 7.54.1 
-    * bind updated to version 9.10.5-P3 
-    * p7zip updated to fix CVE-2016-9296 
-    * web/ca-bundle updated to include OmniOSce Certificate Authority certificate 
-
-
-`uname -a` shows omnios-r151022-f9693432c2 (no change in this release) 
-
+- expat updated to version 2.2.1 (fixes CVE-2017-9233) 
+- openssl updated to version 1.0.2l 
+- curl updated to version 7.54.1 
+- bind updated to version 9.10.5-P3 
+- p7zip updated to fix CVE-2016-9296 
+- web/ca-bundle updated to include OmniOSce Certificate Authority certificate 
 
 Our work does not stop here though. First we are committed to quickly releasing updates for r151022 as the need arises. We are also working towards releasing r151024 on schedule. To that end, we have already updated the bloody environment with all the latest goodies from upstream illumos and joyent-lx repositories. 
 
