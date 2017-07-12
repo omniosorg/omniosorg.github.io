@@ -33,8 +33,8 @@ Our work does not stop here though. First we are committed to quickly releasing 
 
 
 OmniOS community edition hosts its sources on
-(github.com/omniosorg)[https://github.com/omniosorg/] and if you want to get in touch, you can find us on
-(gitter.im/omniosorg)[https://gitter.im/omniosorg/Lobby]
+[github.com/omniosorg](https://github.com/omniosorg/) and if you want to get in touch, you can find us on
+[gitter.im/omniosorg](https://gitter.im/omniosorg/Lobby).
 
 
 ## Release Schedule 
