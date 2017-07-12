@@ -9,7 +9,11 @@ On April 21st 2017, OmniTI announced that they would suspend active development 
 While this announcement left many users stunned, others focused more on the fact that OmniTI in their announcement also expressed the hope that "the community" would take up further development of the OS. 14 weeks later, OmniOS Community Edition is a reality. 
 
 
-Andy Fiddaman (www.citrus-it.net), Tobias Oetiker (www.oetiker.ch) and Dominik Hassler have spent some quality time setting up the systems and procedures allowing us to take over maintenance and development of OmniOS. In this endeavour we were supported by many. Special thanks to Stefan Husch (www.qutic.com), Peter Tribble (www.petertribble.co.uk), Dan McDonald and Theo Schlossnagle (www.circonus.com). 
+Andy Fiddaman ([www.citrus-it.net](https://www.citrus-it.net)), Tobias Oetiker
+([www.oetiker.ch](https://www.oetiker.ch)) and Dominik Hassler have spent some quality time setting up the systems and procedures allowing us to take over maintenance and development of OmniOS. In this endeavour we were supported by many. Special thanks to Stefan Husch
+([www.qutic.com](https://www.qutic.com)), Peter Tribble
+([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald and Theo Schlossnagle
+([www.circonus.com](https://www.circonus.com)). 
 
 
 We have forked the OmniOS repos and pulled in bugfixes and security fixes that have been published since the release of OmniOS r151022. After setting up our own package repository and updating the build infrastructure, we are finally ready to go public. We are following the established OmniOS release naming scheme by releasing 
@@ -28,7 +32,9 @@ The new release contains the following fixes:
 Our work does not stop here though. First we are committed to quickly releasing updates for r151022 as the need arises. We are also working towards releasing r151024 on schedule. To that end, we have already updated the bloody environment with all the latest goodies from upstream illumos and joyent-lx repositories. 
 
 
-OmniOS community edition hosts its sources on https://github.com/omniosorg/ and if you want to get in touch, you can find us on https://gitter.im/omniosorg/Lobby 
+OmniOS community edition hosts its sources on
+(github.com/omniosorg)[https://github.com/omniosorg/] and if you want to get in touch, you can find us on
+(gitter.im/omniosorg)[https://gitter.im/omniosorg/Lobby]
 
 
 ## Release Schedule 
