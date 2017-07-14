@@ -3,20 +3,35 @@
 # ​OmniOS Community Edition
 
 
-On April 21st 2017, OmniTI announced that they would suspend active development of OmniOS and support contracts would not be renewed.
+On April 21st 2017, OmniTI announced that they would suspend active
+development of OmniOS and support contracts would not be renewed.
 
 
-While this announcement left many users stunned, others focused more on the fact that OmniTI in their announcement also expressed the hope that "the community" would take up further development of the OS. 14 weeks later, OmniOS Community Edition is a reality.
+While this announcement left many users stunned, others focused more on the
+fact that OmniTI in their announcement also expressed the hope that "the
+community" would take up further development of the OS.  14 weeks later,
+OmniOS Community Edition is a reality.
 
 
-Andy Fiddaman ([www.citrus-it.net](https://www.citrus-it.net)), Tobias Oetiker
-([www.oetiker.ch](https://www.oetiker.ch)) and Dominik Hassler have spent some quality time setting up the systems and procedures allowing us to take over maintenance and development of OmniOS. In this endeavour we were supported by many. Special thanks to Stefan Husch
+Andy Fiddaman ([www.citrus-it.net](https://www.citrus-it.net)), Tobias
+Oetiker ([www.oetiker.ch](https://www.oetiker.ch)) and Dominik Hassler have
+spent some quality time setting up the systems and procedures allowing us to
+take over maintenance and development of OmniOS.  In this endeavour we were
+supported by many.  Special thanks to Stefan Husch
 ([www.qutic.com](https://www.qutic.com)), Peter Tribble
-([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald and Theo Schlossnagle
-([www.circonus.com](https://www.circonus.com)).
+([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald and
+Theo Schlossnagle ([www.circonus.com](https://www.circonus.com)).
 
+Special thanks also to the [Integrated System Laboratory](http://www.iis.ethz.ch)
+of ETH Zurich, Switzerland, who have graceously provided a zone on one of
+their OmniOS boxes to host our new repository. 
 
-We have forked the OmniOS repos and pulled in bugfixes and security fixes that have been published since the release of OmniOS r151022. After setting up our own package repository and updating the build infrastructure, we are finally ready to go public. We are following the established OmniOS release naming scheme by releasing
+We have forked the OmniOS repos and pulled in bugfixes and security fixes
+that have been published since the release of OmniOS r151022.  After setting
+up our own package repository and updating the build infrastructure, we are
+finally ready to go public.  We are following the established OmniOS release
+naming scheme by releasing
+
 
 ## OmniOSce r151022h, 12th July 2017
 
