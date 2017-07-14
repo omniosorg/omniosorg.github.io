@@ -24,7 +24,7 @@ supported by many.  Special thanks to Stefan Husch
 ([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald and
 Theo Schlossnagle ([www.circonus.com](https://www.circonus.com)).
 
-A big thank you also [Integrated System Laboratory](http://www.iis.ethz.ch)
+A big thank you also to the [Integrated System Laboratory](http://www.iis.ethz.ch)
 of ETH Zurich, Switzerland, who have graceously provided a zone on one of
 their OmniOS boxes to host our new repository. 
 
