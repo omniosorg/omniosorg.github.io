@@ -33,7 +33,7 @@ that have been published since the release of OmniOS r151022.  After setting
 up our own package repository and updating the build infrastructure, we are
 finally ready to go public.  We are following the established OmniOS release
 naming scheme. See our
-[ReleseNotes](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md)
+[Release Notes](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md)
 for details about the latest updates.
 
 Our work does not stop here though. First we are committed to quickly releasing updates for r151022 as the need arises. We are also working towards releasing r151024 on schedule. To that end, we have already updated the bloody environment with all the latest goodies from upstream illumos and joyent-lx repositories.
