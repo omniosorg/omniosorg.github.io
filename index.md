@@ -36,6 +36,9 @@ naming scheme. See our
 [Release Notes](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md)
 for details about the latest updates.
 
+If you are looking for installation media, you can find them on
+[downloads.omniosce.org](https://downloads.omniosce.org/media).
+
 Our work does not stop here though. First we are committed to quickly releasing updates for r151022 as the need arises. We are also working towards releasing r151024 on schedule. To that end, we have already updated the bloody environment with all the latest goodies from upstream illumos and joyent-lx repositories.
 
 
