@@ -18,7 +18,7 @@ for release in r151022 bloody; do
         pub=omnios
         collection=core
         if [ $arch = extra ]; then
-           pub=omnios-extra
+           pub=extra.omnios
            collection=supplemental
         fi
 	pkgrepo create /pkg/$release/$arch
