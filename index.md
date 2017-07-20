@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ![Image](OmniOSce_logo.svg)
 
 # ​OmniOS Community Edition

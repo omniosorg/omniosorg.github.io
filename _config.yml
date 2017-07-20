@@ -1,1 +1,4 @@
-theme: jekyll-theme-minimal
+title: OmniOS Community Edition
+description: illumos based server OS with ZFS, KVM and Linux zone support
+show_downloads: false
+theme: 
