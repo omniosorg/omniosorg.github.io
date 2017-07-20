@@ -1,4 +1,22 @@
-title: OmniOS Community Edition
-description: illumos based server OS with ZFS, KVM and Linux zone support
-show_downloads: false
-theme: 
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               'OmniOS Community Edition'
+tagline:             'illumos based server OS with ZFS, KVM and Linux zone support'
+description:         'Description ... '
+url:                 http://omniosce.org
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              OmniOS Community Edition Association
+  url:               http://omniosce.org
+  email:             info@omniosce.org
+
+# Custom vars
+version:             1.0.0
