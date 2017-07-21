@@ -22,7 +22,7 @@ main {
   flex: 1 0 auto;
   p {
 	margin-top: 1ex;
-	margin-bottom: 1ex;
+	margin-bottom: 2ex;
   }
 }
 
@@ -87,17 +87,13 @@ nav .brand-logo {
     white-space: nowrap;
 }
 article {
-
     padding: 10px;
     font-size: 1.35rem;
-    line-height: 1.7;
+    line-height: 1.5;
     font-weight: 300;
     &.post-content {
       ul {
           margin-left: 20px;
-      }
-      h1, h2, h3, h4, h5, h6 {
-          font-weight: 200;
       }
       li {
         list-style-type: disc;    
