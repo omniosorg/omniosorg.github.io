@@ -4,24 +4,32 @@ layout: default
 <div class="container">
     <div class="group-article">      
         {% for post in paginator.posts %}
-        <div class="row no-margin">
+        <div class="row">
+        {% if post == site.posts.first %}
+                <div class="col s12">
+                    <div class="list-article">
+                        <h4 class="orange-text text-darken-4">{{ post.title }}</h4>
+                        <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
+                        <article class="grey-text text-darken-2 post-content on-index light">
+                            {{ post.content }}
+                        </article>
+                        <br/>
+                    </div>
+                </div>
+        {% else %}
             <a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}">
                 <div class="col s12">
                     <div class="list-article">
                         <h4 class="orange-text text-darken-4">{{ post.title }}</h4>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 post-content on-index light">
-                            {% if post == site.posts.first %}
-                                {{ post.content }}
-                            {% else %}
-                                {{ post.excerpt | strip_html }}. 
-                            {% endif %}
+                            {{ post.excerpt | strip_html }}. 
                         </article>
                         <br/>
                     </div>
-                    <div class="divider dashed"></div>
                 </div>
             </a>
+        {% endif %}
         </div>
         {% endfor %}
 
