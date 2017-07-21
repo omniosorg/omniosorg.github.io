@@ -1,16 +1,12 @@
 ---
 layout: default
 ---
-<div class="card z-depth-0 no-margin">
 <div class="container">
-<div class="section">
     <div class="row">
         <div class="col s12">
-            <div class="card-content">
-                <div class="card-title center-align"><h2 class="thin orange-text text-darken-4">{{ page.title }}</h2></div>
-                <h5 class="center-align grey-text text-darken-1 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
-                <br/>
-                <div class="divider"></div>
+                <h1 class="orange-text text-darken-4">{{ page.title }}</h2>
+                <h5 class="grey-text text-darken-1 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
+
                 <article class="post-categories center-align">
                     <div class="chip teal white-text">Categories</div>
                     {% for cat in page.categories %}<div class="chip">{{ cat }}</div> {% endfor %}
@@ -38,12 +34,6 @@ layout: default
                         {% endif %}
                     {% endfor %}
                 </article>
-                <article class="post-comment">
-                    {% include comments.html %}
-                </article>
-            </div>
-        </div>
+         </div>
     </div>
-</div>
-</div>
 </div>
