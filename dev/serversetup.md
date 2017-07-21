@@ -1,6 +1,6 @@
 ---
 layout: page
-title: pkg.server setup notes
+title: Setup Notes pkg.omniosce.org
 ---
 
 # Setup Notes for the OmniOSce Repo Server

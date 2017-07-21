@@ -1,3 +1,7 @@
+---
+layout: page
+title: Release Notes
+---
 ![Image](OmniOSce_logo.svg)
 
 # Release Notes
