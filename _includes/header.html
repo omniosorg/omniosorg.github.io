@@ -1,25 +1,23 @@
 <div class="navbar-fixed">
-<nav class="white blue-text z-depth-0">
+<nav class="white orange-text text-dareken-4 z-depth-0">
     <ul id="slide-out" class="side-nav">
-        <li><a href="{{ site.baseurl }}/" class="blue-text">Home</a></li>
+        <li><a href="{{ site.baseurl }}/" class="orange-text text-darken-4">Home</a></li>
         {% for page in site.pages %}
             {% if page.title and page.show_in_menu  %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
+                <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text text-darken-4">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
     </ul>
     <div class="container container-large">
-    <a class="brand-logo" href="{{ site.baseurl }}/" class="blue-text"><span class="light blue-text">{{ site.logo }}</span></a>
+    <a class="brand-logo" href="{{ site.baseurl }}/"><img style="height: 100%" src="/OmniOSce_logo.svg" /></a>
     <ul class="right hide-on-med-and-down">
         {% for page in site.pages %}
             {% if page.title and page.show_in_menu  %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
+                <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse right blue-text"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="slide-out" class="button-collapse right orange-text text-darken-4"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 </div>
