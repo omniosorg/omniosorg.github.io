@@ -3,8 +3,6 @@ layout: page
 title: Setup Notes pkg.omniosce.org
 ---
 
-# Setup Notes for the OmniOSce Repo Server
-
 ## Setting Up the Repo Servers
 
 ```bash
