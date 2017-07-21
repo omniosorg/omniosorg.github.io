@@ -28,7 +28,8 @@ Check the certificate fingerprint.
 
 ```
 # /usr/bin/openssl x509 -fingerprint \
-    -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout ```
+    -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
+```
 
 The fingerprint should match this:
 
@@ -68,6 +69,3 @@ Finally, update as usual.
 ```
 # /usr/bin/pkg update -rv 
 ```
-
-
-
