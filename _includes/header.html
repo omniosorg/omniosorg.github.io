@@ -1,10 +1,10 @@
 <div class="navbar-fixed">
-<nav class="white orange-text text-dareken-4 z-depth-0">
+<nav class="white orange-text z-depth-0">
     <ul id="slide-out" class="side-nav">
-        <li><a href="{{ site.baseurl }}/" class="orange-text text-darken-4">Home</a></li>
+        <li><a href="{{ site.baseurl }}/" class="orange-text">Home</a></li>
         {% for page in site.pages %}
             {% if page.title and page.show_in_menu  %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text text-darken-4">{{ page.title }}</a></li>
+                <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
@@ -17,7 +17,7 @@
             {% endif %}
         {% endfor %}
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse right orange-text text-darken-4"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="slide-out" class="button-collapse right orange-text"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 </div>
