@@ -1,20 +1,37 @@
-# Permalinks
-#
-#permalink:           pretty
-
-# Setup
-title:               'OmniOS Community Edition'
-tagline:             'illumos based server OS with ZFS, KVM and Linux zone support'
-description:         'Description ... '
-url:                 http://omniosce.org
-baseurl:             ''
-paginate:            5
-
-# About/contact
-author:
-  name:              OmniOS Community Edition Association
-  url:               http://omniosce.org
-  email:             info@omniosce.org
-
-# Custom vars
-version:             1.0.0
+# Site settings
+title: OmniOS Community Edition
+description: > # this means to ignore newlines until "baseurl:"
+    Write an awesome description for your new site here. You can edit this
+    line in _config.yml. It will appear in your document head meta (for
+    Google search results) and in your feed.xml site description.
+url: "http://www.omniosce.org"
+baseurl: ""
+logo: OmniOS Community Edition
+paginate: 5
+paginate_path: "/page:num/"
+owner:
+    email: info@omniosce.org
+    facebook:
+        show: true
+        name: "OmniOS Commuity Editoin"
+        url: "https://fb.me/omniosce"
+    github:
+        show: true
+        username: "omniosorg"
+    twitter:
+        show: true
+        username: "omniosce"
+    disqus:
+        show: false
+        username: "ichihararifa"
+    linkedin:
+        show: false
+        profile: "https://linkedin.com/in/your-profile-id-here"
+sass:
+    sass_dir: _sass
+    style: compressed
+permalink: "/article/:title"
+markdown: redcarpet
+highlighter: pygments
+gems:
+    - jekyll-feed
