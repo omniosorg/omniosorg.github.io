@@ -18,7 +18,11 @@ layout: default
                         <h4 class="blue-text thin">{{ post.title }}</h4>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 post-content on-index light">
-                                {{ post.excerpt | strip_html }}. . 
+                            {% if post == site.posts.first %}
+                                {{ post }}
+                            {% else %}
+                                {{ post.excerpt | strip_html }}. 
+                            {% endif %}
                         </article>
                         <br/>
                     </div>
