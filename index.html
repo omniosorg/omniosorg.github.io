@@ -2,13 +2,7 @@
 layout: default
 ---
 <div class="container">
-    <div class="group-article">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="orange-text text-darken-4 center-align">Recent Post</h2>
-            </div>
-        </div>
-        
+    <div class="group-article">      
         {% for post in paginator.posts %}
         <div class="row no-margin">
             <a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}">
