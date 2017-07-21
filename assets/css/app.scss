@@ -74,9 +74,15 @@ main {
 .group-article .row:last-child .divider{
   display: none
 }
+
 .card {
     border-radius: 0;
 }
+
+code {
+    white-space: nowrap;
+}
+
 nav .brand-logo {
     position: absolute;
     color: #FFF;
