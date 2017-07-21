@@ -19,7 +19,7 @@ layout: default
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 post-content on-index light">
                             {% if post == site.posts.first %}
-                                {{ post }}
+                                {{ post.content }}
                             {% else %}
                                 {{ post.excerpt | strip_html }}. 
                             {% endif %}
