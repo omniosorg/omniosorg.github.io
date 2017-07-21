@@ -1,47 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-  {% include head.html %}
-
-  <body>
-
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
+<html>
+{% include head.html %}
+<body>
+    <header>
+        {% include header.html %}
+    </header>
+    <main>
         {{ content }}
-      </div>
-    </div>
+    </main>
+    <footer class="page-footer no-margin __top blue">
+        {% include footer.html %}
+    </footer>
+    <script type="text/javascript" src="{{ "/assets/js/jquery.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/materialize.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript">
+    $(function() {
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
+        //fontawesome broken-heart icon
+        var faFlash=$('footer').css('background-color'),
+            faFlash='color:'+faFlash+';transform:scale(1,2);-webkit-transform:scale(1,2);-moz-transform:scale(1,2);-ms-transform:scale(1,2);-o-transform:scale(1,2)';
+        $('i.fa.fa-broken-heart').html('<span style="padding:5px"><span class="fa-broken-heart fa-stack"><i class="fa fa-heart fa-stack-2x"></i><i class="fa fa-flash fa-stack-1x" style="'+faFlash+'"></i></span></span>');
+        $(".button-collapse").sideNav();
+        $('nav a').addClass('waves-effect');
+    });
     </script>
-  </body>
+</body>
 </html>

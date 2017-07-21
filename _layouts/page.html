@@ -1,8 +1,21 @@
 ---
 layout: default
 ---
-
-<div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12">
+                <div class="card white z-depth-0">
+                    <div class="card-content">
+                        <div class="card-title center-align"><h2 class="thin blue-text">{{ page.title }}</h2></div>
+                        <div class="divider"></div>
+                        <br/>
+                        <article class="grey-text text-darken-2 post-content">
+                        {{ content }}
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
