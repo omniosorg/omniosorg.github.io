@@ -5,10 +5,7 @@ show_in_menu: true
 permalink: /about/
 ---
 
-![Image](OmniOSce_logo.svg)
-
-# ​OmniOS Community Edition
-
+<img class="img-responsive" src="OmniOSce_logo.svg"/>
 
 On April 21st 2017, OmniTI announced that they would suspend active
 development of OmniOS and support contracts would not be renewed.
