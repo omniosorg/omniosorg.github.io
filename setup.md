@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Setup
+menu: yes
 permalink: /setup/
 ---
 
