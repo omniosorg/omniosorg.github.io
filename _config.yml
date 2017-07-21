@@ -28,6 +28,5 @@ sass:
     sass_dir: _sass
     style: compressed
 permalink: "/article/:title"
-highlighter: pygments
 gems:
     - jekyll-feed
