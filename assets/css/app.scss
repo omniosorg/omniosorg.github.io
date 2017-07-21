@@ -1,16 +1,17 @@
 ---
 # Transform Sass into css
 ---
+$h1-fontsize: 3rem;
+$h2-fontsize: 2rem;
+$h3-fontsize: 1.5rem;
+$h4-fontsize: 1rem;
+$h5-fontsize: 1rem;
+$h6-fontsize: 1rem;
+
 @import "materialize";
 @import "fontawesome";
 @import "pygments";
 
-$h1-fontsize: 3.56rem;
-$h2-fontsize: 2.92rem;
-$h3-fontsize: 2.28rem;
-$h4-fontsize: 1.64rem;
-$h5-fontsize: 1rem;
-$h6-fontsize: 1rem;
 
 body {
   display: flex;
