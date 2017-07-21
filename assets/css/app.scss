@@ -1,3 +1,11 @@
+$h1-fontsize: 3.56rem;
+$h2-fontsize: 2.92rem;
+$h3-fontsize: 2.28rem;
+$h4-fontsize: 1.64rem;
+$h5-fontsize: 1rem;
+$h6-fontsize: 1rem;
+
+
 ---
 # Transform Sass into css
 ---
@@ -10,24 +18,33 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+
 main {
   flex: 1 0 auto;
+  p {
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+  }
 }
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
   width: 80%;
 }
+
 @media #{$medium-and-up} {
   .container {
     width: 75%;
   }
 }
+
 @media #{$large-and-up} {
   .container {
     width: 60%;
   }
 }
+
 .no-margin {
     margin: 0;
     &.__top {
@@ -43,6 +60,7 @@ main {
         margin-right: 0;
     }
 }
+
 .divider {
   background: transparent;
   border-bottom: 2px solid rgba(0, 39, 59, 0.08);
@@ -70,6 +88,7 @@ nav .brand-logo {
     white-space: nowrap;
 }
 article {
+
     padding: 10px;
     font-size: 1.35rem;
     line-height: 1.7;
@@ -94,6 +113,7 @@ article {
 .list-article {
   padding: 20px;
 }
+
 footer.page-footer {
   font-weight: 400;
   font-style: normal;
