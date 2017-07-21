@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Setup
-menu: yes
+show_in_menu: true
 permalink: /setup/
 ---
 

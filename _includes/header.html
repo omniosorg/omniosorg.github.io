@@ -3,7 +3,7 @@
     <ul id="slide-out" class="side-nav">
         <li><a href="{{ site.baseurl }}/" class="blue-text">Home</a></li>
         {% for page in site.pages %}
-            {% if page.title and page.menu  %}
+            {% if page.title and page.show_in_menu  %}
                 <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
@@ -13,7 +13,7 @@
     <a class="brand-logo" href="{{ site.baseurl }}/" class="blue-text"><span class="light blue-text">{{ site.logo }}</span></a>
     <ul class="right hide-on-med-and-down">
         {% for page in site.pages %}
-            {% if page.title %}
+            {% if page.title and page.show_in_menu  %}
                 <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
