@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Setup
+title: Install
 show_in_menu: true
-permalink: /setup/
+permalink: /install/
 ---
 
 ## A Fresh Install Walk Through
