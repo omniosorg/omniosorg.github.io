@@ -87,6 +87,10 @@ article img {
     max-width: 100%;
 }
 
+.navbar-fixed nav {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
 nav .brand-logo {
     position: absolute;
     color: #FFF;
