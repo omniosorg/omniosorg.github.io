@@ -1,19 +1,11 @@
 ---
 layout: page
-title: Setup
+title: Switch to OmniOSce
 show_in_menu: true
-permalink: /setup/
+permalink: /switch/
 ---
 
-## New System
-
-For a fresh install of OmniOS, get the ISO file from
-[downloads.omniosce.org](https://downloads.omniosce.org/media/stable/), 
-Boot the iso and follow the instructions on screen.
-
-## Moving from OmniOS to OmniOSce
-
-To upgrade an existing system that is running OmniOS, transitioning to
+To transition an existing system that is running OmniOS to
 the OmniOS Community Edition, install the OmniOSce CA certificate, 
 change the pkg publisher, and run pkg update, as follows.
 
