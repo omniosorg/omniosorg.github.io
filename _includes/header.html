@@ -1,13 +1,17 @@
+<ul id="slide-out" class="side-nav">
+    <li><a href="{{ site.baseurl }}/" class="orange-text">Home</a></li>
+    {% for page in site.pages %}
+        {% if page.title and page.show_in_menu  %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text">{{ page.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<a href="#" class="menu-button" data-activates="slide-out">
+    <span class="burger-icon"></span>
+</a>
 <div class="navbar-fixed">
 <nav class="white orange-text">
-    <ul id="slide-out" class="side-nav">
-        <li><a href="{{ site.baseurl }}/" class="orange-text">Home</a></li>
-        {% for page in site.pages %}
-            {% if page.title and page.show_in_menu  %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text">{{ page.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+
     <div class="container container-large">
     <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" /></a>
     <ul class="right hide-on-med-and-down">
@@ -16,8 +20,8 @@
                 <li><a href="{{ page.url | prepend: site.baseurl }}" class="orange-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
+
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse right orange-text"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 </div>

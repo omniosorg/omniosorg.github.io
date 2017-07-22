@@ -13,16 +13,6 @@
     </footer>
     <script type="text/javascript" src="{{ "/assets/js/jquery.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="{{ "/assets/js/materialize.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript">
-    $(function() {
-
-        //fontawesome broken-heart icon
-        var faFlash=$('footer').css('background-color'),
-            faFlash='color:'+faFlash+';transform:scale(1,2);-webkit-transform:scale(1,2);-moz-transform:scale(1,2);-ms-transform:scale(1,2);-o-transform:scale(1,2)';
-        $('i.fa.fa-broken-heart').html('<span style="padding:5px"><span class="fa-broken-heart fa-stack"><i class="fa fa-heart fa-stack-2x"></i><i class="fa fa-flash fa-stack-1x" style="'+faFlash+'"></i></span></span>');
-        $(".button-collapse").sideNav();
-        $('nav a').addClass('waves-effect');
-    });
-    </script>
+    <script type="text/javascript" src="{{ "/assets/js/site.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
