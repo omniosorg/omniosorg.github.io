@@ -137,7 +137,7 @@ nav .brand-logo {
 .menu-button {
     position: fixed;
     z-index: 999;
-    right: 2.5ex;
+    left: 2.5ex;
     top: 2.5ex;
     .burger-icon {
     	@include burger(25px, 3px, 5px, color("orange", "base"));
