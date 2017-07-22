@@ -1,11 +1,9 @@
 ---
-layout: page
-title: Install
-show_in_menu: true
-permalink: /install/
+title: Installation Walk Through
+category: setup
 ---
 
-## A Fresh Install Walk Through
+# A Fresh Install Walk Through
 
 The following screen shots step through a fresh install of the
 OmniOSce operating system on a blank hard drive. To perform this
@@ -103,4 +101,3 @@ using a password is disabled.)
 Install is complete, and root is logged in.
 
 ![Login as root](../assets/images/install_59_11.png?raw=true "Login as root")
-

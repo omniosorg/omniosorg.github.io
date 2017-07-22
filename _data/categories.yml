@@ -1,0 +1,7 @@
+- key: makingoff
+  title: The Making Off
+  order: 99
+
+- key: setup
+  title: Setup OmniOS
+  order: 1

@@ -27,6 +27,20 @@ owner:
 sass:
     sass_dir: _sass
     style: compressed
+
+collections:
+    docs:
+        output: true
+        permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: page
+      order: 999
+
 permalink: "/article/:title"
 gems:
     - jekyll-feed

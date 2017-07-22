@@ -88,8 +88,34 @@ code.highlighter-rouge {
     white-space: nowrap;
 }
 
-article img {
-    max-width: 100%;
+article {
+    img {
+        max-width: 100%;
+    }
+    h1 {
+        color: color("orange","base");
+    }
+}
+
+.side-nav {
+    padding-top: 6ex;
+    li>a,
+    .category {
+        font-size: 14px;
+        font-weight: bold;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 32px;
+    }
+    ul li>a {
+        padding-left: 50px;
+    }
+    li>a {
+        font-weight: normal;
+    }
+    .active {
+        background: color("orange","lighten-5");
+    }
 }
 
 .navbar-fixed nav {

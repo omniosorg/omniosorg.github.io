@@ -1,8 +1,7 @@
 ---
 layout: page
-title: About
+title: About OmniOSce
 show_in_menu: true
-permalink: /about/
 ---
 
 <img class="responsive-img" src="/OmniOSce_logo.svg" />
@@ -29,7 +28,7 @@ Theo Schlossnagle ([www.circonus.com](https://www.circonus.com)).
 
 A big thank you also to the [Integrated Systems Laboratory](http://www.iis.ee.ethz.ch)
 of ETH Zurich, Switzerland, who have graceously provided a zone on one of
-their OmniOS boxes to host our new repository. 
+their OmniOS boxes to host our new repository.
 
 ## About OmniOS Community Edition Association
 
@@ -45,8 +44,6 @@ Citrus IT is a UK company that provides a managed email service platform to comp
 OETIKER+PARTNER is a Swiss system management and software development company. Employees from O+P are involved in many Open Source Software projects. O+P runs most of their server hardware on OmniOS.
 [www.oetiker.ch](https://www.oetiker.ch)
 
-
 Press inquiries to [info@omniosce.org](mailto:info@omniosce.org)
 
 OmniOSce, Aarweg 17, 4600 Olten, Switzerland
-
