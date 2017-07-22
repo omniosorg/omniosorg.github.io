@@ -89,6 +89,9 @@ article img {
 
 .navbar-fixed nav {
     box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,0.06);
 }
 
 nav .brand-logo {
