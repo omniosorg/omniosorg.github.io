@@ -98,7 +98,7 @@ article {
 }
 
 .side-nav {
-    padding-top: 6ex;
+    padding-top: 8ex;
     li>a,
     .category {
         font-size: 14px;
@@ -138,7 +138,7 @@ nav .brand-logo {
     position: fixed;
     z-index: 999;
     left: 2.5ex;
-    top: 2.5ex;
+    top: 2.6ex;
     .burger-icon {
     	@include burger(25px, 3px, 5px, color("orange", "base"));
     }
