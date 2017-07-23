@@ -1,8 +1,7 @@
 ---
 layout: page
-title: About
+title: About OmniOSce
 show_in_menu: true
-permalink: /about/
 ---
 
 <img class="responsive-img" src="/OmniOSce_logo.svg" />
@@ -56,8 +55,6 @@ Citrus IT is a UK company that provides a managed email service platform to comp
 OETIKER+PARTNER is a Swiss system management and software development company. Employees from O+P are involved in many Open Source Software projects. O+P runs most of their server hardware on OmniOS.
 [www.oetiker.ch](https://www.oetiker.ch)
 
-
 Press inquiries to [info@omniosce.org](mailto:info@omniosce.org)
 
 OmniOSce, Aarweg 17, 4600 Olten, Switzerland
-
