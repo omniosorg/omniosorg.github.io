@@ -38,14 +38,13 @@
                 <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
                 {% endif %}
                 {% endfor %}
-                <li><a class="dropdown-buttonn orange-text" href="#" data-activates="media-downloads">Downloads</a></li>
-                
+                <li><a class="dropdown-buttonn orange-text" href="#" data-activates="media-download">Downloads</a></li>
             </ul>
         </div>
     </nav>
 </div>
 
-<ul id="media-downloads" class="dropdown-content">
+<ul id="media-download" class="dropdown-content">
   <li><a href="https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}{{site.omnios_stable_suffix}}.iso" class="orange-text">ISO</a></li>
   <li><a href="https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}{{site.omnios_stable_suffix}}.usb-dd" class="orange-text">USB</a></li>
   <li><a href="https://downloads.omniosce.org/media/stable/kayak_{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2"  class="orange-text">PXE</a></li>
