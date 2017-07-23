@@ -4,7 +4,7 @@
     {% for item in site.pages %}
     {% if item.title and item.show_in_menu %}
     <li>
-        <a href="{{ item.url | prepend: site.baseurl }}"
+        <a href="{{ item.url | prepend: site.baseurl }}.html"
            class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a>
     </li>
     {% endif %}
@@ -17,7 +17,7 @@
     <ul>
         {% assign items = mycat.items | sort: 'order' %}
         {% for item in items %}
-            <li><a href="{{ item.url | prepend: site.baseurl }}"
+            <li><a href="{{ item.url | prepend: site.baseurl }}.html"
                 class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
         {% endfor %}
     </ul></li>
@@ -31,11 +31,11 @@
 <div class="navbar-fixed">
     <nav class="white orange-text">
         <div class="container container-large">
-            <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" /></a>
+            <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" alt="Home"></a>
             <ul class="right hide-on-med-and-down">
                 {% for item in site.pages %}
                 {% if item.title and item.show_in_menu %}
-                <li><a href="{{ item.url | prepend: site.baseurl }}" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
