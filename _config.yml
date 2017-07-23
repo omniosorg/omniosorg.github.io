@@ -6,6 +6,7 @@ baseurl: ""
 logo: OmniOS Community Edition
 paginate: 5
 paginate_path: "/page:num/"
+omnios_stable: r151022
 owner:
     email: info@omniosce.org
     facebook:
