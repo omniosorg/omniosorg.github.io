@@ -134,6 +134,11 @@ nav .brand-logo {
     white-space: nowrap;
 }
 
+nav ul a.inline {
+    display: inline;
+    color: #ff9800;
+}
+
 .menu-button {
     position: fixed;
     z-index: 999;
