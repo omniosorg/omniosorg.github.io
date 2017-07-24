@@ -52,6 +52,6 @@ requests … the source of the website btw is on
 |pipe-viewer  |      1.6.0 | 1.6.6|
 |screen       |     4.5.1 | 4.6.1|
 |sqlite       |     3.3.18 | 3.19.3|
-|sudo         |   1.8.7 | 8.20.2|
+|sudo         |   1.8.7 | 1.8.20p2|
 |tmux         |   2.3 | 2.5|
 |vim          |  8.0.567 | 8.0.586|
