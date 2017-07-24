@@ -33,8 +33,8 @@ requests … the source of the website btw is on
 
 ## Updated packages
 
-|packages|old|new|
-+--------+-------+
+|packages|old |new |
+|:-------|:---|:---|
 |automake     |   1.15.0 | 1.15.1|
 |bind         |   9.10.4P8 | 9.10.5P3|
 |dbus         |   1.11.12 | 1.11.14|
