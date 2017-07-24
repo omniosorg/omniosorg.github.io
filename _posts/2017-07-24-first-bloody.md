@@ -25,7 +25,7 @@ much better now than a few days ago and it comes with much more content.  We
 already integrated two contributions from Rich Murphey @rich-murphey (thank
 you).  If you would also like to contribute, please send us your pull
 requests … the source of the website btw is on
-[github.com/omniosorg/omniosorg.github.com](https://github.com/omniosorg/omniosorg.github.com)
+[github.com/omniosorg/omniosorg.github.io](https://github.com/omniosorg/omniosorg.github.io)
 
 ## bloody update 20170721
 
