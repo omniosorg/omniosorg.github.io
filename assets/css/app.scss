@@ -28,6 +28,18 @@ main {
     }
 }
 
+article table {
+  width: initial;
+  > tbody {
+    > tr:nth-child(odd) {
+      background-color: $table-striped-color;
+    }
+
+    > tr > td {
+      border-radius: 0;
+    }
+ }
+}
 .container {
     margin: 0 auto;
     max-width: 1280px;
