@@ -11,7 +11,7 @@ their latest released versions.  They’ve passed initial regression testing,
 but we could use your help in putting them through their paces a bit more,
 so if you have some spare cycles please grab the ISO and set up a bloody
 system for testing.  Downloads can be found at
-[https://downloads.omniosce.org/media/bloody/](downloads.omniosce.org/media/bloody)
+[downloads.omniosce.org/media/bloody](https://downloads.omniosce.org/media/bloody/)
 
 We have also started enabling test suites for userland packages where one is
 available in the hope of catching more regressions early and automatically. 
@@ -25,7 +25,7 @@ much better now than a few days ago and it comes with much more content.  We
 already integrated two contributions from Rich Murphey @rich-murphey (thank
 you).  If you would also like to contribute, please send us your pull
 requests … the source of the website btw is on
-[https://github.com/omniosorg/omniosor.github.com](github.com/omniosorg/omniosor.github.com).
+[github.com/omniosorg/omniosor.github.com](https://github.com/omniosorg/omniosor.github.com)
 
 ## bloody update 20170721
 
