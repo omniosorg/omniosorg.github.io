@@ -1,6 +1,6 @@
 ---
 title: OmniOSce CA Config
-category: makingoff
+category: makingof
 ---
 
 # Setting Up the OmniOCce CA

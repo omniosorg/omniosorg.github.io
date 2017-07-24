@@ -1,6 +1,6 @@
 ---
 title: pkg(5) Repo Setup
-category: makingoff
+category: makingof
 ---
 
 # Setting Up the Repo Servers

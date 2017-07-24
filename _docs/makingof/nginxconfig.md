@@ -1,6 +1,6 @@
 ---
 title: Nginx for depotd
-category: makingoff
+category: makingof
 ---
 # Setup of Nginx for pkg.omniosce.org
 

@@ -1,6 +1,6 @@
 ---
 title: Setup restricted SFTP
-category: makingoff
+category: makingof
 ---
 
 # Setup Restricted SFTP for download.omniosce.org
