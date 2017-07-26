@@ -1,7 +1,12 @@
+- key: setup
+  title: Setup OmniOS
+  order: 1
+
+- key: info
+  title: Information
+  order: 2
+
 - key: makingof
   title: The Making Of
   order: 99
 
-- key: setup
-  title: Setup OmniOS
-  order: 1
