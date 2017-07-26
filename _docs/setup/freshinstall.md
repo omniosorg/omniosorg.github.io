@@ -1,9 +1,9 @@
 ---
-title: Installation Walk Through
+title: Installation Walk-through
 category: setup
 ---
 
-# A Fresh Install Walk Through
+# A Fresh Install Walk-through
 
 The following screen shots step through a fresh install of the
 OmniOSce operating system on a blank hard drive. To perform this
