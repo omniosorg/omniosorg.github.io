@@ -176,8 +176,8 @@ Afterwards, you boot the zone like any other one.
 
 ## lxadm utility
 
-A simpler way to configure and maintain LX zones is to use Dominik Hassler's
-[lxadm utility](https://github.com/hadfl/lxadm/blob/master/doc/lxadm.pod)
+A simpler way to configure and maintain LX zones is to use
+[lxadm utility](http://www.lxadm.org).
 
 ## LX Zones, BEs, and Upgrades
 
