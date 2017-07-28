@@ -1,6 +1,7 @@
 ---
 title: Setup restricted SFTP
 category: makingof
+show_in_sidebar: true
 ---
 
 # Setup Restricted SFTP for download.omniosce.org

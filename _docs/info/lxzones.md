@@ -1,6 +1,7 @@
 ---
 title: LX Branded Zones
 category: info
+show_in_sidebar: true
 ---
 
 # LX Branded Zones

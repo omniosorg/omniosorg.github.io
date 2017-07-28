@@ -1,6 +1,7 @@
 ---
 title: Installation Walk-through
 category: setup
+show_in_sidebar: true
 ---
 
 # A Fresh Install Walk-through

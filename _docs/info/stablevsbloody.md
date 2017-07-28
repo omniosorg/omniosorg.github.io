@@ -1,6 +1,7 @@
 ---
 title: Stable vs. Bloody
 category: info
+show_in_sidebar: true
 ---
 
 # Stable vs. Bloody

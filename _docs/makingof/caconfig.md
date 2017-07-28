@@ -1,6 +1,7 @@
 ---
 title: OmniOSce CA Config
 category: makingof
+show_in_sidebar: true
 ---
 
 # Setting Up the OmniOCce CA

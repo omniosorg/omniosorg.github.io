@@ -17,8 +17,10 @@
     <ul>
         {% assign items = mycat.items | sort: 'order' %}
         {% for item in items %}
+            {% if item.show_in_sidebar %}
             <li><a href="{{ item.url | prepend: site.baseurl }}.html"
                 class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
+            {% endif %}
         {% endfor %}
     </ul></li>
     {% endif %}

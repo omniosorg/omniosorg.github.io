@@ -1,6 +1,7 @@
 ---
 title: Switch to OmniOSce
 category: setup
+show_in_sidebar: true
 ---
 
 To transition an existing system that is running OmniOS to

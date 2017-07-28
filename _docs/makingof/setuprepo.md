@@ -1,6 +1,7 @@
 ---
 title: pkg(5) Repo Setup
 category: makingof
+show_in_sidebar: true
 ---
 
 # Setting Up the Repo Servers
