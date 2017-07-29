@@ -1,7 +1,7 @@
 ---
 title: IPS Repositories
 category: info
-show_in_sidebar: false
+show_in_sidebar: true
 ---
 
 # IPS Repositories
