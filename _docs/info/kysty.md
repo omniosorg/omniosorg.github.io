@@ -53,6 +53,6 @@ You might not care enough about the particular build options and just
 want something you can install and use. That's fine. Find someone else
 who has done the work and made their packages available via their own
 publisher. OmniOS encourages a *layer cake* approach to the packaging
-ecosystem. [Add packages from different collections](ipsrepos.md) to
+ecosystem. [Add packages from different collections](ipsrepos.html) to
 your system to get the tools you want.
 

@@ -18,14 +18,14 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby)
 
 ## Repos
 
-| URL                                        | Publisher | Build Scripts                                                     | Notes                                       |
-|--------------------------------------------|-----------|-------------------------------------------------------------------|---------------------------------------------|
-| <https://pkg.omniosce.org/r151022/core/>   | omniosce  | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (stable)
-| <https://pkg.omniosce.org/r151022/extra/>  | omniosce  | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (stable)
-| <https://pkg.omniosce.org/bloody/core/>    | omniosce  | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
-| <https://pkg.omniosce.org/bloody/extra/>   | omniosce  | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
+| URL                                        | Publisher    | Build Scripts                                                     | Notes                                       |
+|--------------------------------------------|--------------|-------------------------------------------------------------------|---------------------------------------------|
+| <https://pkg.omniosce.org/r151022/core/>   | omnios       | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (stable)
+| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (stable)
+| <https://pkg.omniosce.org/bloody/core/>    | omnios       | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
+| <https://pkg.omniosce.org/bloody/extra/>   | extra.omnios | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
 
-### Unofficial Extras
+## Unofficial Extras
 
 | URL                                      | Publisher          | Maintainer                             | Build Scripts                                                               | Notes                                                                        |
 |------------------------------------------|--------------------|----------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
