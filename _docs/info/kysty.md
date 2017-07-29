@@ -1,5 +1,5 @@
 ---
-title: Keep Your Stuff to Yourself
+title: Minimalist Principle
 category: info
 show_in_sidebar: true
 ---
