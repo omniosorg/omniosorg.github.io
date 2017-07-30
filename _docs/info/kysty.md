@@ -38,7 +38,7 @@ organising principle. We purposefully ship only what we need to build
 and run the OS. In many cases, these are not the most recent versions.
 Except in the most basic circumstance, you should not use these things
 in your app stack. At best, their versions are stagnant; at worst, they
-may go away entirely as the OS components they exist for are rewritten
+may go away entirely as the OS components they exist for are rewritten.
 
 ## But This Is Really Inconvenient!
 
