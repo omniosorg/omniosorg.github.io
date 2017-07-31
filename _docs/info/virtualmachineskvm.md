@@ -1,7 +1,7 @@
 ---
 title: Virtual Machines with KVM
 category: info
-show_in_sidebar: false
+show_in_sidebar: true
 ---
 
 # Virtual Machines with KVM
