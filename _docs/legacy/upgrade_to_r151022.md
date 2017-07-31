@@ -53,7 +53,7 @@ that will result in a non-bootable system if you have any pool (\*any\*
 pool, not just your rpool) with 4K logical sector disks attached to the
 system. Disks with 4K physical sectors and 512b logical sectors are ok,
 but disks which have 4K logical sectors will fail. Follow the directions
-listed in the [Loader](/info/loader) instructions to leave your
+listed in the [Loader](/info/loader.html) instructions to leave your
 system configured with grub until this bug is fixed upstream and
 backported to r151022. You can check your disks with the following
 command:
@@ -80,7 +80,7 @@ boot.
 
 ## A *NEW* REMINDER ABOUT NUMBER OF BOOT ENVIRONMENTS
 
-GREAT NEWS! Once you switch to [Loader](/info/loader) - there are no
+GREAT NEWS! Once you switch to [Loader](/info/loader.html) - there are no
 limits on the number of boot environments you can have. Loader handles
 any number of them.
 
@@ -128,13 +128,13 @@ upgrade process can be simpler, modulo some setup.
 **NOTE**: Once past a release migration, linked-image zones continue to
 offer great convenience, because a single `pkg update` in the global
 zone easy updates all linked-image zones, if you use the `-r` flag.
-Linked images have [new behavior](/info/newlinkedimages) once you
+Linked images have [new behavior](/info/newlinkedimages.html) once you
 upgrade to r151022, and requiring the use of `-r` is one of them.
 
 ## Performing the Upgrade (ipkg zones only - **NEW METHOD**)
 
 **WARNING**: This is the ONLY method that works for ipkg zones now, due
-to [pkg(5) changes](/info/newlinkedimages). For the detach/attach method
+to [pkg(5) changes](/info/newlinkedimages.html). For the detach/attach method
 of upgrade, you MUST switch all zones *pre-upgrade* to OpenSSH for this
 to work if you have not already. See above for how to switch to OpenSSH.
 Please make sure all zones have OpenSSH installed prior to following any

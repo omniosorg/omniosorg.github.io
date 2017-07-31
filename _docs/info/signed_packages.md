@@ -6,16 +6,16 @@ show_in_sidebar: false
 
 # Signed Packages
 
-With the [r151008 release cycle](/legacy/releasenotes/r151008), OmniTI
+With the [r151008 release cycle](/legacy/releasenotes/r151008.html), OmniTI
 started providing cryptographically signed packages in the main release
 repository. Our intention is to provide signed packages for all new
 packages published to any release repo.
 
-With the [r151014 release cycle](/legacy/releasenotes/r151014) we take the
+With the [r151014 release cycle](/legacy/releasenotes/r151014.html) we take the
 further step with ISO and Kayak installations that the “omnios”
 publisher will now **require** signed OmniOS packages. If someone
 upgrades from pre-r151014 to r151014, they must follow the
-[documented upgrade instructions](/legacy/upgrade_to_r151014) to make
+[documented upgrade instructions](/legacy/upgrade_to_r151014.html) to make
 **require-signatures** the signature policy for the “omnios” publisher.
 This policy will not affect other publishers' default settings.
 
@@ -48,7 +48,7 @@ so.
 Both publishers and images (i.e. collections of publishers that supply
 software to an instance of OmniOS) have a property (signature-policy)
 that governs whether and to what extent package signatures should be
-checked. People who [upgrade to r151014](/legacy/upgrade_to_r151014) are
+checked. People who [upgrade to r151014](/legacy/upgrade_to_r151014.html) are
 expected to change the omnios publisher's policy per the documented
 upgrade instructions.
 

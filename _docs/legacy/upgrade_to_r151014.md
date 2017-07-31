@@ -137,8 +137,7 @@ Assuming the attach succeeds, the zone may be booted as usual:
 # /usr/sbin/zoneadm -z <zonename> boot
 ```
 
-Post-Upgrade (from pre-r151014 systems)
----------------------------------------
+## Post-Upgrade (from pre-r151014 systems)
 
 If you are running one or more instances of pkg.depotd(1M), then after
 the upgrade you will need to refresh and clear them, as the name of the

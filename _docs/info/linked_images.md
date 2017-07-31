@@ -5,11 +5,10 @@ show_in_sidebar: true
 ---
 
 # Linked Image Zones
-==================
 
-Starting with [r151014](/legacy/releasenotes/r151014), the ability to have
+Starting with [r151014](/legacy/releasenotes/r151014.html), the ability to have
 linked-image zones is available. In OmniOS, we chose to make
-linked-images an option, available through the “lipkg” brand zone. The
+linked-images an option, available through the `lipkg` brand zone. The
 only difference between an ipkg zone (the normal zone type for OmniOS)
 and lipkg zones is the linking of images.
 
@@ -31,9 +30,9 @@ zones automatically updated.
 
 ### r151022 and beyond
 
-It has [its own page](/info/newlinkedimages), but in a nutshell, the
+It has [its own page](/info/newlinkedimages.html), but in a nutshell, the
 linkage in linked-image zones weakens some, unless you are using the
-new-in-[r151022](/legacy/releasenotes/r151022) “-r” flag for pkg(1).
+new-in-[r151022](/legacy/releasenotes/r151022.html) `-r` flag for pkg(1).
 
 ## How do I use linked images with my zones?
 

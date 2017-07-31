@@ -14,7 +14,7 @@ install the bits on a preconfigured rpool.
 
 # BSD Loader Menu
 
-See the [Loader usage documentation](/info/loader#InteractingwithLoader).
+See the [Loader usage documentation](/info/loader.html#InteractingwithLoader).
 The new ISO/USB media for r151022 and later will boot with the Loader
 instead of GRUB.
 
@@ -62,6 +62,6 @@ and the new is mounted on for further editing. contains commands that
 will run exactly once at first-boot time. Network configuration could be
 done here, for example. Other configuration on could be done at this
 time as well via the shell. Once the machine reboots, the
-newly-installed rpool will display [Loader](/info/loader) and then
+newly-installed rpool will display [Loader](/info/loader.html) and then
 boot into the newly-installed BE.
 
