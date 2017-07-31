@@ -120,7 +120,7 @@ Interacting with Loader
 
 The Loader main screen looks like this:
 
-![Main loader screen)](/assets/images/install_48_48.png)
+![Main loader screen)](/assets/images/Loader.png)
 
 Normally a 10-second countdown will display at the bottom, and if
 nothing is done, OmniOS itself will boot. This screen provides all of
