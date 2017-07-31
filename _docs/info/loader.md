@@ -149,6 +149,6 @@ time as follows:
 ![Selecting a Boot Environment](/assets/images/BootEnv.png)
 
 Like GRUB, a selected BE is NOT marked for persistent default. Only
-OmniOS's (1M) command can do that.
+OmniOS's beadm(1M) command can do that.
 
 ALL loader screens will boot OmniOS upon the press of RETURN.
