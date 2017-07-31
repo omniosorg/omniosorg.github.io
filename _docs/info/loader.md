@@ -1,7 +1,7 @@
 ---
 title: BSD Loader
 category: info
-show_in_sidebar: false
+show_in_sidebar: true
 ---
 
 illumos Loader (aka. BSD Loader)
