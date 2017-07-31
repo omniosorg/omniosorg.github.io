@@ -52,11 +52,11 @@ Prepare a volume for the VM:
 # zfs create -V <size> <pool>/<zvol-name>
 ```
 
-<size> should be an appropriately-sized virtual disk. E.g. 32G.
+`<size>` should be an appropriately-sized virtual disk. E.g. 32G.
 
-<pool> and <zvol-name> represent a pool, and a name of a ZFS Volume. The
+`<pool>` and `<zvol-name>` represent a pool, and a name of a ZFS Volume. The
 `-V` flag indicates you're creating a ZFS Volume, and an entry in
-`/dev/zvol/dsk/<pool>/<zvol-name>`.
+`/dev/zvol/rdsk/<pool>/<zvol-name>`.
 
 ### Start Virtual Machine
 
