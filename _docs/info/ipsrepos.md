@@ -14,16 +14,16 @@ they like it to be installed) or use repositories published by other users.
 
 Maintainers of add-on repositories are encouraged to share their work with the
 community. If you wish to have your repository listed here, please get in
-touch [in the Lobby](https://gitter.im/omniosorg/Lobby)
+touch [in the Lobby](https://gitter.im/omniosorg/Lobby).
 
 ## Repos
 
-| URL                                        | Publisher    | Build Scripts                                                     | Notes                                       |
-|--------------------------------------------|--------------|-------------------------------------------------------------------|---------------------------------------------|
-| <https://pkg.omniosce.org/r151022/core/>   | omnios       | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (stable)
-| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (stable)
-| <https://pkg.omniosce.org/bloody/core/>    | omnios       | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
-| <https://pkg.omniosce.org/bloody/extra/>   | extra.omnios | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
+| URL                                        | Publisher    | Signed | Build Scripts                                                     | Notes                                       |
+|--------------------------------------------|--------------|--------|-------------------------------------------------------------------|---------------------------------------------|
+| <https://pkg.omniosce.org/r151022/core/>   | omnios       | yes    | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (stable)
+| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | yes    | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (stable)
+| <https://pkg.omniosce.org/bloody/core/>    | omnios       | no     | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
+| <https://pkg.omniosce.org/bloody/extra/>   | extra.omnios | no     | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
 
 ## Unofficial Extras
 
