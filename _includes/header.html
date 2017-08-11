@@ -4,7 +4,7 @@
     {% for item in site.pages %}
     {% if item.title and item.show_in_menu %}
     <li>
-        <a href="{{ item.url | prepend: site.baseurl }}"
+        <a href="{{ item.url | prepend: site.baseurl }}.html"
            class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a>
     </li>
     {% endif %}
@@ -37,7 +37,7 @@
             <ul class="right hide-on-med-and-down">
                 {% for item in site.pages %}
                 {% if item.title and item.show_in_menu %}
-                <li><a href="{{ item.url | prepend: site.baseurl }}" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
                 {% endif %}
                 {% endfor %}
                 <li><a class="dropdown-button orange-text" href="#" data-activates="media-download">Downloads</a></li>
