@@ -9,4 +9,4 @@ After careful consideration of all the input, the OmniOSce Association has decid
 
 This results in the following release schedule with r151024 being targeted for the first week of November 2017.
 
-<img class="responsive-img" src="/release-plan.svg" alt="OmniOSce Release Plan" />
+<img class="responsive-img" src="/release-plan.png" alt="OmniOSce Release Plan" />
