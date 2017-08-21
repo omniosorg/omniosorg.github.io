@@ -9,8 +9,5 @@ OmniOS Community Edition has updated the bzip2 Package for r151022 and bloody to
 
 > A remote user can create a specially crafted bzip2 file that, when processed for recovery by the target application, will trigger a use-after-free memory error in bzip2recover and cause the target application to crash.
 
-This release does NOT require a reboot.
+This update does NOT require a reboot.
 
-Full release notes can be found at 
-
-[https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md)
