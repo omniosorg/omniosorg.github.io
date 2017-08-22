@@ -4,7 +4,9 @@ category: setup
 show_in_sidebar: true
 ---
 
-To transition an existing system that is running OmniOS to
+# Switching to OmniOSce
+
+To transition an existing system that is running OmniOS r151022 to
 the OmniOS Community Edition, install the OmniOSce CA certificate,
 change the pkg publisher, and run pkg update, as follows.
 
