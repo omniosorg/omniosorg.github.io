@@ -69,7 +69,8 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
     currency: $('#currency').val(),
     amount: $('#amount').val() * 10,
     allowRememberMe: true,
-    billingAddress: true
+    billingAddress: true,
+    panelLabel: 'Pay {{amount}} '+ $('#period').val()
   });
   e.preventDefault();
 });
