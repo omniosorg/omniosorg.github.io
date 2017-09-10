@@ -26,14 +26,15 @@ decides about the use of the money.
     <label for="first_name">Amount</label>
 </div>
 <div class="input-field col s6 m5 l3 xl2">
-    <select>
-      <option default value="USD">US Dollars</option>
-      <option value="CHF">Swiss France</option>
-      <option value="EUR">Euros</option>
+    <select id="currency">
+      <option default value="usd">US Dollars</option>
+      <option value="gbp">GB Pounds</option>
+      <option value="eur">Euros</option>
+      <option value="chf">Swiss Francs</option>
     </select>
     <label>Currency</label>
 </div><div class="input-field col s12 offset-m1 m10 l3 xl2">
-    <select>
+    <select id="period">
       <option default value="Monthly">Monthly</option>
       <option value="OneTime">One Time</option>
       <option value="Weekly">Weekly</option>
@@ -64,9 +65,9 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
   // Open Checkout with further options:
   handler.open({
     name: 'OmniOS Patron',
-    description: 'Subscription',
-    currency: 'chf',
-    amount: 2000,
+    description: $('#period').val() + ' Contribution',
+    currency: $('#currency').val(),
+    amount: $('#amount').val() * 10,
     allowRememberMe: true,
     billingAddress: true
   });
@@ -77,7 +78,6 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
 window.addEventListener('popstate', function() {
   handler.close();
 });
-})();
-</script>
+})();</script>
 
 WORK IN PROGRESS!
