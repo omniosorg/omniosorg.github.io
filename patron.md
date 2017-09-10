@@ -67,7 +67,7 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
     name: 'OmniOS Patron',
     description: $('#period').val() + ' Contribution',
     currency: $('#currency').val(),
-    amount: $('#amount').val() * 10,
+    amount: parseFloat($('#amount').val()) * 100,
     allowRememberMe: true,
     billingAddress: true,
     panelLabel: 'Pay {{amount}} '+ $('#period').val()
