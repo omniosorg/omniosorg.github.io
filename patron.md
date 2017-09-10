@@ -19,35 +19,65 @@ they put into the project. Ultimately the board of the OmniOSce Association
 decides about the use of the money.
 
 
-<form>
+<form class="patron_form" action="/create_subscription.php" method="POST">
 <div class="row">
-<div class="input-field col s3">
+<div class="input-field col s6 offset-m1 m5 offset-l2 l2 offset-xl3 xl2">
     <input placeholder="Amount" id="amount" type="text" class="validate">
     <label for="first_name">Amount</label>
 </div>
-<div class="input-field col s3">
+<div class="input-field col s6 m5 l3 xl2">
     <select>
-      <option value="" disabled selected>Choose your option</option>
+      <option default value="USD">US Dollars</option>
       <option value="CHF">Swiss France</option>
       <option value="EUR">Euros</option>
-      <option value="USD">US Dollars</option>
     </select>
     <label>Currency</label>
-</div><div class="input-field col s3">
+</div><div class="input-field col s12 offset-m1 m10 l3 xl2">
     <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="Monthly">Monthly</option>
+      <option default value="Monthly">Monthly</option>
       <option value="OneTime">One Time</option>
       <option value="Weekly">Weekly</option>
       <option value="Yearly">Yearly</option>
     </select>
     <label>Period</label>
 </div>
-<div class="col s3">
-    <button class="btn waves-effect waves-light btn-large" type="submit" name="action"><i class="material-icons right">done</i>Become a Patron</button>
+<div class="col s12 offset-m1 m10 offset-l2 l8 offset-xl3 xl6">
+    <button style="width: 100%" id="start-stripe" class="btn waves-effect waves-light btn-large" type="submit" name="action"><i class="material-icons right">done</i>Become a Patron</button>
 </div>
 </div>
 </form>
 
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script>
+(function(){
+var handler = StripeCheckout.configure({
+  key: 'pk_test_UFESfp6M4UmMqz340REVYtCB',
+  image: '/favicon-512.png',
+  locale: 'auto',
+  token: function(token) {
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('start-stripe').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'OmniOS Patron',
+    description: 'Subscription',
+    currency: 'chf',
+    amount: 2000,
+    allowRememberMe: true,
+    billingAddress: true
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+})();
+</script>
 
 WORK IN PROGRESS!
