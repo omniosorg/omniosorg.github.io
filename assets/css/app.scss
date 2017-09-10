@@ -29,7 +29,7 @@ main {
 }
 
 article table {
-  width: initial;
+  /*width: initial;*/
   > tbody {
     > tr:nth-child(odd) {
       background-color: $table-striped-color;
