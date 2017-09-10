@@ -13,10 +13,10 @@ help secure its future. You can either join us and start contributing your
 time, or you can become a OmniOS Patron.
 
 We use the money provided by our patrons to pay for any services we use in
-publishing and maintaining OmniOS. The rest of the monney gets divided up
+publishing and maintaining OmniOS. The rest of the money gets divided up
 and distributed among the core contributors according to the amount of time
 they put into the project. Ultimately the board of the OmniOSce Association
-decides about the use of the monney.
+decides about the use of the money.
 
 
 <form>
