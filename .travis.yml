@@ -2,12 +2,13 @@ language: ruby
 cache: bundler
 sudo: false
 rvm: 2.4
-
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: H0802llxLrUkSChwtAfArMLKWXp6BphSn0x7xAwb0Z4rlRwmAbc42vPfe4aqSigFQQ0LPqYAOT4sjUEiEr1WnmEC5JSzzEGNk15d007qkXBp881h43lYpi0KgKOEbS8D5bgBe4sB1OCFvSFHR5XxOb8WlFa1AJliDawQcKfu/C+9kAj5digMqqgblV1rMLHThcXoJfnJDxuAZK1Fjse1/BJqqBxeaMg9ymSemFGPcngwXUWPx8WRM+8I3ffD4Fx8q23PCv67lAsYdfwxznE2RLNzh8NosuXX1jKq9wkEhwUvU5daz52DocJAPR8VXDjX/FJhgab8LqMQ2vxqz615pQuid7pi95Rdz+t7daTD6Iae5ktiVRFZ0gsJzccb5uoD6HqcWEt6ev/3qUqeG4SZg1R7VNf9OOawj5BSwCXNnx9WfwLcUkl4dv1R77yL+ltNQJLjtCNdeHe8T6Tmwa8AjlprkTisb5aBuwrdpUpBPU76tK28gpSw8MtzRsCDwh5JvnH0AmlG96kI6dM7CCTCCLiZEUZNEiQ/IM2qpw7+RG8YnRsFingGh56TAmyBNapZGL9JQeOJf75HIKIQ4SqgB5sRrihlkl6Yik065MVqXzKdVBFBoCG+XKF+BbqzcnpDoLro/HEla03jUKOxRAxqMKRuFCAfS7nQWGaDWu62YzM=
+before_install:
+  - openssl aes-256-cbc -k "$super_secret_password" -in site-deply-key.enc -out site-deploy-key -d
 script:
- - bundle exec jekyll build
- - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
- 
+  - bundle exec jekyll build
+  - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
+  - scp -o IdentityFile=site-deploy-key -P 8114 -rp _site/* pkg.omniosce.org:
