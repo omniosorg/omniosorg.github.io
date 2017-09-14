@@ -12,4 +12,4 @@ before_install:
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
-  - 'scp -i site-deploy-key -o StrictHostKeyChecking=no -P 8114 -rp ./_site/ website@pkg.omniosce.org:'
+  - 'scp -i site-deploy-key -o StrictHostKeyChecking=no -P 8114 -rp ./_site/ website@pkg.omniosce.org:site'
