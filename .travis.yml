@@ -11,4 +11,4 @@ before_install:
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
-  - scp -o IdentityFile=site-deploy-key -P 8114 -rp _site/* pkg.omniosce.org:
+  - scp -o IdentityFile=site-deploy-key -o StrictHostKeyChecking=no -P 8114 -rp _site/* website@pkg.omniosce.org:
