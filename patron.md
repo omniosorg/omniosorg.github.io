@@ -19,14 +19,14 @@ they put into the project. Ultimately the board of the OmniOSce Association
 decides about the use of the money.
 
 
-<form class="patron_form" action="/create_subscription.php" method="POST">
+<form class="patron_form">
 <div class="row">
 <div class="input-field col s6 offset-m1 m5 offset-l2 l2 offset-xl3 xl2">
-    <input placeholder="Amount" id="amount" type="text" class="validate">
-    <label for="first_name">Amount</label>
+    <input placeholder="Amount" name="amount" id="amount_fld" type="text" class="validate">
+    <label for="amount">Amount</label>
 </div>
 <div class="input-field col s6 m5 l3 xl2">
-    <select id="currency">
+    <select id="currency_fld">
       <option default value="usd">US Dollars</option>
       <option value="gbp">GB Pounds</option>
       <option value="eur">Euros</option>
@@ -34,7 +34,7 @@ decides about the use of the money.
     </select>
     <label>Currency</label>
 </div><div class="input-field col s12 offset-m1 m10 l3 xl2">
-    <select id="period">
+    <select id="period_fld">
       <option default value="Monthly">Monthly</option>
       <option value="OneTime">One Time</option>
       <option value="Weekly">Weekly</option>
@@ -56,8 +56,23 @@ var handler = StripeCheckout.configure({
   image: '/favicon-512.png',
   locale: 'auto',
   token: function(token) {
-    // You can access the token ID with `token.id`.
-    // Get the token ID to your server-side code for use.
+      jQuery.ajax('https://apps.omniosce.org/patron', {
+	dataType: 'json',
+	method: 'POST',
+	contentType: 'application/json; corset=utf-8',
+	data: JSON.strigify({
+	    token: token,
+	    amount: jQuery('#amount_fld').val(),
+	    period: jQuery('#period_fld').val()
+	    currency: jQuery('#currency_fld').val()
+	}),
+	succsss: function(msg){
+	    console.log('yey success')
+	},
+	error: function(xhr,status){
+	    console.log('problem' + status)
+	}
+     });
   }
 });
 
