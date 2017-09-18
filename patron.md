@@ -63,10 +63,10 @@ var handler = StripeCheckout.configure({
 	data: JSON.strigify({
 	    token: token,
 	    amount: jQuery('#amount_fld').val(),
-	    period: jQuery('#period_fld').val()
+	    period: jQuery('#period_fld').val(),
 	    currency: jQuery('#currency_fld').val()
 	}),
-	succsss: function(msg){
+	success: function(msg){
 	    console.log('yey success')
 	},
 	error: function(xhr,status){
