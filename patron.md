@@ -80,12 +80,12 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
   // Open Checkout with further options:
   handler.open({
     name: 'OmniOS Patron',
-    description: $('#period').val() + ' Contribution',
-    currency: $('#currency').val(),
-    amount: parseFloat($('#amount').val()) * 100,
+    description: $('#period_fld').val() + ' Contribution',
+    currency: $('#currency_fld').val(),
+    amount: parseFloat($('#amount_fld').val()) * 100,
     allowRememberMe: true,
     billingAddress: true,
-    panelLabel: 'Pay {{amount}} '+ $('#period').val()
+    panelLabel: 'Pay {{amount}} '+ $('#period_fld').val()
   });
   e.preventDefault();
 });
