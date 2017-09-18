@@ -60,7 +60,7 @@ var handler = StripeCheckout.configure({
 	dataType: 'json',
 	method: 'POST',
 	contentType: 'application/json; corset=utf-8',
-	data: JSON.strigify({
+	data: JSON.stringify({
 	    token: token,
 	    amount: jQuery('#amount_fld').val(),
 	    period: jQuery('#period_fld').val(),
