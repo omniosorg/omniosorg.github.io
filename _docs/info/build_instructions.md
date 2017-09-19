@@ -18,20 +18,21 @@ downstream
 Core OmniOS consists of several parts:
 
 * [illumos-omnios](https://github.com/omniosorg/illumos-omnios)
-    \- A minimally modified fork of
-    [illumos-gate](https://github.com/illumos/illumos-gate).
+    \- Our fork of [illumos-gate](https://github.com/illumos/illumos-gate).
 * [omnios-build](https://github.com/omniosorg/omnios-build)
     \- OmniOS userland packages.
 * [pkg5](https://github.com/omniosorg/pkg5)
     \- IPS packaging system.
 * [kayak](https://github.com/omniosorg/kayak)
     \- OmniOS installer.
+* [g11n](https://github.com/omniosorg/g11n)
+    \- Globalisation components (locales, iconv, etc.)
 
 ## How to build
 
 The easiest way to build OmniOS is using our
 [omni](https://github.com/omniosorg/omni) utility which can be installed from
-the `extra.omnios` IPS repository.
+the [extra.omnios](https://pkg.omniosce.org/bloody/extra) IPS repository.
 
 Each version of OmniOS can only be built on the same version so if you want
 to build bloody, you need a machine running up-to-date bloody and the same
@@ -40,7 +41,7 @@ version. A KVM instance works well - just be sure to use the `virtio` interface
 for the hard disk.
 
 First, create a GitHub account if you don't have one already and then use
-the web interface to fork the four repositories listed above.
+the web interface to fork the five repositories listed above.
 
 Once that's done you can add the `extra.omnios` publisher and install `omni`
 The example below is for bloody - if you're building a stable version then
