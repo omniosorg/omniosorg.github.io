@@ -194,3 +194,11 @@ footer.page-footer {
     line-height: 1.5;
     letter-spacing: -0.003em;
 }
+
+// get list styling back
+
+article
+{
+	ul {list-style-type: initial; padding-left: 30px; margin-top: 10px; margin-bottom: 15px;}
+	li {list-style-type: initial;}
+}
