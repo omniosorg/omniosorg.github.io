@@ -20,7 +20,7 @@ got a report to our issue tracker that both lx and native zones were not
 shutting down properly.  Andy quickly identified the likely culprit and
 backed out the offending commit and published an updated within hours.
 
-This website has also matured considerabl, it looks
+This website has also matured considerably, it looks
 much better now than a few days ago and it comes with much more content.  We
 already integrated two contributions from Rich Murphey @rich-murphey (thank
 you).  If you would also like to contribute, please send us your pull
