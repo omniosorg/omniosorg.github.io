@@ -7,10 +7,12 @@ layout: default
                 <h1 class="orange-text">{{ page.title }}</h2>
                 <h5 class="grey-text text-darken-1 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
 
+		{% if page.categories.size > 0 %}
                 <article class="post-categories center-align">
                     <div class="chip teal white-text">Categories</div>
                     {% for cat in page.categories %}<div class="chip">{{ cat }}</div> {% endfor %}
                 </article>
+		{% endif %}
                 <article class="grey-text text-darken-2 post-content">
                     {{ content }}
                 </article>
