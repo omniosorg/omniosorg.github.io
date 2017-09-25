@@ -7,7 +7,9 @@ layout: default
         <div class="row">
         {% if post == site.posts.first %}
                 <div class="col s12">
+			<a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}.html">
                         <h1 class="orange-text">{{ post.title }}</h4>
+			</a>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 on-index">
                             {{ post.content }}
