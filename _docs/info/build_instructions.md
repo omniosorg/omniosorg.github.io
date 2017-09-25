@@ -58,7 +58,7 @@ for this as shown below.
 
 ```
 # zfs create -o mountpoint=/build rpool/build
-% /opt/ooce/omni/setup /build <github username>
+% /opt/ooce/bin/omni setup /build <github username>
 ```
 
 > Note: It is also possible to build OmniOS in a non-global zone.
