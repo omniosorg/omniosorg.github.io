@@ -22,7 +22,7 @@ for release in r151022 bloody; do
         fi
 	pkgrepo create /pkg/$release/$arch
 	pkgrepo set -s /pkg/$release/$arch publisher/prefix=$pub
-	pkgrepo set -s /pkg/$release/$arch -p $pub repository/collection_type=core
+	pkgrepo set -s /pkg/$release/$arch -p $pub repository/collection_type=$collection
 	pkgrepo set -s /pkg/$release/$arch -p $pub repository/description="IPS Packages for OmniOS $release $arch"
 	pkgrepo set -s /pkg/$release/$arch -p $pub repository/name="OmniOS $release $arch"
 	svccfg -s pkg/server add ${release}_$arch
