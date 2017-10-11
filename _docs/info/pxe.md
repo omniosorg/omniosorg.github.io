@@ -7,8 +7,7 @@ show_in_sidebar: true
 # OmniOS Installation via PXE Boot
 
 These instructions show how to set up an OmniOS r151024 (or later) system
-as a network install server, and how to install another OmniOS system
-from it.
+as a network install server from which other OmniOS systems can be built.
 
 ## Install packages
 
