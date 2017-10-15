@@ -165,32 +165,38 @@ nav ul a.inline {
 }
 
 
-article {
+main article {
     font-size: 1.35rem;
     line-height: 1.5;
     font-weight: 300;
 
-    &.post-content {
-        ul {
-            margin-left: 20px;
-        }
-
-        li {
-            list-style-type: disc !important;
-        }
-
-        &.on-index {
-            padding: 0;
+    ul:not(.browser-default) {
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+	> li {
+            list-style-type: initial;
+	    margin-left: 1em;
+	    margin-bottom: 1ex;
+        } 
+     }
+     .select-wrapper > ul:not(.browser-default) {
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	> li {
+	    list-style-type: none;
+	    margin-left: 0px;
+	    margin-bottom: 0px;
+	}
+    }
+    &.on-index {
+           padding: 0;
             font-size: 17px;
             line-height: 1.5;
-        }
-    }
+   }
 }
 
-article li {
-	list-style-type: disc !important;
-	margin-left: 1em;
-}
 
 footer.page-footer {
     font-weight: 400;
@@ -202,8 +208,3 @@ footer.page-footer {
 
 // get list styling back
 
-article
-{
-	ul {list-style-type: initial; padding-left: 30px; margin-top: 10px; margin-bottom: 15px;}
-	li {list-style-type: initial;}
-}

@@ -35,10 +35,10 @@ decides about the use of the money.
     <label>Currency</label>
 </div><div class="input-field col s12 offset-m1 m10 l3 xl2">
     <select id="period_fld">
-      <option default value="Monthly">Monthly</option>
-      <option value="OneTime">One Time</option>
-      <option value="Weekly">Weekly</option>
-      <option value="Yearly">Yearly</option>
+      <option default value="month">Monthly</option>
+      <option value="once">One Time</option>
+      <option value="week">Weekly</option>
+      <option value="year">Yearly</option>
     </select>
     <label>Period</label>
 </div>
@@ -55,13 +55,15 @@ var handler = StripeCheckout.configure({
   key: 'pk_test_UFESfp6M4UmMqz340REVYtCB',
   image: '/favicon-512.png',
   locale: 'auto',
-  token: function(token) {
-      jQuery.ajax('https://apps.omniosce.org/patron', {
+  token: function(token,args) {
+//     jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
+       jQuery.ajax('http://localhost:3432/patron/subscribe', {
 	dataType: 'json',
 	method: 'POST',
 	contentType: 'application/json; corset=utf-8',
 	data: JSON.stringify({
 	    token: token,
+	    args: args,
 	    amount: jQuery('#amount_fld').val(),
 	    period: jQuery('#period_fld').val(),
 	    currency: jQuery('#currency_fld').val()
@@ -76,16 +78,18 @@ var handler = StripeCheckout.configure({
   }
 });
 
+// not using jQuery here since it is not loaded at this point (jquery gets
+// loaded at the bottom of html
 document.getElementById('start-stripe').addEventListener('click', function(e) {
   // Open Checkout with further options:
   handler.open({
     name: 'OmniOS Patron',
-    description: $('#period_fld').val() + ' Contribution',
-    currency: $('#currency_fld').val(),
-    amount: parseFloat($('#amount_fld').val()) * 100,
+    description: jQuery('#period_fld').val() + ' Contribution',
+    currency: jQuery('#currency_fld').val(),
+    amount: parseFloat(jQuery('#amount_fld').val()) * 100,
     allowRememberMe: true,
     billingAddress: true,
-    panelLabel: 'Pay {{amount}} '+ $('#period_fld').val()
+    panelLabel: 'Pay {{amount}} '+ jQuery('#period_fld').val()
   });
   e.preventDefault();
 });
