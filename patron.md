@@ -47,6 +47,7 @@ decides about the use of the money.
 </div>
 </div>
 </form>
+<div id="notice"></div>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
@@ -56,8 +57,10 @@ var handler = StripeCheckout.configure({
   image: '/favicon-512.png',
   locale: 'auto',
   token: function(token,args) {
-//     jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
-       jQuery.ajax('http://localhost:3432/patron/subscribe', {
+       jQuery('.patron_form').slideUp();
+       jQuery('#notice').html("<h1>Processing your Request ...</h1>");
+       jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
+       // jQuery.ajax('http://localhost:23843/patron/subscribe', {
 	dataType: 'json',
 	method: 'POST',
 	contentType: 'application/json; corset=utf-8',
@@ -69,10 +72,10 @@ var handler = StripeCheckout.configure({
 	    currency: jQuery('#currency_fld').val()
 	}),
 	success: function(msg){
-	    console.log('yey success')
+	    jQuery('#notice').html('<h1>Thank you for your patronage. We sent a confirmation message in your Mailbox.</h1>'); 
 	},
 	error: function(xhr,status){
-	    console.log('problem' + status)
+	   jQuery('#notice').html('<h1>There was a problem processing your request. Please contact patronage@omniosce.org.</h1>');
 	}
      });
   }
