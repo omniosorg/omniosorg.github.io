@@ -16,7 +16,7 @@ We use the money provided by our patrons to pay for any services we use in
 publishing and maintaining OmniOS. The rest of the money gets divided up
 and distributed among the core contributors according to the amount of time
 they put into the project. Ultimately the board of the OmniOSce Association
-decides about the use of the money.
+decides about the use of funds.
 
 
 <form class="patron_form">
@@ -58,7 +58,8 @@ var handler = StripeCheckout.configure({
   locale: 'auto',
   token: function(token,args) {
        jQuery('.patron_form').slideUp();
-       jQuery('#notice').html("<h1>Processing your Request ...</h1>");
+       jQuery('#notice').html("<h1>Processing your Request ... " .
+           "<img src=/spinner.gif></h1>");
        jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
        // jQuery.ajax('http://localhost:23843/patron/subscribe', {
 	dataType: 'json',
