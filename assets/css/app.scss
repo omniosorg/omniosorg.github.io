@@ -206,5 +206,21 @@ footer.page-footer {
     letter-spacing: -0.003em;
 }
 
+.fleft, .cfleft {
+	float: left;
+}
+
+.cfleft {
+	clear: left;
+}
+
+.fright, .cfright {
+	float: right;
+}
+
+.cfright {
+	clear: right;
+}
+
 // get list styling back
 
