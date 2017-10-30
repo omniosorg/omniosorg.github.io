@@ -72,7 +72,7 @@ var handler = StripeCheckout.configure({
 	    currency: jQuery('#currency_fld').val()
 	}),
 	success: function(msg){
-	    jQuery('#notice').html('<h1>Thank you for your patronage. We sent a confirmation message in your Mailbox.</h1>'); 
+	    jQuery('#notice').html('<h1>Thank you for your patronage. We sent a confirmation message to your Mailbox.</h1>'); 
 	},
 	error: function(xhr,status){
 	   jQuery('#notice').html('<h1>There was a problem processing your request. Please contact patronage@omniosce.org.</h1>');
