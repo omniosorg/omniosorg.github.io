@@ -67,7 +67,7 @@ var handler = StripeCheckout.configure({
 	data: JSON.stringify({
 	    token: token,
 	    args: args,
-	    amount: jQuery('#amount_fld').val(),
+	    amount: Math.round(parseFloat(jQuery('#amount_fld').val())),
 	    period: jQuery('#period_fld').val(),
 	    currency: jQuery('#currency_fld').val()
 	}),
@@ -89,7 +89,7 @@ document.getElementById('start-stripe').addEventListener('click', function(e) {
     name: 'OmniOS Patron',
     description: jQuery('#period_fld').val() + ' Contribution',
     currency: jQuery('#currency_fld').val(),
-    amount: parseFloat(jQuery('#amount_fld').val()) * 100,
+    amount: Math.round(parseFloat(jQuery('#amount_fld').val())) * 100,
     allowRememberMe: true,
     billingAddress: true,
     panelLabel: 'Pay {{amount}} '+ jQuery('#period_fld').val()
