@@ -58,7 +58,7 @@ var handler = StripeCheckout.configure({
   locale: 'auto',
   token: function(token,args) {
        jQuery('.patron_form').slideUp();
-       jQuery('#notice').html("<h1>Processing your Request ... " .
+       jQuery('#notice').html("<h1>Processing your Request ... " +
            "<img src=/spinner.gif></h1>");
        jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
        // jQuery.ajax('http://localhost:23843/patron/subscribe', {
