@@ -4,23 +4,40 @@ title: Upgrading OmniOS
 show_in_menu: false
 ---
 
-# Upgrading to a New OmniOS Stable Release
+# Upgrading to a New OmniOS Release
 
 The following table shows the supported upgrade paths between OmniOS versions.
-Upgrading from versions not listed below has not been tested.
+_Upgrading from versions not listed below has not been tested and is
+not supported._
 
 {:.bordered}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
-| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (Stable)
-| r151022 (LTS)			| &#8594;	| r151024 (Stable)
-| r151023 (bloody)		| &#8594;	| r151024 (Stable)
+| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable)
+| r151022 (LTS)			| &#8594;	| r151024 (stable)
+| r151023 (bloody)		| &#8594;	| r151024 (stable)
 
 ## Updating Installed Packages
 
 Prior to upgrading, ensure that you have the latest updates for the
-current release installed on the system. Check that `pkg list -u` produces
-no output and update if necessary before proceeding.
+current release installed on the system.
+
+```
+# pkg list -u
+no packages have newer versions available
+```
+
+Update if necessary before proceeding.
+
+## Installing the OmniOSce CA Certificate
+
+**If upgrading from OmniTI OmniOS** first install the OmniOSce CA certificate:
+
+```
+# wget -P /etc/ssl/pkg https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
+# openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
+8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
+```
 
 ## Performing the Upgrade
 
@@ -28,29 +45,33 @@ no output and update if necessary before proceeding.
   to upgrade it. Any changes made to the current boot environment after the
   update is started will be lost once you reboot into the new one. This
   includes changes to log files so you may wish to disable services that
-  produce log entries you don't want to lose before starting.
+  produce data or log entries that you don't want to lose before starting.
 
 * Make sure the global zone can reach the network.
+
 * Create a backup boot environment for safety:
   ```
   # beadm create <appropriate-backup-name>
   ```
+
 * Change the publisher in the global zone.
-  For example, going from r151022 to r151024:
+  For example, going from _r151022_ to _r151024_:
   ```
   # pkg set-publisher \
     -G https://pkg.omniosce.org/r151022/core \
     -g https://pkg.omniosce.org/r151024/core \
     omnios
   ```
-* Change the publisher in each native `lipkg` branded zone:
+
+* Change the publisher in each native _lipkg_ branded zone:
   ```
   # pkg -R /path/to/zone/root set-publisher 
     -G https://pkg.omniosce.org/r151022/core \
     -g https://pkg.omniosce.org/r151024/core \
     omnios
   ```
-* Shut down and detach any `ipkg` branded zones:
+
+* Shut down and detach any _ipkg_ branded zones:
   ```
   # zoneadm -z <zonename> shutdown
   ... use the following command to check when the zone has shut down ...
@@ -63,6 +84,7 @@ no output and update if necessary before proceeding.
   ```
   # zfs snapshot -r /path/to/zone@<old-release>
   ```
+
 * Perform the update, optionally specifying the new boot-environment name:
   ```
   # pkg update --be-name r151024
@@ -70,13 +92,14 @@ no output and update if necessary before proceeding.
   This will create a new BE and install the new packages into it. When this
   is complete, reboot your system. The new BE will now be the default
   option in loader.
+
 * Reboot
   ```
   # init 6
   ```
+
 * Re-attach any `ipkg` zones:
   ```
   # zoneadm -z <zonename> attach -u
   ```
-
 
