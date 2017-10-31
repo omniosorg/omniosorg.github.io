@@ -6,7 +6,7 @@ show_in_menu: false
 
 # Become a Patron of OmniOS Community Edition
 
-<img src="/support.png" class="fleft">
+<img src="/support.png" class="fleft" alt="Support Us">
 
 OmniOS Community Edition has no major company behind it, just a small team of
 people who spend their precious spare time keeping it up-to-date. If you
