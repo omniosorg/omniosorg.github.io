@@ -6,8 +6,10 @@ show_in_menu: false
 
 # Become a Patron of OmniOS Community Edition
 
-OmniOS Community Edition has no major company behind it, but a bunch of
-people who spend their precious spare time keeping it up to date.  If you
+<img src="/support.png" class="fleft">
+
+OmniOS Community Edition has no major company behind it, just a small team of
+people who spend their precious spare time keeping it up-to-date. If you
 are relying on OmniOS for fun or business, and you want to help secure its
 future, you can either join us and start contributing your time, or you can
 become an OmniOS Patron.
