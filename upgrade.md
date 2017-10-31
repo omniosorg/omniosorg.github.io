@@ -75,7 +75,7 @@ Update if necessary before proceeding.
   ```
   # zoneadm -z <zonename> shutdown
   ... use the following command to check when the zone has shut down ...
-  # zoneadm list -z <zonename> -v
+  # zoneadm -z <zonename> list -v
   # zoneadm -z <zonename> detach
   ```
   It is also a good idea to take a ZFS snapshot of the zone root in
@@ -87,7 +87,7 @@ Update if necessary before proceeding.
 
 * Perform the update, optionally specifying the new boot-environment name:
   ```
-  # pkg update --be-name r151024
+  # pkg update -r --be-name r151024
   ```
   This will create a new BE and install the new packages into it. When this
   is complete, reboot your system. The new BE will now be the default
