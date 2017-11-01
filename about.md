@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About OmniOSce
+title: About
 show_in_menu: true
 ---
 

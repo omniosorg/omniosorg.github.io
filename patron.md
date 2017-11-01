@@ -95,8 +95,8 @@ var handler = StripeCheckout.configure({
 document.getElementById('start-stripe').addEventListener('click', function(e) {
   e.preventDefault();
   var amount = parseFloat(jQuery('#amount_fld').val());
-  if (isNan(amount)) {
-	$('#notice').html('<h2>Please enter a valid amount above.</h2>');
+  if (isNaN(amount) || amount < 0) {
+	jQuery('#notice').html('<h2>Please enter a valid amount above.</h2>');
 	return false;
   }
   // Open Checkout with further options:
