@@ -79,7 +79,8 @@ var handler = StripeCheckout.configure({
 		'<img src=/thanks.png class="cfleft">' +
 		'<h2 class="fleft">Thank you for your patronage. ' +
 		'We have sent a confirmation message to the email address ' +
-		'provided. Please contact patronage@omniosce.org if the mail ' +
+		'provided.</h2>' +
+		'<h2>Please contact patronage@omniosce.org if the message ' +
 		'does not arrive within 24 hours.</h2>');
 	},
 	error: function(xhr,status){
@@ -92,17 +93,22 @@ var handler = StripeCheckout.configure({
 // not using jQuery here since it is not loaded at this point (jquery gets
 // loaded at the bottom of html
 document.getElementById('start-stripe').addEventListener('click', function(e) {
+  e.preventDefault();
+  var amount = parseFloat(jQuery('#amount_fld').val());
+  if (isNan(amount)) {
+	$('#notice').html('<h2>Please enter a valid amount above.</h2>');
+	return false;
+  }
   // Open Checkout with further options:
   handler.open({
     name: 'OmniOS Patron',
     description: jQuery('#period_fld').val() + ' Contribution',
     currency: jQuery('#currency_fld').val(),
-    amount: Math.round(parseFloat(jQuery('#amount_fld').val())) * 100,
+    amount: Math.round(amount) * 100,
     allowRememberMe: true,
     billingAddress: true,
     panelLabel: 'Pay {{amount}} '+ jQuery('#period_fld').val()
   });
-  e.preventDefault();
 });
 
 // Close Checkout on page navigation:
