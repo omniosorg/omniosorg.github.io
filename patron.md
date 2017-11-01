@@ -19,7 +19,7 @@ they put into the project. Ultimately the board of the OmniOSce Association
 decides about the use of funds.
 
 Since we keep updates coming to OmniOS, why not support our efforts with a
-rurring contribution. When you setup a donation, make sure to enter your
+recurring contribution. When you setup a donation, make sure to enter your
 email correctly, as we will alert you a few days before the next payment is
 due, with the option to cancel your subscription.
 
