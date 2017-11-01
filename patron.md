@@ -79,7 +79,8 @@ var handler = StripeCheckout.configure({
 		'<img src=/thanks.png class="cfleft">' +
 		'<h1 class="fleft">Thank you for your patronage. ' +
 		'We have sent a confirmation message to the email address ' +
-		'provided.</h1>'); 
+		'provided. Please contact patronage@omniosce.org if the mail ' +
+		'does not arrive within 24h.</h1>');
 	},
 	error: function(xhr,status){
 	   jQuery('#notice').html('<h1>There was a problem processing your request. Please contact patronage@omniosce.org.</h1>');
