@@ -4,9 +4,7 @@ title: Become a Patron of OmniOSce
 show_in_menu: false
 ---
 
-# Become a Patron of OmniOS Community Edition
-
-<img src="/support.png" class="fleft" alt="Support Us">
+# Become a Patron of OmniOS Community Edition 
 
 OmniOS Community Edition has no major company behind it, just a small team of
 people who spend their precious spare time keeping it up-to-date. If you
@@ -20,6 +18,10 @@ and distributed among the core contributors according to the amount of time
 they put into the project. Ultimately the board of the OmniOSce Association
 decides about the use of funds.
 
+Since we keep updates coming to OmniOS, why not support our efforts with a
+rurring contribution. When you setup a donation, make sure to enter your
+email correctly, as we will alert you a few days before the next payment is
+due, with the option to cancel your subscription.
 
 <form class="patron_form">
 <div class="row">
@@ -76,15 +78,14 @@ var handler = StripeCheckout.configure({
 	}),
 	success: function(msg){
 	    jQuery('#notice').html(
-		'<img src=/thanks.png class="cfleft">' +
-		'<h2 class="fleft">Thank you for your patronage. ' +
+		'<h2><i class="material-icons">check</i> Thank you for your patronage. ' +
 		'We have sent a confirmation message to the email address ' +
 		'provided.</h2>' +
 		'<h2>Please contact patronage@omniosce.org if the message ' +
-		'does not arrive within 24 hours.</h2>');
+		'does not arrive within a few minutes.</h2>');
 	},
 	error: function(xhr,status){
-	   jQuery('#notice').html('<h2>There was a problem processing your request. Please contact patronage@omniosce.org.</h2>');
+	   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> There was a problem processing your request. Please contact patronage@omniosce.org.</h2>');
 	}
      });
   }
@@ -117,5 +118,6 @@ window.addEventListener('popstate', function() {
 });
 })();</script>
 
-WORK IN PROGRESS!
-
+If you have questions regarding your patronage contribution, or if you want to
+discuss other options to support our work, please feel free to contact <a
+href="mailto:patronage@omniosce.org">patronage@omniosce.org</a> at any time.
