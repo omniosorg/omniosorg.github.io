@@ -98,7 +98,7 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   # init 6
   ```
 
-* Re-attach any `ipkg` zones:
+* Re-attach any _ipkg_ zones:
   ```
   # zoneadm -z <zonename> attach -u
   ```
