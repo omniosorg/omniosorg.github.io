@@ -36,7 +36,7 @@ Update if necessary before proceeding.
 ```
 # wget -P /etc/ssl/pkg https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
 # openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
-8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
+SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 ```
 
 ## Performing the Upgrade
