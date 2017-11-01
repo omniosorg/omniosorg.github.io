@@ -60,8 +60,8 @@ var handler = StripeCheckout.configure({
   locale: 'auto',
   token: function(token,args) {
        jQuery('.patron_form').slideUp();
-       jQuery('#notice').html("<h1>Processing your Request ... " +
-           "<img src=/spinner.gif></h1>");
+       jQuery('#notice').html("<h2>Processing your Request ... " +
+           "<img src=/spinner.gif></h2>");
        jQuery.ajax('https://apps.omniosce.org/patron/subscribe', {
        // jQuery.ajax('http://localhost:23843/patron/subscribe', {
 	dataType: 'json',
@@ -77,13 +77,13 @@ var handler = StripeCheckout.configure({
 	success: function(msg){
 	    jQuery('#notice').html(
 		'<img src=/thanks.png class="cfleft">' +
-		'<h1 class="fleft">Thank you for your patronage. ' +
+		'<h2 class="fleft">Thank you for your patronage. ' +
 		'We have sent a confirmation message to the email address ' +
 		'provided. Please contact patronage@omniosce.org if the mail ' +
-		'does not arrive within 24h.</h1>');
+		'does not arrive within 24 hours.</h2>');
 	},
 	error: function(xhr,status){
-	   jQuery('#notice').html('<h1>There was a problem processing your request. Please contact patronage@omniosce.org.</h1>');
+	   jQuery('#notice').html('<h2>There was a problem processing your request. Please contact patronage@omniosce.org.</h2>');
 	}
      });
   }
