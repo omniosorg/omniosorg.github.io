@@ -79,13 +79,14 @@ var handler = StripeCheckout.configure({
 	success: function(msg){
 	    jQuery('#notice').html(
 		'<h2><i class="material-icons">check</i> Thank you for your patronage. ' +
-		'We have sent a confirmation message to the email address ' +
-		'provided.</h2>' +
-		'<h2>Please contact patronage@omniosce.org if the message ' +
-		'does not arrive within a few minutes.</h2>');
+		'We have sent a confirmation message to the email address provided.</h2>' +
+		'<h3>Please contact <a href="mailto:patronage@omniosce.org">patronage@omniosce.org</a> ' +
+		'if the message does not arrive within a few minutes.</h3>');
 	},
 	error: function(xhr,status){
-	   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> There was a problem processing your request. Please contact patronage@omniosce.org.</h2>');
+	   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
+		'There was a problem processing your request. Please contact ' +
+		'<a href="mailto:patronage@omniosce.org">patronage@omniosce.org</a>.</h2>');
 	}
      });
   }
