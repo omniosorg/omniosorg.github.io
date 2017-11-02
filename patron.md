@@ -58,7 +58,8 @@ payment is due, with the option to cancel your subscription.
 <script>
 (function(){
 var handler = StripeCheckout.configure({
-  key: 'pk_test_UFESfp6M4UmMqz340REVYtCB',
+//  key: 'pk_test_UFESfp6M4UmMqz340REVYtCB',
+    key: 'pk_live_WJeXh3PCWlVcm1aSxBpEIT5B',
   image: '/favicon-512.png',
   locale: 'auto',
   token: function(token,args) {
