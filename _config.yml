@@ -8,6 +8,9 @@ paginate: 5
 paginate_path: "/page:num/"
 omnios_stable: r151022
 omnios_stable_suffix: s
+omnios_lts: r151022
+omnios_lts_suffix: s
+omnios_bloody: 20170925
 owner:
     email: info@omniosce.org
     facebook:
