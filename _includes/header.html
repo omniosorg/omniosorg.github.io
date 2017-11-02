@@ -35,19 +35,14 @@
         <div class="container container-large">
             <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" alt="Home"></a>
             <ul class="right hide-on-med-and-down">
-                {% for item in site.pages %}
+                {% assign pages = site.pages | sort: 'order' %}
+                {% for item in pages %}
                 {% if item.title and item.show_in_menu %}
                 <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
                 {% endif %}
                 {% endfor %}
-                <li><a class="dropdown-button orange-text" href="#" data-activates="media-download">Downloads</a></li>
             </ul>
         </div>
     </nav>
 </div>
 
-<ul id="media-download" class="dropdown-content">
-  <li><a href="https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}{{site.omnios_stable_suffix}}.iso" class="orange-text">ISO</a></li>
-  <li><a href="https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}{{site.omnios_stable_suffix}}.usb-dd" class="orange-text">USB</a></li>
-  <li><a href="https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2"  class="orange-text">PXE</a></li>
-</ul>

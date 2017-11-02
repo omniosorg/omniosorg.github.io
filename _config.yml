@@ -6,8 +6,12 @@ baseurl: ""
 logo: OmniOS Community Edition
 paginate: 5
 paginate_path: "/page:num/"
+download_path: https://downloads.omniosce.org/media
+download_prefix: omniosce-
+omnios_stable_date: the 12th of May, 2017
 omnios_stable: r151022
 omnios_stable_suffix: s
+omnios_lts_date: the 12th of May, 2017
 omnios_lts: r151022
 omnios_lts_suffix: s
 omnios_bloody: 20170925

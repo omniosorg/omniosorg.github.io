@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact
+order: 20
 show_in_menu: true
 ---
 

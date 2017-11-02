@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Release Schedule
+order: 50
 show_in_menu: true
 ---
 

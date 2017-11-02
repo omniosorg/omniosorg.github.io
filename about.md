@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+order: 10
 show_in_menu: true
 ---
 

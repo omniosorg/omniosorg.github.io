@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Become a Patron of OmniOSce
+order: 30
 show_in_menu: false
 ---
 
