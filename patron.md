@@ -7,10 +7,10 @@ show_in_menu: false
 # Become a Patron of OmniOS Community Edition 
 
 OmniOS Community Edition has no major company behind it, just a small team of
-people who spend their precious spare time keeping it up-to-date. If you
-are relying on OmniOS for fun or business, and you want to help secure its
-future, you can either join us and start contributing your time, or you can
-become an OmniOS Patron.
+people who spend their precious spare time keeping it up-to-date. If you rely
+on OmniOS for fun or business, and you want to help secure its future, you can
+either join us and start contributing your time, or you can become an OmniOS
+Patron.
 
 We use the money provided by our patrons to pay for any services we use in
 publishing and maintaining OmniOS. The rest of the money gets divided up
@@ -19,9 +19,9 @@ they put into the project. Ultimately the board of the OmniOSce Association
 decides about the use of funds.
 
 Since we keep updates coming to OmniOS, why not support our efforts with a
-recurring contribution. When you setup a donation, make sure to enter your
-email correctly, as we will alert you a few days before the next payment is
-due, with the option to cancel your subscription.
+recurring contribution? When you set up a donation, make sure to enter your
+email address correctly, as we will alert you a few days before the next
+payment is due, with the option to cancel your subscription.
 
 <form class="patron_form">
 <div class="row">
@@ -40,7 +40,7 @@ due, with the option to cancel your subscription.
 </div><div class="input-field col s12 offset-m1 m10 l3 xl2">
     <select id="period_fld">
       <option default value="month">Monthly</option>
-      <option value="once">One Time</option>
+      <option value="once">One-Off</option>
       <option value="week">Weekly</option>
       <option value="year">Yearly</option>
     </select>
