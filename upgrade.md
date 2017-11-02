@@ -17,18 +17,6 @@ not supported._
 | r151022 (LTS)			| &#8594;	| r151024 (stable)
 | r151023 (bloody)		| &#8594;	| r151024 (stable)
 
-## Updating Installed Packages
-
-Prior to upgrading, ensure that you have the latest updates for the
-current release installed on the system.
-
-```
-# pkg list -u
-no packages have newer versions available
-```
-
-Update if necessary before proceeding.
-
 ## Installing the OmniOSce CA Certificate
 
 **If upgrading from OmniTI OmniOS** first install the OmniOSce CA certificate:
