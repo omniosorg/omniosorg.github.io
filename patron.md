@@ -5,24 +5,27 @@ order: 30
 show_in_menu: false
 ---
 
-# Become a Patron of OmniOS Community Edition 
+# Become a Patron of the OmniOS Community Edition
 
 OmniOS Community Edition has no major company behind it, just a small team of
 people who spend their precious spare time keeping it up-to-date. If you rely
 on OmniOS for fun or business, and you want to help secure its future, you can
-either join us and start contributing your time, or you can become an OmniOS
-Patron.
+contribute by becoming an OmniOS patron.
 
-We use the money provided by our patrons to pay for any services we use in
+We are committed to providing updates to OmniOS for many years to come and
+to maintaining the stable and long-term-release models put in place by
+OmniTI before us. Your donation will help us to achieve that goal and
+ensure the long-term success of OmniOSce.
+
+We use the money provided by our patrons to pay for any services used in
 publishing and maintaining OmniOS. The rest of the money gets divided up
 and distributed among the core contributors according to the amount of time
 they put into the project. Ultimately the board of the OmniOSce Association
-decides about the use of funds.
+allocates the funds.
 
-Since we keep updates coming to OmniOS, why not support our efforts with a
-recurring contribution? When you set up a donation, make sure to enter your
-email address correctly, as we will alert you a few days before the next
-payment is due, with the option to cancel your subscription.
+If you set up a recurring subscription, please take care to enter your email
+address correctly as we will alert you a few days before the next payment is
+due, with the option to cancel your subscription.
 
 <form class="patron_form">
 <div class="row">
@@ -40,10 +43,10 @@ payment is due, with the option to cancel your subscription.
     <label>Currency</label>
 </div><div class="input-field col s12 offset-m1 m10 l3 xl2">
     <select id="period_fld">
-      <option default value="month">Monthly</option>
-      <option value="once">One-Off</option>
       <option value="week">Weekly</option>
+      <option selected default value="month">Monthly</option>
       <option value="year">Yearly</option>
+      <option value="once">One-Off</option>
     </select>
     <label>Period</label>
 </div>
@@ -80,15 +83,17 @@ var handler = StripeCheckout.configure({
 	}),
 	success: function(msg){
 	    jQuery('#notice').html(
-		'<h2><i class="material-icons">check</i> Thank you for your patronage. ' +
-		'We have sent a confirmation message to the email address provided.</h2>' +
-		'<h3>Please contact <a href="mailto:patronage@omniosce.org">patronage@omniosce.org</a> ' +
+		'<h2><i class="material-icons">check</i> ' +
+		'Thank you for your donation. We have sent a confirmation ' +
+		'message to the email address provided.</h2>' +
+		'<h3>Please contact ' +
+		'<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> ' +
 		'if the message does not arrive within a few minutes.</h3>');
 	},
 	error: function(xhr,status){
 	   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 		'There was a problem processing your request. Please contact ' +
-		'<a href="mailto:patronage@omniosce.org">patronage@omniosce.org</a>.</h2>');
+		'<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
 	}
      });
   }
@@ -121,6 +126,6 @@ window.addEventListener('popstate', function() {
 });
 })();</script>
 
-If you have questions regarding your patronage contribution, or if you want to
+If you have questions regarding your subscription, or if you want to
 discuss other options to support our work, please feel free to contact <a
-href="mailto:patronage@omniosce.org">patronage@omniosce.org</a> at any time.
+href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
