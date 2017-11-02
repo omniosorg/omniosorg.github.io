@@ -20,8 +20,8 @@ ensure the long-term success of OmniOSce.
 We use the money provided by our patrons to pay for any services used in
 publishing and maintaining OmniOS. The rest of the money gets divided up
 and distributed among the core contributors according to the amount of time
-they put into the project. Ultimately the board of the OmniOSce Association
-allocates the funds.
+they put into the project - with the OmniOSce Association directing fund
+allocation.
 
 If you set up a recurring subscription, please take care to enter your email
 address correctly as we will alert you a few days before the next payment is
