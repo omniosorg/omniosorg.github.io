@@ -7,7 +7,8 @@ show_in_menu: true
 
 # OmniOS Community Edition
 
-* [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - current stable
+* [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - current stable
+* [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - LTS
 
 # OmniTI OmniOS (archived)
 
