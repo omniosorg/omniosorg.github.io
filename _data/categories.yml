@@ -10,6 +10,10 @@
   title: OmniOS Operation
   order: 30
 
+- key: dev
+  title: OmniOS Development
+  order: 40
+
 - key: makingof
   title: The Making Of
   order: 99

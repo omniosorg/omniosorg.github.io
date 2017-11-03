@@ -1,6 +1,6 @@
 ---
 title: Building OmniOS
-category: info
+category: dev
 show_in_sidebar: true
 ---
 
@@ -74,4 +74,7 @@ and build the illumos and omnios components in turn.
 % /opt/ooce/bin/omni build_illumos
 % /opt/ooce/bin/omni build_omnios
 ```
+
+> You can also use `update_world` and `build_world` to update and build
+> everything at once.
 
