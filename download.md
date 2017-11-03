@@ -9,7 +9,7 @@ show_in_sidebar: true
 # OmniOSce Downloads
 
 Even-numbered releases of OmniOSce are stable and odd-numbered releases are
-unstable (bloody). See [stable vs. bloody](/info/stablevsbloody.html) for
+unstable (bloody). See [stable vs. bloody](/about/stablevsbloody.html) for
 more information on the difference between them.
 
 Refer to the [release schedule page](/schedule.html) for details regarding
