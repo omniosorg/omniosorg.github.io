@@ -1,6 +1,7 @@
 ---
 title: Switch to OmniOSce
 category: setup
+order: 10
 show_in_sidebar: true
 ---
 

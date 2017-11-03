@@ -1,6 +1,7 @@
 ---
 title: Minimalist Principle
-category: info
+category: about
+order: 99
 show_in_sidebar: true
 ---
 

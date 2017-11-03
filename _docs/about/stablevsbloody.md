@@ -1,6 +1,7 @@
 ---
 title: Stable vs. Bloody
-category: info
+category: about
+order: 99
 show_in_sidebar: true
 ---
 

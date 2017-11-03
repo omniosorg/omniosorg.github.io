@@ -1,6 +1,7 @@
 ---
 title: Installation Walk-through
 category: setup
+order: 20
 show_in_sidebar: true
 ---
 

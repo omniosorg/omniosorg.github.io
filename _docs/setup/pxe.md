@@ -1,6 +1,7 @@
 ---
 title: Installation via PXE Boot
-category: info
+category: setup
+order: 99
 show_in_sidebar: true
 ---
 
