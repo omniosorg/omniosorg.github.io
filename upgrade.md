@@ -10,7 +10,7 @@ The following table shows the supported upgrade paths between OmniOS versions.
 _Upgrading from versions not listed below has not been tested and is
 not supported._
 
-{:.bordered}
+{:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
 | r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable)
