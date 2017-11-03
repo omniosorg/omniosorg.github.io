@@ -3,6 +3,7 @@ layout: page
 title: Release Notes
 order: 40
 show_in_menu: true
+show_in_sidebar: true
 ---
 
 # OmniOS Community Edition

@@ -3,6 +3,7 @@ layout: page
 title: Release Schedule
 order: 50
 show_in_menu: true
+show_in_sidebar: true
 ---
 
 # OmniOSce Release Schedule

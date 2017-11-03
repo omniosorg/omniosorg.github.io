@@ -3,6 +3,7 @@ layout: page
 title: Downloads
 order: 60
 show_in_menu: true
+show_in_sidebar: true
 ---
 
 # OmniOSce Downloads

@@ -1,8 +1,9 @@
 ---
 layout: page
 title: About
+category: about
 order: 10
-show_in_menu: true
+show_in_sidebar: true
 ---
 
 <img class="responsive-img" src="/OmniOSce_logo.svg" alt="OmniOS Community Edition" />

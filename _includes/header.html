@@ -1,8 +1,9 @@
 {% assign mydocs = site.docs | group_by: 'category' %}
+{% assign pages = site.pages | sort: 'order' %}
 <ul id="slide-out" class="side-nav">
     <li><a href="{{ site.baseurl }}/" class="orange-text {% if "/" == page.url %}active{% endif %}">Home</a></li>
-    {% for item in site.pages %}
-    {% if item.title and item.show_in_menu %}
+    {% for item in pages %}
+    {% if item.title and item.show_in_sidebar %}
     <li>
         <a href="{{ item.url | prepend: site.baseurl }}.html"
            class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a>
@@ -37,7 +38,6 @@
             <div class="col s12 xl10 offset-xl1">
             <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" alt="Home"></a>
             <ul class="right hide-on-med-and-down">
-                {% assign pages = site.pages | sort: 'order' %}
                 {% for item in pages %}
                 {% if item.title and item.show_in_menu %}
                 <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>

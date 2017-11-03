@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Contact
+title: Contact Us
+category: about
 order: 20
-show_in_menu: true
+show_in_sidebar: true
 ---
 
 # Contact the OmniOSce Team

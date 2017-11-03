@@ -3,6 +3,7 @@ layout: page
 title: Become a Patron of OmniOSce
 order: 30
 show_in_menu: false
+show_in_sidebar: false
 ---
 
 # Become a Patron of the OmniOS Community Edition

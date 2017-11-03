@@ -2,6 +2,7 @@
 layout: page
 title: Upgrading OmniOS
 show_in_menu: false
+show_in_sidebar: true
 ---
 
 # Upgrading to a New OmniOS Release
