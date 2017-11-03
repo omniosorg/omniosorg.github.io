@@ -165,13 +165,16 @@ nav ul a.inline {
 }
 
 
-main article {
-    
-    line-height: 1.5;
+main article {    
+    line-height: 3.1ex;
     font-weight: 300;
-    ul,ol,p,table {
-	@extend .flow-text;
+    @media #{$medium-and-up} {
+	font-size: 1.2rem;
     }
+
+//  ul,ol,p,table {
+//	@extend .flow-text;
+//  }
     ul:not(.browser-default) {
         margin-left: 20px;
         margin-top: 10px;
