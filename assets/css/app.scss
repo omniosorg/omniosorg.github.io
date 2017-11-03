@@ -9,7 +9,7 @@ $h4-fontsize: 1rem;
 $h5-fontsize: 1rem;
 $h6-fontsize: 1rem;
 @import "materialize";
-@import "fontawesome";
+// @import "fontawesome";
 @import "pygments";
 @import "burger";
 
@@ -165,7 +165,8 @@ nav ul a.inline {
 }
 
 
-main article {    
+main list-article,
+main article {
     line-height: 3.1ex;
     font-weight: 300;
     @media #{$medium-and-up} {
@@ -195,11 +196,6 @@ main article {
 	    margin-bottom: 0px;
 	}
     }
-    &.on-index {
-           padding: 0;
-            font-size: 17px;
-            line-height: 1.5;
-   }
 }
 
 
