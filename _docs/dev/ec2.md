@@ -132,3 +132,11 @@ pool `phys_path` property, you would see an EC2 compatible value:
                 phys_path: '/xpvd/xdf@2048:a'
 ```
 
+# Uploading the image to AWS
+
+TBC...
+
+```
+# ec2-import-volume -o $AWS_ACCESS_KEY -w $AWS_SECRET_KEY -f raw -b <bucket> -z eu-west-2a /dev/zvol/rdsk/data/omniosce/hdd-ec2
+```
+
