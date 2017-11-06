@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Become a Patron of OmniOSce
-order: 30
-show_in_menu: false
-show_in_sidebar: false
+title: Donate
+order: 10
+show_in_menu: true
+show_in_sidebar: true
 ---
 
 # Become a Patron of the OmniOS Community Edition
