@@ -20,9 +20,9 @@ need:
 
 ```
 % pkg install git
-% it clone https://github.com/omniosorg/kayak
-% d kayak
-% get https://downloads.omniosce.org/media/stable/omniosce-r151024.zfs.bz2
+% git clone https://github.com/omniosorg/kayak.git
+% cd kayak
+% wget https://downloads.omniosce.org/media/stable/omniosce-r151024.zfs.bz2
 % pfexec ./build_xen.sh
 ```
 > NB: sudo can be used for privilege escalation in place of pexec if you have
@@ -42,7 +42,7 @@ phys_path: '/pci@0,0/pci1af4,2@5/blkdev@0,0:a'
 # Correcting the phys_path label
 
 This phys_path value from the label is used to set bootpath= kernel boot option
-when pv-grub is expanding $ZFS-BOOTFS macro. Therefore the value stored in the
+when pv-grub is expanding `$ZFS-BOOTFS` macro. Therefore the value stored in the
 pool's label needs to match the disk device name in EC2 environment. When
 booted in EC2 environment, the first disk will be represented by
 `/xpvd/xdf@2048` device, the second by `/xpvd/xdf@2064` and so on.
@@ -74,7 +74,7 @@ Device     Boot Start      End  Sectors Size Id Type
 /dev/vdb2       34816 16777215 16742400   8G bf Solaris
 ```
 
-Grab a copy of the OmniOS installer, pv grub and create a Xen config file:
+Grab a copy of the OmniOS installer, pv-grub and create a Xen config file:
 
 ```
 root@xen:/# wget https://downloads.omniosce.org/media/r151024/omniosce-r151024.iso
