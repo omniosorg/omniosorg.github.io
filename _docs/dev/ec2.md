@@ -125,18 +125,57 @@ bash-4.4# exit
 ```
 
 If you were now to re-attach the disk to an OmniOS system and query the
-pool `phys_path` property, you would see an EC2 compatible value:
+pool `phys_path` property, you would see an EC2 PV compatible value:
 
 ```
 # zdb -e -C syspool | grep phys_path
                 phys_path: '/xpvd/xdf@2048:a'
 ```
 
-# Uploading the image to AWS
-
-TBC...
+# Convert the raw disk image to VMDK Stream
 
 ```
-# ec2-import-volume -o $AWS_ACCESS_KEY -w $AWS_SECRET_KEY -f raw -b <bucket> -z eu-west-2a /dev/zvol/rdsk/data/omniosce/hdd-ec2
+wget -O VMDK-stream-converter-0.2.tar.gz \
+    https://github.com/imcleod/VMDK-stream-converter/archive/0.2.tar.gz
+gtar zxvf VMDK-stream-converter-0.2.tar.gz
+./VMDK-stream-converter-0.2/VMDKstream.py \
+    /dev/zvol/rdsk/data/omniosce/hdd-ec2 omniosr24.vmdk
+```
+
+# Uploading the image to AWS
+
+```
+export AWS_ACCESS_KEY=<access key>
+export AWS_SECRET_KEY=<secret key>
+export EC2_URL=https://ec2.eu-west-2.amazonaws.com
+```
+
+```
+# ec2-import-volume -o $AWS_ACCESS_KEY -w $AWS_SECRET_KEY \
+    -b <S3 bucket> -z eu-west-2a -f vmdk omniosr24.vmdk
+
+# ec2dct
+TaskType        IMPORTVOLUME    TaskId  import-vol-ffmkcg21     ExpirationTime  2017-11-13T22:25:34Z    Status  completed
+DISKIMAGE       DiskImageFormat RAW     DiskImageSize   8589934592      VolumeId        vol-0fe060b6203e94aad   VolumeSize      8       AvailabilityZone        eu-west-2a      ApproximateBytesConverted       8589934592
+```
+
+# Creating the AMI
+
+Once the image conversion has completed (as shown by the output of `ec2dct`,
+proceed to create the AMI.
+
+```
+# ec2addsnap vol-0fe060b6203e94aad
+SNAPSHOT      snap-0ed358e4e225b4df6  vol-0fe060b6203e94aad   pending 2017-11-07T17:52:57+0000                239848717670    8               Not Encrypted
+
+# ec2reg -s snap-0ed358e4e225b4df6 \
+    -d "OmniOSce r151024" -n "OmniOSce r151024" \
+    -a x86_64 --root-device-name /dev/sda \
+    --virtualization-type paravirtual
+IMAGE   ami-9dcbd7f9
+
+# ec2-describe-images ami-9dcbd7f9
+IMAGE   ami-9dcbd7f9    239848717670/OmniOSce r151024   239848717670    available       private         x86_64  machine                         ebs     /dev/sda        paravirtual     xen     2017-11-07T19:33:01.000Z
+BLOCKDEVICEMAPPING      EBS     /dev/sda                snap-0ed358e4e225b4df6  8       true    gp2             Not Encrypted
 ```
 
