@@ -10,11 +10,11 @@ show_in_sidebar: true
 
 The recommended way to configure and maintain KVM instances is to use the
 [kvmadm utility](http://www.kvmadm.org). This is available in the
-OmniOS extra repository. Substitute `r151024` below with the OmniOS release you
-are using.
+OmniOS extra repository. Substitute `{{site.omnios_stable}}` below with
+the OmniOS release you are using
 
 ```
-# pkg set-publisher -g https://pkg.omniosce.org/r151024/extra extra.omnios
+# pkg set-publisher -g https://pkg.omniosce.org/{{site.omnios_stable}}/extra extra.omnios
 # pkg install kvmadm
 ```
 
@@ -23,7 +23,7 @@ and refer to the [man page](https://github.com/hadfl/kvmadm/blob/master/doc/kvma
 `kvmadm` also supports running a KVM instance within a non-global zone to
 provide an extra layer of isolation.
 
-if you do not wish to use this utility, then the rest of the page contains
+If you do not wish to use this utility, then the rest of the page contains
 instructions for setting up a KVM instance by hand.
 
 <hr>
