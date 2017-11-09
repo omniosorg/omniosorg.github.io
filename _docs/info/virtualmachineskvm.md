@@ -74,8 +74,8 @@ Prepare a volume for the VM:
 ### Download an ISO
 
 ```
-# mkdir -p /export/vm
-# cd /export/vm
+# mkdir -p /export/iso
+# cd /export/iso
 # wget ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/9.1/FreeBSD-9.1-RC2-amd64-disc1.iso
 ```
 
