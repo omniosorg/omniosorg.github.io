@@ -42,7 +42,7 @@ phys_path: '/pci@0,0/pci1af4,2@5/blkdev@0,0:a'
 # Correcting the phys_path label
 
 This phys_path value from the label is used during initial pool import and
-if it does not patch the physical device path then the import will fail.
+if it does not match the real physical device path then the import will fail.
 When booted in EC2 environment, the first disk will be represented by
 `/xpvd/xdf@51712` device so the label needs correcting.
 
