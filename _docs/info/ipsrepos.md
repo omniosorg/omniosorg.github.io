@@ -20,8 +20,10 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby).
 
 | URL                                        | Publisher    | Signed | Build Scripts                                                     | Notes                                       |
 |--------------------------------------------|--------------|--------|-------------------------------------------------------------------|---------------------------------------------|
-| <https://pkg.omniosce.org/r151022/core/>   | omnios       | yes    | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (stable)
-| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | yes    | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (stable)
+| <https://pkg.omniosce.org/r151024/core/>   | omnios       | yes    | [r151024](https://github.com/omniosorg/omnios-build/tree/r151024) | Core OS components (stable)
+| <https://pkg.omniosce.org/r151024/extra/>  | extra.omnios | yes    | [r151024](https://github.com/omniosorg/omnios-extra/tree/r151024) | Additional packages (stable)
+| <https://pkg.omniosce.org/r151022/core/>   | omnios       | yes    | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (LTS)
+| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | yes    | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (LTS)
 | <https://pkg.omniosce.org/bloody/core/>    | omnios       | no     | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
 | <https://pkg.omniosce.org/bloody/extra/>   | extra.omnios | no     | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
 
