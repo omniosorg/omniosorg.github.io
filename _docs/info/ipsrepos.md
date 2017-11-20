@@ -18,6 +18,7 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby).
 
 ## Repos
 
+{:.bordered .responsive-table}
 | URL                                        | Publisher    | Signed | Build Scripts                                                     | Notes                                       |
 |--------------------------------------------|--------------|--------|-------------------------------------------------------------------|---------------------------------------------|
 | <https://pkg.omniosce.org/r151024/core/>   | omnios       | yes    | [r151024](https://github.com/omniosorg/omnios-build/tree/r151024) | Core OS components (stable)
@@ -29,6 +30,7 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby).
 
 ## Unofficial Extras
 
+{:.bordered .responsive-table}
 | URL                                      | Publisher          | Maintainer                             | Build Scripts                                                               | Notes                                                                        |
 |------------------------------------------|--------------------|----------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | <http://pkg.cs.umd.edu/>                 | cs.umd.edu         | Sergey Ivanov                          |                                                                             |                                                                              |
