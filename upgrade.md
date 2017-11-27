@@ -43,19 +43,15 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   ```
 
 * Change the publisher in the global zone.
-  For example, going from _r151022_ to _r151024_:
+  For example, going to _{{site.omnios_stable}}_:
   ```
-  # pkg set-publisher \
-    -G https://pkg.omniosce.org/r151022/core \
-    -g https://pkg.omniosce.org/r151024/core \
-    omnios
+  # pkg set-publisher -G '*' -g https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
   ```
 
 * Change the publisher in each native _lipkg_ branded zone:
   ```
-  # pkg -R /path/to/zone/root set-publisher 
-    -G https://pkg.omniosce.org/r151022/core \
-    -g https://pkg.omniosce.org/r151024/core \
+  # pkg -R /path/to/zone/root set-publisher -G '*' \
+    -g https://pkg.omniosce.org/{{site.omnios_stable}}/core \
     omnios
   ```
 
@@ -75,7 +71,7 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 
 * Perform the update, optionally specifying the new boot-environment name:
   ```
-  # pkg update -r --be-name r151024
+  # pkg update -r --be-name {{site.omnios_stable}}
   ```
   This will create a new BE and install the new packages into it. When this
   is complete, reboot your system. The new BE will now be the default

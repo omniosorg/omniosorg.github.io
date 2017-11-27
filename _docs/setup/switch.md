@@ -14,15 +14,14 @@ change the pkg publisher, and run pkg update, as follows.
 Get a copy of the OmniOSce CA certificate.
 
 ```
-# /usr/bin/wget -P /etc/ssl/pkg \
+# wget -P /etc/ssl/pkg \
     https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
 ```
 
 Check the certificate fingerprint.
 
 ```
-# /usr/bin/openssl x509 -fingerprint \
-    -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
+# openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
 ```
 
 The fingerprint should match this:
@@ -32,24 +31,22 @@ The fingerprint should match this:
 Change the publisher to the OmniOSce repo
 
 ```
-# /usr/bin/pkg set-publisher -P \
-   -G https://pkg.omniti.com/omnios/r151022/ \
-   -g https://pkg.omniosce.org/r151022/core/ omnios
+# pkg set-publisher -P -G '*' -g https://pkg.omniosce.org/r151022/core/ omnios
 ```
 
-If you have zones, change the publisher of each native zone.  To get a list of all your zones, run `zoneadm list -cv`. For each `<zone_root>`, add the zone's `/root` to the PATH given in the list.
+If you have zones, change the publisher of each native zone.  To get a list of
+all your zones, run `zoneadm list -cv`. For each `<zone_root>`, add the zone's
+`/root` to the PATH given in the list.
 
 
 ```
-# /usr/bin/pkg -R <zone_root> set-publisher -P \
-   -G https://pkg.omniti.com/omnios/r151022/ \
-   -g https://pkg.omniosce.org/r151022/core/ omnios
+# pkg -R <zone_root> set-publisher -P -G '*' -g https://pkg.omniosce.org/r151022/core/ omnios
 ```
 
 Install the OmniOSce CA certificate.
 
 ```
-# /usr/bin/pkg update -rv web/ca-bundle
+# pkg update -rv web/ca-bundle
 ```
 
 The downloaded OmniOSce CA certificate can be removed after it is installed.
@@ -61,5 +58,6 @@ The downloaded OmniOSce CA certificate can be removed after it is installed.
 Finally, update as usual.
 
 ```
-# /usr/bin/pkg update -rv
+# pkg update -rv
 ```
+
