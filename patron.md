@@ -134,7 +134,14 @@ IBAN CH22 0900 0000 6188 9767 7<br/>
 BIC POFICHBEXX<br/>
 Verein OmniOS Community Edition
 
-
 If you have questions regarding your subscription, or if you want to
 discuss other options to support our work, please feel free to contact <a
 href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
+
+## How your payments are processed
+
+Our donation system is using stripe.com as a payment provider. We do not keeep ANY
+information local. Credit card numbers are NOT available to us at any point
+in the payment process. The integration of stripe.com and all the user
+interactions are handled by our <a href="https://github.com/omniosorg/ooceapps">OcceApps</a> package.
+
