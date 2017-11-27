@@ -127,6 +127,14 @@ window.addEventListener('popstate', function() {
 });
 })();</script>
 
+You can also use tradtional banking transactions to send us your
+contributions by paying directly to our account here in Switzerland.
+
+IBAN CH22 0900 0000 6188 9767 7<br/>
+BIC POFICHBEXX<br/>
+Verein OmniOS Community Edition
+
+
 If you have questions regarding your subscription, or if you want to
 discuss other options to support our work, please feel free to contact <a
 href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
