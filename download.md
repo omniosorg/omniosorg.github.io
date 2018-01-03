@@ -15,6 +15,14 @@ more information on the difference between them.
 Refer to the [release schedule page](/schedule.html) for details regarding
 the following versions and end-of-support dates.
 
+We also provide public [Amazon Machine Images (AMIs)](/setup/aws.html) for
+some regions.
+
+All OmniOS releases are for the x86-64 architecture only.
+
+Please refer to the [installation walk-through](/setup/freshinstall.html)
+for more information on how to install a fresh system.
+
 ## Current Stable Release
 
 Stable releases come out approximately every six months and are supported for
