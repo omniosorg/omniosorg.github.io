@@ -1,0 +1,135 @@
+---
+layout: default
+---
+<div class="container omniad">
+    <div class="row">
+       <div class="col s12 offset-m2 m8">
+           <img src="OmniOSce_logo.svg" class="responsive-img"/>
+       </div>
+       <div class="claim col s12 offset-m2 m8">
+           The OpenSource Enterprise Server OS with just the features you need.
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="features col s12 m8 l8 xl9">
+           <div class="row">
+               <div class="col s12">
+                   <h3>Key Features</h3>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Built-in Storage</span>
+                       <p>Explain ZFS: snapshots, redundancy, checksumming, storage manager.</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">VM hypervisor</span>
+                       <p>Explain KVM and soon bhyve support</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Lightweight container host</span>
+                       <p>explain native zones, and lxzones</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Built-in networking</span>
+                       <p>explain neworking capabilities </p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Open Source</span>
+                       <p>explain oss nature of omnios</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Built-in tracing</span>
+                       <p>explain advantages of dtract</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Fast deployment</span>
+                       <p>explain kayak</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Seemles updates and upgrades</span>
+                       <p>explain pkg</p>
+                  </div>
+                  </div>
+               </div>
+               <div class="col s12 m6 l6 xl4">
+                  <div class="card">
+                  <div class="card-content">
+                       <span class="card-title">Commercial support</span>
+                       <p>explain support options</p>
+                  </div>
+                  </div>
+               </div>
+           </div>
+        </div>
+        <div class="news col s12 m4 l4 xl3">
+            <div class="row">
+                <div class="col s12">
+                    <h3>Latest News</h3>
+                </div>
+            {% for post in site.posts limit:4 %}
+                <div class="news col s12">
+                <div class="card">
+                    <a href="{{ post.url | prepend: site.baseurl }}.html">
+                        <div class="card-content">
+                            <p><i>{{ post.date | date: "%B %-d, %Y" }}</i></p>
+                            <p>{{ post.title }}</p>
+                        </div>
+                    </a>
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+jQuery(document).ready(function(){
+    var resizer = function (){
+        var width = jQuery(window).width();
+        var height = 0;
+        var cards = jQuery('.features .row .col .card');
+        cards.css('height','auto');
+        if (width < 600){
+            return;
+        }
+        cards.each(function(){
+            height = Math.max(height,$(this).height());
+            return this;
+        })
+        .css('height',height);
+    };
+    resizer();
+    jQuery(window).on('resize',resizer);
+});
+</script>

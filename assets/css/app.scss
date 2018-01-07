@@ -184,7 +184,7 @@ main article {
             list-style-type: initial;
 	    margin-left: 1em;
 	    margin-bottom: 1ex;
-        } 
+        }
      }
      .select-wrapper > ul:not(.browser-default) {
 	margin-left: 0px;
@@ -223,5 +223,27 @@ footer.page-footer {
 	clear: right;
 }
 
-// get list styling back
+.omniad {
+    .claim {
+        padding-top: 3ex;
+        padding-bottom: 3ex;
+        font-weight: 300;
+        font-size: 40px;
+        @media #{$medium-and-down} {
+            font-size: 30px;
+        }
+        @media #{$small-and-down} {
+            font-size: 20px;
+        }
+    }
+    .news {
+        .card-content {
+            color: black;
+            p i {
+                font-size: 80%;
+            }
+        }
 
+    }
+}
+// get list styling back
