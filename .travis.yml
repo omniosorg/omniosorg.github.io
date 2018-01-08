@@ -10,6 +10,7 @@ before_install:
   - openssl aes-256-cbc -k "$super_secret_password" -in site-deploy-key.enc -out site-deploy-key -d
   - chmod 600 site-deploy-key
 script:
+  - rm -f vendor/bundle/ruby/2.4.0/gems/jekyll-2.4.0/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb || true
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
   - 'rm _site/site-deploy-key*'
