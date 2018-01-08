@@ -51,5 +51,9 @@ defaults:
       order: 999
 
 permalink: "/article/:title"
+
+exclude:
+  - vendor/bundle
+
 gems:
     - jekyll-feed
