@@ -23,9 +23,9 @@ VMware, Xen, KVM or Bhyve. The following configuration is recommended for
 such deployments.
 
 {:.bordered .responsive-table}
-| Architecture | 64-bit (x64-64) |
-| Memory Size | 1GiB |
-| Hard Disk | 8GiB |
+| Architecture | 64-bit (x86-64) |
+| Memory Size | 1GiB (minimum) |
+| Hard Disk | 8GiB (minimum) |
 
 ## Booting from the image
 
