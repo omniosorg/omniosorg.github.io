@@ -10,7 +10,7 @@ download_path: https://downloads.omniosce.org/media
 download_prefix: omniosce-
 omnios_stable_date: the 6th of November, 2017
 omnios_stable: r151024
-omnios_stable_suffix: 
+omnios_stable_suffix: l
 omnios_lts_date: the 12th of May, 2017
 omnios_lts: r151022
 omnios_lts_suffix: s
