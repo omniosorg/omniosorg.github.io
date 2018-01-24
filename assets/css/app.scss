@@ -225,18 +225,21 @@ footer.page-footer {
 
 .omniad {
     .claim {
-        padding-top: 3ex;
-        padding-bottom: 3ex;
+        padding-top: 2ex;
+        padding-bottom: 1ex;
         font-weight: 300;
-        font-size: 40px;
+        font-size: 30px;
         @media #{$medium-and-down} {
-            font-size: 30px;
+            font-size: 25px;
         }
         @media #{$small-and-down} {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     .news {
+        @media #{$medium-and-up} {
+            margin-top: 15ex;
+        }
         .card-content {
             color: black;
             p i {
