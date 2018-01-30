@@ -20,7 +20,7 @@ The cost for the support contract is 500 USD per server.
 <form id="invoice_form">
 <div class="row">
 <div class="input-field col s12 offset-m1 m10 offset-l2 l8">
-    <input placeholder="First name and last name (printed on invoice)" name="name" id="name_fld" type="text" class="validate">
+    <input placeholder="first name and last name" name="name" id="name_fld" type="text" class="validate">
     <label for="name">Your Name</label>
 </div>
 <div class="input-field col s12 offset-m1 m10 offset-l2 l8">
@@ -28,19 +28,19 @@ The cost for the support contract is 500 USD per server.
     <label for="name">Your eMail Address</label>
 </div>
 <div class="input-field col s12 offset-m1 m10 offset-l2 l8">
-    <input placeholder="Company name" name="company" id="company_fld" type="text" class="validate">
+    <input placeholder="company name" name="company" id="company_fld" type="text" class="validate">
     <label for="name">Company</label>
 </div>
 <div class="input-field col s12 offset-m1 m10 offset-l2 l8">
-    <input placeholder="your reference (printed on invoice)" name="ref" id="ref_fld" type="text" class="validate">
+    <input placeholder="your invoice reference (printed on invoice)" name="ref" id="ref_fld" type="text" class="validate">
     <label for="name">Ref</label>
 </div>
 <div class="input-field col s12 offset-m1 m10 offset-l2 l8">
-    <textarea placeholder="postal address (printed on invoice)" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
+    <textarea placeholder="postal address" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
     <label for="address">Address</label>
 </div>
 <div class="input-field col s6 offset-m1  m5 offset-l2 l4">
-    <input placeholder="500 USD per server" name="amount" id="amount_fld" type="text" class="validate">
+    <input placeholder="500 USD equivalent per server" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
 <div class="input-field col s6 m5 l4">
