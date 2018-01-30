@@ -24,9 +24,11 @@ will facilitate contacts with relevant domain experts from our network.
 Fill in the form below and we will email you an invoice. The support contract
 runs for 12 months and costs 500 USD per server.
 
-## Invoice Request Form
 
 <form id="invoice-form">
+
+## Invoice Request Form
+
 <div class="row">
 <div class="input-field col s12 m6">
     <input placeholder="first name and last name" name="name" id="name_fld" type="text" class="validate">
