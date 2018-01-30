@@ -91,7 +91,7 @@ right">done</i>Request Invoice</button>
 		  break;
 		default:
 		 jQuery('#invoice-form').slidDown();
-		 jQuery('#notice').html( <h2><i class="material-icons">sms_failed</i> ' +
+		 jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 	            'There was a problem processing your request: ' + msg.text
 		    + ' Please contact <a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>'
                 );
