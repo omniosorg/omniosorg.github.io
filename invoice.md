@@ -81,7 +81,7 @@ right">done</i>Request Invoice</button>
         'currency','amount','email','ref'].forEach(function(fld,i){
 	   data[fld] = jQuery('#' + fld + '_fld').val();
        });
-       jQuery.ajax('https://apps.omniosce.org/invoice/create', {
+       jQuery.ajax('https://apps.omniosce.org/invoice/request', {
           dataType: 'json',
           method: 'POST',
           contentType: 'application/json; charset=utf-8',
@@ -91,8 +91,8 @@ right">done</i>Request Invoice</button>
 	       case 'ok':
 	          jQuery('#notice').html(
                     '<h2><i class="material-icons">check</i> ' +
-                    'Check your mailbox. We have sent you the requested invoice'
-	  	    +' by email.</h2>' +
+                    'Check your mailbox. We have sent you the invoice download link.'
+	  	    +'</h2>' +
                     '<h3>Please contact ' +
                     '<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> ' +
                     'if the message does not arrive within a few minutes.</h3>'
