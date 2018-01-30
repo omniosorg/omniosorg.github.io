@@ -19,31 +19,31 @@ The cost for the support contract is 500 USD per server.
 
 <form id="invoice_form">
 <div class="row">
-<div class="input-field col s12 offset-m1 m10 offset-l2 l8">
+<div class="input-field col s12 m6">
     <input placeholder="first name and last name" name="name" id="name_fld" type="text" class="validate">
     <label for="name">Your Name</label>
 </div>
-<div class="input-field col s12 offset-m1 m10 offset-l2 l8">
+<div class="input-field col s12 m6">
     <input placeholder="your@email" name="email" id="email_fld" type="email" class="validate">
     <label for="name">Your eMail Address</label>
 </div>
-<div class="input-field col s12 offset-m1 m10 offset-l2 l8">
+<div class="input-field col s12 m6">
     <input placeholder="company name" name="company" id="company_fld" type="text" class="validate">
     <label for="name">Company</label>
 </div>
-<div class="input-field col s12 offset-m1 m10 offset-l2 l8">
+<div class="input-field col s12 m6">
     <input placeholder="your invoice reference (printed on invoice)" name="ref" id="ref_fld" type="text" class="validate">
     <label for="name">Ref</label>
 </div>
-<div class="input-field col s12 offset-m1 m10 offset-l2 l8">
+<div class="input-field col s12">
     <textarea placeholder="postal address" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
     <label for="address">Address</label>
 </div>
-<div class="input-field col s6 offset-m1  m5 offset-l2 l4">
+<div class="input-field col s6 m3">
     <input placeholder="500 USD equivalent per server" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
-<div class="input-field col s6 m5 l4">
+<div class="input-field col s6 m3">
     <select id="currency_fld">
       <option default value="usd">US Dollars</option>
       <option value="gbp">GB Pounds</option>
@@ -52,7 +52,7 @@ The cost for the support contract is 500 USD per server.
     </select>
     <label>Currency</label>
 </div>
-<div class="col s12 offset-m1 m10 offset-l2 l8">
+<div class="col s12 m6">
     <button style="width: 100%" id="get-invoice" class="btn waves-effect waves-light btn-large" type="submit" name="action"><i class="material-icons
 right">done</i>Request Invoice</button>
 </div>
