@@ -45,7 +45,7 @@ The cost for the support contract is 500 USD per server.
 </div>
 <div class="input-field col s4 m2">
     <select id="currency_fld">
-      <option default value="USD">US$</option>
+      <option default value="USD">USD</option>
       <option value="GBP">GBP</option>
       <option value="EUR">EUR</option>
       <option value="CHF">CHF</option>
