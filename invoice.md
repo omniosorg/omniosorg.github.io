@@ -19,7 +19,7 @@ support.  Support comes with a best effort reaction time of 4 hours on our
 Gitter support channel.  This contract does NOT include any guaranteed
 problem resolutions.  Depending on the nature of your request we will offer
 custom development and debugging services on a case by case basis and we
-will facilitate contacts with relevant domain experts from our
+will facilitate contacts with relevant domain experts from our network.
 
 Fill in the form below and we will email you an invoice. The support contract
 runs for 12 months and costs 500 USD per server.
