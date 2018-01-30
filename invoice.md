@@ -21,8 +21,8 @@ problem resolutions.  Depending on the nature of your request we will offer
 custom development and debugging services on a case by case basis and we
 will facilitate contacts with relevant domain experts from our
 
-Fill in the form below and we will email you an invoice. The cost for the support contract is 500 USD per server
-and year.
+Fill in the form below and we will email you an invoice. The support contract
+runs for 12 months and costs 500 USD per server.
 
 ## Invoice Request Form
 
@@ -49,7 +49,7 @@ and year.
     <label for="address">Address</label>
 </div>
 <div class="input-field col s8 m4">
-    <input placeholder="500$ per server" name="amount" id="amount_fld" type="text" class="validate">
+    <input placeholder="x * 500 USD" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
 <div class="input-field col s4 m2">
