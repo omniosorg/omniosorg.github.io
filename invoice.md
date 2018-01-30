@@ -39,16 +39,16 @@ The cost for the support contract is 500 USD per server.
     <textarea placeholder="postal address" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
     <label for="address">Address</label>
 </div>
-<div class="input-field col s6 m3">
-    <input placeholder="500 USD equivalent per server" name="amount" id="amount_fld" type="text" class="validate">
+<div class="input-field col s8 m4">
+    <input placeholder="500$ per server" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
-<div class="input-field col s6 m3">
+<div class="input-field col s4 m2">
     <select id="currency_fld">
-      <option default value="usd">US Dollars</option>
-      <option value="gbp">GB Pounds</option>
-      <option value="eur">Euros</option>
-      <option value="chf">Swiss Francs</option>
+      <option default value="USD">US$</option>
+      <option value="GBP">GBP</option>
+      <option value="EUR">EUR</option>
+      <option value="CHF">CHF</option>
     </select>
     <label>Currency</label>
 </div>
@@ -106,21 +106,6 @@ right">done</i>Request Invoice</button>
    });
 })();</script>
 
-You can also use tradtional banking transactions to send us your
-contributions by paying directly to our account here in Switzerland.
-
-IBAN CH22 0900 0000 6188 9767 7<br/>
-BIC POFICHBEXX<br/>
-Verein OmniOS Community Edition
-
-If you have questions regarding your subscription, or if you want to
+If you have questions regarding our support offering, or if you want to
 discuss other options to support our work, please feel free to contact <a
 href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
-
-## How your payments are processed
-
-Our donation system is using <a href="https://stripe.com">stripe.com</a> as a payment provider.
-We do not keep ANY information local. Credit card numbers are NOT available to us at any point
-in the payment process. The integration of <a href="https://stripe.com">stripe.com</a> and all the user
-interactions are handled by our <a href="https://github.com/omniosorg/ooceapps">OOceApps</a> package.
-
