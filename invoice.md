@@ -63,6 +63,7 @@ right">done</i>Request Invoice</button>
 <script>
 (function(){
     document.getElementById('get-invoice').addEventListener('click', function(e) {
+       e.preventDefault();
        jQuery('#invoice-form').slideUp();
        jQuery('#notice').html("<h2>Processing your Request ... " +
            "<img src=/assets/images/spinner.gif></h2>");
