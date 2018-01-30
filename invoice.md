@@ -11,7 +11,7 @@ show_in_sidebar: false
 Are you running your Servers on OmniOS Community Edition? Would you like to
 ensure you are not left alone if you run into trouble with the devices?
 Would you like to ensure the continued maintenance and development of your
-favorite OS? An OmniOS Support Package will cater for all these needs.
+favorite OS? The "OmniOS CE Prime Enterprise Support Package" will cater for all these needs.
 
 Fill in the form below and we will email you an invoice.
 
