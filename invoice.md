@@ -104,12 +104,6 @@ right">done</i>Request Invoice</button>
           }
        });
    });
-});
-
-// Close Checkout on page navigation:
-window.addEventListener('popstate', function() {
-  handler.close();
-});
 })();</script>
 
 You can also use tradtional banking transactions to send us your
