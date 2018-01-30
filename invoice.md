@@ -17,6 +17,8 @@ Fill in the form below and we will email you an invoice.
 
 The cost for the support contract is 500 USD per server.
 
+## Invoice Request Form
+
 <form id="invoice-form">
 <div class="row">
 <div class="input-field col s12 m6">
