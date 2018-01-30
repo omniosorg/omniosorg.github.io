@@ -13,9 +13,16 @@ ensure you are not left alone if you run into trouble with the devices?
 Would you like to ensure the continued maintenance and development of your
 favorite OS? The "OmniOS CE Prime Enterprise Support Package" will cater for all these needs.
 
-Fill in the form below and we will email you an invoice.
+The support package includes weekly security updates as necessary, LTS releases with
+one year migration overlap and direct developer access for second level
+support.  Support comes with a best effort reaction time of 4 hours on our
+Gitter support channel.  This contract does NOT include any guaranteed
+problem resolutions.  Depending on the nature of your request we will offer
+custom development and debugging services on a case by case basis and we
+will facilitate contacts with relevant domain experts from our
 
-The cost for the support contract is 500 USD per server.
+Fill in the form below and we will email you an invoice. The cost for the support contract is 500 USD per server
+and year.
 
 ## Invoice Request Form
 
