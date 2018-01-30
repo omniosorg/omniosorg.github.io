@@ -74,7 +74,7 @@ var handler = StripeCheckout.configure({
        // jQuery.ajax('http://localhost:23843/patron/subscribe', {
 	dataType: 'json',
 	method: 'POST',
-	contentType: 'application/json; corset=utf-8',
+	contentType: 'application/json; charset=utf-8',
 	data: JSON.stringify({
 	    token: token,
 	    args: args,

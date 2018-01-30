@@ -75,8 +75,8 @@ right">done</i>Request Invoice</button>
        jQuery.ajax('https://apps.omniosce.org/invoice/create', {
           dataType: 'json',
           method: 'POST',
-          contentType: 'application/json; corset=utf-8',
-          data: JSON.stringify(data)
+          contentType: 'application/json; charset=utf-8',
+          data: JSON.stringify(data),
           success: function(msg){
 	    switch (msg.status){
 	       case 'ok':
