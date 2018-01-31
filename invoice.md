@@ -27,7 +27,7 @@ runs for 12 months and costs 500 USD per server.
 
 <form id="invoice-form">
 
-## Invoice Request Form
+<h2>Invoice Request Form</h2>
 
 <div class="row">
 <div class="input-field col s12 m6">
