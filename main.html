@@ -131,7 +131,7 @@ and direct access to the OmniOS developers in case of any problems
                         <div class="card-content">
                             <p><i>{{ post.date | date: "%B %-d, %Y" }}</i></p>
                                 {% if post.synopsis %}
-                                    <p>{{ post.synopsis | markdownify }}</p>
+                                    <p>{{ post.synopsis }}</p>
                                 {% else %}
                                     <p>{{ post.title }}</p>
                                 {% endif %}
