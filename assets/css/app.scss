@@ -40,24 +40,6 @@ article table {
     }
  }
 }
-.container {
-    margin: 0 auto;
-    max-width: 1280px;
-    width: 80%;
-}
-@media #{$medium-and-up} {
-    .container {
-        width: 75%;
-    }
-}
-@media #{$large-and-up} {
-    .container {
-        width: 60%;
-    }
-    .omniad {
-        width: 70%;
-    }
-}
 
 .no-margin {
     margin: 0;
