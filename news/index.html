@@ -39,25 +39,25 @@ layout: default
             <ul class="pagination center-align">
 
                 {% if paginator.previous_page %}
-                    <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}index.html">&laquo; Prev</a></li>
+                    <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
                 {% else %}
-                    <li class="waves-effect disabled orange lighten-2"><a class="white-text" href="#">&laquo; Prev</a></li>
+                    <li class="waves-effect disabled orange lighten-2"><a class="white-text null" href="#">&laquo; Prev</a></li>
                 {% endif %}
 
                 {% for page in (1..paginator.total_pages) %}
                     {% if page == paginator.page %}
-                        <li class="waves-effect active orange"><a href="#">{{ page }}</a></li>
+                        <li class="waves-effect active orange"><a class="null" href="#">{{ page }}</a></li>
                     {% elsif page == 1 %}
-                        <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}index.html">{{ page }}</a></li>
+                        <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
                     {% else %}
-                        <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}index.html">{{ page }}</a></li>
+                        <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                     {% endif %}
                 {% endfor %}
 
                 {% if paginator.next_page %}
-                    <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}index.html">Next &raquo;</a></li>
+                    <li class="waves-effect orange lighten-2"><a class="white-text" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
                 {% else %}
-                    <li class="waves-effect disabled orange lighten-2"><a class="white-text" href="#">Next &raquo;</a></li>
+                    <li class="waves-effect disabled orange lighten-2"><a class="white-text null" href="#">Next &raquo;</a></li>
                 {% endif %}
 
             </ul>
@@ -65,3 +65,11 @@ layout: default
 
     </div>
 </div>
+
+<script>
+$(function() {
+	$('a.null').on('click', function(e) {
+		e.preventDefault();
+	});
+});
+</script>
