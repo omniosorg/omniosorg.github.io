@@ -96,14 +96,16 @@ article {
 
 .side-nav {
     padding-top: 8ex;
+    li {
+       line-height: auto;	
+    }
     li>a,
     .category {
         font-size: 14px;
         font-weight: bold;
-        min-height: 38px;
-        line-height: 38px;
 	height: auto;
-        padding: 0 32px;
+	line-height: auto;
+        padding: 8px 32px;
     }
     ul li>a {
         padding-left: 50px;
