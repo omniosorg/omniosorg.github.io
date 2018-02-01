@@ -97,14 +97,14 @@ article {
 .side-nav {
     padding-top: 8ex;
     li {
-       line-height: auto;	
+       line-height: normal;	
     }
     li>a,
     .category {
         font-size: 14px;
         font-weight: bold;
 	height: auto;
-	line-height: auto;
+	line-height: 150%;
         padding: 8px 32px;
     }
     ul li>a {
