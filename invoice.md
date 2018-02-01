@@ -100,12 +100,21 @@ right">done</i>Request Invoice</button>
                     'if the message does not arrive within a few minutes.</h3>'
                   );
 		  break;
+		case 'error':
+		   var $label = jQuery('#'+msg.target + ' + label');
+		   var $field = jQuery('#'+msg.target);
+		   if ($label){
+			$label.attr('data-error',msg.text);
+                        $field.addClass('invalid');
+                        $field[0].scrollIntoView();
+                        $field.focus();
+			break;
+		    }
 		default:
-		 jQuery('#invoice-form').slidDown();
-		 jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
+	  	   jQuery('#invoice-form').slidDown();
+		   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 	            'There was a problem processing your request: ' + msg.text
-		    + ' Please contact <a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>'
-                );
+		    + ' Please contact <a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
 	     }	   
           },
           error: function(xhr,status){
