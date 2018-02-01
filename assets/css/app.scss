@@ -54,6 +54,9 @@ article table {
     .container {
         width: 60%;
     }
+    .omniad {
+        width: 70%;
+    }
 }
 
 .no-margin {
@@ -226,7 +229,6 @@ footer.page-footer {
 .omniad {
     .claim {
         padding-top: 2ex;
-        padding-bottom: 1ex;
         font-weight: 300;
         font-size: 30px;
         @media #{$medium-and-down} {
@@ -250,13 +252,29 @@ footer.page-footer {
 	}
         .card-content {
             padding-top: 15px;
-            background: #fcf1e0 linear-gradient(to bottom right, #fcf1e0, #fcf6ed);
+            background: color("orange", "lighten-4")
+                linear-gradient(to bottom right, color("orange", "lighten-4"),
+                color("orange", "lighten-5"));
             color: black;
             p i {
                 font-size: 80%;
             }
         }
-
+    }
+    .row {
+        .card-content {
+            .card-title {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            i.far, i.fal, i.fas {
+                color: color("orange","lighten-1");
+                line-height: 28px;
+                > span {
+                    float: left;
+                }
+            }
+        }
     }
 }
 // get list styling back
