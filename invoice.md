@@ -75,9 +75,6 @@ right">done</i>Request Invoice</button>
 (function(){
     document.getElementById('invoice-form').addEventListener('submit', function(e) {
        e.preventDefault();
-       jQuery('#invoice-form').slideUp();
-       jQuery('#notice').html("<h2>Processing your Request ... " +
-           "<img src=/assets/images/spinner.gif></h2>");
        var data = {};
        ['name','company','address',
         'currency','amount','email','ref'].forEach(function(fld,i){
@@ -91,6 +88,7 @@ right">done</i>Request Invoice</button>
           success: function(msg){
 	    switch (msg.status){
 	       case 'ok':
+		  jQuery('#invoice-form').slideUp();
 	          jQuery('#notice').html(
                     '<h2><i class="material-icons">check</i> ' +
                     'Check your mailbox. We have sent you the invoice download link.'
@@ -111,7 +109,6 @@ right">done</i>Request Invoice</button>
 			break;
 		    }
 		default:
-	  	   jQuery('#invoice-form').slidDown();
 		   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 	            'There was a problem processing your request: ' + msg.text
 		    + ' Please contact <a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
