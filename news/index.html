@@ -2,10 +2,10 @@
 layout: page
 ---
     <div class="group-article">
-        {% for post in paginator.posts %}
         <div class="row">
+        {% for post in paginator.posts %}
         {% if post == site.posts.first %}
-                <div class="col s12 xl10 offset-xl1">
+                <div class="col s12">
 			<a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}.html">
                         <h1 class="orange-text">{{ post.title }}</h4>
 			</a>
@@ -16,7 +16,7 @@ layout: page
                 </div>
         {% else %}
             <a href="{{ post.url | prepend: site.baseurl }}.html">
-                <div class="col s12 xl10 offset-xl1">
+                <div class="col s12 m6 l4 xl3">
                     <div class="list-article">
                         <h1 class="orange-text">{{ post.title }}</h4>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
@@ -27,9 +27,8 @@ layout: page
                 </div>
             </a>
         {% endif %}
-        </div>
         {% endfor %}
-
+        </div>
     </div>
 
     <div class="section">

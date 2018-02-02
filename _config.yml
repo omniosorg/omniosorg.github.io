@@ -4,7 +4,7 @@ description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, KVM and Li
 url: "https://www.omniosce.org"
 baseurl: ""
 logo: OmniOS Community Edition
-paginate: 5
+paginate: 12
 paginate_path: "/news/page:num/"
 download_path: https://downloads.omniosce.org/media
 download_prefix: omniosce-
