@@ -72,5 +72,21 @@ $(function() {
 	$('a.null').on('click', function(e) {
 		e.preventDefault();
 	});
+    var resizer = function (){
+        var width = jQuery(window).width();
+        var height = 0;
+        var cards = jQuery('.news .card');
+        cards.css('height','auto');
+        if (width < 600){
+            return;
+        }
+        cards.each(function(){
+            height = Math.max(height,$(this).height());
+            return this;
+        })
+        .css('height',height);
+    };
+    resizer();
+    jQuery(window).on('resize',resizer);
 });
 </script>
