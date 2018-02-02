@@ -211,6 +211,27 @@ footer.page-footer {
 	clear: right;
 }
 
+.news-card {
+         background: color("orange", "lighten-4")
+            linear-gradient(to bottom right, color("orange", "lighten-4"),
+            color("orange", "lighten-5"));
+         color: black;
+	.news-date {
+		width: 100%;
+		font-size: 80%;
+		text-align: right;
+		font-style: italic;
+		text-decoration: underline;
+		padding-bottom: 5px;
+	}
+        .card-content {
+            padding-top: 15px;
+            p i {
+                font-size: 80%;
+            }
+        }
+}
+
 .omniad {
     .claim {
         padding-top: 2ex;
@@ -226,24 +247,6 @@ footer.page-footer {
     .news {
         @media #{$medium-and-up} {
             margin-top: 15ex;
-        }
-	.news-date {
-		width: 100%;
-		font-size: 80%;
-		text-align: right;
-		font-style: italic;
-		text-decoration: underline;
-		padding-bottom: 5px;
-	}
-        .card-content {
-            padding-top: 15px;
-            background: color("orange", "lighten-4")
-                linear-gradient(to bottom right, color("orange", "lighten-4"),
-                color("orange", "lighten-5"));
-            color: black;
-            p i {
-                font-size: 80%;
-            }
         }
     }
     .row {

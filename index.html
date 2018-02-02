@@ -136,7 +136,7 @@ receive updates for three years so you can schedule upgrades when convenient.
                 </div>
             {% for post in site.posts limit:10 %}
                 <div class="col s12">
-                <div class="card">
+                <div class="card news-card">
                     <a href="{{ post.url | prepend: site.baseurl }}.html">
                         <div class="card-content">
                             <div class="news-date">{{ post.date | date: "%B %-d, %Y" }}</div>
