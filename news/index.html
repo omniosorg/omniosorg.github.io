@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-    <div class="group-article">
+    <div class="group-article omniad">
         <div class="row">
         {% for post in paginator.posts %}
         {% if post == site.posts.first %}
@@ -15,17 +15,20 @@ layout: page
                         </article>
                 </div>
         {% else %}
-            <a href="{{ post.url | prepend: site.baseurl }}.html">
-                <div class="col s12 m6 l4 xl3">
-                    <div class="list-article">
-                        <h2 class="orange-text">{{ post.title }}</h2>
-                        <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
-                        <article class="grey-text text-darken-2 post-content on-index light">
-                            {{ post.excerpt | strip_html }}. 
-                        </article>
-                    </div>
+                <div class="col s12 m6 l4 xl3 news">
+                <div class="card">
+                    <a href="{{ post.url | prepend: site.baseurl }}.html">
+                        <div class="card-content">
+                            <div class="news-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+                                {% if post.synopsis %}
+                                    <p>{{ post.synopsis }}</p>
+                                {% else %}
+                                    <p>{{ post.title }}</p>
+                                {% endif %}
+                        </div>
+                    </a>
                 </div>
-            </a>
+                </div>
         {% endif %}
         {% endfor %}
         </div>
