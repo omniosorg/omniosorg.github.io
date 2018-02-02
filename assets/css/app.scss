@@ -215,7 +215,6 @@ footer.page-footer {
          background: color("orange", "lighten-4")
             linear-gradient(to bottom right, color("orange", "lighten-4"),
             color("orange", "lighten-5"));
-         color: black;
 	.news-date {
 		width: 100%;
 		font-size: 80%;
@@ -226,6 +225,7 @@ footer.page-footer {
 	}
         .card-content {
             padding-top: 15px;
+            color: black;
             p i {
                 font-size: 80%;
             }
