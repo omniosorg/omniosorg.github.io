@@ -7,7 +7,7 @@ layout: page
         {% if post == site.posts.first %}
                 <div class="col s12">
 			<a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}.html">
-                        <h1 class="orange-text">{{ post.title }}</h4>
+                        <h1 class="orange-text">{{ post.title }}</h1>
 			</a>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 on-index">
@@ -18,7 +18,7 @@ layout: page
             <a href="{{ post.url | prepend: site.baseurl }}.html">
                 <div class="col s12 m6 l4 xl3">
                     <div class="list-article">
-                        <h1 class="orange-text">{{ post.title }}</h4>
+                        <h2 class="orange-text">{{ post.title }}</h2>
                         <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
                         <article class="grey-text text-darken-2 post-content on-index light">
                             {{ post.excerpt | strip_html }}. 
