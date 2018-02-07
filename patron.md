@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Donate
-order: 10
+order: 11
 show_in_menu: true
 show_in_sidebar: true
 ---
@@ -127,7 +127,7 @@ window.addEventListener('popstate', function() {
 });
 })();</script>
 
-You can also use tradtional banking transactions to send us your
+You can also use traditional banking transactions to send us your
 contributions by paying directly to our account here in Switzerland.
 
 IBAN CH22 0900 0000 6188 9767 7<br/>
@@ -144,4 +144,3 @@ Our donation system is using <a href="https://stripe.com">stripe.com</a> as a pa
 We do not keep ANY information local. Credit card numbers are NOT available to us at any point
 in the payment process. The integration of <a href="https://stripe.com">stripe.com</a> and all the user
 interactions are handled by our <a href="https://github.com/omniosorg/ooceapps">OOceApps</a> package.
-

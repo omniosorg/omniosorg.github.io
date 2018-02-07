@@ -5,6 +5,11 @@ order: 40
 show_in_menu: true
 show_in_sidebar: true
 ---
+# Release Notes
+
+In our [Relase Schedule](schedule/) you can see when the next major release of OmniOS is due
+and for how long it will be supported.
+
 
 # OmniOS Community Edition
 
@@ -24,4 +29,3 @@ show_in_sidebar: true
 * [r151006](legacy/releasenotes/r151006.html) - Initial release May 8 2013
 * [r151004](legacy/releasenotes/r151004.html) - Initial release October 29 2012
 * [r151002](legacy/releasenotes/r151002.html) - Initial release April 2 2012
-

@@ -2,7 +2,7 @@
 layout: page
 title: Release Schedule
 order: 50
-show_in_menu: true
+show_in_menu: false
 show_in_sidebar: true
 ---
 
@@ -33,4 +33,3 @@ In the table below, currently supported releases are **emboldened**.
 | r151026	| stable  	| 2018-05-*TBC* |
 | r151028	| stable  	| 2018-11-*TBC* |
 | r151030	| LTS     	| 2019-05-*TBC* |
-

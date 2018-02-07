@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Support Contract
-order: 11
-show_in_menu: false
-show_in_sidebar: false
+title: Commercial Support
+order: 10
+show_in_menu: true
+show_in_sidebar: true
 ---
 
 # OmniOSce Support Contract

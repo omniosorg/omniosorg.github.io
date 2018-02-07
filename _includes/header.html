@@ -2,6 +2,7 @@
 {% assign pages = site.pages | sort: 'order' %}
 <ul id="slide-out" class="side-nav">
     <li><a href="{{ site.baseurl }}/" class="orange-text {% if "/" == page.url %}active{% endif %}">Home</a></li>
+    <li><a href="{{ site.baseurl }}/news/" class="orange-text {% if "/news" == page.url %}active{% endif %}">News</a></li>
     {% for item in pages %}
     {% if item.title and item.show_in_sidebar %}
     <li>
