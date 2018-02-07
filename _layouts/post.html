@@ -5,7 +5,7 @@ layout: default
     <div class="row">
         <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                 <h1 class="orange-text">{{ page.title }}</h2>
-                <h5 class="grey-text text-darken-1 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
+                <h5 class="grey-text text-darken-2 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
 
 		{% if page.categories.size > 0 %}
                 <article class="post-categories center-align">
@@ -13,10 +13,10 @@ layout: default
                     {% for cat in page.categories %}<div class="chip">{{ cat }}</div> {% endfor %}
                 </article>
 		{% endif %}
-                <article class="grey-text text-darken-2 post-content">
+                <article class="grey-text text-darken-4 post-content">
                     {{ content }}
                 </article>
-                <article class="grey-text text-darken-2">
+                <article class="grey-text text-darken-4">
                     {% for cat in page.categories %}
                         {% if site.categories[cat].size > 1 %}
                             <aside class="related">

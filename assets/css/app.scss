@@ -8,6 +8,7 @@ $h3-fontsize: 1.5rem;
 $h4-fontsize: 1rem;
 $h5-fontsize: 1rem;
 $h6-fontsize: 1rem;
+
 @import "materialize";
 @import "fontawesome";
 @import "pygments";
@@ -39,6 +40,10 @@ article table {
       border-radius: 0;
     }
  }
+}
+
+.input-field label {
+   color: #4a4a4a;
 }
 
 .no-margin {
