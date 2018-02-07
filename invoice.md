@@ -51,7 +51,7 @@ runs for 12 months and costs 500 USD per server.
     <label for="address">Address</label>
 </div>
 <div class="input-field col s8 m4">
-    <input placeholder="x * 500 USD" name="amount" id="amount_fld" type="text" class="validate">
+    <input placeholder="1000" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
 <div class="input-field col s4 m2">
