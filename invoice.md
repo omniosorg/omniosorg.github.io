@@ -21,13 +21,14 @@ problem resolutions.  Depending on the nature of your request we will offer
 custom development and debugging services on a case by case basis and we
 will facilitate contacts with relevant domain experts from our network.
 
-Fill in the form below and we will email you an invoice. The support contract
-runs for 12 months and costs 500 USD per server.
+Fill in the form below and we will email you an invoice, or if your purchase
+process is more elaborate, also a quote.  The support contract runs for 12
+months and costs 500 USD per server.
 
 
 <form id="invoice-form">
 
-<h2>Invoice Request Form</h2>
+<h2>Invoice or Quote Request Form</h2>
 
 <div class="row">
 <div class="input-field col s12 m6">
@@ -43,14 +44,14 @@ runs for 12 months and costs 500 USD per server.
     <label for="name">Company</label>
 </div>
 <div class="input-field col s12 m6">
-    <input placeholder="your invoice reference (printed on invoice)" name="ref" id="ref_fld" type="text" class="validate">
+    <input placeholder="your reference (printed on document)" name="ref" id="ref_fld" type="text" class="validate">
     <label for="name">Ref</label>
 </div>
 <div class="input-field col s12">
     <textarea placeholder="postal address" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
     <label for="address">Address</label>
 </div>
-<div class="input-field col s8 m4">
+<div class="input-field col s8 m2">
     <input placeholder="1000" name="amount" id="amount_fld" type="text" class="validate">
     <label>Amount</label>
 </div>
@@ -63,9 +64,16 @@ runs for 12 months and costs 500 USD per server.
     </select>
     <label>Currency</label>
 </div>
-<div class="col s12 m6">
+<div class="input-field col s4 m3 l2">
+    <select id="type_fld">
+      <option value="invoice">Invoice</option>
+      <option value="quote">Quote</option>
+    </select>
+    <label>Doc Type</label>
+</div>
+<div class="col s8 m5 l6">
     <button style="width: 100%" id="get-invoice" class="btn waves-effect waves-light btn-large" type="submit" name="action"><i class="material-icons
-right">done</i>Request Invoice</button>
+right">done</i>Submit</button>
 </div>
 </div>
 </form>
@@ -77,7 +85,7 @@ right">done</i>Request Invoice</button>
        e.preventDefault();
        var data = {};
        ['name','company','address',
-        'currency','amount','email','ref'].forEach(function(fld,i){
+        'currency','type','amount','email','ref'].forEach(function(fld,i){
 	   data[fld] = jQuery('#' + fld + '_fld').val();
        });
        jQuery.ajax('https://apps.omniosce.org/invoice/request', {
