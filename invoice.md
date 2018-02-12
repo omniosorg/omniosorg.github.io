@@ -99,7 +99,7 @@ right">done</i>Submit</button>
 		  jQuery('#invoice-form').slideUp();
 	          jQuery('#notice').html(
                     '<h2><i class="material-icons">check</i> ' +
-                    'Check your mailbox. We have sent you the invoice download link.'
+                    'Check your mailbox. We have sent you the ' + data['type'] + ' download link.'
 	  	    +'</h2>' +
                     '<h3>Please contact ' +
                     '<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> ' +
