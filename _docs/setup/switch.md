@@ -64,20 +64,16 @@ Finally, update as usual.
 ## Upgrading from older versions of OmniOS to current OmniOS CE
 
 If you are running OmniOS r14 or later and want to try and 'jump' right to
-the latest OmniOS CE. The following recepie MIGHT work. 
+the latest OmniOS CE. The following recepie MIGHT work. This is just a bunch
+of steps that have worked for some setups ... 
 
+Are there any zones ? if so ... detach them!
+
+```
 wget -P /etc/ssl/pkg \
     https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
-
-
 pkg set-publisher -P -G '*' -g https://pkg.omniosce.org/r151024/core/ omnios
-
-are there any zones ? if so ... detach them
-
-pkg -R /fast/zones/neplan/root/ set-publisher -P -G '*' -g https://pkg.omniosce.org/r151024/core/ omnios
-
 pkg update -n -v web/ca-bundle
-
 pkg update -v -n \
 	--reject pkg:/network/ssh \
 	--reject pkg:/network/ssh/ssh-key \
@@ -85,6 +81,25 @@ pkg update -v -n \
 	--reject pkg:/service/network/ssh-common \
 	--reject pkg://omnios/runtime/python-26 \
 	`pkg update -nv  --reject pkg://omnios/runtime/python-26 |& grep Reject | sed 's/Reject:/--reject/g'` --be-name r151024
+```
+
+if that worked and you were successful in upgrading you can try getting at
+your zones by upgrading them 'from the outside'.
+
+```
+pkg -R /myzone-pool/zones/my-zone-1/root/ set-publisher -P -G '*' -g https://pkg.omniosce.org/r151024/core/ omnios
+pkg -R /myzone-pool/zones/my-zone-1/root/ update -v -n \
+	--reject pkg:/network/ssh \
+	--reject pkg:/network/ssh/ssh-key \
+	--reject pkg:/service/network/ssh \
+	--reject pkg:/service/network/ssh-common \
+	--reject pkg://omnios/runtime/python-26 \
+	`pkg update -nv  --reject pkg://omnios/runtime/python-26 |& grep Reject | sed 's/Reject:/--reject/g'` --be-name r151024
+```
+
+now re-attach your zones ... 
+
+good luck!
 
 
 
