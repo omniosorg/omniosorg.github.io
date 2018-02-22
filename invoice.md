@@ -48,8 +48,9 @@ months and costs 500 USD per server.
     <label for="name">Ref</label>
 </div>
 <div class="input-field col s12">
-    <textarea placeholder="postal address" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
-    <label for="address">Address</label>
+    <textarea placeholder="Street
+Town" name="address" id="address_fld" class="materialize-textarea validate"></textarea>
+    <label for="address">Complete Postal Address</label>
 </div>
 <div class="input-field col s8 m2">
     <input placeholder="1000" name="amount" id="amount_fld" type="text" class="validate">
