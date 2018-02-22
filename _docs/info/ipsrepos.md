@@ -14,7 +14,8 @@ they like it to be installed) or use repositories published by other users.
 
 Maintainers of add-on repositories are encouraged to share their work with the
 community. If you wish to have your repository listed here, please get in
-touch [in the Lobby](https://gitter.im/omniosorg/Lobby).
+touch [in the Lobby](https://gitter.im/omniosorg/Lobby) or via
+[#omnios on Freenode](http://webchat.freenode.net?randomnick=1&channels=%23omnios&uio=d4).
 
 ## Repos
 

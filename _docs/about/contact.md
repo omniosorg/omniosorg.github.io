@@ -9,7 +9,8 @@ show_in_sidebar: true
 # Contact the OmniOSce Team
 
 For general queries and discussion, members of the OmniOSce team can
-usually be found in our [lobby on Gitter](https://gitter.im/omniosorg/Lobby)
+usually be found in our [lobby on Gitter](https://gitter.im/omniosorg/Lobby),
+[#omnios on Freenode](http://webchat.freenode.net?randomnick=1&channels=%23omnios&uio=d4)
 or can be reached via e-mail at <info@omniosce.org>.
 
 For issues, bugs or suggestions, please open an issue against the relevant
