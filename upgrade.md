@@ -45,14 +45,12 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 * Change the publisher in the global zone.
   For example, going to _{{site.omnios_stable}}_:
   ```
-  # pkg set-publisher -G '*' -g https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
+  # pkg set-publisher -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
   ```
 
 * Change the publisher in each native _lipkg_ branded zone:
   ```
-  # pkg -R /path/to/zone/root set-publisher -G '*' \
-    -g https://pkg.omniosce.org/{{site.omnios_stable}}/core \
-    omnios
+  # pkg -R /path/to/zone/root set-publisher -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
   ```
 
 * Shut down and detach any _ipkg_ branded zones:
