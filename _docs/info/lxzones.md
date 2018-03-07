@@ -185,6 +185,6 @@ A simpler way to configure and maintain LX zones is to use
 LX Zones, unlike ipkg or lipkg zones, do not have individual boot
 environments. If you update and create a new BE, any LX zones are not
 explicitly updated. LX zones use lofs mounts to remap the global zone's
-`/usr/bin` into `/native/usr/bin` inside the LX zone. The zone's
-contents stay constant no matter which BE you're using.
+`/usr/bin` into `/native/usr/bin` inside the LX zone. The zone
+content stays constant no matter which BE you're using.
 
