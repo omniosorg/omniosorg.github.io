@@ -69,7 +69,7 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 
 * Perform the update, optionally specifying the new boot-environment name:
   ```
-  # pkg update -r --be-name {{site.omnios_stable}}
+  # pkg update -f -r --be-name {{site.omnios_stable}}
   ```
   This will create a new BE and install the new packages into it. When this
   is complete, reboot your system. The new BE will now be the default
