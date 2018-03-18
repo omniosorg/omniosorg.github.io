@@ -32,7 +32,7 @@ gained; it's available in our _bloody_ release now.
 
 KPTI does have a performance impact as memory caches need to be flushed
 whenever a process transitions from user to kernel space or vice versa.
-The impact is highly dependant on the workload however in our experience -
+The impact is highly dependant on the workload however, in our experience -
 and particularly due to the considered way in which it has
 been implemented - this is under 5% for most applications. Joyent have also
 enabled the use of additional CPU features (PCID/INVPCID) to further speed
