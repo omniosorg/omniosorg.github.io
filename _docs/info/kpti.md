@@ -9,10 +9,11 @@ show_in_sidebar: true
 <img src="/assets/images/meltdown.png" alt="(logo)" align="left"
  width="100px" style="padding-right: 10px">
 [Meltdown](https://meltdownattack.com) is an attack which exploits
-vulnerabilities in modern processors which was announced early in 2018.
+vulnerabilities in modern processors; it was announced early in 2018.
 Using it, any process can determine the entire memory contents of the system
-including that used by the kernel itself and within other zones. Meltdown
-was assigned [CVE-2017-5754](https://nvd.nist.gov/vuln/detail/CVE-2017-5754).
+including that used by the kernel itself and also within other zones. Meltdown
+has been assigned
+[CVE-2017-5754](https://nvd.nist.gov/vuln/detail/CVE-2017-5754).
 
 <div style="clear: both" />
 
