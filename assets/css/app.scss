@@ -153,7 +153,7 @@ nav ul a.inline {
     z-index: 999;
     left: 2.5ex;
     top: 2.6ex;
-    box-shadow: 10px 5px 5px white;
+    box-shadow: 0 0 10px white;
     background-color: white;
     .burger-icon {
     	@include burger(25px, 3px, 5px, color("orange", "base"));
