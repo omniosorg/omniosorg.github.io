@@ -23,7 +23,7 @@ need:
 % git clone https://github.com/omniosorg/kayak.git
 % cd kayak
 % wget https://downloads.omniosce.org/media/stable/omniosce-r151024.zfs.bz2
-% pfexec ./build_xen.sh
+% pfexec ./build/build_xen
 ```
 > NB: sudo can be used for privilege escalation in place of pexec if you have
 > it configured.
