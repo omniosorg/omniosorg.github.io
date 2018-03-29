@@ -101,9 +101,12 @@ article {
 
 .side-nav {
     padding-top: 8ex;
-    padding-bottom: 11ex;
+    height: 100%;
     li {
        line-height: normal;	
+    }
+    li:last-child {
+	margin-bottom: 3ex;
     }
     li>a,
     .category {
