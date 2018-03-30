@@ -141,6 +141,6 @@ href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
 ## How your payments are processed
 
 Our donation system is using <a href="https://stripe.com">stripe.com</a> as a payment provider.
-We do not keep ANY information local. Credit card numbers are NOT available to us at any point
+We do not keep ANY information locally. Credit card numbers are NOT available to us at any point
 in the payment process. The integration of <a href="https://stripe.com">stripe.com</a> and all the user
 interactions are handled by our <a href="https://github.com/omniosorg/ooceapps">OOceApps</a> package.
