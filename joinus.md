@@ -2,7 +2,6 @@
 layout: page
 title: Contribute to OmniOS
 order: 11
-show_in_menu: true
 show_in_sidebar: true
 ---
 
