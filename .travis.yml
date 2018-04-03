@@ -3,6 +3,10 @@ cache: bundler
 sudo: false
 rvm: 2.4
 bundler_args: --without development
+addons:
+  apt:
+    packages:
+      - lftp
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -13,5 +17,5 @@ before_install:
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
-  - 'rm _site/site-deploy-key*'
-  - 'cd _site; echo put -r . | sftp -i ../site-deploy-key -o StrictHostKeyChecking=no -P 8114  -b - website@pkg.omniosce.org:/site'
+  - rm _site/site-deploy-key*
+  - lftp -e 'set sftp:connect-program "sftp -i site-deploy-key";set sftp:auto-confirm true; mirror -R --verbose _site site;exit' sftp://website@pkg.omniosce.org:8114
