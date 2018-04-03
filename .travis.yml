@@ -15,6 +15,7 @@ env:
 before_install:
   - openssl aes-256-cbc -k "$super_secret_password" -in site-deploy-key.enc -out site-deploy-key -d
   - chmod 600 site-deploy-key
+  - git log --pretty=%at --name-status --reverse | perl -ane '($x,$f)=@F;next if !$x;$t=$x,next if !defined($f)||$s{$f};$s{$f}=utime($t,$t,$f),next if $x=~/[AM]/;'
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
