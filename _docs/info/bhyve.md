@@ -162,14 +162,15 @@ pfexec bhyve \
         -s 2:0,ahci-cd,/export/iso/FreeBSD-11.1-RELEASE-amd64-disc1.iso \
         -s 3:0,virtio-blk,/dev/zvol/rdsk/rpool/hdd-bhyve0 \
         -s 5:0,virtio-net-viona,bhyve0 \
-	-s 30,fbuf,vga=off,tcp=192.168.1.1:5900,wait,w=1024,h=768 \
+	-s 30,fbuf,vga=off,tcp=0.0.0.0:5900,wait,w=1024,h=768 \
 	-s 31,xhci,tablet \
         testvm
 ```
 
-Substitute `192.168.1.1` above with the local IP address of the host machine
-and you should be able to connect via VNC to continue the boot. If you wish
-to skip VNC support, just remove the _fbuf_ and _xhci_ lines.
+You should be able to connect to the host machine via VNC to continue the
+boot and finish installation. If you wish to skip VNC support, just remove
+the _fbuf_ and _xhci_ lines. To connect to the serial console, use
+`nc -U /tmp/test.cons`.
 
 ### More Options
 
