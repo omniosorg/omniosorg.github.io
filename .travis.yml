@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 sudo: false
 rvm: 2.4
-bundler_args: --without development --path=~/.bundle
+bundler_args: --without development
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
