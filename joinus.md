@@ -59,9 +59,9 @@ help in any of these areas.
 If you aren't able to help in the above areas, please consider
 [donating to OmniOS](/patron.html).
 We are committed to providing updates to OmniOS for many years to come and
-to maintaining the stable and long-term-release models put in place by
-OmniTI before us. Your donation will help us to achieve that goal and
-ensure the long-term success of OmniOSce.
+to maintaining the [stable and long-term-release models](/schedule.html)
+put in place by OmniTI before us. Your donation will help us to achieve
+that goal and ensure the long-term success of OmniOSce.
 
 We also provide [support contracts](/invoice.html) if you need cover for your
 systems.

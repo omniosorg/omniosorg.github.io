@@ -24,11 +24,18 @@ that improvements make it back where appropriate. Some slides on Joyent's work
 in this area were
 [presented at bhyvecon 2018](https://www.youtube.com/watch?v=90ihmO281GE)
 
-**With many thanks to all of the above, bhyve has been integrated into OmniOS
-and is available for testing from release v11 r151026 (and in the
-bloody release right now).**
+With many thanks to all of the above, bhyve has been integrated into OmniOS
+and is available **for beta testing** from release v11 r151026 (and in the
+bloody release right now).
 
 ## FAQ
+
+### What is the status of bhyve in OmniOS
+
+bhyve is available for *beta testing* at present and not recommended for
+production use. It is expected to be considered stable and officially
+supported from release r151028 and will be included alongside KVM in the
+next LTS version (r151030).
 
 ### Why bhyve?
 
@@ -160,7 +167,7 @@ pfexec bhyve \
         -c 4 \
         -m 1G \
         -s 2:0,ahci-cd,/export/iso/FreeBSD-11.1-RELEASE-amd64-disc1.iso \
-        -s 3:0,virtio-blk,/dev/zvol/rdsk/rpool/hdd-bhyve0 \
+        -s 3:0,virtio-blk,/dev/zvol/rdsk/rpool/hdd/bhyve0 \
         -s 5:0,virtio-net-viona,bhyve0 \
 	-s 30,fbuf,vga=off,tcp=0.0.0.0:5900,wait,w=1024,h=768 \
 	-s 31,xhci,tablet \
