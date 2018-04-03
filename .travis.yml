@@ -19,4 +19,4 @@ script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
   - rm _site/site-deploy-key*
-  - lftp -e 'set sftp:connect-program "ssh -l website -a -x -i site-deploy-key";set sftp:auto-confirm true; mirror -R --verbose _site site;exit' sftp://pkg.omniosce.org:8114
+  - lftp -e 'set sftp:connect-program "ssh -l website -a -x -i site-deploy-key"; mirror -R --verbose _site site;exit' sftp://pkg.omniosce.org:8114
