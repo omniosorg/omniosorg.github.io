@@ -1,6 +1,8 @@
 language: ruby
 cache: 
-  - bundler
+  bundler: true
+  directories:
+    - _site
 sudo: false
 rvm: 2.4
 bundler_args: --without development
@@ -17,7 +19,7 @@ before_install:
   - chmod 600 site-deploy-key
   - git log --pretty=%at --name-status --reverse | perl -ane '($x,$f)=@F;next if !$x;$t=$x,next if !defined($f)||$s{$f};$s{$f}=utime($t,$t,$f),next if $x=~/[AM]/;'
 script:
-  - bundle exec jekyll build
+  - bundle exec jekyll build --incremental
   - bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
   - rm _site/site-deploy-key*
   - lftp -e 'set sftp:connect-program "ssh -l website -a -x -i site-deploy-key"; mirror -R --verbose --use-pget-n=5 --parallel=5 _site site;exit' sftp://pkg.omniosce.org:8114
