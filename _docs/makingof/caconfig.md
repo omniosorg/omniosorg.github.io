@@ -33,6 +33,9 @@ database          = $dir/index.txt
 serial            = $dir/serial
 RANDFILE          = $dir/private/.rand
 
+# allow to re-issue certs
+unique_subject    = no
+
 # The root key and root certificate.
 private_key       = $dir/private/ca.key.pem
 certificate       = $dir/certs/ca.cert.pem
