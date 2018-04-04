@@ -106,7 +106,7 @@ mac=`dladm show-vnic -po macaddress $VNIC`
     -enable-kvm \
     -nodefaults \
     -vnc :$VNC \
-    -monitor telnet:localhost:%((vnc + 7000)),server,nowait,nodelay \
+    -monitor telnet:localhost:$((vnc + 7000)),server,nowait,nodelay \
     -smp $CPUS \
     -m $MEM \
     -no-hpet \
