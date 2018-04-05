@@ -59,6 +59,10 @@ _No files to update in this repository; just create the new branch._
 
 # Update Master Branches
 
+### illumos-omnios
+
+* `usr/src/tools/env/omnios-illumos-omnios.sh` - ONNV\_BUILDNUM
+
 ### omnios-build
 
 * `lib/config.sh`
@@ -66,6 +70,10 @@ _No files to update in this repository; just create the new branch._
 ### omnios-extra
 
 * `lib/config.sh`
+
+### pkgmgr
+
+* `etc/pkgmgr.conf.dist`
 
 # Release Testing Checklist
 
