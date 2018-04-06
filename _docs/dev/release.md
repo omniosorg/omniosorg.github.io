@@ -35,7 +35,8 @@ it is successful, reload with `/opt/ooce/nginx-*/sbin/nginx -s reload`
 ## Create branches
 
 For each of the following repositories, create a branch for the new release -
-`r1510nn` - and create a PR to update the indicated files.
+`r1510nn` - and create a PR to update the indicated files. **Set up
+branch protection in github using the previous branch as a template**
 
 ### illumos-omnios
 
@@ -57,7 +58,7 @@ _No files to update in this repository; just create the new branch._
 * `build/build_miniroot` - change _bloody_ to _r1510nn_
 * `build/build_zfs_send` - change _bloody_ to _r1510nn_
 
-# Update Master Branches
+## Update Master Branches
 
 ### illumos-omnios
 
@@ -70,10 +71,6 @@ _No files to update in this repository; just create the new branch._
 ### omnios-extra
 
 * `lib/config.sh`
-
-### pkgmgr
-
-* `etc/pkgmgr.conf.dist`
 
 # Release Testing Checklist
 
@@ -89,7 +86,7 @@ _No files to update in this repository; just create the new branch._
 
 ### TBC...
 
-# Updates Upon Release (website)
+## Updates Upon Release (website)
 
 * \_config.yml
 * releasenotes.md
