@@ -163,7 +163,7 @@ pfexec bhyve \
         -s 0,amd_hostbridge \
         -s 1,lpc \
         -l bootrom,/usr/share/bhyve/firmware/BHYVE.fd \
-        -l com1,socket,/tmp/test.cons,stdio \
+        -l com1,stdio \
         -c 4 \
         -m 1G \
         -s 2:0,ahci-cd,/export/iso/FreeBSD-11.1-RELEASE-amd64-disc1.iso \
