@@ -31,7 +31,7 @@ components. For this example walk-through, the `kayak` service is used.
 
 ```
 cd /var/kayak/kayak
-wget https://downloads.omniosce.org/media/stable/omniosce-r151022s.zfs.bz2
+wget {{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2
 ```
 
 > It is possible to customise this image prior to deployment if desired.
