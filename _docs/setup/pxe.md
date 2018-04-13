@@ -60,9 +60,10 @@ SetRootPW
 SetHostname omniosce
 SetTimezone UTC
 EnableDNS example.com
-SetDNS 80.80.80.80 8.8.8.8
-Postboot '/sbin/ipadm create-if bnx0'
-Postboot '/sbin/ipadm create-addr -T dhcp bnx0/kayak'
+SetDNS 1.1.1.1 80.80.80.80
+Postboot '/sbin/ipadm create-if e1000g0'
+Postboot '/sbin/ipadm create-addr -T dhcp e1000g0/kayak'
+SendInstallLog
 ```
 
 ## Configure DHCP
