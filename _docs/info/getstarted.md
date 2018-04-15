@@ -30,14 +30,14 @@ using the `pkg` command-line utility.
 
 First make sure the list of available packages is up-to-date:
 
-```
+```terminal
 $ pfexec pkg refresh
 Refreshing catalog 1/1 omnios
 ```
 
 and show the available updates (no privileges required):
 
-```
+```terminal
 $ pkg list -u
 NAME (PUBLISHER)                                  VERSION                    IFO
 archiver/gnu-tar                                  1.29-0.151024              i--
@@ -46,14 +46,14 @@ archiver/gnu-tar                                  1.29-0.151024              i--
 
 and to apply all updates, simply:
 
-```
+```terminal
 $ pfexec pkg update
 ```
 
 If any of the updates require a reboot, then a new boot environment will be
 created and this will be shown in the output.
 
-```
+```terminal
 A clone of omnios exists and has been updated and activated.
 On the next boot the Boot Environment omnios-1 will be
 mounted on '/'.  Reboot when ready to switch to this updated BE.
@@ -61,7 +61,7 @@ mounted on '/'.  Reboot when ready to switch to this updated BE.
 
 Reboot using `shutdown` or `init`:
 
-```
+```terminal
 $ pfexec init 6
 ... or ...
 $ pfexec shutdown -i 6 
@@ -85,7 +85,7 @@ package system as follows:
 > If you're interested in building illumos or OmniOS, refer to
 > the [Building OmniOS](/dev/build_instructions.html) page.
 
-```
+```terminal
 $ pkg list -a 'developer/gcc?'
 NAME (PUBLISHER)                                  VERSION                    IFO
 developer/gcc5                                    5.5.0-0.151024             ---
@@ -94,14 +94,14 @@ developer/gcc6                                    6.4.0-0.151024             ---
 
 and then install the desired version along with the `system/header` package:
 
-```
+```terminal
 $ pfexec pkg install developer/gcc6 system/header
 ```
 
 This will give you enough to build simple software but you may also want to
 install the following packages to provide additional utilities.
 
-```
+```terminal
 $ pfexec pkg install \
 	developer/build/autoconf \
 	developer/build/automake \
@@ -120,7 +120,7 @@ If you install multiple versions of `gcc`, then you can switch the links in
 `/usr/bin` between versions by changing the pkg system mediator. Alternatively
 you can use a specific version by invoking it directly or changing your PATH.
 
-```
+```terminal
 $ gcc -v
 gcc version 6.4.0 (GCC)
 $ pfexec pkg set-mediator -V 5 gcc
