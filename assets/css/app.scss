@@ -87,7 +87,11 @@ article table {
 }
 
 code.highlighter-rouge {
-    white-space: nowrap;
+    white-space: nowrap;    
+}
+
+div.highlighter-rouge pre code {
+    font-size: 13px;
 }
 
 article {
