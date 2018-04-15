@@ -15,7 +15,8 @@ not supported._
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
 | r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable)
-| r151022 (LTS)			| &#8594;	| r151024 (stable)
+| r151022 (LTS)			| &#8594;	| r151024 (stable), r151026 (stable)
+| r151024 (LTS)			| &#8594;	| r151026 (stable)
 
 ## Installing the OmniOSce CA Certificate
 
