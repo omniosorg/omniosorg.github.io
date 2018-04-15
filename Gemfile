@@ -6,3 +6,5 @@ gem 'jekyll-sass-converter'
 gem 'jekyll-feed'
 gem 'sass'
 gem "html-proofer"
+gem 'kramdown'
+gem 'rouge'
