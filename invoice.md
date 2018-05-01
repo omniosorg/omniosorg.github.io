@@ -6,7 +6,7 @@ show_in_menu: true
 show_in_sidebar: true
 ---
 
-# OmniOSce Support Contract
+# OmniOS Support Contract
 
 Are you running your Servers on OmniOS Community Edition? Would you like to
 ensure you are not left alone if you run into trouble with the devices?
