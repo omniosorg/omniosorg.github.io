@@ -22,6 +22,8 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby) or via
 {:.bordered .responsive-table}
 | URL                                        | Publisher    | Signed | Build Scripts                                                     | Notes                                       |
 |--------------------------------------------|--------------|--------|-------------------------------------------------------------------|---------------------------------------------|
+| <https://pkg.omniosce.org/r151026/core/>   | omnios       | yes    | [r151026](https://github.com/omniosorg/omnios-build/tree/r151026) | Core OS components (stable)
+| <https://pkg.omniosce.org/r151026/extra/>  | extra.omnios | yes    | [r151026](https://github.com/omniosorg/omnios-extra/tree/r151026) | Additional packages (stable)
 | <https://pkg.omniosce.org/r151024/core/>   | omnios       | yes    | [r151024](https://github.com/omniosorg/omnios-build/tree/r151024) | Core OS components (stable)
 | <https://pkg.omniosce.org/r151024/extra/>  | extra.omnios | yes    | [r151024](https://github.com/omniosorg/omnios-extra/tree/r151024) | Additional packages (stable)
 | <https://pkg.omniosce.org/r151022/core/>   | omnios       | yes    | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (LTS)
