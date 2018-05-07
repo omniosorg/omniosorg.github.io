@@ -16,6 +16,7 @@ is perfect for experimentation.
 {:.bordered .responsive-table}
 | Region(s) | AMI ID | AMI Name
 | --------- | ------ | --------
+| EU (Frankfurt) | ami-07e7a072121af904b | OmniOSce r151026 stable 20180507
 | EU (Frankfurt) | ami-cc56d7a3 | OmniOSce r151024 stable 20171113
 
 If you wish to run an image in a different region then please
