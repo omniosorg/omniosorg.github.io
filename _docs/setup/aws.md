@@ -13,17 +13,22 @@ running within a couple of minutes.
 The image is small so can be run within the free tier - a `t2.micro` instance
 is perfect for experimentation.
 
+### r151026
+
 {:.bordered .responsive-table}
 | Region(s) | AMI ID | AMI Name
 | --------- | ------ | --------
-| EU (Frankfurt) | ami-07e7a072121af904b | OmniOSce r151026 stable 20180507
-| EU (Frankfurt) | ami-cc56d7a3 | OmniOSce r151024 stable 20171113
+| EU (Frankfurt)	| ami-07e7a072121af904b | OmniOSce r151026 stable 20180507
+| EU (London)		| ami-0e815515b2fe8f7b3 | OmniOSce r151026 stable 20180507
+| EU (Ireland)		| ami-072c2a2ffb7e97761 | OmniOSce r151026 stable 20180507
+| EU (Paris)		| ami-0864714f1fe8631ff | OmniOSce r151026 stable 20180507
 
-If you wish to run an image in a different region then please
-[get in touch](/about/contact.html) and we will make it (and future
-releases) available there.
-Alternatively, you can copy the image to a private AMI within another region
-yourself via the EC2 dashboard and launch it from there.
+### r151024
+
+{:.bordered .responsive-table}
+| Region(s) | AMI ID | AMI Name
+| --------- | ------ | --------
+| EU (Frankfurt)	| ami-cc56d7a3 | OmniOSce r151024 stable 20171113
 
 ## Launching an instance
 
