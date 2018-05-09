@@ -18,28 +18,28 @@ is perfect for experimentation.
 {:.bordered .responsive-table}
 | Region(s) | AMI ID | AMI Name
 | --------- | ------ | --------
-| EU (Frankfurt)	| ami-07e7a072121af904b | OmniOSce r151026 stable 20180507
-| EU (London)		| ami-0e815515b2fe8f7b3 | OmniOSce r151026 stable 20180507
-| EU (Ireland)		| ami-072c2a2ffb7e97761 | OmniOSce r151026 stable 20180507
-| EU (Paris)		| ami-0864714f1fe8631ff | OmniOSce r151026 stable 20180507
-| US (Oregon)		| ami-09e271c1e0f163eca | OmniOSce r151026 stable 20180507
-| US (N.California)	| ami-0d2d11f5075cc9845 | OmniOSce r151026 stable 20180507
-| US (Ohio)		| ami-0169c5108d1bdfd57 | OmniOSce r151026 stable 20180507
-| US (N.Virginia)	| ami-0b2c7fd1c1f7e91d6 | OmniOSce r151026 stable 20180507
-| Canada		| ami-0413ce96dc9426f86 | OmniOSce r151026 stable 20180507
-| S.America (Sao Paulo)	| ami-05d9d52506d57b653 | OmniOSce r151026 stable 20180507
-| Asia Pacific (Tokyo)	| ami-037d1630e373179ff | OmniOSce r151026 stable 20180507
-| Asia Pacific (Seoul)	| ami-07f5fd6fa34316773 | OmniOSce r151026 stable 20180507
-| Asia Pacific (Mumbai)	| ami-06ef85f830ecd879f | OmniOSce r151026 stable 20180507
-| Asia Pacific (Singapore)	| ami-036737039cf84b8bf | OmniOSce r151026 stable 20180507
-| Asia Pacific (Sydney)	| ami-04db88805d27f8c74 | OmniOSce r151026 stable 20180507
+| EU (Frankfurt)	| ami-07e7a072121af904b | r151026 stable 20180507
+| EU (London)		| ami-0e815515b2fe8f7b3 | r151026 stable 20180507
+| EU (Ireland)		| ami-072c2a2ffb7e97761 | r151026 stable 20180507
+| EU (Paris)		| ami-0864714f1fe8631ff | r151026 stable 20180507
+| US (Oregon)		| ami-09e271c1e0f163eca | r151026 stable 20180507
+| US (N.California)	| ami-0d2d11f5075cc9845 | r151026 stable 20180507
+| US (Ohio)		| ami-0169c5108d1bdfd57 | r151026 stable 20180507
+| US (N.Virginia)	| ami-0b2c7fd1c1f7e91d6 | r151026 stable 20180507
+| Canada		| ami-0413ce96dc9426f86 | r151026 stable 20180507
+| S.America (Sao Paulo)	| ami-05d9d52506d57b653 | r151026 stable 20180507
+| Asia Pacific (Tokyo)	| ami-037d1630e373179ff | r151026 stable 20180507
+| Asia Pacific (Seoul)	| ami-07f5fd6fa34316773 | r151026 stable 20180507
+| Asia Pacific (Mumbai)	| ami-06ef85f830ecd879f | r151026 stable 20180507
+| Asia Pacific (Singapore)	| ami-036737039cf84b8bf | r151026 stable 20180507
+| Asia Pacific (Sydney)	| ami-04db88805d27f8c74 | r151026 stable 20180507
 
 ### r151024
 
 {:.bordered .responsive-table}
 | Region(s) | AMI ID | AMI Name
 | --------- | ------ | --------
-| EU (Frankfurt)	| ami-cc56d7a3 | OmniOSce r151024 stable 20171113
+| EU (Frankfurt)	| ami-cc56d7a3 | r151024 stable 20171113
 
 ## Launching an instance
 

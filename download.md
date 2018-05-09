@@ -9,16 +9,12 @@ show_in_sidebar: true
 # OmniOSce Downloads
 
 Even-numbered releases of OmniOSce are stable and odd-numbered releases are
-unstable (bloody). See [stable vs. bloody](/about/stablevsbloody.html) for
-more information on the difference between them.
+unstable (bloody); see [stable vs. bloody](/about/stablevsbloody.html) for
+more information on the differences between them. Our
+[release schedule](/schedule.html) has more information on the
+versions below and their end-of-support dates.
 
-Refer to the [release schedule page](/schedule.html) for details regarding
-the following versions and end-of-support dates.
-
-We also provide public [Amazon Machine Images (AMIs)](/setup/aws.html) for
-some regions.
-
-All OmniOS releases are for the x86-64 architecture only.
+> All OmniOS releases are for the x86-64 architecture only.
 
 Please refer to the [installation walk-through](/setup/freshinstall.html)
 for more information on how to install a fresh system.
@@ -35,6 +31,7 @@ The current stable release is {{site.omnios_stable}} and was released on
 | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.iso"><i class="flow-text material-icons">cloud_download</i> {{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.iso</a> | ISO | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.iso.sha256" class="orange-text">(SHA256)</a>
 | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.usb-dd"><i class="flow-text material-icons">cloud_download</i> {{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.usb-dd</a> | USB | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.usb-dd.sha256" class="orange-text">(SHA256)</a>
 | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2"><i class="flow-text material-icons">cloud_download</i> {{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2</a> | PXE | <a href="{{site.download_path}}/stable/{{site.download_prefix}}{{site.omnios_stable}}{{site.omnios_stable_suffix}}.zfs.bz2.sha256" class="orange-text">(SHA256)</a>
+| <a href="/setup/aws.html"><i class="fab fa-lg fa-aws"></i> Amazon Machine Images</a> | AMI |
 | <a target="_blank" href="{{site.download_path}}/stable/"><i class="flow-text material-icons">cloud_download</i> Other stable downloads</a>
 
 ## Long-term support (LTS) Release
@@ -53,7 +50,9 @@ The current LTS release is {{site.omnios_lts}} and was released on
 
 ## Bloody
 
-Bloody media is built on an ad-hoc basis and is not supported.
+Bloody media is built on an ad-hoc basis and is not supported. However, if
+you want to experiment with the latest features and updates, then please
+use these media and let us know how you get on.
 
 {:.bordered .responsive-table}
 | <a href="{{site.download_path}}/bloody/{{site.download_prefix}}bloody-{{site.omnios_bloody}}.iso"><i class="flow-text material-icons">cloud_download</i> {{site.download_prefix}}bloody-{{site.omnios_bloody}}.iso</a> | ISO | <a href="{{site.download_path}}/bloody/{{site.download_prefix}}bloody-{{site.omnios_bloody}}.iso.sha256" class="orange-text">(SHA256)</a>
