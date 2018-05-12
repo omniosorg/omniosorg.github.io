@@ -14,6 +14,13 @@ registration; if you decide to become a patron or if you subscribe to a
 support contract we will use your data only in connection with these
 two services.
 
+If you download the OmniOS installation media, hot-fixes or package updates
+we will record your Internet Protocol address (_IP address_), information
+derived from your IP address such as your geographic location, and metadata
+relating to the system being updated. We do NOT correlate these data with
+personal data.  They are retained for a period of three months and used for
+the production of aggregate statistics regarding OmniOS usage.
+
 If you become a Patron, we will not store any data about you directly. 
 Your payment data is stored by our payment provider Stripe according to
 their own GDPR compliant [Privacy Policy](https://stripe.com/ch/privacy)
