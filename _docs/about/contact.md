@@ -44,3 +44,7 @@ Tobias Oetiker <tobi@omniosce.org>, President<br/>
 Dominik Hassler <hadfl@omniosce.org>, Treasurer<br/>
 Andy Fiddaman <andy@omniosce.org>, Technical Director
 
+# Privacy
+
+If you are concerned about your data privacy in connection with OmniOS,
+check out our [Privacy Statement](privacy).
