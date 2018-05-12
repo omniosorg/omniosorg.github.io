@@ -47,4 +47,4 @@ Andy Fiddaman <andy@omniosce.org>, Technical Director
 # Privacy
 
 If you are concerned about your data privacy in connection with OmniOS,
-check out our [Privacy Statement](privacy).
+check out our [Privacy Statement](privacy.html).

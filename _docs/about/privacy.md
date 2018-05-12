@@ -39,4 +39,4 @@ with the Swiss data protection regulations applicable to the OmniOS
 Community Edition Association.
 
 If you have any concern in regards to our handling of your data, please feel
-free to [contact us](contact) at any time.
+free to [contact us](contact.html) at any time.
