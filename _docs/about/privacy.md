@@ -24,10 +24,9 @@ If you buy an OmniOSce support contract, we will store your contact data
 to be able to communicate with you about your contract and matters related
 to that.
 
-Our processing of personal data, such as the name, address, e-mail
-address, a data subject shall always be in line with
+Our processing of personal data shall always be in line with
 the General Data Protection Regulation (GDPR), and in accordance with the
-country-specific data protection regulations applicable to the OmniOS
+swiss data protection regulations applicable to the OmniOS
 Community Edition Association.
 
 If you have any concern in regards to our handling of your data, please feel
