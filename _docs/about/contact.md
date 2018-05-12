@@ -41,6 +41,6 @@ Aarweg 17, 4600 Olten, Switzerland <br/>
 The Board of the OmniOS Comunity Edition Association consists of
 
 Tobias Oetiker <tobi@omniosce.org>, President<br/>
-Dominik Hassler <hadfl@omniosce.org>, Tresurer<br/>
+Dominik Hassler <hadfl@omniosce.org>, Treasurer<br/>
 Andy Fiddaman <andy@omniosce.org>, Technical Director
 
