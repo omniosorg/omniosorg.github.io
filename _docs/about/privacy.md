@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Privacy Policy/ Impressum
+title: Privacy Policy
+category: about
+show_in_sidebar: true
 order: 11
-show_in_menu: false
-show_in_sidebar: false
 ---
 
 Data protection is a of concern for the OmniOS Community Edition Association. The use of
@@ -29,15 +29,4 @@ country-specific data protection regulations applicable to the OmniOS
 Community Edition Association.
 
 If you have any concern in regards to our handling of your data, please feel
-free to contact us at any time:
-
-OmniOS Community Edition Associaction 
-Aarweg 17, 4600 Olten, Switzerland 
-062 775 9902, info@omniosce.org 
-<https://www.omniosce.org>
-
-The Board of the OmniOS Comunity Edition Association consists of
-
-Tobias Oetiker <tobi@omniosce.org>, President 
-Dominik Hassler <hadfl@omniosce.org>, Tresurer 
-Andy Fiddaman <andy@omniosce.org>, Technical Director
+free to [contact us](contact) at any time.

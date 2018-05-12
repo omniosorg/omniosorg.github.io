@@ -31,3 +31,16 @@ If desired, email can be encrypted with the OmniOSce Security Team key
 (key ID
 [0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2](https://sks-keyservers.net/pks/lookup?op=get&search=0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2))
 
+# Impressum
+
+OmniOS Community Edition Associaction 
+Aarweg 17, 4600 Olten, Switzerland 
+062 775 9902, info@omniosce.org 
+<https://www.omniosce.org>
+
+The Board of the OmniOS Comunity Edition Association consists of
+
+Tobias Oetiker <tobi@omniosce.org>, President 
+Dominik Hassler <hadfl@omniosce.org>, Tresurer 
+Andy Fiddaman <andy@omniosce.org>, Technical Director
+
