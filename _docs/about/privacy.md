@@ -6,6 +6,8 @@ show_in_sidebar: true
 order: 11
 ---
 
+# Privacy Policy
+
 Data protection is a of concern for the OmniOS Community Edition Association. The use of
 our website as well as of OmniOS is possible without any registration, if
 you decide to become a patron or if you subscribe to a support contract 

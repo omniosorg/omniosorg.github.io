@@ -33,14 +33,14 @@ If desired, email can be encrypted with the OmniOSce Security Team key
 
 # Impressum
 
-OmniOS Community Edition Associaction 
-Aarweg 17, 4600 Olten, Switzerland 
-062 775 9902, info@omniosce.org 
+OmniOS Community Edition Associaction<br/>
+Aarweg 17, 4600 Olten, Switzerland <br/>
+062 775 9902, info@omniosce.org<br/>
 <https://www.omniosce.org>
 
 The Board of the OmniOS Comunity Edition Association consists of
 
-Tobias Oetiker <tobi@omniosce.org>, President 
-Dominik Hassler <hadfl@omniosce.org>, Tresurer 
+Tobias Oetiker <tobi@omniosce.org>, President<br/>
+Dominik Hassler <hadfl@omniosce.org>, Tresurer<br/>
 Andy Fiddaman <andy@omniosce.org>, Technical Director
 
