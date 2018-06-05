@@ -18,13 +18,14 @@ downstream
 Core OmniOS consists of several parts:
 
 * [illumos-omnios](https://github.com/omniosorg/illumos-omnios)
-    \- Our fork of [illumos-gate](https://github.com/illumos/illumos-gate).
+    \- Our fork of [illumos-gate](https://github.com/illumos/illumos-gate);
+    this is the core operating system.
 * [omnios-build](https://github.com/omniosorg/omnios-build)
     \- OmniOS userland packages.
 * [pkg5](https://github.com/omniosorg/pkg5)
     \- IPS packaging system.
 * [kayak](https://github.com/omniosorg/kayak)
-    \- OmniOS installer.
+    \- the OmniOS installer.
 * [g11n](https://github.com/omniosorg/g11n)
     \- Globalisation components (locales, iconv, etc.)
 
