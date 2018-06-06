@@ -109,26 +109,7 @@ http {
             rewrite ^ $request_uri;
             rewrite ^/r151022/core/?(.*) /$1 break;
 
-            proxy_pass http://127.0.0.1:10001/$uri;
-        }
-
-        location /r151022/extra {
-
-            root /pkg/r151022/extra;
-
-            # serve files from local filesystem instead through pkg/server...
-            location ~ ^/r151022/extra/file/0/(..)(.*)$ {
-                try_files /publisher/extra.omnios/file/$1/$1$2 =404;
-            }
-            location ~ ^/r151022/extra/omnios/file/1/(..)(.*)$ {
-                try_files /publisher/extra.omnios/file/$1/$1$2 =404;
-            }
-
-            # don't remove the first rewrite as it will rewrite uri w/ the non decoded version!
-            rewrite ^ $request_uri;
-            rewrite ^/r151022/extra/?(.*) /$1 break;
-
-            proxy_pass http://127.0.0.1:10002/$uri;
+            proxy_pass http://127.0.0.1:10022/$uri;
         }
 
         location /r151022/staging {
@@ -147,7 +128,26 @@ http {
             rewrite ^ $request_uri;
             rewrite ^/r151022/staging/?(.*) /$1 break;
 
-            proxy_pass http://127.0.0.1:10003/$uri;
+            proxy_pass http://127.0.0.1:10122/$uri;
+        }
+
+        location /r151022/extra {
+
+            root /pkg/r151022/extra;
+
+            # serve files from local filesystem instead through pkg/server...
+            location ~ ^/r151022/extra/file/0/(..)(.*)$ {
+                try_files /publisher/extra.omnios/file/$1/$1$2 =404;
+            }
+            location ~ ^/r151022/extra/omnios/file/1/(..)(.*)$ {
+                try_files /publisher/extra.omnios/file/$1/$1$2 =404;
+            }
+
+            # don't remove the first rewrite as it will rewrite uri w/ the non decoded version!
+            rewrite ^ $request_uri;
+            rewrite ^/r151022/extra/?(.*) /$1 break;
+
+            proxy_pass http://127.0.0.1:10222/$uri;
         }
 
         location /bloody/core {
@@ -166,7 +166,7 @@ http {
             rewrite ^ $request_uri;
             rewrite ^/bloody/core/?(.*) /$1 break;
 
-            proxy_pass http://127.0.0.1:10004/$uri;
+            proxy_pass http://127.0.0.1:10099/$uri;
         }
 
         location /bloody/extra {
@@ -185,7 +185,7 @@ http {
             rewrite ^ $request_uri;
             rewrite ^/bloody/extra/?(.*) /$1 break;
 
-            proxy_pass http://127.0.0.1:10005/$uri;
+            proxy_pass http://127.0.0.1:10299/$uri;
         }
 
         location /r151022 {

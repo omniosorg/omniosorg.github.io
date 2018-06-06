@@ -7,19 +7,23 @@ show_in_sidebar: true
 # Setting Up the Repo Servers
 
 ```bash
-port=10000
 for release in r151022 bloody; do
+    relnum=${release#r1510*}
+    [ "$release" = "bloody" ] && relnum=99
     for arch in core extra staging; do
-        if [ $arch = staging  -a $release = bloody ]; then
-           continue
-        fi
-        ((port++))
+
         pub=omnios
         collection=core
-        if [ $arch = extra ]; then
-           pub=extra.omnios
-           collection=supplemental
-        fi
+        port=100$relnum
+
+        case $release:$arch in
+            bloody/staging)	continue ;;	# No staging for bloody
+	    */staging)		((port = port + 100)) ;;
+	    */extra)		((port = port + 200))
+				pub=extra.omnios
+				collection=supplemental
+				;;
+        esac
 	pkgrepo create /pkg/$release/$arch
 	pkgrepo set -s /pkg/$release/$arch publisher/prefix=$pub
 	pkgrepo set -s /pkg/$release/$arch -p $pub repository/collection_type=$collection
@@ -29,7 +33,7 @@ for release in r151022 bloody; do
 	svccfg -s pkg/server:${release}_$arch addpg pkg application
 	svccfg -s pkg/server:${release}_$arch setprop pkg/inst_root = /pkg/$release/$arch
 	svccfg -s pkg/server:${release}_$arch setprop pkg/content_root = /pkg/content_root
-	svccfg -s pkg/server:${release}_$arch setprop pkg/threads = 1200
+	svccfg -s pkg/server:${release}_$arch setprop pkg/threads = 400
 	svccfg -s pkg/server:${release}_$arch setprop pkg/readonly = false
 	svccfg -s pkg/server:${release}_$arch setprop pkg/port = $port
 	svccfg -s pkg/server:${release}_$arch setprop pkg/proxy_base = https://pkg.omniosce.org/$release/$arch
