@@ -14,6 +14,7 @@ $h6-fontsize: 1rem;
 @import "pygments";
 @import "burger";
 
+
 body {
     display: flex;
     min-height: 100vh;
@@ -162,8 +163,24 @@ nav ul a.inline {
     .burger-icon {
     	@include burger(25px, 3px, 5px, color("orange", "base"));
     }
+    .burger-text {
+	position: absolute;
+	display: block;
+	white-space: nowrap;
+	@media #{$small-and-down} {
+            display: none;
+        }
+	font-size: 1rem;
+	top: 0px;
+	left: 34px;
+	color: color("orange", "base");
+    }
+
     &.is-active .burger-icon {
     	@include burger-to-cross;
+    }
+    &.is-active .burger-text {
+	display: none;
     }
 }
 
