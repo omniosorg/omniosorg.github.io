@@ -30,7 +30,7 @@ take over maintenance and development of OmniOS.
 In this endeavor we were
 supported by many.  Special thanks to Stefan Husch
 ([www.qutic.com](https://www.qutic.com)), Peter Tribble
-([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald and
+([www.petertribble.co.uk](https://www.petertribble.co.uk)), Dan McDonald  ([kebe.com](http://kebe.com/~danmcd/)) and
 Theo Schlossnagle ([www.circonus.com](https://www.circonus.com)).
 
 A big thank you also to the [Integrated Systems Laboratory](http://www.iis.ee.ethz.ch)
