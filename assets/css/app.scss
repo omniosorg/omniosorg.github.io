@@ -297,4 +297,23 @@ footer.page-footer {
         }
     }
 }
-// get list styling back
+
+.mirror-select {
+	overflow: auto;
+	div {
+		float: left;
+		vertical-align: middle;
+	}
+	.mirror-list {
+		padding-left: 1em;
+	}
+	.selected {
+		color: $link-color;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	img {
+		vertical-align: middle;
+	}
+}
+

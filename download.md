@@ -14,10 +14,23 @@ more information on the differences between them. Our
 [release schedule](/schedule.html) has more information on the
 versions below and their end-of-support dates.
 
-> All OmniOS releases are for the x86-64 architecture only.
-
 Please refer to the [installation walk-through](/setup/freshinstall.html)
 for more information on how to install a fresh system.
+All OmniOS releases are for the x86-64 architecture only.
+
+<div class="mirror-select">
+  <div>
+	Choose Download Mirror:
+  </div>
+  <div class="mirror-list">
+        <img src="/assets/flags/blank.gif" class="flag flag-ch" alt="Swiss Flag" />
+	<span class="selected">Switzerland (selected)</span>
+	<br />
+        <img src="/assets/flags/blank.gif" class="flag flag-us" alt="US Flag" />
+	<a href="/download-us-east.html">US East</a>
+  </div>
+  <div class="cleft"></div>
+</div>
 
 ## Current Stable Release
 
