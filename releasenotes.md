@@ -7,7 +7,7 @@ show_in_sidebar: true
 ---
 # Release Notes
 
-In our [Relase Schedule](schedule.html) you can see when the next major release of OmniOS is due
+In our [Release Schedule](schedule.html) you can see when the next major release of OmniOS is due
 and for how long it will be supported.
 
 
