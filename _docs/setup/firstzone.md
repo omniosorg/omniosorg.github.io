@@ -139,4 +139,10 @@ firstzone0/_a     from-gz  ok           10.0.0.154/24
 lo0/v6            static   ok           ::1/128
 ```
 
+### Configure DNS
+
+```terminal
+root@omniosce:~# cp /etc/nsswitch.{dns,conf}
+root@omniosce:~# echo nameserver 1.1.1.1 > /etc/resolv.conf
+```
 
