@@ -43,7 +43,7 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   # beadm create <appropriate-backup-name>
   ```
 
-* Change the publisher in the global zone and in _lipkg_ branded zone.
+* Change the publisher in the global zone and in _lipkg_ branded zones.
   For example, going to _{{site.omnios_stable}}_:
   ```terminal
   # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
