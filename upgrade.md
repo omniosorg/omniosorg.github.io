@@ -39,23 +39,18 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 * Make sure the global zone can reach the network.
 
 * Create a backup boot environment for safety:
-  ```
+  ```terminal
   # beadm create <appropriate-backup-name>
   ```
 
-* Change the publisher in the global zone.
+* Change the publisher in the global zone and in _lipkg_ branded zone.
   For example, going to _{{site.omnios_stable}}_:
-  ```
-  # pkg set-publisher -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
-  ```
-
-* Change the publisher in each native _lipkg_ branded zone:
-  ```
-  # pkg -R /path/to/zone/root set-publisher -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
+  ```terminal
+  # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
   ```
 
 * Shut down and detach any _ipkg_ branded zones:
-  ```
+  ```terminal
   # zoneadm -z <zonename> shutdown
   ... use the following command to check when the zone has shut down ...
   # zoneadm -z <zonename> list -v
@@ -64,12 +59,12 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   It is also a good idea to take a ZFS snapshot of the zone root in
   case it's needed for rollback (such as if there are issues with the zone
   upgrade.) 
-  ```
+  ```terminal
   # zfs snapshot -r /path/to/zone@<old-release>
   ```
 
 * Perform the update, optionally specifying the new boot-environment name:
-  ```
+  ```terminal
   # pkg update -f -r --be-name={{site.omnios_stable}}
   ```
   This will create a new BE and install the new packages into it. When this
@@ -77,12 +72,12 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   option in loader.
 
 * Reboot
-  ```
+  ```terminal
   # init 6
   ```
 
 * Re-attach any _ipkg_ zones:
-  ```
+  ```terminal
   # zoneadm -z <zonename> attach -u
   ```
 
