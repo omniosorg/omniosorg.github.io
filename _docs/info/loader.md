@@ -115,6 +115,17 @@ If you have mirrored roots, do the above installboot for each `<rpool-drive>`.
 
 If you have mirrored roots, use `installgrub -M /dev/rdsk/<installed-drive> /dev/rdsk/<mirror-drive>`
 
+### I still get Grub, despite all ...
+
+Try rewriting the MBR using:
+
+```console
+# bootadm  install-bootloader -Mfv
+```
+
+beware, that with this you will loos any boot manager you may have had
+installed previously.
+
 Interacting with Loader
 -----------------------
 
