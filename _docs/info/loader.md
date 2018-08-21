@@ -123,7 +123,7 @@ Try rewriting the MBR using:
 # bootadm  install-bootloader -Mfv
 ```
 
-beware, that with this you will loos any boot manager you may have had
+beware, that with this you will lose any boot manager you may have had
 installed previously.
 
 Interacting with Loader
