@@ -14,7 +14,7 @@ and for how long it will be supported.
 # OmniOS Community Edition
 
 * [r151026](https://github.com/omniosorg/omnios-build/blob/r151026/doc/ReleaseNotes.md) - current stable
-* [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - old stable
+* [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - old stable (support ends 2018-11-06)
 * [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - LTS
 
 # OmniTI OmniOS (archived)
