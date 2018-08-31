@@ -1,7 +1,7 @@
 ---
 title: Installation via PXE Boot
 category: setup
-order: 99
+order: 88
 show_in_sidebar: true
 ---
 
