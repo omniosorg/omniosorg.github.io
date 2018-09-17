@@ -28,6 +28,9 @@ If you set up a recurring subscription, please take care to enter your email
 address correctly as we will alert you a few days before the next payment is
 due, with the option to cancel your subscription.
 
+Note, this has nothing todo with *Patreon* we are using *Stripe* as our card processing
+service.
+
 <form class="patron_form">
 <div class="row">
 <div class="input-field col s6 offset-m1 m5 offset-l2 l2 offset-xl3 xl2">
