@@ -132,7 +132,7 @@ Create a virtual network interface on top of the selected link. Here, the
 new VNIC is named `bhyve0` and it is based on the physical interface `igb0`:
 
 ```
-# dladm create-vnic -l igb0 vnic0
+# dladm create-vnic -l igb0 bhyve0
 # dladm show-vnic
 LINK         OVER         SPEED  MACADDRESS        MACADDRTYPE         VID
 bhyve0       igb0         100    2:8:20:38:a5:d6   random              0
