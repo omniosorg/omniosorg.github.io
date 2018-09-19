@@ -179,6 +179,12 @@ boot and finish installation. If you wish to skip VNC support, just remove
 the _fbuf_ and _xhci_ lines. To connect to the serial console, use
 `nc -U /tmp/test.cons`.
 
+### Stop the Virtual Machine
+
+```
+% pfexec bhyvectl --vm=testvm --destroy
+```
+
 ### More Options
 
 ```
