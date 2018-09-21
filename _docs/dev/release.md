@@ -11,26 +11,42 @@ frequent occurence, this page records the required tasks.
 
 ## Create repositories
 
-Create the new package repositories on the OOCE package server
+Create the new package repositories on the OOCE package server using the
+`create_release` script.
 
-### Filesystems
+```terminal
+ooce# /pkg/create_release r151028
+Creating release r151028 (28)
+  core (omnios/core) @ 10028
+  extra (extra.omnios/supplemental) @ 10228
+  staging (omnios/core) @ 10128
+```
 
-Create new filesystems to hold the package repositories following the existing
-pattern.
+### pkg/server
 
-### pkg server
+Check pkg/server status
 
-Use the pattern from <https://omniosce.org/makingof/setuprepo> to
-create new repositories on the next available port numbers.
+```terminal
+ooce# svcs '*/pkg/server:r151028*'
+STATE          STIME    FMRI
+online         12:55:22 svc:/application/pkg/server:r151028_core
+online         12:55:24 svc:/application/pkg/server:r151028_extra
+online         12:55:27 svc:/application/pkg/server:r151028_staging
+```
 
 ### nginx
 
-On the OOCE package server, create a new file
-`/etc/opt/ooce/nginx/ips/r1510nn.conf` by copying that from the previous
-release and replacing the release number therein.
+Test the configuration and, if everything is ok, reload.
 
-Test the configuration with `/opt/ooce/nginx-*/sbin/nginx -t` and, assuming
-it is successful, reload with `/opt/ooce/nginx-*/sbin/nginx -s reload`
+```terminal
+ooce# /opt/ooce/nginx-*/sbin/nginx -t
+nginx: the configuration file /etc/opt/ooce/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/opt/ooce/nginx/nginx.conf test is successful
+ooce# /opt/ooce/nginx-*/sbin/nginx -s reload
+```
+
+Test web browsing to the release, for example -
+<https://pkg.omniosce.org/r151028>
 
 ## Create branches
 
@@ -42,6 +58,14 @@ branch protection in github using the previous branch as a template**
 
 * `usr/src/tools/env/omnios-illumos-gate.sh`
 * `usr/src/tools/env/omnios-illumos-omnios.sh`
+
+### illumos-kvm
+
+_No files to update in this repository; just create the new branch._
+
+### illumos-kvm-cmd
+
+_No files to update in this repository; just create the new branch._
 
 ### omnios-build
 
