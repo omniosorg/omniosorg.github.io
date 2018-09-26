@@ -11,7 +11,7 @@ useast_path: https://us-east.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
 omnios_stable_date: the 7th of May, 2018
 omnios_stable: r151026
-omnios_stable_suffix:
+omnios_stable_suffix: u
 omnios_lts_date: the 12th of May, 2017
 omnios_lts: r151022
 omnios_lts_suffix: s
