@@ -87,9 +87,9 @@ _string_ type.
 | `diskif`                      | `virtio`               | `virtio`,`ahci`
 | `hostbridge`<sup>1</sup>      | `i440fx`               | `i440fx`,`q35`,`amd`,`netapp`,`none`
 | `netif`                       | `virtio`               | `virtio`,`e1000`
-| `ram`                         | `1G`                   | `<i>n</i>G`,`<i>n</i>M`
+| `ram`                         | `1G`                   | <code><i>n</i>G</code>,<code><i>n</i>M</code>
 | `type`                        | `generic`              | `generic`,`windows`
-| `vcpus`<sup>7</sup>           | `1`                    | `[[cpus=]<i>numcpus</i>][,sockets=<i>n</i>][,cores=<i>n</i>][,threads=<i>n</i>]]`
+| `vcpus`<sup>7</sup>           | `1`                    | <code>[[cpus=]<i>numcpus</i>][,sockets=<i>n</i>][,cores=<i>n</i>][,threads=<i>n</i>]]</code>
 | `vnc`<sup>5</sup>             |                        | `off`,`on`,`options`
 
 ### Notes
