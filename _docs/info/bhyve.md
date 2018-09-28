@@ -142,13 +142,13 @@ bhyve0       igb0         100    2:8:20:38:a5:d6   random              0
 
 Prepare a volume for the VM:
 
-```
+```terminal
 # zfs create -V 30G rpool/hdd/bhyve0
 ```
 
 ### Grab an ISO:
 
-```
+```terminal
 # mkdir -p /export/iso
 # cd /export/iso
 # wget ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.1/FreeBSD-11.1-RELEASE-amd64-disc1.iso
@@ -156,8 +156,8 @@ Prepare a volume for the VM:
 
 ### Start the Virtual Machine
 
-```
-pfexec bhyve \
+```terminal
+% pfexec bhyve \
         -H \
         -B "1,product=OmniOS HVM" \
         -s 0,amd_hostbridge \
@@ -176,19 +176,19 @@ pfexec bhyve \
 
 You should be able to connect to the host machine via VNC to continue the
 boot and finish installation. If you wish to skip VNC support, just remove
-the _fbuf_ and _xhci_ lines. To connect to the serial console, use
+the _fbuf_ and _xhci_ lines. To connect to the serial terminal, use
 `nc -U /tmp/test.cons`.
 
 ### Stop the Virtual Machine
 
-```
+```terminal
 % pfexec bhyvectl --vm=testvm --destroy
 ```
 
 ### More Options
 
-```
-pfexec bhyve
+```terminal
+% pfexec bhyve
         -H
         -B "1,product=OmniOS HVM"
         
