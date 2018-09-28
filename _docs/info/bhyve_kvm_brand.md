@@ -32,7 +32,7 @@ machines that use UEFI boot.
 
 ```terminal
 omnios# dladm create-vnic -l net0 bhyve0
-omnios# zfs create -V rpool/bhyve0
+omnios# zfs create -V 30G rpool/bhyve0
 omnios# zonecfg -z freebsd
 create -b
 set brand=bhyve
