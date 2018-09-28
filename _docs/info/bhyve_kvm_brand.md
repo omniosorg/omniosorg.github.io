@@ -79,17 +79,17 @@ _string_ type.
 | ---                           | ---                    | ---
 | `acpi`<sup>1</sup>            | `on`                   | `on`,`off`
 | `bootdisk`<sup>2</sup>        |                        | Eg. `rpool/hdd-bhyve0`
-| `bootorder`                   | `cd`                   | [c][d][n]
+| `bootorder`                   | `cd`                   | [`c`][`d`][`n`]
 | `bootrom`<sup>1,4</sup>       | `BHYVE_RELEASE_CSM`    | firmware image name
-| `cdrom`<sup>3</sup>           |                        | /path/to/image.iso
+| `cdrom`<sup>3</sup>           |                        | `/path/to/image.iso`
 | `console`<sup>6</sup>         | `/dev/zconsole`        | Eg. `socket,/tmp/vm.com1,wait`
-| `disk`<sup>2</sup>            |                        | _path_[,`serial=`]
+| `disk`<sup>2</sup>            |                        | `/dev/zvol/rdsk/fast/swap`
 | `diskif`                      | `virtio`               | `virtio`,`ahci`
 | `hostbridge`<sup>1</sup>      | `i440fx`               | `i440fx`,`q35`,`amd`,`netapp`,`none`
 | `netif`                       | `virtio`               | `virtio`,`e1000`
-| `ram`                         | `1G`                   | _n_`G`,_n_`M`
+| `ram`                         | `1G`                   | `_n_G`,`_n_M`
 | `type`                        | `generic`              | `generic`,`windows`
-| `vcpus`<sup>7</sup>           | `1`                    | [[`cpus=`]_numcpus_][`,sockets=`_n_][`,cores=`_n_][`,threads=`_n_]]
+| `vcpus`<sup>7</sup>           | `1`                    | `[[cpus=]_numcpus_][,sockets=_n_][,cores=_n_][,threads=_n_]]`
 | `vnc`<sup>5</sup>             |                        | `off`,`on`,`options`
 
 ### Notes
