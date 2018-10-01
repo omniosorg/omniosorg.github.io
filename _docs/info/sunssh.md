@@ -16,8 +16,8 @@ local patches just to support legacy SunSSH configurations. The OpenSSH
 migration is now complete and the time has come to retire these patches,
 therefore:
 
-> The following SunSSH compatibility features will be removed from OpenSSH
-> starting from OmniOS r151028.
+> The following SunSSH compatibility features have been removed from OpenSSH
+> starting with OmniOS r151028.
 
 In order to check if your OpenSSH configuration is using any of these, you
 can run the following command and look for deprecation warnings in the output.

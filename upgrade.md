@@ -14,19 +14,18 @@ not supported._
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
-| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable)
-| r151022 (LTS)			| &#8594;	| r151024 (stable), r151026 (stable)
-| r151024 (stable)		| &#8594;	| r151026 (stable)
+| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omniosce-ca-certificate)
+| r151022 (LTS)			| &#8594;	| r151024 (stable), r151026 (stable), r151028 (stable)
+| r151024 (stable)		| &#8594;	| r151026 (stable), r151028 (stable)
+| r151026 (stable)		| &#8594;	| r151028 (stable)
 
-## Installing the OmniOSce CA Certificate
-
-**If upgrading from OmniTI OmniOS** first install the OmniOSce CA certificate:
-
-```
-# wget -P /etc/ssl/pkg https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
-# openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
-SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
-```
+<div class="fa-orange" style="padding-top: 0.5em">
+<i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
+Before upgrading, check that you have <a href="/info/sunssh.html">
+removed any legacy options from your OpenSSH configuration file
+</a>.
+Failure to do so may result in the SSH service not starting after upgrade.
+</div>
 
 ## Performing the Upgrade
 
@@ -43,7 +42,8 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   # beadm create <appropriate-backup-name>
   ```
 
-* Change the publisher in the global zone and in _lipkg_ branded zones.
+* Change the publisher in the global zone and all linked zones
+  (e.g. _lipkg_ and _sparse_ branded zones).
   For example, going to _{{site.omnios_stable}}_:
   ```terminal
   # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
@@ -80,4 +80,14 @@ SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
   ```terminal
   # zoneadm -z <zonename> attach -u
   ```
+
+## Installing the OmniOSce CA Certificate
+
+**If upgrading from OmniTI OmniOS** first install the OmniOSce CA certificate:
+
+```
+# wget -P /etc/ssl/pkg https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
+# openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
+SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
+```
 
