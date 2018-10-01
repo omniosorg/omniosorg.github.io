@@ -69,8 +69,7 @@ _No files to update in this repository; just create the new branch._
 
 ### omnios-build
 
-* `build/release/root/etc/release`
-* `lib/config.sh`
+* `lib/config.sh` - RELVER
 * `tools/test` - remove check against doc/packages
 
 ### pkg5
