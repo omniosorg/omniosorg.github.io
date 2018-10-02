@@ -71,6 +71,7 @@ _No files to update in this repository; just create the new branch._
 
 * `lib/config.sh` - RELVER
 * `tools/test` - remove check against doc/packages
+* `doc/packages.md` - remove
 
 ### pkg5
 
