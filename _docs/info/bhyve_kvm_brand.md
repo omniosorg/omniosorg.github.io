@@ -25,7 +25,7 @@ configuring these types of zone.
 
 Most attributes have reasonable default value as described in the next
 section so here's a complete example bhyve zone configuration for installing
-FreeBSD from an _iso_ file. Since nothing is explicitly specified, this machine
+Debian from an _iso_ file. Since nothing is explicitly specified, this machine
 will default to a single virtual CPU and 1GiB of RAM. The machine's serial
 console is accessible via `zlogin`. It is also possible to configure VNC for
 all KVM machines and bhyve VMs that use UEFI boot.
@@ -33,7 +33,7 @@ all KVM machines and bhyve VMs that use UEFI boot.
 ```terminal
 omnios# dladm create-vnic -l net0 bhyve0
 omnios# zfs create -V 30G rpool/bhyve0
-omnios# zonecfg -z freebsd
+omnios# zonecfg -z debian
 create -b
 set brand=bhyve
 set zonepath=/data/zone/bhyve
@@ -62,9 +62,9 @@ add attr
     set type=string
     set value=/rpool/iso/debian-9.4.0-amd64-netinst.iso
 end
-omnios# zoneadm -z freebsd install
-omnios# zoneadm -z freebsd boot
-omnios# zlogin -C freebsd
+omnios# zoneadm -z debian install
+omnios# zoneadm -z debian boot
+omnios# zlogin -C debian
 ```
 
 ## Attributes
