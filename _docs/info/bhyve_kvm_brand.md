@@ -28,7 +28,7 @@ section so here's a complete example bhyve zone configuration for installing
 FreeBSD from an _iso_ file. Since nothing is explicitly specified, this machine
 will default to a single virtual CPU and 1GiB of RAM. The machine's serial
 console is accessible via `zlogin`. It is also possible to configure VNC for
-machines that use UEFI boot.
+all KVM machines and bhyve VMNs that use UEFI boot.
 
 ```terminal
 omnios# dladm create-vnic -l net0 bhyve0
@@ -75,22 +75,23 @@ configuration as shown in the example above; all attributes have the
 _string_ type.
 
 {:.bordered .responsive-table .bordered}
-| Attribute                     | Default                | Syntax
-| ---                           | ---                    | ---
-| `acpi`<sup>1</sup>            | `on`                   | `on`,`off`
-| `bootdisk`<sup>2</sup>        |                        | Eg. `rpool/hdd-bhyve0`
-| `bootorder`                   | `cd`                   | [`c`][`d`][`n`]
-| `bootrom`<sup>1,4</sup>       | `BHYVE_RELEASE_CSM`    | firmware image name
-| `cdrom`<sup>3</sup>           |                        | `/path/to/image.iso`
-| `console`<sup>6</sup>         | `/dev/zconsole`        | Eg. `socket,/tmp/vm.com1,wait`
-| `disk`<sup>2</sup>            |                        | `/dev/zvol/rdsk/fast/swap`
-| `diskif`                      | `virtio`               | `virtio`,`ahci`
-| `hostbridge`<sup>1</sup>      | `i440fx`               | `i440fx`,`q35`,`amd`,`netapp`,`none`
-| `netif`                       | `virtio`               | `virtio`,`e1000`
-| `ram`                         | `1G`                   | <code><i>n</i>G</code>,<code><i>n</i>M</code>
-| `type`                        | `generic`              | `generic`,`windows`
-| `vcpus`<sup>7</sup>           | `1`                    | <code>[[cpus=]<i>numcpus</i>][,sockets=<i>n</i>][,cores=<i>n</i>][,threads=<i>n</i>]]</code>
-| `vnc`<sup>5</sup>             |                        | `off`,`on`,`options`
+| Attribute			| Default		| Syntax
+| ---				| ---			| ---
+| acpi<sup>1</sup>		| `on`			| on,off
+| bootdisk<sup>2</sup>		|			| Eg. `rpool/hdd-bhyve0`
+| bootorder			| `cd`			| [c][d][n]
+| bootrom<sup>1,4</sup>		| `BHYVE_RELEASE_CSM`	| firmware image name
+| cdrom<sup>3</sup>		|			| Eg. `/rpool/iso/debian.iso`
+| console<sup>6</sup>		| `/dev/zconsole`	| Eg. `socket,/tmp/vm.com1,wait`
+| disk<sup>2</sup>		|			| Eg. `/dev/zvol/rdsk/fast/hdd-guest1`
+| diskif			| `virtio`		| virtio,ahci
+| extra				|			| Arbitrary hypervisor arguments
+| hostbridge<sup>1</sup>	| `i440fx`		| i440fx, q35, amd, netapp, none
+| netif				| `virtio`		| virtio,e1000
+| ram				| `1G`			| <i>n</i>G,<i>n</i>M
+| type				| `generic`		| generic, windows, openbsd
+| vcpus<sup>7</sup>		| `1`			| [[cpus=]_numcpus_][,sockets=_n_][,cores=_n_][,threads=_n_]]
+| vnc<sup>5</sup>		| `off`			| off,on,_options_
 
 ### Notes
 
@@ -116,6 +117,12 @@ one option is to use the mini `socat` utility that comes with the brand.
 
 ```terminal
 omnios# /usr/lib/brand/bhyve/socat /data/zone/bhyve/root/tmp/vm.vnc 5905
+```
+
+or use the full socat utility from extra:
+
+```terminal
+omnios# socat TCP-LISTEN:5905  UNIX-CONNECT:/data/zone/bhyve/root/tmp/vm.vnc
 ```
 
 > It is intended that future zone management tools incorporate this feature
