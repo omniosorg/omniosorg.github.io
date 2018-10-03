@@ -28,7 +28,7 @@ section so here's a complete example bhyve zone configuration for installing
 FreeBSD from an _iso_ file. Since nothing is explicitly specified, this machine
 will default to a single virtual CPU and 1GiB of RAM. The machine's serial
 console is accessible via `zlogin`. It is also possible to configure VNC for
-all KVM machines and bhyve VMNs that use UEFI boot.
+all KVM machines and bhyve VMs that use UEFI boot.
 
 ```terminal
 omnios# dladm create-vnic -l net0 bhyve0
@@ -83,7 +83,7 @@ _string_ type.
 | bootrom<sup>1,4</sup>		| `BHYVE_RELEASE_CSM`	| firmware image name
 | cdrom<sup>3</sup>		|			| Eg. `/rpool/iso/debian.iso`
 | console<sup>6</sup>		| `/dev/zconsole`	| Eg. `socket,/tmp/vm.com1,wait`
-| disk<sup>2</sup>		|			| Eg. `/dev/zvol/rdsk/fast/hdd-guest1`
+| disk<sup>2</sup>		|			| Eg. `/dev/zvol/rdsk/fast/hdd1,serial=1234`
 | diskif			| `virtio`		| virtio,ahci
 | extra				|			| Arbitrary hypervisor arguments
 | hostbridge<sup>1</sup>	| `i440fx`		| i440fx, q35, amd, netapp, none
