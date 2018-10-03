@@ -122,7 +122,7 @@ omnios# /usr/lib/brand/bhyve/socat /data/zone/bhyve/root/tmp/vm.vnc 5905
 or use the full socat utility from extra:
 
 ```terminal
-omnios# socat TCP-LISTEN:5905  UNIX-CONNECT:/data/zone/bhyve/root/tmp/vm.vnc
+omnios# socat TCP-LISTEN:5905 UNIX-CONNECT:/data/zone/bhyve/root/tmp/vm.vnc
 ```
 
 > It is intended that future zone management tools incorporate this feature
