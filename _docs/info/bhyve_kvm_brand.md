@@ -101,7 +101,7 @@ _string_ type.
 3. The ISO file needs passing through to the zone via a lofs mount as shown
    in the example above;
 4. Available firmware files can be found in `/usr/share/bhyve/firmware/`;
-5. Setting vnc to on is the same as setting it to `unix=/tmp/vm.vnc`;
+5. Setting vnc to `on` is the same as setting it to `unix=/tmp/vm.vnc`;
 6. You can connect to the virtual machine console from the global zone with
    `zlogin -C zonename`;
 7. For KVM, the extended syntax can cause problems with the guest; it's best to stick to simple numbers here.
@@ -122,7 +122,7 @@ omnios# /usr/lib/brand/bhyve/socat /data/zone/bhyve/root/tmp/vm.vnc 5905
 or use the full socat utility from extra:
 
 ```terminal
-omnios# socat TCP-LISTEN:5905 UNIX-CONNECT:/data/zone/bhyve/root/tmp/vm.vnc
+omnios# socat TCP-LISTEN:5905,reuseaddr,fork UNIX-CONNECT:/data/zone/bhyve/root/tmp/vm.vnc
 ```
 
 > It is intended that future zone management tools incorporate this feature
