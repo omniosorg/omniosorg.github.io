@@ -4,6 +4,8 @@
 <body>
     <header>
         {% include header.html %}
+        <script type="text/javascript" src='{{ "/assets/js/materialize.js" | prepend: site.baseurl }}'></script>
+        <script type="text/javascript" src='{{ "/assets/js/site.js" | prepend: site.baseurl }}'></script>
     </header>
     <main>
         {{ content }}
@@ -12,7 +14,5 @@
         {% include footer.html %}
     </footer>
 
-    <script type="text/javascript" src="{{ "/assets/js/materialize.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/assets/js/site.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
