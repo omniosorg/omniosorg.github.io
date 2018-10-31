@@ -33,6 +33,10 @@ If you buy an OmniOSce support contract, we will store your contact data
 to be able to communicate with you about your contract and matters related
 to that.
 
+If you subscribe to the OmniOSce Newsletter, your mail adderess will be
+stored at MailChimp who have their own GDPR compliant [Privacy
+Policy](https://mailchimp.com/legal/privacy/)
+
 It is our intention that our processing of personal data shall always be
 in line with the General Data Protection Regulation (GDPR), and in accordance
 with the Swiss data protection regulations applicable to the OmniOS
