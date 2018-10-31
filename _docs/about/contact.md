@@ -22,6 +22,11 @@ GitHub repository:
 
 If you are aren't sure, please use the first one in the list.
 
+# Newsletter
+
+I you would just like to stay up to date, consider subscribing to our
+[Newsletter](http://eepurl.com/dL1z7k).
+
 # Security
 
 Security information can be sent to <security@omniosce.org>
