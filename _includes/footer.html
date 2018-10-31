@@ -10,6 +10,7 @@
           {% if site.owner.facebook.show == true %}<li><a class="grey-text text-lighten-3" href="{{ site.owner.facebook.url }}"><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;{{ site.owner.facebook.name }}</a></li>{% endif %}
           {% if site.owner.twitter.show == true %}<li><a class="grey-text text-lighten-3" href="https://twitter.com/{{ site.owner.twitter.username }}"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@ {{ site.owner.twitter.username }}</a></li>{% endif %}
           {% if site.owner.email %}<li><a class="grey-text text-lighten-3" href="mailto:{{ site.owner.email }}"><i class="far fa-envelope"></i>&nbsp;&nbsp;{{ site.owner.email }}</a></li>{% endif %}
+          <li><a class="grey-text text-lighten-3" href="#" onClick="MCpopupNow()"><i class="fab fa-mailchimp"></i>&nbsp;&nbsp;OmniOS CE Newsletter Subscripton</a></li>
           <li><a class="grey-text text-lighten-3" href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="far fa-rss"></i>&nbsp;&nbsp;Atom Feed</a></li>
         </ul>
       </div>
@@ -20,3 +21,20 @@
     </div>
   </div>
   
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">
+function MCloadPopup() {
+    require(["mojo/signup-forms/Loader"], function(L) { 
+        L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"cacadc11134daf05d442e6595","lid":"84f8b950f7"})
+    });
+  }
+function MCpopupNow() {
+     document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+     document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+     jQuery('#PopupSignupForm_0').remove();
+     MCloadPopup();
+}
+jQuery(document).ready(function(){
+  MCloadPopup();
+});
+</script>
