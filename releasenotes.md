@@ -7,17 +7,20 @@ show_in_sidebar: true
 ---
 # Release Notes
 
-In our [Release Schedule](schedule.html) you can see when the next major release of OmniOS is due
-and for how long it will be supported.
+In our [Release Schedule](schedule.html) you can see when the next release
+of OmniOS is due and for how long it will be supported.
 
+## OmniOS Community Edition
 
-# OmniOS Community Edition
-
-* [r151026](https://github.com/omniosorg/omnios-build/blob/r151026/doc/ReleaseNotes.md) - current stable
-* [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - old stable (support ends 2018-11-06)
+* [r151028](https://github.com/omniosorg/omnios-build/blob/r151028/doc/ReleaseNotes.md) - current stable
+* [r151026](https://github.com/omniosorg/omnios-build/blob/r151026/doc/ReleaseNotes.md) - old stable (support ends 2019-05-05)
 * [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - LTS
 
-# OmniTI OmniOS (archived)
+## OmniOS (archived)
+
+* [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - old stable (support ended 2018-11-04)
+
+## OmniTI OmniOS (archived)
 
 * [r151022](legacy/releasenotes/r151022.html) - Initial release May 12 2017
 * [r151020](legacy/releasenotes/r151020.html) - Initial release November 4 2016
@@ -30,3 +33,4 @@ and for how long it will be supported.
 * [r151006](legacy/releasenotes/r151006.html) - Initial release May 8 2013
 * [r151004](legacy/releasenotes/r151004.html) - Initial release October 29 2012
 * [r151002](legacy/releasenotes/r151002.html) - Initial release April 2 2012
+
