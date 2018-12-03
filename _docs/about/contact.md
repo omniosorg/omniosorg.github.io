@@ -30,6 +30,11 @@ For general discussion and queries, please subscribe to the
 If you would just like to stay up to date regarding all things OmniOS,
 consider subscribing to our [Newsletter](http://eepurl.com/dL1z7k).
 
+## <i class="fab fa-twitter">&nbsp;&nbsp;Twitter</i>
+
+We also post announcements and release information on our
+[twitter feed](https://twitter.com/omniosce).
+
 ## <i class="fal fa-bug">&nbsp;&nbsp;Bug reports</i>
 
 For issues, bugs or suggestions, please open an issue against the relevant
