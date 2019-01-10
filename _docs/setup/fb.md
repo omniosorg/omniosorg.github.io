@@ -1,5 +1,5 @@
 ---
-title: Installation Walk-through
+title: Framebuffer loader
 category: setup
 order: 20
 show_in_sidebar: false
