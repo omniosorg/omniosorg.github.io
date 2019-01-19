@@ -23,7 +23,9 @@ Connect to the web-based [chat room on Gitter](https://gitter.im/omniosorg/Lobby
 ## <i class="fal fa-quote-right"></i> Mailing List
 
 For general discussion and queries, please subscribe to the
-[omnios-discuss mailing list](https://illumos.topicbox.com/groups/omnios-discuss).
+[omnios-discuss mailing list](https://illumos.topicbox.com/groups/omnios-discuss).  
+Archives of the previous mailing list
+[are available](https://omniosce.org/ml-archive/).
 
 ## <i class="fal fa-newspaper"></i> Newsletter
 
