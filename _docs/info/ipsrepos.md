@@ -20,16 +20,16 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby) or via
 ## Repos
 
 {:.bordered .responsive-table}
-| URL                                        | Publisher    | Signed | Build Scripts                                                     | Notes                                       |
-|--------------------------------------------|--------------|--------|-------------------------------------------------------------------|---------------------------------------------|
-| <https://pkg.omniosce.org/r151026/core/>   | omnios       | yes    | [r151026](https://github.com/omniosorg/omnios-build/tree/r151026) | Core OS components (stable)
-| <https://pkg.omniosce.org/r151026/extra/>  | extra.omnios | yes    | [r151026](https://github.com/omniosorg/omnios-extra/tree/r151026) | Additional packages (stable)
-| <https://pkg.omniosce.org/r151024/core/>   | omnios       | yes    | [r151024](https://github.com/omniosorg/omnios-build/tree/r151024) | Core OS components (stable)
-| <https://pkg.omniosce.org/r151024/extra/>  | extra.omnios | yes    | [r151024](https://github.com/omniosorg/omnios-extra/tree/r151024) | Additional packages (stable)
-| <https://pkg.omniosce.org/r151022/core/>   | omnios       | yes    | [r151022](https://github.com/omniosorg/omnios-build/tree/r151022) | Core OS components (LTS)
-| <https://pkg.omniosce.org/r151022/extra/>  | extra.omnios | yes    | [r151022](https://github.com/omniosorg/omnios-extra/tree/r151022) | Additional packages (LTS)
-| <https://pkg.omniosce.org/bloody/core/>    | omnios       | no     | [master](https://github.com/omniosorg/omnios-build)               | Core OS components (unstable)
-| <https://pkg.omniosce.org/bloody/extra/>   | extra.omnios | no     | [master](https://github.com/omniosorg/omnios-extra)               | Additional packages (unstable)
+| URL                                                         | Publisher    | Signed | Build Scripts                                                                                         | Notes                                       |
+|-------------------------------------------------------------|--------------|--------|-------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| <https://pkg.omniosce.org/{{site.omnios_stable}}/core/>     | omnios       | yes    | [{{site.omnios_stable}}](https://github.com/omniosorg/omnios-build/tree/{{site.omnios_stable}})       | Core OS components (stable)
+| <https://pkg.omniosce.org/{{site.omnios_stable}}/extra/>    | extra.omnios | yes    | [master](https://github.com/omniosorg/omnios-extra)                                                   | Additional packages (stable)
+| <https://pkg.omniosce.org/{{site.omnios_oldstable}}/core/>  | omnios       | yes    | [{{site.omnios_oldstable}}](https://github.com/omniosorg/omnios-build/tree/{{site.omnios_oldstable}}) | Core OS components (old stable)
+| <https://pkg.omniosce.org/{{site.omnios_oldstable}}/extra/> | extra.omnios | yes    | [master](https://github.com/omniosorg/omnios-extra)                                                   | Additional packages (old stable)
+| <https://pkg.omniosce.org/{{site.omnios_lts}}/core/>        | omnios       | yes    | [{{site.omnios_lts}}](https://github.com/omniosorg/omnios-build/tree/{{site.omnios_lts}})             | Core OS components (LTS)
+| <https://pkg.omniosce.org/{{site.omnios_lts}}/extra/>       | extra.omnios | yes    | [master](https://github.com/omniosorg/omnios-extra)                                                   | Additional packages (LTS)
+| <https://pkg.omniosce.org/bloody/core/>                     | omnios       | no     | [master](https://github.com/omniosorg/omnios-build)                                                   | Core OS components (unstable)
+| <https://pkg.omniosce.org/bloody/extra/>                    | extra.omnios | no     | [master](https://github.com/omniosorg/omnios-extra)                                                   | Additional packages (unstable)
 
 ## Unofficial Extras
 
@@ -37,8 +37,6 @@ touch [in the Lobby](https://gitter.im/omniosorg/Lobby) or via
 | URL                                      | Publisher          | Maintainer                             | Build Scripts                                                               | Notes                                                                        |
 |------------------------------------------|--------------------|----------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | <http://pkg.cs.umd.edu/>                 | cs.umd.edu         | Sergey Ivanov                          |                                                                             |                                                                              |
-| <http://pkg.omniti.com/omniti-ms/>       | ms.omniti.com      | OmniTI                                 | [omniti-ms](https://github.com/omniti-labs/omniti-ms)                       | Non-core packages used in OmniTI's managed services environments             |
-| <http://pkg.omniti.com/omniti-perl/>     | perl.omniti.com    | OmniTI                                 | [omnios-build-perl](https://github.com/omniti-labs/omnios-build-perl)       | Perl module dists designed to work with omniti/runtime/perl                  |
 | <http://pkg.niksula.hut.fi/>             | niksula.hut.fi     | pkg@niksula.hut.fi                     | <https://github.com/niksula/omnios-build>                                   | Signed packages; see the [instructions](http://pkg.niksula.hut.fi/)          |
 | <http://scott.mathematik.uni-ulm.de/>    | uulm.mawi          | Steffen Kram                           | [stefri/omnios-build](https://github.com/stefri/omnios-build)               |                                                                              |
 | <http://sfe.opencsw.org/localhostomnios> | localhostomnios    | SFE Community                          | <https://sourceforge.net/p/pkgbuild/code/HEAD/tree/spec-files-extra/trunk/> | Open for contribution                                                        |
