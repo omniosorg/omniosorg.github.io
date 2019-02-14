@@ -1,7 +1,7 @@
 ---
 title: Creating a simple zone
 category: setup
-order: 21
+order: 22
 show_in_sidebar: true
 ---
 
