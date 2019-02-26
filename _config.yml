@@ -16,7 +16,7 @@ omnios_oldstable: r151026
 omnios_lts_date: the 12th of May, 2017
 omnios_lts: r151022
 omnios_lts_suffix: s
-omnios_bloody: 20190126
+omnios_bloody: 20190225
 owner:
     email: info@omniosce.org
     facebook:
