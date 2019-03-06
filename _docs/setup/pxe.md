@@ -94,6 +94,12 @@ use grub.
 pfexec svcadm enable kayak tftp/udp6 dhcp:ipv4
 ```
 
+> If you have something already running on port 80, it's possible to change the
+> port the kayak server uses by running (where 8080 is the port you want):
+> `/var/svc/method/svc-kayak -u nobody -g nobody -p 8080`
+> but if you're running a full fledged webserver on port 80, it might be better
+> to just use that server to serve the directory. 
+
 ## Using the illumos loader (filename "pxeboot")
 
 The configuration for builds using the illumos loader can be found
