@@ -9,6 +9,15 @@ show_in_sidebar: true
 Every 6 months, a new OmniOS stable release is made. Since it is not a
 frequent occurence, this page records the required tasks.
 
+## Update data
+
+Before a release, the following data within _illumos-omnios_ should be updated:
+
+* tzdata
+* PCI IDs
+
+Ideally these should be upstreamed to illumos-gate too.
+
 ## Create repositories
 
 Create the new package repositories on the OOCE package server using the
