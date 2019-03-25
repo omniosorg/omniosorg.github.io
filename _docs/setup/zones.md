@@ -114,6 +114,13 @@ A _bhyve_ zone runs a virtual machine instance under the bhyve hypervisor.
 
 A _kvm_ zone runs a virtual machine instance under the KVM hypervisor.
 
+### illumos branded zones
+
+An _illumos_ zone runs an independant illumos distribution under the shared
+OmniOS kernel. Subject to the constraints imposed by the shared kernel, it can
+be used to run a different version of OmniOS userland or even a different
+illumos distribution.
+
 # Creating zones
 
 ## Creating a top-level dataset
