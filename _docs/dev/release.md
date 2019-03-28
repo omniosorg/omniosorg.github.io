@@ -91,6 +91,10 @@ _No files to update in this repository; just create the new branch._
 * `build/build_miniroot` - change _bloody_ to _r1510nn_
 * `build/build_zfs_send` - change _bloody_ to _r1510nn_
 
+### gfx-drm
+
+_No files to update in this repository; just create the new branch._
+
 ## Update Master Branches
 
 ### illumos-omnios
