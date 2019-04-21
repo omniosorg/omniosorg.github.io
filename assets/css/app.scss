@@ -228,6 +228,12 @@ footer.page-footer {
     padding-bottom: 3ex;
 }
 
+body .gitter-chat-embed {
+    z-index: 1000;
+    border-style: none;
+}
+
+
 .fleft, .cfleft {
 	float: left;
 }
