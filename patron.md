@@ -16,7 +16,7 @@ contribute by becoming an OmniOS patron.
 We are committed to providing updates to OmniOS for many years to come and
 to maintaining the stable and long-term-release models put in place by
 OmniTI before us. Your donation will help us to achieve that goal and
-ensure the long-term success of OmniOSce.
+ensure the long-term success of OmniOS.
 
 We use the money provided by our patrons to pay for any services used in
 publishing and maintaining OmniOS. The rest of the money gets divided up
