@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_wide
 title: Upgrading OmniOS
 show_in_menu: false
 show_in_sidebar: true
@@ -8,16 +8,17 @@ show_in_sidebar: true
 # Upgrading to a New OmniOS Release
 
 The following table shows the supported upgrade paths between OmniOS versions.
-_Upgrading from versions not listed below has not been tested and is
-not supported._
+> Upgrading from versions not listed below has not been tested and is
+not supported.
 
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
 | r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omniosce-ca-certificate)
-| r151022 (LTS)			| &#8594;	| r151024 (stable), r151026 (stable), r151028 (stable)
-| r151024 (stable)		| &#8594;	| r151026 (stable), r151028 (stable)
-| r151026 (stable)		| &#8594;	| r151028 (stable)
+| r151022 (LTS)			| &#8594;	| r151024, r151026, r151028 (stable), r151030 (LTS)
+| r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
+| r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
+| r151028 (stable)		| &#8594;	| r151030 (LTS)
 
 <div class="fa-orange" style="padding-top: 0.5em">
 <i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
@@ -47,9 +48,11 @@ Failure to do so may result in the SSH service not starting after upgrade.
   For example, going to _{{site.omnios_stable}}_:
   ```terminal
   # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
+  # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/extra extra.omnios
   ```
 
-* Shut down and detach any _ipkg_ branded zones:
+* Shut down and detach any _ipkg_ branded zones (NB: linked zones such as
+the _lipkg_ and _sparse_ brands do **not** need to be detached):
   ```terminal
   # zoneadm -z <zonename> shutdown
   ... use the following command to check when the zone has shut down ...

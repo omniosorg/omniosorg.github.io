@@ -6,9 +6,9 @@ show_in_menu: true
 show_in_sidebar: true
 ---
 
-# OmniOSce Downloads
+# OmniOS Downloads
 
-Even-numbered releases of OmniOSce are stable and odd-numbered releases are
+Even-numbered releases of OmniOS are stable and odd-numbered releases are
 unstable (bloody); see [stable vs. bloody](/about/stablevsbloody.html) for
 more information on the differences between them. Our
 [release schedule](/schedule.html) has more information on the
