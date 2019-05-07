@@ -1,4 +1,4 @@
-# Site settings
+# Site settings 
 title: OmniOS Community Edition
 description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, Bhyve, KVM and Linux zone support
 url: "https://omniosce.org"
