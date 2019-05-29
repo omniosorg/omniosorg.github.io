@@ -13,6 +13,27 @@ running within a couple of minutes.
 The image is small so can be run within the free tier - a `t2.micro` instance
 is perfect for experimentation.
 
+### r151030 (LTS)
+
+{:.bordered .responsive-table}
+| Region(s) | AMI ID | AMI Name
+| --------- | ------ | --------
+| EU (Frankfurt)	| ami-05c391bd80dcc7998 | r151030 stable 20190529
+| EU (London)		| TBC | r151030 stable 20190529
+| EU (Ireland)		| TBC | r151030 stable 20190529
+| EU (Paris)		| TBC | r151030 stable 20190529
+| US (Oregon)		| TBC | r151030 stable 20190529
+| US (N.California)	| TBC | r151030 stable 20190529
+| US (Ohio)		| TBC | r151030 stable 20190529
+| US (N.Virginia)	| TBC | r151030 stable 20190529
+| Canada		| TBC | r151030 stable 20190529
+| S.America (Sao Paulo)	| TBC | r151030 stable 20190529
+| Asia Pacific (Tokyo)	| TBC | r151030 stable 20190529
+| Asia Pacific (Seoul)	| TBC | r151030 stable 20190529
+| Asia Pacific (Mumbai)	| TBC | r151030 stable 20190529
+| Asia Pacific (Singapore)	| TBC | r151030 stable 20190529
+| Asia Pacific (Sydney)	| TBC | r151030 stable 20190529
+
 ### r151026
 
 {:.bordered .responsive-table}
