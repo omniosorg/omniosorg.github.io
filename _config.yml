@@ -10,12 +10,12 @@ download_path: https://downloads.omniosce.org/media
 useast_path: https://us-east.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
 omnios_stable_date: the 6th of May, 2019
-omnios_stable: r151030h
-omnios_stable_suffix:
+omnios_stable: r151030
+omnios_stable_suffix: h
 omnios_oldstable: r151028
 omnios_lts_date: the 6th of May, 2019
-omnios_lts: r151030h
-omnios_lts_suffix:
+omnios_lts: r151030
+omnios_lts_suffix: h
 omnios_bloody: 20190618
 owner:
     email: info@omniosce.org
