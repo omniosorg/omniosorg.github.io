@@ -10,6 +10,7 @@ addons:
   apt:
     packages:
       - lftp
+  ssh_known_hosts: pkg.omniosce.org:8114
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
