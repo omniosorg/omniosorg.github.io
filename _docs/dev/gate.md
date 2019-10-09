@@ -12,13 +12,12 @@ our `omni` utility as described on our
 [build instructions page](/dev/build_instructions.html).
 
 ```shell_session
-~$ pfexec pkg install illumos-tools
-~$ pfexec zfs create -o mountpoint=/build rpool/build
-~$ cd /build
-/build$ git clone https://github.com/illumos/illumos-gate
-/build$ sed '/CODEMGR_WS=.*/s^^CODEMGR_WS=/build/illumos-gate^' \
-    < /opt/onbld/env/omnios-illumos-gate > gate.env
-/build$ chmod +x illumos-gate/usr/src/tools/scripts/nightly.sh
-/build$ illumos-gate/usr/src/tools/scripts/nightly.sh gate.env
+$ pfexec pkg install illumos-tools
+$ pfexec zfs create -o mountpoint=/build rpool/build
+$ cd /build
+$ git clone https://github.com/illumos/illumos-gate
+$ cd illumos-gate
+$ chmod +x usr/src/tools/scripts/nightly.sh
+$ ./usr/src/tools/scripts/nightly.sh /opt/onbld/env/omnios-illumos-gate
 ```
 
