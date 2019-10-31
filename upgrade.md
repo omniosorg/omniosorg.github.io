@@ -9,7 +9,7 @@ show_in_sidebar: true
 
 The following table shows the supported upgrade paths between OmniOS versions.
 > Upgrading from versions not listed below has not been tested and is
-not supported.
+**not supported**.
 
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
@@ -19,6 +19,7 @@ not supported.
 | r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
 | r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
 | r151028 (stable)		| &#8594;	| r151030 (LTS)
+| r151030 (LTS)			| &#8594;	| r151032 (stable)
 
 <div class="fa-orange" style="padding-top: 0.5em">
 <i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
