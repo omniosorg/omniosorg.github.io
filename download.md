@@ -27,7 +27,7 @@ All OmniOS releases are for the x86-64 architecture only.
 	<span class="selected">Switzerland (selected)</span>
 	<br />
         <img src="/assets/flags/blank.gif" class="flag flag-us" alt="US Flag" />
-	<a href="/download-us-east.html">US East</a>
+	<a href="/download-us-west.html">US West</a>
   </div>
   <div class="cleft"></div>
 </div>

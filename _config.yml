@@ -7,7 +7,7 @@ logo: OmniOS Community Edition
 paginate: 12
 paginate_path: "/news/page:num/"
 download_path: https://downloads.omniosce.org/media
-useast_path: https://us-east.mirror.omniosce.org/downloads/media
+uswest_path: https://us-west.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
 omnios_stable_date: the 4th of November, 2019
 omnios_stable: r151032
