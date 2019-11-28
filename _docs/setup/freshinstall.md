@@ -23,7 +23,7 @@ or [PXE](/setup/pxe.html). Images for these formats are available on
 ## Virtual machine notes
 
 OmniOS works well within a virtual machine environment such as Virtualbox,
-VMware, Xen, Hypver-V, KVM or Bhyve. The following configuration is
+VMware, Xen, Hyper-V, KVM or Bhyve. The following configuration is
 recommended for such deployments.
 
 {:.bordered .responsive-table}
