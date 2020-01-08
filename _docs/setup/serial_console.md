@@ -28,7 +28,8 @@ Enable the Serial Port
 
 ![Enable the Serial Port](../assets/images/sc-bios1.png)
 
-Enable Console Redirection
+Enable Console Redirection. Since we are running the console on a
+dedicated ethernet interface I enable SOL only there.
 
 ![Enable the Serial Port](../assets/images/sc-bios2.png)
 
@@ -92,6 +93,14 @@ Finally update the boot archive and reboot
 ```bash
 bootadm update-archive
 reboot
+```
+
+## Trying it out
+
+Now you can ssh into your server by simply doing:
+
+```bash
+ssh -p 66 server-console-ip
 ```
 
 ## Help making this better
