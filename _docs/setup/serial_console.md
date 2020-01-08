@@ -1,8 +1,8 @@
 ---
-title: Serial Console Setup
+title: Serial Console over SSH
 category: setup
 order: 21
-show_in_sidebar: false
+show_in_sidebar: true
 ---
 
 # Setting up a serial console
@@ -97,5 +97,4 @@ reboot
 ## Help making this better
 
 If you have figured out how to make the SOL SSH console work on another
-motherboard, please [provide a
-PR](https://github.com/omniosorg/omniosorg.github.io/edit/master/_docs/setup/serial_console.md).
+motherboard, please [provide a PR](https://github.com/omniosorg/omniosorg.github.io/edit/master/_docs/setup/serial_console.md).
