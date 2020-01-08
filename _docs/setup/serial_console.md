@@ -94,3 +94,8 @@ bootadm update-archive
 reboot
 ```
 
+## Help making this better
+
+If you have figured out how to make the SOL SSH console work on another
+motherboard, please [provide a
+PR](https://github.com/omniosorg/omniosorg.github.io/edit/master/_docs/setup/serial_console.md).
