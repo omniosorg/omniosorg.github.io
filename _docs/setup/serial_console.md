@@ -53,7 +53,7 @@ add ttya
 select svc:/system/console-login:ttya
 addpg ttymon application
 setprop ttymon/device = astring: /dev/term/a
-setprop ttymon/terminal_type = astring: xterm
+setprop ttymon/terminal_type = astring: vt100
 setprop ttymon/label = astring: ttya
 setprop ttymon/modules = astring: ldterm,ttcompat
 setprop ttymon/nohangup = boolean: true
