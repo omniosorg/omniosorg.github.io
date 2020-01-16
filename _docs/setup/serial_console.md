@@ -53,7 +53,7 @@ add ttya
 select svc:/system/console-login:ttya
 addpg ttymon application
 setprop ttymon/device = astring: /dev/term/a
-setprop ttymon/terminal_type = astring: vt100
+setprop ttymon/terminal_type = astring: xterm
 setprop ttymon/label = astring: ttya
 setprop ttymon/modules = astring: ldterm,ttcompat
 setprop ttymon/nohangup = boolean: true
@@ -65,12 +65,12 @@ EOF
 and enable the new console login
 
 ```bash
-scvadm enable svc:/system/console-login:ttya
+svcadm enable svc:/system/console-login:ttya
 ```
 Allow root logins on all consoles
 
 ```bash
-perl -i -p 's/\s*(CONSOLE.+)/# $1/' /etc/default/login
+perl -i -p -e 's/\s*(CONSOLE.+)/# $1/' /etc/default/login
 ```
 
 ## Get the Loader to use the Serial Console
@@ -102,6 +102,64 @@ Now you can ssh into your server by simply doing:
 ```bash
 ssh -p 66 server-console-ip
 ```
+
+## Console Resizing
+
+Maybe you tried our vim on your new serial console and were disapointed that
+somehow it jumbled up the screen. The reason for this is, that over the
+serial console connection stty does not seem to get properly informed about
+screen size. Type `stty` and it will report rows and cols as 0 which is not
+ideal. There is a way to fix this though. 
+
+The easiest is to just type `resize` to get things fixed ... unfortunately
+the `resize` comand is part of the `xterm` package which is probably not
+installed on your omnios GZ. There is another way though. If you are running
+bash, a little shell function will do:
+
+```bash
+resize() {
+  old=$(stty -g)
+  stty -echo
+  printf '\033[18t'
+  IFS=';' read -d t _ rows cols _
+  stty "$old"
+  stty cols "$cols" rows "$rows"
+}
+```
+
+I have put this following into `~root/.bash_profile` to make it all
+automatic:
+
+```bash
+if [ ! -f /usr/bin/resize ]; then
+resize() {
+  old=$(stty -g)
+  stty -echo
+  printf '\033[18t'
+  IFS=';' read -d t _ rows cols _
+  stty "$old"
+  stty cols "$cols" rows "$rows"
+}
+fi
+# resize terminal
+if [ "$(tty)" = '/dev/term/a' ]; then
+   resize
+fi
+```
+
+Now whenever I login on ttya the screen gets automatically resized.
+
+## The SMASH-CLP Console
+
+Maybe your system has a SMASH console. This also lets you connect to the
+serial port. Just type:
+
+```console
+start /system1/sol1
+```
+
+to get started and `^.` to disconnect. (`^` is not the control key, but the
+little hat above the `6` key on a US keyboard).
 
 ## Help making this better
 
