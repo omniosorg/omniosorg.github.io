@@ -127,7 +127,7 @@ resize() {
 }
 ```
 
-I have put this following into `~root/.bash_profile` to make it all
+I have put the following into `~root/.bash_profile` to make it all
 automatic:
 
 ```bash
