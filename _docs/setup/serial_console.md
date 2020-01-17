@@ -75,7 +75,7 @@ perl -i -p -e 's/\s*(CONSOLE.+)/# $1/' /etc/default/login
 
 ## Get the Loader to use the Serial Console
 
-First setup the loader to also talk over the serial port
+You can also make the omnios loader talk over serial:
 
 ```bash
 cat >/boot/conf.d/serial <<EOF
@@ -154,7 +154,7 @@ Now whenever I login on ttya the screen gets automatically resized.
 Maybe your system has a SMASH console. This also lets you connect to the
 serial port. Just type:
 
-```console
+```bash
 start /system1/sol1
 ```
 
