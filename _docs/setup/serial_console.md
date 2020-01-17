@@ -7,18 +7,25 @@ show_in_sidebar: true
 
 # Setting up a serial console
 
-Many modern motherboards support remote console access. Intel calls Baseboard Management Controller. Apart from the friendly webinterface BMC also offers a facility called SOL SSH. With this
-it is possible to access the first serial port (ttya/com1) over ssh. When you configure it you can access BIOS settings and other boot time things like boot media selection over ssh which is quite nice in it self. But even better, you can also configure OmniOS to provide access to a serial console over this path. Which is a great recovery option. Here is how to set this up.
+Many modern motherboards support remote console access.  Intel calls their
+solution Baseboard Management Controller.  Apart from the friendly
+webinterface BMC also offers a facility called SOL SSH.  With this it is
+possible to access the first serial port (ttya/com1) over ssh.  When you
+configure it you can access BIOS settings and other boot time things like
+boot media selection over ssh which is quite nice in it self.  But even
+better, you can also configure OmniOS to provide access to a serial console
+over this path.  Which is a great recovery option.  Here is how to set this
+up.
 
 The following examples are screenshots from an Intel S2600ST Motherboard.
 
 ## Configuring the BMC
 
-Enable SSH SOL
+Configure the SSH SOL Port
 
 ![BMC SSH SOL Activation](../assets/images/sc-bmc1.png)
 
-Configure the SSH SOL Port
+Enable SSH SOL
 
 ![BMC SSH SOL Port](../assets/images/sc-bmc2.png)
 
