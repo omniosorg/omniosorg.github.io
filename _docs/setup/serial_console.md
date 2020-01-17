@@ -82,7 +82,7 @@ cat >/boot/conf.d/serial <<EOF
 boot_multicons="YES"
 boot_serial="YES"
 comconsole_speed="115200"
-osconsole="ttya,text"
+os_console="ttya"
 console="ttya,text"
 ttya-mode="115200,8,n,1,-"
 EOF
@@ -105,11 +105,11 @@ ssh -p 66 server-console-ip
 
 ## Console Resizing
 
-Maybe you tried our vim on your new serial console and were disapointed that
-somehow it jumbled up the screen. The reason for this is, that over the
-serial console connection stty does not seem to get properly informed about
-screen size. Type `stty` and it will report rows and cols as 0 which is not
-ideal. There is a way to fix this though. 
+If you tried vim on your new serial console, you were probably in for a
+disapointed &emdash; somehow it jumbled up the screen.  The reason for this is,
+that over the serial console connection stty does not seem to get properly
+informed about screen size and screen size changes.  Run `stty` and it will report rows and cols as
+0 which is not ideal.  There is a way to fix this though.
 
 The easiest is to just type `resize` to get things fixed ... unfortunately
 the `resize` comand is part of the `xterm` package which is probably not
