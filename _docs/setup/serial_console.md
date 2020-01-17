@@ -82,7 +82,7 @@ cat >/boot/conf.d/serial <<EOF
 boot_multicons="YES"
 boot_serial="YES"
 comconsole_speed="115200"
-os_console="ttya"
+os_console="text"
 console="ttya,text"
 ttya-mode="115200,8,n,1,-"
 EOF
