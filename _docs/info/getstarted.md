@@ -92,7 +92,35 @@ developer/gcc5                                    5.5.0-0.151024             ---
 developer/gcc6                                    6.4.0-0.151024             ---
 ```
 
-and then install the desired version along with the `system/header` package:
+Note that our query is run against the **entire package name**, including its category (in this case, developer), however a short form can be used. For example, `bhyve` would match against `system/bhyve`, `system/bhyve/firmware`, `system/library/bhyve`, and `system/zones/brand/bhyve`, but `gcc` would not match against `gcc5` due to the extra `5`. Globbing is provided (remember to use quotes if using e.g. bash), using the `?` and `*`  wildcards to match one or zero or more instances of any character respectively. Therefore, for the most general search for a term, use the following:
+
+```terminal
+$ pkg list -a '*gcc*'
+NAME (PUBLISHER)                                  VERSION                    IFO
+developer/gcc44                                   4.4.4-151032.0             ---
+developer/gcc44/libgmp-gcc44                      5.0.2-151032.0             ---
+developer/gcc44/libmpc-gcc44                      0.8.2-151032.0             ---
+developer/gcc44/libmpfr-gcc44                     3.1.0-151032.0             ---
+developer/gcc5                                    5.5.0-0.151024             ---
+developer/gcc6                                    6.4.0-0.151024             ---
+sfe/developer/gcc (localhostomnios)               4.9.4-0.151030.3           ---
+sfe/developer/gcc-46 (localhostomnios)            4.6.4-0.0.151012           ---
+sfe/developer/gcc-48 (localhostomnios)            4.8.5-0.0.151014           ---
+sfe/developer/gcc-49 (localhostomnios)            4.9.4-0.151030.3           ---
+sfe/developer/gcc-54 (localhostomnios)            5.4.0-0.0.151014           ---
+sfe/developer/gcc-7 (localhostomnios)             7.3.0-0.0.151022           ---
+sfe/developer/gcc/src (localhostomnios)           7.3.0-0.0.151022           ---
+sfe/system/library/gcc-46-runtime (localhostomnios) 4.6.4-0.0.151012           ---
+sfe/system/library/gcc-48-runtime (localhostomnios) 4.8.5-0.0.151014           ---
+sfe/system/library/gcc-49-runtime (localhostomnios) 4.9.4-0.151030.3           ---
+sfe/system/library/gcc-54-runtime (localhostomnios) 5.4.0-0.0.151014           ---
+sfe/system/library/gcc-7-runtime (localhostomnios) 7.3.0-0.0.151022           ---
+sfe/system/library/gcc-runtime (localhostomnios)  4.9.4-0.151030.3           ---
+system/library/gcc-runtime                        8-151032.0                 i--
+```
+
+
+We can then install the desired version along with the `system/header` package:
 
 ```terminal
 $ pfexec pkg install developer/gcc6 system/header
