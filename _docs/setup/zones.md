@@ -62,7 +62,7 @@ installed software set linked to that within the global zone. By default,
 when performing a package update from the global zone, core system packages
 within lipkg zones are automatically updated at the same time.
 It is possible to extend this to upgrade all packages and to upgrade multiple
-likg zones in parallel via command line options or pkg properties.
+lipkg zones in parallel via command line options or pkg properties.
 See XXX below.
 
 A further benefit over ipkg zones is that major version upgrades can be
