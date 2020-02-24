@@ -11,12 +11,12 @@ uswest_path: https://us-west.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
 omnios_stable_date: the 4th of November, 2019
 omnios_stable: r151032
-omnios_stable_suffix:
+omnios_stable_suffix: p
 omnios_oldstable: r151030
 omnios_lts_date: the 6th of May, 2019
 omnios_lts: r151030
-omnios_lts_suffix: s
-omnios_bloody: 20191213
+omnios_lts_suffix: ap
+omnios_bloody: 20200224
 owner:
     email: info@omniosce.org
     facebook:
