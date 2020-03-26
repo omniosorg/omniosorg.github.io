@@ -28,7 +28,9 @@ section so here's a complete example bhyve zone configuration for installing
 Debian from an _iso_ file. Since nothing is explicitly specified, this machine
 will default to a single virtual CPU and 1GiB of RAM. The machine's serial
 console is accessible via `zlogin`. It is also possible to configure VNC for
-all KVM machines and bhyve VMs that use UEFI boot.
+all KVM machines and bhyve VMs that use UEFI boot. The below example uses VNC because
+the Debian netinstall default assumes a graphical console. See below example for
+using socat to access it from a vnc client.
 
 ```terminal
 omnios# dladm create-vnic -l net0 bhyve0
@@ -62,6 +64,22 @@ add attr
     set type=string
     set value=/rpool/iso/debian-9.4.0-amd64-netinst.iso
 end
+add attr
+    set name=acpi
+    set type=string
+    set value=off
+end
+add attr
+    set name=bootrom
+    set type=string
+    set value=BHYVE_RELEASE
+end
+add attr
+    set name=vnc
+    set type=string
+    set value=on
+end
+
 omnios# zoneadm -z debian install
 omnios# zoneadm -z debian boot
 omnios# zlogin -C debian
@@ -109,7 +127,7 @@ _string_ type.
 
 ## VNC Access
 
-If the `vnc` attribute is set to `on`, then a VNC server will be started
+When the `vnc` attribute is set to `on`, a VNC server will be started
 listening on a UNIX socket at `/tmp/vm.vnc` within the zone. Note that this
 only functions for bhyve zones if the guest is booted via UEFI. In order to
 connect the socket to a TCP port so that it can be accessed using a VNC client
@@ -128,3 +146,43 @@ omnios# socat TCP-LISTEN:5905,reuseaddr,fork UNIX-CONNECT:/data/zone/bhyve/root/
 > It is intended that future zone management tools incorporate this feature
 > in an easy-to-use way.
 
+## Post Install
+
+Once the image is installed and it reboots, you'll get back to the install menu.
+(Note, you'll have to reconnect after VNC disconnects at the reboot to see this).
+To avoid going into another full reinstall, you need to remove the boot cdrom from 
+the zone config.
+
+```terminal
+omnios# zonecfg -z debian
+zonecfg:debian> remote attr name=cdrom
+zonecfg:debian> verify
+zonecfg:debian> commit
+zonecfg:debian> exit
+```
+
+## Debian specific
+
+One final note on Debian. The install image does not setup (as of Debian 10) a proper
+UEFI boot in the right place for Bhyve to find it, so you'll have to boot into the 
+Debian OS following a few steps from the uefi shell, get the OS up, then copy a file
+in place and run update-grub.
+
+1.  exit from the UEFI Shell
+```terminal
+Shell> exit
+```
+
+2.  Now select Boot Maintenance Manager from the Bhyve boot screen
+3. select Boot From File from the next screen
+4. at the following screen select the single `<EFI>` option
+5. Then select `<debian>`
+6. Finally, select grubx64.efi from the last screen and your guest OS will boot
+7. The last step to make this permanent is to issue the following command to put
+   the UEFI boot code into the right place for subsequent boots to be automatic
+    
+```terminal
+root# mkdir /boot/efi/EFI/BOOT
+root# cp /boot/efi/EFI/debian/grubx64.efi /boot/efi/EFI/BOOT/bootx64.efi
+root# /usr/sbin/update-grub
+```
