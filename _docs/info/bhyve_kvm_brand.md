@@ -168,7 +168,7 @@ UEFI boot in the right place for Bhyve to find it, so you'll have to boot into t
 Debian OS following a few steps from the uefi shell, get the OS up, then copy a file
 in place and run update-grub.
 
-# exit from the Uefi Shell
+1.  exit from the UEFI Shell
 ```terminal
 Shell> exit
 ```
