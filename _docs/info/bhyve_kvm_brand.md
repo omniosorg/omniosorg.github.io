@@ -174,11 +174,11 @@ Shell> exit
 ```
 
 2.  Now select Boot Maintenance Manager from the Bhyve boot screen
-# select Boot From File from the next screen
-# at the folloewing screen select the single <EFI> option
-# Then select <debian>
-# Finally select grubx64.efi from the last screen and your guest OS will boot
-# The last step to make this permanent is to issue the following command to put
+3. select Boot From File from the next screen
+4. at the following screen select the single `<EFI>` option
+5. Then select `<debian>`
+6. Finally, select grubx64.efi from the last screen and your guest OS will boot
+7. The last step to make this permanent is to issue the following command to put
 the UEFI boot code into the right place for subsequent boots to be automatic
     
 ```terminal
