@@ -179,7 +179,7 @@ Shell> exit
 5. Then select `<debian>`
 6. Finally, select grubx64.efi from the last screen and your guest OS will boot
 7. The last step to make this permanent is to issue the following command to put
-the UEFI boot code into the right place for subsequent boots to be automatic
+   the UEFI boot code into the right place for subsequent boots to be automatic
     
 ```terminal
 root# mkdir /boot/efi/EFI/BOOT
