@@ -173,7 +173,7 @@ in place and run update-grub.
 Shell> exit
 ```
 
-# Now select Boot Maintenance Manager from the Bhyve boot screen
+2.  Now select Boot Maintenance Manager from the Bhyve boot screen
 # select Boot From File from the next screen
 # at the folloewing screen select the single <EFI> option
 # Then select <debian>
