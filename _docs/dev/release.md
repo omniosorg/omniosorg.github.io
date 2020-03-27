@@ -65,8 +65,7 @@ branch protection in github using the previous branch as a template**
 
 ### illumos-omnios
 
-* `usr/src/tools/env/omnios-illumos-gate.sh`
-* `usr/src/tools/env/omnios-illumos-omnios.sh`
+_No files to update in this repository; just create the new branch._
 
 ### illumos-kvm
 
@@ -96,10 +95,6 @@ _No files to update in this repository; just create the new branch._
 _No files to update in this repository; just create the new branch._
 
 ## Update Master Branches
-
-### illumos-omnios
-
-* `usr/src/tools/env/omnios-illumos-omnios.sh` - ONNV\_BUILDNUM
 
 ### omnios-build
 
