@@ -37,7 +37,7 @@ that will result in a non-bootable system if you have any pool (\*any\*
 pool, not just your rpool) with 4K logical sector disks attached to the
 system. Disks with 4K physical sectors and 512b logical sectors are ok,
 but disks which have 4K logical sectors will fail. Follow the directions
-listed belowito leave your system configured with grub until this bug is
+listed below to leave your system configured with grub until this bug is
 fixed upstream and backported to r151022. You can check your disks with the
 following command:
 
