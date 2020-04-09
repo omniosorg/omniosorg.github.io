@@ -155,7 +155,7 @@ the zone config.
 
 ```terminal
 omnios# zonecfg -z debian
-zonecfg:debian> remote attr name=cdrom
+zonecfg:debian> remove attr name=cdrom
 zonecfg:debian> verify
 zonecfg:debian> commit
 zonecfg:debian> exit
