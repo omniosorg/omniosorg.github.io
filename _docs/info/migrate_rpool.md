@@ -75,6 +75,29 @@ Password:
 Make sure to wait until resilver is done before rebooting.
 ```
 
+Running the command **zpool status** after attaching the new disk will give this output:
+
+``` terminal
+$ zpool status
+  pool: rpool
+ state: ONLINE
+status: One or more devices is currently being resilvered.  The pool will
+        continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+  scan: resilver in progress since Mon Apr 13 14:24:45 2020
+        18.1M scanned out of 1.60G at 1.21M/s, 0h22m to go
+    16.1M resilvered, 1.10% done
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        rpool       ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c1t1d0  ONLINE       0     0     0
+            c1t2d0  ONLINE       0     0     0
+            c1t3d0  ONLINE       0     0     0
+
+```
+
 **You must not do anything until resilver is done**. So go and grab a cup of coffee or some other fluid you want to drink.
 
 To monitor progress you can use this command:
@@ -84,6 +107,7 @@ $ yes "zpool status; sleep 10"|sh
 
 Use Ctrl+c to quit the command.
 ```
+
 
 The above should be done for every new disk which in this case means one more time for c1t4d0
 
@@ -114,9 +138,6 @@ After detaching the old disk(s) from the rpool you should do a reboot to ensure 
 
 When rebooting you might see a warning from 'devid register' that device ids has changed when removing the old disk(s). This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOSce when you reboot or power down your system.
 
-## Contact
+### Contact
 
-If you have any problems or questions, please get in touch via
-[the lobby](https://gitter.im/omniosorg/Lobby) or
-[#omnios on Freenode](http://webchat.freenode.net?randomnick=1&channels=%23omnios&uio=d4)
-
+Any problems or questions, please [get in touch](/about/contact.html).
