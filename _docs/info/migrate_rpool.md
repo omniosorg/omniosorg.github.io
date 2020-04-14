@@ -136,6 +136,12 @@ sudo zpool detach rpool c1t2d0
 
 After detaching the old disk(s) from the rpool you should do a reboot to ensure everything is fine.
 
+If the new disk(s) have a higher capacity than the old disk(s) and you want the new rpool to grow to the new size of the disk(s) you will have to run the following command:
+
+``` terminal
+zpool set autoexpand=on rpool
+```
+
 When rebooting you might see a warning from 'devid register' that device ids has changed when removing the old disk(s). This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOSce when you reboot or power down your system.
 
 ### Contact
