@@ -78,7 +78,7 @@ ok boot
 
 ## Basic Package Management
 
-`pkg` is the principle method of installing software in OmniOS.
+`pkg` is the principal method of installing software in OmniOS.
 Let's query the package manager for a version of gcc:
 
 ```terminal
