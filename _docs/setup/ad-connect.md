@@ -46,7 +46,7 @@ Setup Kerberos for MS Active Directory (ms_ad)
 To make sure we have the same user id numbers everywhere we want to keep them in Active Direcory. 
 
 ```terminal
-# svccfg -s svc:/system/idmap setprop \ config/directory_based_mapping=astring: idmu
+# svccfg -s svc:/system/idmap setprop config/directory_based_mapping=astring: idmu
 # svcadm refresh svc:/system/idmap
 ```
 
@@ -69,11 +69,11 @@ Make sure you have the following properties configured for every user in your ac
 
 ### Name Service Integration
 
-The illumos active directory plugin does not support full login integration, therefore we have to setup a proxy ldap user and then configure the ldap client to enable unix logins with ldap accounts. The proxy AD user has to have appropriate rights to read the the user account entries.
+The illumos active directory plugin does not support full login integration, therefore we have to setup a proxy ldap user and then configure the ldap client to enable unix logins with ldap accounts. The proxy AD user has to have appropriate rights to read the user account entries.
 
 ![Proxy User Account](./ad-proxy-user.png)
 
-Now configure the ldap client accordinly
+Now configure the ldap client accordingly
 
 ```terminal
 ldapclient manual \
@@ -83,7 +83,7 @@ ldapclient manual \
     -a proxyPassword=Plain Password \
     -a defaultSearchBase=dc=my-ad-domain,dc=local \
     -a domainName=my-ad-domain.local \
-    -a followReferrals=false" \
+    -a followReferrals=false \
     -a defaultServerList=ad.my-ad-domain.local \
     -a attributeMap=group:userpassword=userPassword \
     -a attributeMap=group:memberuid=memberUid \
