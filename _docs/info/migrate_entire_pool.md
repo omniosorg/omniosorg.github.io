@@ -110,15 +110,15 @@ tank2/vm-100-disk-0@replication      0      -   734M  - z
 **Remote operation**
 
 ``` terminal
-local-host $ sudo zfs send -R tank1@replication | ssh <remote-host> sudo zfs recv -Fdu tank2
+local-host $ sudo zfs send -R tank1@replication | remote-host $ sudo zfs recv -Fdu tank2
 
-local-host $ ssh <remote-host> zfs list -r tank2
+remote-host $ zfs list -r tank2
 NAME                  USED  AVAIL  REFER  MOUNTPOINT
 tank2                1.58G  13.4G    24K  /tank2
 tank2/nfs             879M  13.4G   879M  /nfs
 tank2/vm-100-disk-0   734M  13.4G   734M  -
 
-local-host $ ssh <remote-host> zfs list -r -t snapshot tank2
+remote-host $ zfs list -r -t snapshot tank2
 NAME                              USED  AVAIL  REFER  MOUNTPOINT
 tank2@replication                    0      -    24K  -
 tank2/nfs@replication                0      -   879M  -
@@ -142,7 +142,7 @@ local-host $ sudo zpool create tank1 c1t3d0
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
-local-host $ ssh <remote-host> sudo zfs destroy -r tank2@replication
+remote-host $ sudo zfs destroy -r tank2@replication
 
 local-host $ sudo zpool destroy -f tank1
 
@@ -173,9 +173,9 @@ tank1/vm-100-disk-0@replication      0      -   734M  -
 
 **Remote operation**
 ``` terminal
-local-host $ ssh <remote-host> sudo zfs snapshot -r tank2@replication
+remote-host $ sudo zfs snapshot -r tank2@replication
 
-local-host $ ssh <remote-host> sudo zfs send -R tank2@replication | ssh <local-host> sudo zfs recv -Fdu tank1
+remote-host $ sudo zfs send -R tank2@replication | ssh <local-host> sudo zfs recv -Fdu tank1
 
 local-host $ zfs list -r tank1
 NAME                  USED  AVAIL  REFER  MOUNTPOINT
@@ -203,7 +203,7 @@ local-host $ sudo zfs destroy -r tank2@replication
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
-local-host $ ssh <remote-host> sudo zfs destroy -r tank2@replication
+remote-host $ sudo zfs destroy -r tank2@replication
 ```
 
 To prevent mounting conflicts or having NFS datasets active and mounted on our temporary pool when must make some changes.
@@ -218,8 +218,8 @@ local-host $ sudo zfs set mountpoint=/nfs2 tank2/nfs
 **Remote operation**
 
 ``` terminal
-local-host $ ssh <remote-host> sudo zfs set sharenfs=off tank2/nfs
-local-host $ ssh <remote-host> sudo zfs set mountpoint=/nfs2 tank2/nfs
+remote-host $ sudo zfs set sharenfs=off tank2/nfs
+remote-host $ sudo zfs set mountpoint=/nfs2 tank2/nfs
 ```
 
 If you changed the name of the pool you need to perform this extra step to have your LUN's available for your targets and view on the new pool. This is where the saved list of LUN's is needed. So for every LUN you need to perform the following:
@@ -258,7 +258,7 @@ local-host $ sudo zpool destroy -f tank2
 **Remote operation**
 
 ``` terminal
-local-host $ ssh <remote-host> sudo zpool destroy -f tank2
+remote-host $ sudo zpool destroy -f tank2
 ```
 
 ### Contact
