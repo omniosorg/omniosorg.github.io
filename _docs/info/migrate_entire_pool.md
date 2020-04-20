@@ -7,15 +7,22 @@ show_in_sidebar: true
 ## Migrate entire pool to new pool
 If you have a pool which contains a lot of datasets and volumes backing LUN's migrating the pool in case of rebalancing, changing structure, or converting from (stripped) mirror to raidz(n) or vice versa this recipe can be of interest for you.
 
+The idea behind the method of migrating an entire pool in the article is based on the idea that the contents of the pool you want to migrate is temporarily stored on another pool. This other pool can live locally on the same server as the pool you intend to migrate and therefore called a local temporary pool or it can live on other server in which case it is called a remote temporary pool. Each time the commands you are supposed to do differs whether the temporary pool is local or remote you choose the commands with the header:
+
+Temporary pool local: **Local temporary pool**
+Temporary pool remote: **Remote temporary pool**
+
+In description below the following convention is:
+local-host = Host where local pool exists.
+remote-host = Host where remote pool exists.
+
+*Please remember that you cannot change method along the line. If you choose* **Local temporary pool** *at the beginning you have to follow this route from start to end.*
+
 you can migrate to both a local or a remote pool but I strongly recommend using a local pool because of the speed advantages which greatly influence downtime. I will however, show commands for both local and remote migration.
 
 Since I do not use SMB then there is no example with SMB but I am very confident that it will work exactly the same way as a NFS share.
 
 The current setup is shown below. For the sake of simplicity I use single disk pools but any pool structure, mirror, and raidz(n) can use this recipe.
-
-In description below the following convention is:
-local-host = Host where pool to migrate exist.
-remote-host = Remote host where pool is migrated to in case of remote migration
 
 
 ``` terminal
@@ -89,7 +96,7 @@ tank1/vm-100-disk-0@replication      0      -   734M  -
 
 After making the a snapshot of the entire pool when temporarily send the entire pool contents to another pool. The pool needs to be configured prior to sending the data and it needs to have a size at least equal to the size of the pool we migrate.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zfs send -R tank1@replication | sudo zfs recv -Fdu tank2
@@ -107,7 +114,7 @@ tank2/nfs@replication                0      -   879M  -
 tank2/vm-100-disk-0@replication      0      -   734M  - z
 ```
 
-**Remote operation**
+**Remote temporary pool**
 
 ``` terminal
 local-host $ sudo zfs send -R tank1@replication | remote-host $ sudo zfs recv -Fdu tank2
@@ -127,7 +134,7 @@ tank2/vm-100-disk-0@replication      0      -   734M  - z
 
 After we have insured our destination pool contains the same as our source pool we can safely destroy the replication snapshots on both source and destination pools as well as destroying the old source pool and recreate a new source pool. As stated at the beginning if you want to use another name for the new source pool at extra operation is needed which is shown at the end.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
@@ -138,7 +145,7 @@ local-host $ sudo zpool destroy -f tank1
 local-host $ sudo zpool create tank1 c1t3d0
 ```
 
-**Remote operation**
+**Remote temporary pool**
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
@@ -151,7 +158,7 @@ local-host $ sudo zpool create tank1 c1t3d0
 
 We should now have a new pool which awaits data from our temporary pool so we basically reverse the operation used prior.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zfs snapshot -r tank2@replication
@@ -171,7 +178,7 @@ tank1/nfs@replication                0      -   879M  -
 tank1/vm-100-disk-0@replication      0      -   734M  -
 ```
 
-**Remote operation**
+**Remote temporary pool**
 ``` terminal
 remote-host $ sudo zfs snapshot -r tank2@replication
 
@@ -192,14 +199,14 @@ tank1/vm-100-disk-0@replication      0      -   734M  -
 
 We have now transferred our data back so we can now safely remove the replication snapshots in both pools.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
 local-host $ sudo zfs destroy -r tank2@replication
 ```
 
-**Remote operation**
+**Remote temporary pool**
 
 ``` terminal
 local-host $ sudo zfs destroy -r tank1@replication
@@ -208,14 +215,14 @@ remote-host $ sudo zfs destroy -r tank2@replication
 
 To prevent mounting conflicts or having NFS datasets active and mounted on our temporary pool when must make some changes.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zfs set sharenfs=off tank2/nfs
 local-host $ sudo zfs set mountpoint=/nfs2 tank2/nfs
 ```
 
-**Remote operation**
+**Remote temporary pool**
 
 ``` terminal
 remote-host $ sudo zfs set sharenfs=off tank2/nfs
@@ -249,13 +256,13 @@ tank1/nfs  sharenfs  rw=@192.168.2.92,root=@192.168.2.92  local
 
 You can now safely destroy your temporary pool or stored it as a safety backup.
 
-**Local operation**
+**Local temporary pool**
 
 ``` terminal
 local-host $ sudo zpool destroy -f tank2
 ```
 
-**Remote operation**
+**Remote temporary pool**
 
 ``` terminal
 remote-host $ sudo zpool destroy -f tank2
