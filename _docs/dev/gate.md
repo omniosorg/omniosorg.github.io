@@ -17,7 +17,6 @@ $ pfexec zfs create -o mountpoint=/build rpool/build
 $ cd /build
 $ git clone https://github.com/illumos/illumos-gate
 $ cd illumos-gate
-$ chmod +x usr/src/tools/scripts/nightly.sh
-$ ./usr/src/tools/scripts/nightly.sh /opt/onbld/env/omnios-illumos-gate
+$ ./usr/src/tools/scripts/nightly /opt/onbld/env/omnios-illumos-gate
 ```
 
