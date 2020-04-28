@@ -75,7 +75,7 @@ NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTR
 rpool  9.50G  1.60G  7.90G        -         -     3%    16%  1.00x  ONLINE  -
 ```
 
-Before you are able to go further you need to fetch an **installation iso for the version of OmniosCE your have installed on the rpool**. [Get your iso her](https://omniosce.org/download.html). In this guide the installer iso for r151030ap is used.
+Before you are able to go further you need to fetch an **installation iso for the version of OmniosCE you have installed on the rpool**. [Get your iso here](https://omniosce.org/download.html). In this guide, the installer iso for r151030ap is used.
 
 Now boot your system using the downloaded iso and when you see the installer welcome screen choose the shell option:
 
