@@ -26,7 +26,7 @@ stable releases overlap for six months.
 In the table below, currently supported releases are **emboldened**.
 
 {:.bordered .responsive-table}
-| Release	| Typ		| Release Date		| End-of-support
+| Release	| Type		| Release Date		| End of support
 | -------	| ----		| ------------		| --------------
 | **r151032**	| **stable**	| 2019-11-04		| 2020-11-04
 | **r151030**	| **LTS**	| 2019-05-06		| 2022-05-05
