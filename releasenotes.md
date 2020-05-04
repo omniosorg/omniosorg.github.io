@@ -12,15 +12,16 @@ of OmniOS is due and for how long it will be supported.
 
 ## OmniOS Community Edition
 
-* [r151032](https://github.com/omniosorg/omnios-build/blob/r151032/doc/ReleaseNotes.md) - current stable
+* [r151034](https://github.com/omniosorg/omnios-build/blob/r151034/doc/ReleaseNotes.md) - current stable
+* [r151032](https://github.com/omniosorg/omnios-build/blob/r151032/doc/ReleaseNotes.md) - old stable (support ends 2020-11-03)
 * [r151030](https://github.com/omniosorg/omnios-build/blob/r151030/doc/ReleaseNotes.md) - LTS
-* [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - old LTS (support ends 2020-05-12)
 
 ## OmniOS (archived)
 
-* [r151028](https://github.com/omniosorg/omnios-build/blob/r151028/doc/ReleaseNotes.md) - old stable (support ended 2019-11-05)
+* [r151028](https://github.com/omniosorg/omnios-build/blob/r151028/doc/ReleaseNotes.md) - old stable (support ended 2019-11-04)
 * [r151026](https://github.com/omniosorg/omnios-build/blob/r151026/doc/ReleaseNotes.md) - old stable (support ended 2019-05-05)
 * [r151024](https://github.com/omniosorg/omnios-build/blob/r151024/doc/ReleaseNotes.md) - old stable (support ended 2018-11-04)
+* [r151022](https://github.com/omniosorg/omnios-build/blob/r151022/doc/ReleaseNotes.md) - old LTS (support ends 2020-05-11)
 
 ## OmniTI OmniOS (archived)
 

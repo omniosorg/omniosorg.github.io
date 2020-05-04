@@ -1,4 +1,4 @@
-# Site settings 
+# Site settings
 title: OmniOS Community Edition
 description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, Bhyve, KVM and Linux zone support
 url: "https://omniosce.org"
@@ -9,9 +9,9 @@ paginate_path: "/news/page:num/"
 download_path: https://downloads.omniosce.org/media
 uswest_path: https://us-west.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
-omnios_stable_date: the 4th of November, 2019
-omnios_stable: r151032
-omnios_stable_suffix: p
+omnios_stable_date: the 4th of May, 2020
+omnios_stable: r151034
+omnios_stable_suffix:
 omnios_oldstable: r151030
 omnios_lts_date: the 6th of May, 2019
 omnios_lts: r151030
