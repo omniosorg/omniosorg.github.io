@@ -34,5 +34,5 @@ In the table below, currently supported releases are **emboldened**.
 | _r151028_	| _stable_	| _2018-11-05_		| _2019-11-04 (ended)_
 | _r151026_	| _stable_	| _2018-05-07_		| _2019-05-05 (ended)_
 | _r151024_	| _stable_	| _2017-11-06_		| _2018-11-04 (ended)_
-| **r151022**	| **LTS**	| 2017-05-12		| 2020-05-11
+| _r151022_	| _LTS_		| _2017-05-12_		| _2020-05-11 (ended)_
 
