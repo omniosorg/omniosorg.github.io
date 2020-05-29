@@ -116,14 +116,16 @@ AVAILABLE DISK SELECTIONS:
           /pci@0,0/pci8086,2829@1f,2/disk@4,0
 ```
 
-Now create the new pool newPool for migration and run zfs send/recv to migrate rpool to newPool.
+Now create the new pool `newPool` for migration and run zfs send/recv to migrate rpool to newPool. The `-B` switch tells 
+the `zpool` command to reserve space for an UEFI boot partition. This is essential to get your disk to boot if your
+system is a using UEFI boot. If you have a legacy system, it won't hurt.
 
 ``` terminal
-kayak-r151030ap# zpool create newPool mirror c1t3d0 c1t4d0
+kayak-r151030ap# zpool create -B newPool mirror c1t3d0 c1t4d0
 kayak-r151030ap# zfs send -R rpool@replication | zfs recv -Fdu newPool
 ```
 
-After we have migrated the rpool to newPool we can now remove the snapshots made for replication and export the rpool.
+After we have migrated the `rpool` to `newPool` we can now remove the snapshots made for replication and export the `rpool`.
 
 ``` terminal
 kayak-r151030ap# zfs destroy -r rpool@replication
@@ -131,7 +133,7 @@ kayak-r151030ap# zfs destroy -r newPool@replication
 kayak-r151030ap# zpool export rpool
 ```
 
-If you list the BE's now you will see the BE's from newPool which is identical to the BE's on rpool except that no BE is active
+If you list the BE's now you will see the BE's from `newPool` which is identical to the BE's on rpool except that no BE is active
 
 ``` terminal
 $ beadm list
@@ -146,7 +148,7 @@ kayak-r151030ap# beadm activate omnios-r151030ap
 Activated successfully
 ```
 
-Now we are ready to rename newPool to rpool. This is done this way:
+Now we are ready to rename `newPool` to `rpool`. This is done this way:
 
 ``` terminal
 zpool export newPool
