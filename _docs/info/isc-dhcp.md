@@ -6,6 +6,7 @@ show_in_sidebar: true
 ---
 
 # Dynamic Host Configuration Protocol (DHCP)
+
 #### Acknowledgement
 
 This document has been adapted from the [FreeBSD Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/) for use with OmniOS.
@@ -63,7 +64,7 @@ fixed-address fantasia.fugue.com;                                      #[10]
 
 8. Declares the default gateway that is valid for the network or subnet specified before the opening **{** bracket. 
 
-9. Specifies the hardware MAC address of a client so that the DHCP server can recognize the client when it makes a request.
+9. Specifies the hardware MAC address of a client so that the DHCP server can recognise the client when it makes a request.
 
 10. Specifies that this host should always be given the same IP address. Using the hostname is correct, since the DHCP server will resolve the hostname before returning the lease information.
 
