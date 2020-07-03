@@ -16,7 +16,7 @@ This document has been adapted from the [FreeBSD Handbook](https://www.freebsd.o
 4. [Administration of the ISC DHCP Server](#administration-of-the-isc-dhcp-server)
 
 
-The Dynamic Host Configuration Protocol (DHCP) allows a system to connect to a network in order to be assigned the necessary addressing information for communication on that network. The Internet Systems Consortium Dynamic Host Configuration Protocol (ISC DHCP) server is available in the OmniOS Extra IPS Repository. The DHCP protocol is fully described in RFC 2131. Informational resources are also available at isc.org/downloads/dhcp/.
+The Dynamic Host Configuration Protocol (DHCP) allows a system to connect to a network in order to be assigned the necessary addressing information for communication on that network. The Internet Systems Consortium Dynamic Host Configuration Protocol (ISC DHCP) server is available in the OmniOS Extra IPS Repository. The DHCP protocol is fully described in RFC 2131. Informational resources are also available at <isc.org/downloads/dhcp/>.
 
 This section describes how to install and configure the ISC DHCP server.
 
@@ -57,11 +57,11 @@ fixed-address fantasia.fugue.com;                                      #[10]
 
 5. The maximum allowed length of time, in seconds, for a lease. Should a client request a longer lease, a lease will still be issued, but it will only be valid for max-lease-time.
 
-6. The default of none disables dynamic DNS updates. Changing this to interim configures the DHCP server to update a DNS server whenever it hands out a lease so that the DNS server knows which IP addresses are associated with which computers in the network. Do not change the default setting unless the DNS server has been configured to support dynamic DNS.
+6. The default of *none* disables dynamic DNS updates. Changing this to *interim* configures the DHCP server to update a DNS server whenever it hands out a lease so that the DNS server knows which IP addresses are associated with which computers in the network. Do not change the default setting unless the DNS server has been configured to support dynamic DNS.
 
 7. This line creates a pool of available IP addresses which are reserved for allocation to DHCP clients. The range of addresses must be valid for the network or subnet specified in the previous line.
 
-8. Declares the default gateway that is valid for the network or subnet specified before the opening { bracket. 
+8. Declares the default gateway that is valid for the network or subnet specified before the opening **{** bracket. 
 
 9. Specifies the hardware MAC address of a client so that the DHCP server can recognize the client when it makes a request.
 
@@ -71,7 +71,7 @@ This configuration file supports many more options. Refer to **dhcpd.conf(5)**, 
 
 ## ISC DHCP SMF Configuration
 
-Further configuration of the ISC DHCP server can be made by configuring the SMF manifest. By default the ISC DHCP server will listen on all interfaces, therefore in this section we will configure the server to listen only on specific interfaces.
+Further configuration of the ISC DHCP server can be made by configuring the SMF manifest. By default the ISC DHCP server will listen on all interfaces, this section will demonstrate configuring the server to listen only on specific interfaces.
 
 #### Listen on a single interface
 
@@ -114,11 +114,11 @@ Any future changes to the configuration of the server will require the dhcpd ser
 
 The DHCP server uses the following files. Note that the manual pages are installed with the server software.
 
-* /etc/dhcpd.conf
+* `/etc/dhcpd.conf`
  
 The server configuration file needs to contain all the information that should be provided to clients, along with information regarding the operation of the server. This configuration file is described in **dhcpd.conf(5)**.
 
-* /var/db/dhcpd.leases
+* `/var/db/dhcpd.leases`
 
 The DHCP server keeps a database of leases it has issued in this file, which is written as a log. Refer to **dhcpd.leases(5)**, which gives a slightly longer description.
 
