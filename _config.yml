@@ -11,7 +11,7 @@ uswest_path: https://us-west.mirror.omniosce.org/downloads/media
 download_prefix: omniosce-
 omnios_stable_date: the 4th of May, 2020
 omnios_stable: r151034
-omnios_stable_suffix:
+omnios_stable_suffix: l
 omnios_oldstable: r151030
 omnios_lts_date: the 6th of May, 2019
 omnios_lts: r151030
