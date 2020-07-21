@@ -19,11 +19,11 @@ is perfect for experimentation.
 {:.bordered .responsive-table}
 | Region | Name | AMI ID
 | ------ | ---- | --------
-| eu-central-1 | EU (Frankfurt) | ami-0ad303949e19f897a
-| eu-north-1 | EU (Stockholm) | ami-0d76cb8752ad73ab1
-| eu-west-1 | EU (Ireland) | ami-0f38cdec7da648424
-| eu-west-2 | EU (London) | ami-0127cb92c2ac61534
-| eu-west-3 | EU (Paris) | ami-0083960c1530c641f
+| eu-central-1 | Europe (Frankfurt) | ami-0ad303949e19f897a
+| eu-north-1 | Europe (Stockholm) | ami-0d76cb8752ad73ab1
+| eu-west-1 | Europe (Ireland) | ami-0f38cdec7da648424
+| eu-west-2 | Europe (London) | ami-0127cb92c2ac61534
+| eu-west-3 | Europe (Paris) | ami-0083960c1530c641f
 | us-east-1 | US East (N. Virginia) | ami-0a01a5636f3c4f21c
 | us-east-2 | US East (Ohio) | ami-0a02eadc6d8770f83
 | us-west-1 | US West (N. California) | ami-0bbeea654a35ef611
@@ -41,28 +41,14 @@ is perfect for experimentation.
 {:.bordered .responsive-table}
 | Region | Name | AMI ID
 | ------ | ---- | --------
-| eu-central-1 | EU (Frankfurt) | ami-07e7a072121af904b
-| eu-west-1 | EU (Ireland) | ami-072c2a2ffb7e97761
-| eu-west-2 | EU (London) | ami-0e815515b2fe8f7b3
-| eu-west-3 | EU (Paris) | ami-0864714f1fe8631ff
-| us-east-1 | US East (N. Virginia) | ami-0b2c7fd1c1f7e91d6
-| us-east-2 | US East (Ohio) | ami-0169c5108d1bdfd57
-| us-west-1 | US West (N. California) | ami-0d2d11f5075cc9845
-| us-west-2 | US West (Oregon) | ami-09e271c1e0f163eca
-| sa-east-1 | South America (São Paulo) | ami-05d9d52506d57b653
-| ap-northeast-1 | Asia Pacific (Tokyo) | ami-037d1630e373179ff
-| ap-northeast-2 | Asia Pacific (Seoul) | ami-07f5fd6fa34316773
-| ap-south-1 | Asia Pacific (Mumbai) | ami-06ef85f830ecd879f
-| ap-southeast-1 | Asia Pacific (Singapore) | ami-036737039cf84b8bf
-| ap-southeast-2 | Asia Pacific (Sydney) | ami-04db88805d27f8c74
-| ca-central-1 | Canada (Central) | ami-0413ce96dc9426f86
+| eu-central-1 | Europe (Frankfurt) | ami-07e7a072121af904b
 
 ## r151024
 
 {:.bordered .responsive-table}
 | Region | Name | AMI ID
 | ------ | ---- | --------
-| eu-central-1 | EU (Frankfurt) | ami-cc56d7a3
+| eu-central-1 | Europe (Frankfurt) | ami-cc56d7a3
 
 ## Launching an instance
 
