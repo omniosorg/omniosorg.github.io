@@ -14,6 +14,28 @@ running within a couple of minutes.
 The image is small so can be run within the free tier - a `t2.micro` instance
 is perfect for experimentation.
 
+## r151034 (Stable)
+
+{:.bordered .responsive-table}
+| Region | Name | AMI ID
+| ------ | ---- | --------
+| eu-north-1 | Europe (Stockholm) | ami-07da7a254f71745d7
+| ap-south-1 | Asia Pacific (Mumbai) | ami-0f016ee9744d41846
+| eu-west-3 | Europe (Paris) | ami-0c67b3f815e7a3dfe
+| eu-west-2 | Europe (London) | ami-0be1908547f192f73
+| eu-west-1 | Europe (Ireland) | ami-05e0c2963f13c351a
+| ap-northeast-2 | Asia Pacific (Seoul) | ami-033e30b59bd5a9b80
+| ap-northeast-1 | Asia Pacific (Tokyo) | ami-0fba25638d6e8fa4e
+| sa-east-1 | South America (SALo Paulo) | ami-0b03c400ed353eee3
+| ca-central-1 | Canada (Central) | ami-0d7e38a07b106d373
+| ap-southeast-1 | Asia Pacific (Singapore) | ami-03493b667c228cf83
+| ap-southeast-2 | Asia Pacific (Sydney) | ami-0fa6a6cdc2267f6ff
+| eu-central-1 | Europe (Frankfurt) | ami-0796c8d3883d638c0
+| us-east-1 | US East (N. Virginia) | ami-0242bbd23361d20e2
+| us-east-2 | US East (Ohio) | ami-04bbce71bc531eb30
+| us-west-1 | US West (N. California) | ami-0d2fc538b61b3a36a
+| us-west-2 | US West (Oregon) | ami-08c96174444c4c4e6
+
 ## r151030 (LTS)
 
 {:.bordered .responsive-table}
