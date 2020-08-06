@@ -135,7 +135,7 @@ receive updates for three years so you can schedule upgrades when convenient.
                     <h3>Latest News</h3>
                 </div>
             {% for post in site.posts limit:10 %}
-            {% if post.hide_post == true %}
+            {% if post.hide_post == false %}
                 <div class="col s12">
                 <div class="card news-card">
                     <a href="{{ post.url | prepend: site.baseurl }}.html">
