@@ -135,6 +135,7 @@ receive updates for three years so you can schedule upgrades when convenient.
                     <h3>Latest News</h3>
                 </div>
             {% for post in site.posts limit:10 %}
+            {% if not post.hide_post %}
                 <div class="col s12">
                 <div class="card news-card">
                     <a href="{{ post.url | prepend: site.baseurl }}.html">
@@ -149,6 +150,7 @@ receive updates for three years so you can schedule upgrades when convenient.
                     </a>
                 </div>
                 </div>
+            {% endif %}
             {% endfor %}
                 <div class="col s12">
                     <a href="/news/">more news ...</a>
