@@ -1,0 +1,41 @@
+---
+layout: default_wide
+---
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+                <h1 class="orange-text">{{ page.title }}</h2>
+                <h5 class="grey-text text-darken-2 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
+
+		{% if page.categories.size > 0 %}
+                <article class="post-categories center-align">
+                    <div class="chip teal white-text">Categories</div>
+                    {% for cat in page.categories %}<div class="chip">{{ cat }}</div> {% endfor %}
+                </article>
+		{% endif %}
+                <article class="grey-text text-darken-4 post-content">
+                    {{ content }}
+                </article>
+                <article class="grey-text text-darken-4">
+                    {% for cat in page.categories %}
+                        {% if site.categories[cat].size > 1 %}
+                            <aside class="related">
+                                <ul class="collection with-header">
+                                    <li class="collection-header"><h5 class="light">Related posts in <span class="green-text">{{ cat }}</span> category</h5></li>
+                            {% for post in site.categories[cat] limit:5 %}
+                                {% if post.title != page.title %}
+                                        <a href="{{ post.url }}" class="collection-item avatar">
+                                            <i class="material-icons circle green">loyalty</i>
+                                            <span class="title light">{{ post.date | date: "%B %-d, %Y" }}</span>
+                                            <p class="light">{{ post.title }}</p>
+                                        </a>
+                                {% endif %}
+                            {% endfor %}
+                                </ul>
+                            </aside>
+                        {% endif %}
+                    {% endfor %}
+                </article>
+         </div>
+    </div>
+</div>
