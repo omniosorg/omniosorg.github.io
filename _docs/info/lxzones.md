@@ -175,10 +175,10 @@ To use a tarball (like a docker one):
 
 Afterwards, you boot the zone like any other one.
 
-## lxadm utility
+## zadm utility
 
 A simpler way to configure and maintain LX zones is to use
-[lxadm utility](http://www.lxadm.org).
+[zadm](https://omniosce.org/setup/zadm).
 
 ## LX Zones, BEs, and Upgrades
 
