@@ -6,7 +6,9 @@ synopsis: Using the 'zadm' utility to create an lx zone
 
 This week's ascii-cast shows how to use `zadm` to quickly create an
 _lx_-branded zone in OmniOS r151034 and how to configure a basic policy in
-the zone firewall.
+the zone firewall. The zone firewall works for all zone brands except for
+_KVM_ and is ideal for securing an lx zone where the native iptables
+tools don't work.
 
 > nginx is used as an example application here, but in reality one would
 > deploy something like nginx in a native branded zone, most likely with
