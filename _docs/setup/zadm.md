@@ -4,6 +4,8 @@ category: setup
 show_in_sidebar: true
 ---
 
+# zadm - Zone Management Tool
+
 This is a series of ascii-casts showing how to use the `zadm` zone management
 tool to create and manage zones on OmniOS from release r151034. New videos
 will be posted to this page over the coming weeks.
