@@ -1,5 +1,5 @@
 ---
-title: 'zadm' walk-through series
+title: zadm walk-through series
 category: setup
 show_in_sidebar: true
 ---
