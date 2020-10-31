@@ -19,8 +19,9 @@ The following table shows the supported upgrade paths between OmniOS versions.
 | r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
 | r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
 | r151028 (stable)		| &#8594;	| r151030 (LTS)
-| r151030 (LTS)			| &#8594;	| r151032 (stable), r151034 (stable)
-| r151032 (stable)		| &#8594;	| r151034 (stable)
+| r151030 (LTS)			| &#8594;	| r151032, r151034, r151036 (stable)
+| r151032 (stable)		| &#8594;	| r151034, r151036 (stable)
+| r151034 (stable)		| &#8594;	| r151036 (stable)
 
 <div class="fa-orange" style="padding-top: 0.5em">
 <i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
@@ -63,7 +64,7 @@ the _lipkg_ and _sparse_ brands do **not** need to be detached):
   ```
   It is also a good idea to take a ZFS snapshot of the zone root in
   case it's needed for rollback (such as if there are issues with the zone
-  upgrade.) 
+  upgrade.)
   ```terminal
   # zfs snapshot -r /path/to/zone@<old-release>
   ```
