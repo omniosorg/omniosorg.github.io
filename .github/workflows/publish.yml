@@ -1,0 +1,55 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    name: Jekyll build
+    runs-on: ubuntu-latest
+    steps:
+    - run: sudo apt-get install -y libxslt-dev lftp
+
+    - uses: actions/checkout@v2
+
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    - name: Bundle install
+      env:
+        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      run: |
+        gem install bundler
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+
+    - name: Generate Site
+      run: |
+        bundle exec jekyll build --incremental
+        bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
+
+    - name: Publish to OOCE Web Server
+      if: ${{github.event_name}} == "push" && ${{github.ref}} == "refs/heads/master"
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_SECRET}}
+      run: |
+        if [ -n "$DEPLOY_KEY" ]; then
+          echo "$DEPLOY_KEY" > site-deploy-key
+          chmod 600 site-deploy-key
+          lftp -e 'set sftp:connect-program "ssh -o StrictHostKeyChecking=no -l ${{secrets.DEPLOY_USER}} -a -x -i site-deploy-key"; mirror -R --verbose --use-pget-n=5 --parallel=5 _site site;exit' sftp://${{secrets.DEPLOY_HOST}}:${{secrets.DEPLOY_PORT}} || true
+          rm -f site-deploy-key
+        else
+          echo "Not deploying"
+        fi
+
