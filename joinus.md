@@ -35,8 +35,8 @@ Tasks include:
 * etc...
 
 If you want to find out more about some of the work that was involved in
-r151026, take a look at the
-[github project page.](https://github.com/omniosorg/omnios-build/projects/1)
+r151034, take a look at the
+[github commit page.](https://github.com/omniosorg/omnios-build/commits/r151034)
 
 # Extra package repository
 
