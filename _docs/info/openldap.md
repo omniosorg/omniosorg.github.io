@@ -22,6 +22,8 @@ Use the OmniOS IPS package manager to install OpenLDAP as follows:
 root:# pkg install network/openldap
 ```
 
+The OpenLDAP tools will be installed in the `/opt/ooce/bin/` directory. Of note, OmniOS comes pre-installed with the native Solaris LDAP tools which are located in the `/usr/bin/` directory. Care should be taken in which command is run as the options for each tool may differ.
+
 ### OpenLDAP Configuration
 
 The default OpenLDAP configuration file is located at `/etc/opt/ooce/openldap/slapd.conf`. It is necessary to make the following edit for the purposes of this quickstart.
@@ -52,7 +54,7 @@ You are now ready to start the Standalone LDAP Daemon, `slapd`, by running the f
 root:# svcadm enable network/openldap
 ```
 
-To check to see if the server is running and configured correctly, you can run a search against it with **ldapsearch(1)**. By default, `ldapsearch` is installed as `/usr/bin/ldapsearch`:
+To check to see if the server is running and configured correctly, you can run a search against it with **ldapsearch(1)**.
 
 ```terminal
 root:# ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
@@ -70,7 +72,7 @@ Details regarding running `slapd` can be found in the `slapd` manual page and th
 
 ### Add initial entries to your directory
 
-You can use **ldapadd(1)** to add entries to your LDAP directory. By default, `ldapadd` is installed as `/usr/bin/ldapadd`. `ldapadd` expects input in *LDIF* form. We'll do it in two steps:
+You can use **ldapadd(1)** to add entries to your LDAP directory. `ldapadd` expects input in *LDIF* form. We'll do it in two steps:
 
 * create an LDIF file
 * run `ldapadd`
@@ -141,7 +143,7 @@ objectClass: organizationalRole
 cn: Manager
 ```
 
-## Converting old style `slapd.conf` file to *slapd-config format*
+## Converting old style `slapd.conf` file to *slapd-config* format
 
 OpenLDAP 2.3 and later have transitioned to using a dynamic runtime configuration engine, **slapd-config(5)**.
 
@@ -156,7 +158,7 @@ The older style `slapd.conf` file is still supported, but its use is deprecated 
 
 The following describes the necessary operations to convert the old style `slapd.conf` file to *slapd-config* format, as well as re-configuring the OpenLDAP SMF Service.
 
-### Create the new format *slapd-config ldif* files
+### Create the new format *slapd-config* ldif files
 
 An existing `slapd.conf` file can be converted to the new format using **slaptest(8)**:
 
