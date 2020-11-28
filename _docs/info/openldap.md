@@ -57,15 +57,30 @@ root:# svcadm enable network/openldap
 To check to see if the server is running and configured correctly, you can run a search against it with **ldapsearch(1)**.
 
 ```terminal
-root:# ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
+root:# /opt/ooce/bin/ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
 ```
 
 Note the use of single quotes around command parameters to prevent special characters from being interpreted by the shell. This should return:
 
 ```terminal
-version: 1
+# extended LDIF
+#
+# LDAPv3
+# base <> with scope baseObject
+# filter: (objectclass=*)
+# requesting: namingContexts
+#
+
+#
 dn:
 namingContexts: dc=omniosce,dc=org
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1
 ```
 
 Details regarding running `slapd` can be found in the `slapd` manual page and the [Running slapd](https://www.openldap.org/doc/admin24/runningslapd.html) chapter of the OpenLDAP Administrator's Guide.
@@ -114,7 +129,11 @@ EOF
 Now, you may run `ldapadd` to insert these entries into your directory.
 
 ```terminal
-ldapadd -D "cn=Manager,dc=omniosce,dc=org" -w secret -f ~/omniosce.ldif
+root:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f ~/omniosce.ldif
+Enter LDAP Password:
+adding new entry "dc=omniosce,dc=org"
+
+adding new entry "cn=Manager,dc=omniosce,dc=org"
 ```
 where `~/omniosce.ldif` is the file you created above.
 
@@ -125,22 +144,38 @@ Additional information regarding directory creation can be found in the [Databas
 Now we're ready to verify the added entries are in your directory. You can use any LDAP client to do this, but our example uses the `ldapsearch` tool.
 
 ```terminal
-ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
+root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
 ```
 
 This command will search for and retrieve every entry in the database and should produce the following result:
 
 ```terminal
-version: 1
+# extended LDIF
+#
+# LDAPv3
+# base <dc=omniosce,dc=org> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# omniosce.org
 dn: dc=omniosce,dc=org
 objectClass: dcObject
 objectClass: organization
 o: OmniOSce Association
 dc: omniosce
 
+# Manager, omniosce.org
 dn: cn=Manager,dc=omniosce,dc=org
 objectClass: organizationalRole
 cn: Manager
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 3
+# numEntries: 2
 ```
 
 ## Converting old style `slapd.conf` file to *slapd-config* format
@@ -164,7 +199,7 @@ An existing `slapd.conf` file can be converted to the new format using **slaptes
 
 ```terminal
 root:# mkdir /etc/opt/ooce/openldap/slapd.d
-root:# slaptest -f /etc/opt/ooce/openldap/slapd.conf -F /etc/opt/ooce/openldap/slapd.d
+root:# /opt/ooce/sbin/slaptest -f /etc/opt/ooce/openldap/slapd.conf -F /etc/opt/ooce/openldap/slapd.d
 root:# chown -R openldap:openldap /etc/opt/ooce/openldap/slapd.d
 ```
 
@@ -193,22 +228,38 @@ online         12:03:28 svc:/network/openldap:slapd
 Again, run the previous `ldapsearch` command to verify the entries in the database:
 
 ```terminal
-root:# ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
+root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
 ```
 
 This command will search for and retrieve every entry in the database and should produce the same result as when it was issued in the previous section.
 
 ```terminal
-version: 1
+# extended LDIF
+#
+# LDAPv3
+# base <dc=omniosce,dc=org> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# omniosce.org
 dn: dc=omniosce,dc=org
 objectClass: dcObject
 objectClass: organization
 o: OmniOSce Association
 dc: omniosce
 
+# Manager, omniosce.org
 dn: cn=Manager,dc=omniosce,dc=org
 objectClass: organizationalRole
 cn: Manager
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 3
+# numEntries: 2
 ```
 
 Before converting to the *slapd-config* format it was necessary that the config backend is properly configured in the existing `slapd.conf` file. This was taken care of in the "OpenLDAP Configuration" section. While the config backend is always present inside `slapd`, by default it is only accessible by its `rootdn`, and there are no default credentials assigned so unless you explicitly configure the `roopw`, there will be no means to authenticate to it and it will be unusable.
@@ -216,20 +267,40 @@ Before converting to the *slapd-config* format it was necessary that the config 
 Check that the *cn=config* database is accessible:
 
 ```terminal
-root:# ldapsearch -x -D cn=config  -b 'cn=config' '(objectclass=*)' *
-Enter bind password:
-version: 1
+root:# /opt/ooce/bin/ldapsearch -x -D cn=config -W -b 'cn=config' '(objectclass=*)' *
+Enter LDAP Password:
+# extended LDIF
+#
+# LDAPv3
+# base <cn=config> with scope subtree
+# filter: (objectclass=*)
+# requesting: omniosce.ldif slapd.conf
+#
+
+# config
 dn: cn=config
 
+# schema, config
 dn: cn=schema,cn=config
 
+# {0}core, schema, config
 dn: cn={0}core,cn=schema,cn=config
 
+# {-1}frontend, config
 dn: olcDatabase={-1}frontend,cn=config
 
+# {0}config, config
 dn: olcDatabase={0}config,cn=config
 
+# {1}mdb, config
 dn: olcDatabase={1}mdb,cn=config
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 7
+# numEntries: 6
 ```
 
 ### Looking forward
