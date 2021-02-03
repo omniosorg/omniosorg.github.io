@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Jekyll build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - run: sudo apt-get install -y libxslt-dev lftp
 
@@ -36,7 +36,7 @@ jobs:
 
     - name: Generate Site
       run: |
-        bundle exec jekyll build --incremental
+        bundle exec jekyll build
         bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
 
     - name: Publish to OOCE Web Server
