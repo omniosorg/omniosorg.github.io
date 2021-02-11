@@ -9,30 +9,17 @@ on:
 jobs:
   build:
     name: Jekyll build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
+
     - run: sudo apt-get install -y libxslt-dev lftp
 
     - uses: actions/checkout@v2
 
-    - uses: actions/cache@v2
+    - uses: ruby/setup-ruby@v1
       with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-
-    - uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6
-
-    - name: Bundle install
-      env:
-        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
-      run: |
-        gem install bundler
-        bundle config path vendor/bundle
-        bundle install --jobs 4 --retry 3
+        ruby-version: 2.7
+        bundler-cache: true
 
     - name: Generate Site
       run: |

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll'
+gem 'jekyll', '~> 4.2'
 gem 'jekyll-paginate'
 gem 'liquid'
 gem 'jekyll-sass-converter'
