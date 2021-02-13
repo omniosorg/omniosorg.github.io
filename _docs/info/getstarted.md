@@ -131,7 +131,7 @@ gcc version 5.5.0 (GCC)
 ## More information
 
 This page is a work-in-progress and contributions are very welcome. The
-[system administration page](http://wiki.omniosce.org/GeneralAdministration)
+[system administration page](http://wiki.omnios.org/GeneralAdministration)
 in the wiki provides some further information that may eventually be
 incorporated into this page.
 

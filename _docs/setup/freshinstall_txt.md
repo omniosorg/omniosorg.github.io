@@ -33,7 +33,7 @@ such deployments.
 
 ## Booting from the image
 
-Upon booting from CD, USB or PXE, the OmniOSce installer
+Upon booting from CD, USB or PXE, the OmniOS installer
 displays several boot options. To install, one may press <kbd>return</kbd>
 or let it time out and the installation will continue.
 

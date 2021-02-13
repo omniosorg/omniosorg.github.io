@@ -55,7 +55,7 @@ ooce# /opt/ooce/nginx-*/sbin/nginx -s reload
 ```
 
 Test web browsing to the release, for example -
-<https://pkg.omniosce.org/r151028>
+<https://pkg.omnios.org/r151028>
 
 ## Create branches
 

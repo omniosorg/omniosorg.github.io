@@ -57,7 +57,7 @@ Example (root password is `test` in this example):
 BuildRpool c1t0d0
 RootPW '$5$JQkyMDvv$pPzEUsvP/rLwURyrpwz5i1SfVqx2QiEoIdDA9ZrG271'
 SetRootPW
-SetHostname omniosce
+SetHostname omnios
 SetTimezone UTC
 EnableDNS example.com
 SetDNS 1.1.1.1 80.80.80.80
@@ -74,10 +74,10 @@ Here's a complete working example:
 ```
 subnet 10.0.0.0 netmask 255.255.255.0 { }
 
-host omniosce {
+host omnios {
 	filename "pxeboot";
 	next-server 10.0.0.5;
-	option host-name "omniosce";
+	option host-name "omnios";
 	hardware ethernet 01:02:03:AB:CD:EF;
 	fixed-address 10.0.0.100;
 }

@@ -14,7 +14,7 @@ OmniOS extra repository. Substitute `{{site.omnios_stable}}` below with
 the OmniOS release you are using
 
 ```
-# pkg set-publisher -g https://pkg.omniosce.org/{{site.omnios_stable}}/extra extra.omnios
+# pkg set-publisher -g https://pkg.omnios.org/{{site.omnios_stable}}/extra extra.omnios
 # pkg install kvmadm
 ```
 

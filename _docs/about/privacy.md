@@ -29,11 +29,11 @@ your payments to OmniOS.  For recurring payments we will always inform you
 before the payment gets collected and offer you the option of cancelling
 your subscription.
 
-If you buy an OmniOSce support contract, we will store your contact data
+If you buy an OmniOS support contract, we will store your contact data
 to be able to communicate with you about your contract and matters related
 to that.
 
-If you subscribe to the OmniOSce Newsletter, your mail adderess will be
+If you subscribe to the OmniOS Newsletter, your mail adderess will be
 stored at MailChimp who have their own GDPR compliant [Privacy
 Policy](https://mailchimp.com/legal/privacy/)
 

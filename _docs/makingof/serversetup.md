@@ -30,6 +30,6 @@ To access the archive, the guardian will put the following into
 Host omniosce-archive
      Hostname omniosce.ee.ethz.ch
      User archive
-     IdentityFile ~/.ssh/omniosce.key.pem     
+     IdentityFile ~/.ssh/omniosce.key.pem
      Port 8114
 ```

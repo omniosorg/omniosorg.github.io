@@ -33,7 +33,7 @@ recommended for such deployments.
 
 ## Booting from the image
 
-Upon booting from CD, USB or PXE, the OmniOSce installer
+Upon booting from CD, USB or PXE, the OmniOS installer
 displays several boot options. To install, one may press <kbd>return</kbd>
 or let it time out and the installation will continue.
 
@@ -57,7 +57,7 @@ within layouts with the same initial letter. Once chosen, press
 After selecting the keyboard layout, the top-level installation menu will be
 shown. This provides a number of options but for a simple installation onto
 a clean hard disk select the highlighted option
-<kbd>Find disks, create rpool, and install OmniOSce</kbd> and press
+<kbd>Find disks, create rpool, and install OmniOS</kbd> and press
 <kbd>return</kbd>.
 
 ![Install, shell or reboot](../assets/images/install/r26/menu.png?raw=true "Install, shell or reboot")

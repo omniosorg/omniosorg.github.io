@@ -22,7 +22,7 @@ need:
 % pkg install git
 % git clone https://github.com/omniosorg/kayak.git
 % cd kayak
-% wget https://downloads.omniosce.org/media/stable/omniosce-{{site.omnios_stable}}.zfs.bz2
+% wget https://downloads.omnios.org/media/stable/omniosce-{{site.omnios_stable}}.zfs.bz2
 % pfexec ./build/build_xen
 ```
 > NB: sudo can be used for privilege escalation in place of pexec if you have
@@ -77,15 +77,15 @@ Device     Boot Start      End  Sectors Size Id Type
 Grab a copy of the OmniOS installer, pv-grub and create a Xen config file:
 
 ```
-root@xen:/# wget https://downloads.omniosce.org/media/{{site.omnios_stable}}/omniosce-{{site.omnios_stable}}.iso
-root@xen:/# wget https://downloads.omniosce.org/media/misc/pv-grub.gz.d3950d8
+root@xen:/# wget https://downloads.omnios.org/media/{{site.omnios_stable}}/omniosce-{{site.omnios_stable}}.iso
+root@xen:/# wget https://downloads.omnios.org/media/misc/pv-grub.gz.d3950d8
 root@xen:/# cat omnios.xen
-memory = 2048 
-name = 'omnios' 
-vcpus = 4 
+memory = 2048
+name = 'omnios'
+vcpus = 4
 disk = [ 'file:/dev/vdb,51712,w',
-         'file:/omniosce-{{site.omnios_stable}}.iso,2064,r' ] 
-kernel = "/pv-grub.gz.d3950d8" 
+         'file:/omnios-{{site.omnios_stable}}.iso,2064,r' ]
+kernel = "/pv-grub.gz.d3950d8"
 extra = "(hd0)/boot/grub/menu.lst"
 ```
 
@@ -139,7 +139,7 @@ wget -O VMDK-stream-converter-0.2.tar.gz \
     https://github.com/imcleod/VMDK-stream-converter/archive/0.2.tar.gz
 gtar zxvf VMDK-stream-converter-0.2.tar.gz
 ./VMDK-stream-converter-0.2/VMDKstream.py \
-    /dev/zvol/rdsk/data/omniosce/hdd-ec2 omniosr24.vmdk
+    /dev/zvol/rdsk/data/omnios/hdd-ec2 omniosr24.vmdk
 ```
 
 # Uploading the image to AWS
@@ -169,15 +169,15 @@ proceed to create the AMI.
 SNAPSHOT      snap-0e45330d16d7809f3  vol-0fe060b6203e94aad   pending 2017-11-07T17:52:57+0000                239848717670    8               Not Encrypted
 
 # ec2reg -s snap-0ed358e4e225b4df6 \
-    -n "OmniOSce {{site.omnios_stable}} stable YYYYMMDD" \
-    -d "OmniOSce illumos distribution" \
+    -n "OmniOS {{site.omnios_stable}} stable YYYYMMDD" \
+    -d "OmniOS illumos distribution" \
     -a x86_64 --root-device-name /dev/xvda \
     --virtualization-type hvm
 IMAGE   ami-cc56d7a3
 
 # ec2-describe-images ami-cc56d7a3
-IMAGE   ami-cc56d7a3    313551840421/OmniOSce {{site.omnios_stable}} stable 20171113   313551840421    available       public          x86_64  machine                         ebs     /dev/xvda       hvm     xen     2017-11-13T20:09:40.000Z
+IMAGE   ami-cc56d7a3    313551840421/OmniOS {{site.omnios_stable}} stable 20171113   313551840421    available       public          x86_64  machine                         ebs     /dev/xvda       hvm     xen     2017-11-13T20:09:40.000Z
 BLOCKDEVICEMAPPING      EBS     /dev/xvda               snap-0e45330d16d7809f3  8       true    standard                Not Encrypted
-TAG     image   ami-cc56d7a3    Name    omniosce
+TAG     image   ami-cc56d7a3    Name    omnios
 ```
 

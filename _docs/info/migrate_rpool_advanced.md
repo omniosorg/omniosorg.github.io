@@ -22,7 +22,7 @@ NB. **It is always a good idea to perform a scrub before doing operations on the
 This is the current rpool:
 
 ``` terminal
-$ zpool status                                                    
+$ zpool status
   pool: rpool
  state: ONLINE
   scan: none requested
@@ -34,7 +34,7 @@ config:
             c1t1d0  ONLINE       0     0     0
             c1t2d0  ONLINE       0     0     0
 
-$ zpool list rpool                                                
+$ zpool list rpool
 NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
 rpool  15.5G  1.61G  13.9G        -         -     0%    10%  1.00x  ONLINE  -
 ```
@@ -75,7 +75,7 @@ NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTR
 rpool  9.50G  1.60G  7.90G        -         -     3%    16%  1.00x  ONLINE  -
 ```
 
-Before you are able to go further you need to fetch an **installation iso for the version of OmniosCE you have installed on the rpool**. [Get your iso here](https://omniosce.org/download.html). In this guide, the installer iso for r151030ap is used.
+Before you are able to go further you need to fetch an **installation iso for the version of OmniOS you have installed on the rpool**. [Get your iso here](https://omniosce.org/download.html). In this guide, the installer iso for r151030ap is used.
 
 Now boot your system using the downloaded iso and when you see the installer welcome screen choose the shell option:
 
@@ -95,7 +95,7 @@ Now we need to find the name of the current Boot Environment(BE) since we need t
 kayak-r151030ap# beadm list
 BE               Active Mountpoint Space Policy Created
 omnios-r151030ap R      -          609M  static 2020-04-27 21:47
-``` 
+```
 The current BE is called **omnios-r151030ap**
 
 Since device name might have changed you need to run format to display the new device names.
@@ -116,7 +116,7 @@ AVAILABLE DISK SELECTIONS:
           /pci@0,0/pci8086,2829@1f,2/disk@4,0
 ```
 
-Now create the new pool `newPool` for migration and run zfs send/recv to migrate rpool to newPool. The `-B` switch tells 
+Now create the new pool `newPool` for migration and run zfs send/recv to migrate rpool to newPool. The `-B` switch tells
 the `zpool` command to reserve space for an UEFI boot partition. This is essential to get your disk to boot if your
 system is a using UEFI boot. If you have a legacy system, it won't hurt.
 
@@ -139,7 +139,7 @@ If you list the BE's now you will see the BE's from `newPool` which is identical
 $ beadm list
 BE               Active Mountpoint Space Policy Created
 omnios-r151030ap -      -          609M  static 2020-04-27 22:47
-``` 
+```
 
 So to make the BE on newPool active do this:
 

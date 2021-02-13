@@ -8,14 +8,14 @@ show_in_sidebar: true
 
 <img class="responsive-img" src="/OmniOSce_logo.svg" alt="OmniOS Community Edition" />
 
-On April 21st 2017, [Robert Treat announced](https://lists.omniti.com/pipermail/omnios-discuss/2017-April/008699.html) 
+On April 21st 2017, [Robert Treat announced](https://lists.omniti.com/pipermail/omnios-discuss/2017-April/008699.html)
 that OmniTI would suspend active development of OmniOS and support
-contracts would not be renewed.  After five years of releases twice 
+contracts would not be renewed.  After five years of releases twice
 a year, OmniOS had become highly popular, yet a goal of making
 OmniOS community operated had not been realized.
 
 While the announcement of this "radical" approach [stunned many](https://www.theregister.co.uk/2017/04/25/oracle_free_solaris_project_stops/),
-Treat explained that the action was taken in part in hopes that it 
+Treat explained that the action was taken in part in hopes that it
 might catalyze the community, stating "To be clear, our goal is not to abandon
 OmniOS, but to divest OmniTI from the open source project in order to spur
 others to participate more."
@@ -25,7 +25,7 @@ others to participate more."
 Andy Fiddaman ([www.citrus-it.net](https://www.citrus-it.net)), Tobias
 Oetiker ([www.oetiker.ch](https://www.oetiker.ch)) and Dominik Hassler have
 spent some quality time setting up the systems and procedures allowing us to
-take over maintenance and development of OmniOS.  
+take over maintenance and development of OmniOS.
 
 In this endeavor we were
 supported by many.  Special thanks to
@@ -37,12 +37,12 @@ Theo Schlossnagle ([www.circonus.com](https://www.circonus.com)).
 
 A big thank you also to the [Integrated Systems Laboratory](http://www.iis.ee.ethz.ch)
 of ETH Zurich, Switzerland, who have graciously provided a zone on one of
-their OmniOS boxes to host our new repository. 
+their OmniOS boxes to host our new repository.
 
 ## Thank you, OmniTI
 
 Thank you, OmniTI, for all of your efforts and the efforts of OmniTI
-developers throughout the last five years.  Your regular releases of OmniOS 
+developers throughout the last five years.  Your regular releases of OmniOS
 and open approach to development are greatly appreciated.
 
 ## About OmniOS Community Edition Association
@@ -67,6 +67,6 @@ Employees from O+P are involved in many Open Source Software projects. O+P runs
 most of their server hardware on OmniOS.
 [www.oetiker.ch](https://www.oetiker.ch)
 
-Press inquiries to [info@omniosce.org](mailto:info@omniosce.org)
+Press enquiries to [info@omnios.org](mailto:info@omnios.org)
 
 OmniOSce, Aarweg 17, 4600 Olten, Switzerland

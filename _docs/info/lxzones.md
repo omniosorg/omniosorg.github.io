@@ -178,7 +178,7 @@ Afterwards, you boot the zone like any other one.
 ## zadm utility
 
 A simpler way to configure and maintain LX zones is to use
-[zadm](https://omniosce.org/setup/zadm).
+[zadm](https://omnios.org/setup/zadm).
 
 ## LX Zones, BEs, and Upgrades
 

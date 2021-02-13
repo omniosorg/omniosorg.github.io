@@ -123,10 +123,10 @@ jobs:
       type: tls
       listen: ":8888"
       ca: "/etc/pki/tls/master/root-ca.crt"
-      cert: "/etc/pki/tls/master/certs/master.omniosce.org.crt"
-      key:  "/etc/pki/tls/master/private/master.omniosce.org.key"
+      cert: "/etc/pki/tls/master/certs/master.omnios.org.crt"
+      key:  "/etc/pki/tls/master/private/master.omnios.org.key"
       client_cns:
-        - "client.omniosce.org"
+        - "client.omnios.org"
   root_fs: "storage/zrepl/sink"
 EOF
 ```
@@ -169,11 +169,11 @@ jobs:
   type: push
   connect:
     type: tls
-    address: "master.omniosce.org:8888"
+    address: "master.omnios.org:8888"
     ca: "/etc/pki/tls/client/root-ca.crt"
-    cert: "/etc/pki/tls/client/certs/client.omniosce.org.crt"
-    key: "/etc/pki/tls/client/private/client.omniosce.org.key"
-    server_cn: "master.omniosce.org"
+    cert: "/etc/pki/tls/client/certs/client.omnios.org.crt"
+    key: "/etc/pki/tls/client/private/client.omnios.org.key"
+    server_cn: "master.omnios.org"
   filesystems: {
     "rpool/var/db": true,
     "rpool/home<": true,
@@ -215,7 +215,7 @@ To demonstrate that the master is receiving snapshots from the client, use the f
 ```terminal
 root@master:# zfs list -r -t snapshot storage
 NAME                                                                                   USED  AVAIL  REFER  MOUNTPOINT
-storage/zrepl/sink/client.omniosce.org/rpool/home/philip@zrepl_20201123_150322_000      0      -    55K  -
+storage/zrepl/sink/client.omnios.org/rpool/home/philip@zrepl_20201123_150322_000      0      -    55K  -
 ```
 
 On the client we can view the operation of zrepl with the `zrepl status` command as follows:
@@ -258,7 +258,7 @@ root@master:# tail -f  /var/svc/log/system-zrepl:default.log
 Finally, we can inspect the snapshot contents via the `zfs clone` subcommand:
 
 ```terminal
-root@master:# zfs clone storage/zrepl/sink/client.omniosce.org/rpool/home/philip@zrepl_20201124_140320_000 storage/tmp
+root@master:# zfs clone storage/zrepl/sink/client.omnios.org/rpool/home/philip@zrepl_20201124_140320_000 storage/tmp
 root@master:# ll /storage/tmp/
 total 75
 drwxr-xr-x   5 philip   other         17 Nov 23 17:35 .

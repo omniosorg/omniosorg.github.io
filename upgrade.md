@@ -50,8 +50,8 @@ Failure to do so may result in the SSH service not starting after upgrade.
   (e.g. _lipkg_ and _sparse_ branded zones).
   For example, going to _{{site.omnios_stable}}_:
   ```terminal
-  # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/core omnios
-  # pkg set-publisher -r -O https://pkg.omniosce.org/{{site.omnios_stable}}/extra extra.omnios
+  # pkg set-publisher -r -O https://pkg.omnios.org/{{site.omnios_stable}}/core omnios
+  # pkg set-publisher -r -O https://pkg.omnios.org/{{site.omnios_stable}}/extra extra.omnios
   ```
 
 * Shut down and detach any _ipkg_ branded zones (NB: linked zones such as
@@ -87,12 +87,12 @@ the _lipkg_ and _sparse_ brands do **not** need to be detached):
   # zoneadm -z <zonename> attach -u
   ```
 
-## Installing the OmniOSce CA Certificate
+## Installing the OmniOS CA Certificate
 
-**If upgrading from OmniTI OmniOS** first install the OmniOSce CA certificate:
+**If upgrading from OmniTI OmniOS** first install the OmniOS CA certificate:
 
 ```
-# wget -P /etc/ssl/pkg https://downloads.omniosce.org/ssl/omniosce-ca.cert.pem
+# wget -P /etc/ssl/pkg https://downloads.omnios.org/ssl/omniosce-ca.cert.pem
 # openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
 SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 ```

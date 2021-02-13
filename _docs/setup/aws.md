@@ -89,13 +89,13 @@ search for OmniOS to find the AMI.
 
 ## Support Us
 
-<a href="https://omniosce.org/patron">
-<img src="https://omniosce.org/assets/images/support.png" alt="Support Us" align="left">
+<a href="https://omnios.org/patron">
+<img src="/assets/images/support.png" alt="Support Us" align="left">
 </a>
 
 OmniOS Community Edition has no major company behind it, just a small
 team of people who spend their precious spare time keeping it up-to-date.
 If you rely on OmniOS for fun or business, and you want to help secure
 its future, you can contribute by becoming an
-[OmniOS patron](https://omniosce.org/patron).
+[OmniOS patron](https://omnios.org/patron).
 

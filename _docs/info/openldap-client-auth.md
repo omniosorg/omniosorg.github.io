@@ -43,7 +43,7 @@ First, create an *ldif* text file that can be used to import the data into the D
 
 ```terminal
 root@ldap:# cat << EOF > ou-group.ldif
-dn: ou=group,dc=omniosce,dc=org
+dn: ou=group,dc=omnios,dc=org
 objectClass: organizationalUnit
 ou: group
 EOF
@@ -52,9 +52,9 @@ EOF
 This can now be added to the DIT with the `ldapadd` command as follows:
 
 ```terminal
-root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f ou-group.ldif
+root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omnios,dc=org" -W -f ou-group.ldif
 Enter LDAP Password:
-adding new entry "ou=group,dc=omniosce,dc=org"
+adding new entry "ou=group,dc=omnios,dc=org"
 ```
 This ou represents groups for users. The same as what you have with `/etc/group` with traditional Unix authentication.
 
@@ -64,7 +64,7 @@ Again, create an *ldif* text file that can be used to import the data into the D
 
 ```terminal
 root@ldap:# cat << EOF > ou-user.ldif
-dn: ou=user,dc=omniosce,dc=org
+dn: ou=user,dc=omnios,dc=org
 objectClass: organizationalUnit
 ou: user
 EOF
@@ -73,9 +73,9 @@ EOF
 This can now be added to the DIT with the `ldapadd` command as follows:
 
 ```terminal
-root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f ou-user.ldif
+root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omnios,dc=org" -W -f ou-user.ldif
 Enter LDAP Password:
-adding new entry "ou=user,dc=omniosce,dc=org"
+adding new entry "ou=user,dc=omnios,dc=org"
 ```
 
 This ou represents users that will access systems via OpenLDAP Client Authentication. Again, this is the same as what you have with `/etc/passwd` with traditional Unix authentication.
@@ -88,14 +88,14 @@ Again, we follow the standard procedure of creating an *ldif* text file and then
 
 ```terminal
 root@ldap:# cat  << EOF > group-other.ldif
-dn: cn=other,ou=group,dc=omniosce,dc=org
+dn: cn=other,ou=group,dc=omnios,dc=org
 objectClass: posixGroup
 cn: other
 gidNumber: 1
 EOF
-root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f group-other.ldif
+root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omnios,dc=org" -W -f group-other.ldif
 Enter LDAP Password:
-adding new entry "cn=other,ou=group,dc=omniosce,dc=org"
+adding new entry "cn=other,ou=group,dc=omnios,dc=org"
 ```
 
 ### Add a user to the ou=user
@@ -106,7 +106,7 @@ Again, we follow the standard procedure of creating an *ldif* text file and then
 
 ```terminal
 root@ldap:# cat << EOF > user-rigby.ldif
-dn: uid=rigby,ou=user,dc=omniosce,dc=org
+dn: uid=rigby,ou=user,dc=omnios,dc=org
 objectClass: account
 objectClass: posixAccount
 objectClass: shadowAccount
@@ -118,9 +118,9 @@ homeDirectory: /home/rigby/
 loginShell: /usr/bin/bash
 userPassword: {SSHA}WjKBvaM5QYtyzrpQDs2NHtOTbLwYizxe
 EOF
-root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f user-rigby.ldif
+root@ldap:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omnios,dc=org" -W -f user-rigby.ldif
 Enter LDAP Password:
-adding new entry "uid=rigby,ou=user,dc=omniosce,dc=org"
+adding new entry "uid=rigby,ou=user,dc=omnios,dc=org"
 ```
 
 This completes the configuration of the OpenLDAP Client Authentication server. OpenLDAP should be running, the DIT is populated, and is now ready to authenticate against clients stored in the DIT.
@@ -154,10 +154,10 @@ Issue the following command to manually create the configuration for the LDAP cl
 root@client:# ldapclient manual \
 -a credentialLevel=proxy \
 -a authenticationMethod=simple \
--a defaultSearchBase=dc=omniosce,dc=org \
--a domainName=omniosce.org \
--a defaultServerList=ldap.omniosce.org \
--a proxyDN=cn=Manager,dc=omniosce,dc=org \
+-a defaultSearchBase=dc=omnios,dc=org \
+-a domainName=omnios.org \
+-a defaultServerList=ldap.omnios.org \
+-a proxyDN=cn=Manager,dc=omnios,dc=org \
 -a proxyPassword=secret \
 -a attributeMap=group:gidnumber=gidNumber \
 -a attributeMap=passwd:gidnumber=gidNumber \
@@ -168,9 +168,9 @@ root@client:# ldapclient manual \
 -a objectClassMap=group:posixGroup=posixgroup \
 -a objectClassMap=passwd:posixAccount=posixaccount \
 -a objectClassMap=shadow:shadowAccount=posixaccount \
--a serviceSearchDescriptor=passwd:ou=user,dc=omniosce,dc=org \
--a serviceSearchDescriptor=group:ou=group,dc=omniosce,dc=org \
--a serviceSearchDescriptor=shadow:ou=user,dc=omniosce,dc=org
+-a serviceSearchDescriptor=passwd:ou=user,dc=omnios,dc=org \
+-a serviceSearchDescriptor=group:ou=group,dc=omnios,dc=org \
+-a serviceSearchDescriptor=shadow:ou=user,dc=omnios,dc=org
 Stopping sendmail failed with (1). You may need to restart it manually for changes to take effect.
 System successfully configured
 ```
@@ -199,7 +199,7 @@ This is demonstrated as follows:
 
 ```ternimal
 Hostname: client
-LDAP domain name is omniosce.org
+LDAP domain name is omnios.org
 
 client console login: rigby
 Password:

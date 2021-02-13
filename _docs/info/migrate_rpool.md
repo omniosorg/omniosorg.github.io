@@ -123,7 +123,7 @@ $ sudo bootadm install-bootloader -P rpool
 
 Before detaching the old disk(s) from the rpool we make a reboot to ensure everything was successful. **Remember to change the first boot device in the BIOS to use the new disk (or one of the new disk(s)).**
 
-When rebooting you might see a warning from 'devid register' that device ids has changed in case you need to reorder the disks in the BIOS to be able to change boot device. This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOSce when you reboot or power down your system.
+When rebooting you might see a warning from 'devid register' that device ids has changed in case you need to reorder the disks in the BIOS to be able to change boot device. This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOS when you reboot or power down your system.
 
 ## Detach old disk(s) from the rpool
 
@@ -142,7 +142,7 @@ If the new disk(s) have a higher capacity than the old disk(s) and you want the 
 zpool set autoexpand=on rpool
 ```
 
-When rebooting you might see a warning from 'devid register' that device ids has changed when removing the old disk(s). This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOSce when you reboot or power down your system.
+When rebooting you might see a warning from 'devid register' that device ids has changed when removing the old disk(s). This is just a warning which will be fixed by creating a new boot_archive either manually or automatically by OmniOS when you reboot or power down your system.
 
 ### Contact
 

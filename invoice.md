@@ -103,7 +103,7 @@ right">done</i>Submit</button>
                     'Check your mailbox. We have sent you the ' + data['type'] + ' download link.'
 	  	    +'</h2>' +
                     '<h3>Please contact ' +
-                    '<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> ' +
+                    '<a href="mailto:patrons@omnios.org">patrons@omnios.org</a> ' +
                     'if the message does not arrive within a few minutes.</h3>'
                   );
 		  break;
@@ -120,13 +120,13 @@ right">done</i>Submit</button>
 		default:
 		   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 	            'There was a problem processing your request: ' + msg.text
-		    + ' Please contact <a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
+		    + ' Please contact <a href="mailto:patrons@omnios.org">patrons@omnios.org</a>.</h2>');
 	     }	   
           },
           error: function(xhr,status){
              jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
                 'There was a problem processing your request. Please contact ' +
-                '<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
+                '<a href="mailto:patrons@omnios.org">patrons@omnios.org</a>.</h2>');
           }
        });
    });
@@ -134,4 +134,4 @@ right">done</i>Submit</button>
 
 If you have questions regarding our support offering, or if you want to
 discuss other options to support our work, please feel free to contact <a
-href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
+href="mailto:patrons@omnios.org">patrons@omnios.org</a> at any time.

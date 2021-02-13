@@ -8,7 +8,7 @@ show_in_sidebar: true
 
 The following is a quick start guide to OpenLDAP Software 2.4, including the Standalone LDAP Daemon, **slapd(8)**.
 
-It is meant to walk you through the basic steps needed to install and configure [OpenLDAP Software](http://www.openldap.org/software/) on [OmniOS](https://omniosce.org/). It should be used in conjunction with the [OpenLDAP Administrator's Guide](https://www.openldap.org/doc/admin24/), manual pages, and other materials provided with the distribution (e.g. the `INSTALL` document) or on the [OpenLDAP web site](http://www.OpenLDAP.org), in particular the [OpenLDAP Software FAQ](http://www.OpenLDAP.org/faq/?file=2).
+It is meant to walk you through the basic steps needed to install and configure [OpenLDAP Software](http://www.openldap.org/software/) on [OmniOS](https://omnios.org/). It should be used in conjunction with the [OpenLDAP Administrator's Guide](https://www.openldap.org/doc/admin24/), manual pages, and other materials provided with the distribution (e.g. the `INSTALL` document) or on the [OpenLDAP web site](http://www.OpenLDAP.org), in particular the [OpenLDAP Software FAQ](http://www.OpenLDAP.org/faq/?file=2).
 
 If you intend to run OpenLDAP Software seriously, you should review all of the OpenLDAP Administrator's Guide.
 
@@ -37,11 +37,11 @@ rootpw verysecret
 
 This will be used to allow access to the *cn=config* database, when converting to the *slapd-config* format.
 
-It is also recommended to replace `<MY-DOMAIN>` and `<COM>` with the appropriate domain components of your domain name. For example, for *omniosce.org*, use:
+It is also recommended to replace `<MY-DOMAIN>` and `<COM>` with the appropriate domain components of your domain name. For example, for *omnios.org*, use:
 
 ```terminal
-suffix "dc=omniosce,dc=org"
-rootdn "cn=Manager,dc=omniosce,dc=org"
+suffix "dc=omnios,dc=org"
+rootdn "cn=Manager,dc=omnios,dc=org"
 ```
 
 Details regarding configuring `slapd` can be found in the **slapd.conf(5)** manual page and the [Configuring slapd](https://www.openldap.org/doc/admin24/slapdconf2.html) chapter of the OpenLDAP Administrator's Guide.
@@ -73,7 +73,7 @@ Note the use of single quotes around command parameters to prevent special chara
 
 #
 dn:
-namingContexts: dc=omniosce,dc=org
+namingContexts: dc=omnios,dc=org
 
 # search result
 search: 2
@@ -110,17 +110,17 @@ EOF
 
 Be sure to replace `<MY-DOMAIN>` and `<COM>` with the appropriate domain components of your domain name. `<MY ORGANIZATION>` should be replaced with the name of your organization. When you cut and paste, be sure to trim any leading and trailing whitespace from the example.
 
-For example, for *omniosce.org*, use:
+For example, for *omnios.org*, use:
 
 ```terminal
-root:# cat << EOF > ~/omniosce.ldif
-dn: dc=omniosce,dc=org
+root:# cat << EOF > ~/omnios.ldif
+dn: dc=omnios,dc=org
 objectclass: dcObject
 objectclass: organization
-o: OmniOSce Association
-dc: omniosce
+o: OmniOS Association
+dc: omnios
 
-dn: cn=Manager,dc=omniosce,dc=org
+dn: cn=Manager,dc=omnios,dc=org
 objectclass: organizationalRole
 cn: Manager
 EOF
@@ -129,13 +129,13 @@ EOF
 Now, you may run `ldapadd` to insert these entries into your directory.
 
 ```terminal
-root:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omniosce,dc=org" -W -f ~/omniosce.ldif
+root:# /opt/ooce/bin/ldapadd -D "cn=Manager,dc=omnios,dc=org" -W -f ~/omnios.ldif
 Enter LDAP Password:
-adding new entry "dc=omniosce,dc=org"
+adding new entry "dc=omnios,dc=org"
 
-adding new entry "cn=Manager,dc=omniosce,dc=org"
+adding new entry "cn=Manager,dc=omnios,dc=org"
 ```
-where `~/omniosce.ldif` is the file you created above.
+where `~/omnios.ldif` is the file you created above.
 
 Additional information regarding directory creation can be found in the [Database Creation and Maintenance Tools](https://www.openldap.org/doc/admin24/dbtools.html) chapter of the OpenLDAP Administrator's Guide.
 
@@ -144,7 +144,7 @@ Additional information regarding directory creation can be found in the [Databas
 Now we're ready to verify the added entries are in your directory. You can use any LDAP client to do this, but our example uses the `ldapsearch` tool.
 
 ```terminal
-root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
+root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omnios,dc=org' '(objectclass=*)'
 ```
 
 This command will search for and retrieve every entry in the database and should produce the following result:
@@ -153,20 +153,20 @@ This command will search for and retrieve every entry in the database and should
 # extended LDIF
 #
 # LDAPv3
-# base <dc=omniosce,dc=org> with scope subtree
+# base <dc=omnios,dc=org> with scope subtree
 # filter: (objectclass=*)
 # requesting: ALL
 #
 
-# omniosce.org
-dn: dc=omniosce,dc=org
+# omnios.org
+dn: dc=omnios,dc=org
 objectClass: dcObject
 objectClass: organization
-o: OmniOSce Association
-dc: omniosce
+o: OmniOS Association
+dc: omnios
 
-# Manager, omniosce.org
-dn: cn=Manager,dc=omniosce,dc=org
+# Manager, omnios.org
+dn: cn=Manager,dc=omnios,dc=org
 objectClass: organizationalRole
 cn: Manager
 
@@ -228,7 +228,7 @@ online         12:03:28 svc:/network/openldap:slapd
 Again, run the previous `ldapsearch` command to verify the entries in the database:
 
 ```terminal
-root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omniosce,dc=org' '(objectclass=*)'
+root:# /opt/ooce/bin/ldapsearch -x -b 'dc=omnios,dc=org' '(objectclass=*)'
 ```
 
 This command will search for and retrieve every entry in the database and should produce the same result as when it was issued in the previous section.
@@ -237,20 +237,20 @@ This command will search for and retrieve every entry in the database and should
 # extended LDIF
 #
 # LDAPv3
-# base <dc=omniosce,dc=org> with scope subtree
+# base <dc=omnios,dc=org> with scope subtree
 # filter: (objectclass=*)
 # requesting: ALL
 #
 
-# omniosce.org
-dn: dc=omniosce,dc=org
+# omnios.org
+dn: dc=omnios,dc=org
 objectClass: dcObject
 objectClass: organization
-o: OmniOSce Association
-dc: omniosce
+o: OmniOS Association
+dc: omnios
 
-# Manager, omniosce.org
-dn: cn=Manager,dc=omniosce,dc=org
+# Manager, omnios.org
+dn: cn=Manager,dc=omnios,dc=org
 objectClass: organizationalRole
 cn: Manager
 
@@ -274,7 +274,7 @@ Enter LDAP Password:
 # LDAPv3
 # base <cn=config> with scope subtree
 # filter: (objectclass=*)
-# requesting: omniosce.ldif slapd.conf
+# requesting: omnios.ldif slapd.conf
 #
 
 # config

@@ -89,7 +89,7 @@ countryName_default             = GB
 stateOrProvinceName_default     =
 localityName_default            =
 0.organizationName_default      = OmniOSce or MyCompany
-emailAddress			= github-id@omniosce.org or me@mycompany.com
+emailAddress			= github-id@omnios.org or me@mycompany.com
 
 [ omniosce_ca ]
 subjectKeyIdentifier = hash

@@ -221,7 +221,7 @@ zonecfg:test:attr> end
 zonecfg:test> add attr
 zonecfg:test:attr> set name=dns-domain
 zonecfg:test:attr> set type=string
-zonecfg:test:attr> set value=omniosce.org
+zonecfg:test:attr> set value=omnios.org
 zonecfg:test:attr> end
 zonecfg:test> exit
 ```
@@ -279,8 +279,8 @@ A ZFS file system has been created for this zone.
 
        Image: Preparing at /zones/test/root.
 Sanity Check: Looking for 'entire' incorporation.
-   Publisher: Using omnios (https://pkg.omniosce.org/bloody/core/).
-   Publisher: Using extra.omnios (https://pkg.omniosce.org/bloody/extra/).
+   Publisher: Using omnios (https://pkg.omnios.org/bloody/core/).
+   Publisher: Using extra.omnios (https://pkg.omnios.org/bloody/extra/).
        Cache: Using /var/pkg/publisher.
   Installing: Packages (output follows)
 Packages to install: 197

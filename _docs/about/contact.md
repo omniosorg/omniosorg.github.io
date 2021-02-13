@@ -6,7 +6,7 @@ order: 20
 show_in_sidebar: true
 ---
 
-# Contact the OmniOSce Team
+# Contact the OmniOS Team
 
 For general queries and discussion, OmniOS users and developers can usually be
 found on IRC, Gitter or the mailing list. Please use the information below
@@ -25,7 +25,7 @@ Connect to the web-based [chat room on Gitter](https://gitter.im/omniosorg/Lobby
 For general discussion and queries, please subscribe to the
 [omnios-discuss mailing list](https://illumos.topicbox.com/groups/omnios-discuss).  
 Archives of the previous mailing list
-[are available](https://omniosce.org/ml-archive/).
+[are available](https://omnios.org/ml-archive/).
 
 ## <i class="fal fa-newspaper"></i> Newsletter
 
@@ -50,9 +50,9 @@ If you are aren't sure, please use the first one in the list.
 
 ## <i class="fal fa-shield-alt"></i> Security
 
-Security information can be sent to <security@omniosce.org>
+Security information can be sent to <security@omnios.org>
 
-If desired, email can be encrypted with the OmniOSce Security Team key
+If desired, email can be encrypted with the OmniOS Security Team key
 <br>
 (key ID
 [0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2](https://sks-keyservers.net/pks/lookup?op=get&search=0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2))
@@ -61,14 +61,14 @@ If desired, email can be encrypted with the OmniOSce Security Team key
 
 OmniOS Community Edition Association<br/>
 Aarweg 17, 4600 Olten, Switzerland <br/>
-062 775 9902, info@omniosce.org<br/>
-<https://www.omniosce.org>
+062 775 9902, info@omnios.org<br/>
+<https://www.omnios.org>
 
 The Board of the OmniOS Comunity Edition Association consists of:
 
-Tobias Oetiker <tobi@omniosce.org>, President<br/>
-Dominik Hassler <hadfl@omniosce.org>, Treasurer<br/>
-Andy Fiddaman <andy@omniosce.org>, Technical Director
+Tobias Oetiker <tobi@omnios.org>, President<br/>
+Dominik Hassler <hadfl@omnios.org>, Treasurer<br/>
+Andy Fiddaman <andy@omnios.org>, Technical Director
 
 ## <i class="fal fa-badge-check"></i> Privacy
 

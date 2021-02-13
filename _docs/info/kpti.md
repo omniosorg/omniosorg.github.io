@@ -55,7 +55,7 @@ are being used, is to check the kernel log:
 
 ```
 % dmesg | grep KPTI
-Mar 18 17:22:42 omniosce unix: [ID 551322 kern.info] KPTI enabled (PCID in use, INVPCID not supported)
+Mar 18 17:22:42 omnios unix: [ID 551322 kern.info] KPTI enabled (PCID in use, INVPCID not supported)
 ```
 
 Alternatively, the kernel variables can be queried directly as follows

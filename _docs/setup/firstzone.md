@@ -17,8 +17,8 @@ a parent dataset under which the zones will live. Since this test server only
 has a root ZFS pool, we'll create it under there but mount it at /zone.
 
 ```terminal
-root@omniosce:~# zfs create -o mountpoint=/zone rpool/zone
-root@omniosce:~# df -h | grep zone
+root@omnios:~# zfs create -o mountpoint=/zone rpool/zone
+root@omnios:~# df -h | grep zone
 rpool/zone            7.27G    23K      6.77G     1%    /zone
 ```
 
@@ -29,12 +29,12 @@ need to be installed before they can be used. For this
 example, we'll use the _sparse_ brand so let's install it:
 
 ```terminal
-root@omniosce:~# pkg list '*/brand/*'
+root@omnios:~# pkg list '*/brand/*'
 NAME (PUBLISHER)                                  VERSION                    IFO
 system/zones/brand/ipkg                           0.5.11-0.151026            i--
 system/zones/brand/lipkg                          0.5.11-0.151026            i--
 
-root@omniosce:~# pkg install brand/sparse
+root@omnios:~# pkg install brand/sparse
            Packages to install:  1
        Create boot environment: No
 Create backup boot environment: No
@@ -56,11 +56,11 @@ Updating package cache                           1/1
 ### Create a virtual NIC (VNIC) for the zone
 
 ```terminal
-root@omniosce:~# dladm show-link
+root@omnios:~# dladm show-link
 LINK        CLASS     MTU    STATE    BRIDGE     OVER
 e1000g0     phys      1500   up       --         --
 
-root@omniosce:~# dladm create-vnic -l e1000g0 firstzone0
+root@omnios:~# dladm create-vnic -l e1000g0 firstzone0
 ```
 
 ### Create the zone
@@ -73,7 +73,7 @@ that the IP address cannot be changed from within the zone and will be
 automatically configured.
 
 ```terminal
-root@omniosce:~# zonecfg -z firstzone
+root@omnios:~# zonecfg -z firstzone
 firstzone: No such zone configured
 Use 'create' to begin configuring a new zone.
 zonecfg:firstzone> create
@@ -93,7 +93,7 @@ zonecfg:firstzone> exit
 ### Install the zone
 
 ```terminal
-root@omniosce:~# zoneadm -z firstzone install
+root@omnios:~# zoneadm -z firstzone install
 A ZFS file system has been created for this zone.
 
        Image: Preparing at /zone/firstzone/root.
@@ -122,13 +122,13 @@ Creating fast lookup database                   Done
 ### Boot the zone
 
 ```terminal
-root@omniosce:~# zoneadm -z firstzone boot
+root@omnios:~# zoneadm -z firstzone boot
 ```
 
 ### Log in
 
 ```terminal
-root@omniosce:~# zlogin firstzone
+root@omnios:~# zlogin firstzone
 [Connected to zone 'firstzone' pts/2]
 OmniOS 5.11     omnios-r151026-b6848f4455       June 2018
 root@firstzone:~#
@@ -142,7 +142,7 @@ lo0/v6            static   ok           ::1/128
 ### Configure DNS
 
 ```terminal
-root@omniosce:~# cp /etc/nsswitch.{dns,conf}
-root@omniosce:~# echo nameserver 1.1.1.1 > /etc/resolv.conf
+root@omnios:~# cp /etc/nsswitch.{dns,conf}
+root@omnios:~# echo nameserver 1.1.1.1 > /etc/resolv.conf
 ```
 

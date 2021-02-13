@@ -20,10 +20,10 @@ version number for the release you are running.
 {:.bordered .responsive-table}
 | URL	| Publisher	| Signed | Build Scripts	| Notes	|
 | ---	| ---		| ---	| ---			| ---	|
-| <https://pkg.omniosce.org/{{site.omnios_stable}}/core/>	| omnios	| yes	| [{{site.omnios_stable}}](https://github.com/omniosorg/omnios-build/tree/{{site.omnios_stable}})	| Core OS
-| <https://pkg.omniosce.org/{{site.omnios_stable}}/extra/>	| extra.omnios	| yes	| [master](https://github.com/omniosorg/omnios-extra)							| Additional packages
-| <https://pkg.omniosce.org/bloody/core/>			| omnios	| no	| [master](https://github.com/omniosorg/omnios-build)							| Core OS
-| <https://pkg.omniosce.org/bloody/extra/>			| extra.omnios 	| no	| [master](https://github.com/omniosorg/omnios-extra)							| Additional packages
+| <https://pkg.omnios.org/{{site.omnios_stable}}/core/>	| omnios	| yes	| [{{site.omnios_stable}}](https://github.com/omniosorg/omnios-build/tree/{{site.omnios_stable}})	| Core OS
+| <https://pkg.omnios.org/{{site.omnios_stable}}/extra/>	| extra.omnios	| yes	| [master](https://github.com/omniosorg/omnios-extra)							| Additional packages
+| <https://pkg.omnios.org/bloody/core/>			| omnios	| no	| [master](https://github.com/omniosorg/omnios-build)							| Core OS
+| <https://pkg.omnios.org/bloody/extra/>			| extra.omnios 	| no	| [master](https://github.com/omniosorg/omnios-extra)							| Additional packages
 
 ## Packages by the OmniOS Community
 

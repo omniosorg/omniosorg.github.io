@@ -6,7 +6,7 @@ show_in_sidebar: true
 
 # Migrating an OmniOS virtual machine from KVM to bhyve
 
-This is a walk-through of how I moved a development OmniOSce bloody virtual
+This is a walk-through of how I moved a development OmniOS bloody virtual
 machine from KVM to bhyve under an OmniOS r151028 global zone. In the end,
 this process turned out to be much easier than I feared; the main thing was
 making sure that the root pool was mountable on the new system.
@@ -30,8 +30,8 @@ checksum of that path, separated into groups of 4 and separated by hyphens:
 
 ```terminal
 gz$ kvm list bloody | grep hdd
-            "disk_path" : "/dev/zvol/rdsk/data/omniosce/hdd-bloody",
-gz$ echo '/dev/zvol/rdsk/data/omniosce/hdd-bloody\c' | digest -a md5 | cut -c1-12 | tr '[a-z]' '[A-Z]' | sed 's/..../-&/g'
+            "disk_path" : "/dev/zvol/rdsk/data/omnios/hdd-bloody",
+gz$ echo '/dev/zvol/rdsk/data/omnios/hdd-bloody\c' | digest -a md5 | cut -c1-12 | tr '[a-z]' '[A-Z]' | sed 's/..../-&/g'
 -B066-A256-5589
 ```
 
@@ -50,7 +50,7 @@ gz$ kvmadm list bloody
             "cache" : "none",
             "model" : "virtio",
             "boot" : "true",
-            "disk_path" : "/dev/zvol/rdsk/data/omniosce/hdd-bloody",
+            "disk_path" : "/dev/zvol/rdsk/data/omnios/hdd-bloody",
             "disk_size" : "300G",
             "index" : "0",
             "serial" : "BHYVE-B066-A256-5589"
@@ -114,7 +114,7 @@ gz$ kvm list bloody
             "index" : "0",
             "cache" : "none",
             "disk_size" : "300G",
-            "disk_path" : "/dev/zvol/rdsk/data/omniosce/hdd-bloody",
+            "disk_path" : "/dev/zvol/rdsk/data/omnios/hdd-bloody",
             "serial" : "BHYVE-B066-A256-5589",
             "model" : "virtio"
          },
@@ -123,7 +123,7 @@ gz$ kvm list bloody
             "index" : "1",
             "serial" : "HONALULU",
             "disk_size" : "8G",
-            "disk_path" : "/dev/zvol/rdsk/data/omniosce/hdd-bloody2",
+            "disk_path" : "/dev/zvol/rdsk/data/omnios/hdd-bloody2",
             "model" : "virtio"
          }
       ],
@@ -177,7 +177,7 @@ net:
         physical: omniosr0
         vlan-id not specified
 device:
-        match: /dev/zvol/rdsk/data/omniosce/hdd-bloody*
+        match: /dev/zvol/rdsk/data/omnios/hdd-bloody*
 attr:
         name: ram
         type: string
@@ -189,11 +189,11 @@ attr:
 attr:
         name: bootdisk
         type: string
-        value: data/omniosce/hdd-bloody,sectorsize=512/512
+        value: data/omnios/hdd-bloody,sectorsize=512/512
 attr:
         name: disk
         type: string
-        value: data/omniosce/hdd-bloody2,serial=HONALULU,sectorsize=512/512
+        value: data/omnios/hdd-bloody2,serial=HONALULU,sectorsize=512/512
 attr:
         name: bootrom
         type: string

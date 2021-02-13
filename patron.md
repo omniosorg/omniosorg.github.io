@@ -91,13 +91,13 @@ var handler = StripeCheckout.configure({
 		'Thank you for your donation. We have sent a confirmation ' +
 		'message to the email address provided.</h2>' +
 		'<h3>Please contact ' +
-		'<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> ' +
+		'<a href="mailto:patrons@omnios.org">patrons@omnios.org</a> ' +
 		'if the message does not arrive within a few minutes.</h3>');
 	},
 	error: function(xhr,status){
 	   jQuery('#notice').html('<h2><i class="material-icons">sms_failed</i> ' +
 		'There was a problem processing your request. Please contact ' +
-		'<a href="mailto:patrons@omniosce.org">patrons@omniosce.org</a>.</h2>');
+		'<a href="mailto:patrons@omnios.org">patrons@omnios.org</a>.</h2>');
 	}
      });
   }
@@ -139,7 +139,7 @@ Verein OmniOS Community Edition
 
 If you have questions regarding your subscription, or if you want to
 discuss other options to support our work, please feel free to contact <a
-href="mailto:patrons@omniosce.org">patrons@omniosce.org</a> at any time.
+href="mailto:patrons@omnios.org">patrons@omnios.org</a> at any time.
 
 ## How your payments are processed
 

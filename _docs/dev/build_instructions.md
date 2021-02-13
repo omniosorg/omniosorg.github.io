@@ -33,7 +33,7 @@ Core OmniOS consists of several parts:
 
 The easiest way to build OmniOS is using our
 [omni](https://github.com/omniosorg/omni) utility which can be installed from
-the [extra.omnios](https://pkg.omniosce.org/bloody/extra) IPS repository.
+the [extra.omnios](https://pkg.omnios.org/bloody/extra) IPS repository.
 
 Each version of OmniOS can only be built on the same version so if you want
 to build bloody, you need a machine running up-to-date bloody and the same
@@ -49,7 +49,7 @@ The example below is for bloody - if you're building a stable version then
 just replace */bloody/* in the publisher URL.
 
 ```
-# pkg set-publisher -g https://pkg.omniosce.org/bloody/extra extra.omnios
+# pkg set-publisher -g https://pkg.omnios.org/bloody/extra extra.omnios
 # pkg install developer/omni
 ```
 

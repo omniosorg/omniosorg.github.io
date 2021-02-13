@@ -41,7 +41,7 @@ If you want to find out more about some of the work that was involved in
 # Extra package repository
 
 The
-[OmniOS Extra](https://pkg.omniosce.org/{{site.omnios_stable}}/extra/en/catalog.shtml)
+[OmniOS Extra](https://pkg.omnios.org/{{site.omnios_stable}}/extra/en/catalog.shtml)
 package repository contains a small number of commonly used additional
 packages such as _nginx_ and _postfix_. We'd appreciate contributions in this
 area so if there's some software you use on OmniOS and would be useful to
@@ -61,7 +61,7 @@ If you aren't able to help in the above areas, please consider
 We are committed to providing updates to OmniOS for many years to come and
 to maintaining the [stable and long-term-release models](/schedule.html)
 put in place by OmniTI before us. Your donation will help us to achieve
-that goal and ensure the long-term success of OmniOSce.
+that goal and ensure the long-term success of OmniOS.
 
 We also provide [support contracts](/invoice.html) if you need cover for your
 systems.
