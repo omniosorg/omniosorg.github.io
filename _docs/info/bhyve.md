@@ -65,22 +65,24 @@ bhyve on OmniOS comes with a utility to test for processor support (see below),
 but most intel processors with Extended Page Table (EPT) support will work.
 Refer to [Intel's processor search tool](https://ark.intel.com/Search/FeatureFilter?productType=processors&ExtendedPageTables=true) for a complete list.
 
-bhyve does not currently have support for AMD processors but this is planned
-for a future release.
+bhyve also supports AMD processors with SVM and nested paging support.
 
-To check if bhyve will work on your hardware, install the package and
-run bhhwcompat:
+To check if bhyve will work on your hardware, download the `bhhwcompat`
+utility from https://downloads.omnios.org/misc/bhyve/bhhwcompat
 
 ```terminal
-% pfexec pkg install system/bhyve
-% pfexec bhhwcompat -v
-processor does not support VMX operation
-```
+% curl -o /tmp/bhhwcompat https://downloads.omnios.org/misc/bhyve/bhhwcompat
+% chmod +x /tmp/bhhwcompat
+% pfexec /tmp/bhhwcompat
+CPU vendor string: GenuineIntel
+... CPU supports VMX
+... VMX support is enabled in BIOS
+... VMX supports EPT
+... VMX supports VPID
+... VNX supports single INVEPT
+... VMX supports all INVEPT
 
-or, hopefully:
-```terminal
-% pfexec bhhwcompat -v
-bhyve is supported on this host.
+bhyve is supported on this system.
 ```
 
 ### Which guest operating systems are supported?
