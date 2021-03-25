@@ -81,7 +81,7 @@ $ az vm create --resource-group web --location ukwest \
     --admin-username boho --ssh-key-value ~/.ssh/id_rsa.pub \
     --size Standard_B1s --boot-diagnostics-storage=webstorage \
     --use-unmanaged-disk --image \
-    https://$storage.blob.core.windows.net/omniosdisk/azure-151037.vhd
+    https://webstorage.blob.core.windows.net/omniosdisk/azure-151037.vhd
 ```
 
 Once this is complete, a JSON object will be displayed which includes the
