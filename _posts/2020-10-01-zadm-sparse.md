@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Using the 'zadm' utility to create an sparse zone from a template
-synopsis: Using the 'zadm' utility to create an sparse zone from a template
+title: Using the 'zadm' utility to create a sparse zone from a template
+synopsis: Using the 'zadm' utility to create a sparse zone from a template
 ---
 
 This week's ascii-cast shows how to use `zadm` to create a

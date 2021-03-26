@@ -12,7 +12,7 @@ will be posted to this page over the coming weeks.
 
 ## Using zadm to create an lx zone
 
-This week's cast shows how to use `zadm` to quickly create an
+This cast shows how to use `zadm` to quickly create an
 _lx_-branded zone and how to configure a basic policy in the zone firewall.
 The zone firewall works for all zone brands except for _KVM_ and is ideal for
 securing an lx zone where the native iptables tools don't work.
@@ -29,12 +29,22 @@ and CPU caps will be covered in a future post.
 
 ## Using zadm to create a sparse zone from a template
 
-This week's ascii-cast shows how to use `zadm` to create a
+This ascii-cast shows how to use `zadm` to create a
 _sparse_-branded zone in OmniOS r151034 using a prepared JSON file,
 along with a memory cap and CPU shares.
 
 <script id="asciicast-aiXmHqbMqfoqGwiDIxbSv6Jcf"
     src="https://asciinema.org/a/aiXmHqbMqfoqGwiDIxbSv6Jcf.js" async>
+</script>
+
+## Using zadm to create a bhyve VM from an image
+
+Creating an OmniOS bhyve VM is quick and easy with the provided images.
+This example shows creating a VM running the rolling _bloody_ release on
+r151034.
+
+<script id="asciicast-xYYPdt7feg41q53cOPIl1IeMO"
+    src="https://asciinema.org/a/xYYPdt7feg41q53cOPIl1IeMO.js" async>
 </script>
 
 ---
