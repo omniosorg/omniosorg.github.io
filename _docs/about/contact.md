@@ -46,7 +46,7 @@ GitHub repository:
 * [Our brand of illumos](https://github.com/omniosorg/illumos-omnios/issues/new)
 * [Kayak Installer](https://github.com/omniosorg/kayak/issues/new)
 
-If you are aren't sure, please use the first one in the list.
+If you aren't sure, please use the first one in the list.
 
 ## <i class="fal fa-shield-alt"></i> Security
 
