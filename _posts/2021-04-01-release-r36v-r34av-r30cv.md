@@ -12,7 +12,7 @@ OmniOS weekly releases for w/c 29th of March 2021 are now available.
   [CVE-2021-22890](https://curl.se/docs/CVE-2021-22890.html).
 
 For further details, please see
-[https://omniosce.org/releasenotes](/releasenotes.html)
+[https://omnios.org/releasenotes](/releasenotes.html)
 
 ---
 

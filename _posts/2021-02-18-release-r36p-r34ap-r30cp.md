@@ -40,7 +40,7 @@ OmniOS weekly releases for w/c 15th of February 2021 are now available.
 
 
 For further details, please see
-[https://omniosce.org/releasenotes](/releasenotes.html)
+[https://omnios.org/releasenotes](/releasenotes.html)
 
 ---
 

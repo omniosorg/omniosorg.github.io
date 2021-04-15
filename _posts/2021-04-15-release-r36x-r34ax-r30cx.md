@@ -34,7 +34,7 @@ r151034, a _curl_ update to 7.76.1 in all releases and more.
 * The _dma_ mailer could spin when trying to create a new local mailbox.
 
 For further details, please see
-[https://omniosce.org/releasenotes](/releasenotes.html)
+[https://omnios.org/releasenotes](/releasenotes.html)
 
 ---
 

@@ -71,7 +71,7 @@ On the next boot the Boot Environment omnios-r151026m will be
 mounted on '/'.  Reboot when ready to switch to this updated BE.
 
 -------------------------------------------------------------------------------
-Find release notes:                        https://omniosce.org/releasenotes
+Find release notes:                        https://omnios.org/releasenotes
 -------------------------------------------------------------------------------
 Get a support contract:                    https://omniosce.org/support
 Sponsor OmniOS development:                https://omniosce.org/patron
