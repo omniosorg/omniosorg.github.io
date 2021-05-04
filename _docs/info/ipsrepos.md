@@ -56,5 +56,5 @@ packages then you should ask for them.
 
 Maintainers of add-on repositories are encouraged to share their work with the
 community. If you wish to have your repository listed here, please
-[get in touch](/about/contact.html)
+[get in touch](/about/contact.html).
 
