@@ -14,7 +14,7 @@ to get in touch.
 
 ## <i class="fal fa-hashtag"></i> IRC
 
-Join the [#omnios channel on Freenode](http://webchat.freenode.net?randomnick=1&channels=%23omnios&uio=d4).
+Join the [#omnios channel on Libera.chat](https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#omnios).
 
 ## <i class="fal fa-comments"></i> Gitter
 

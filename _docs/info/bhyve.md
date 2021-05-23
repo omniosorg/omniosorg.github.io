@@ -106,5 +106,5 @@ for more information.
 
 If you have any problems or questions, please get in touch via
 [the lobby](https://gitter.im/omniosorg/Lobby) or
-[#omnios on Freenode](http://webchat.freenode.net?randomnick=1&channels=%23omnios&uio=d4)
+[#omnios on Libera.chat](https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#omnios)
 
