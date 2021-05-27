@@ -14,7 +14,7 @@ to get in touch.
 
 ## <i class="fal fa-hashtag"></i> IRC
 
-Join the [#omnios channel on Libera.chat](https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#omnios).
+Join the [#omnios channel on Libera.chat](https://web.libera.chat/#omnios).
 
 ## <i class="fal fa-comments"></i> Gitter
 
