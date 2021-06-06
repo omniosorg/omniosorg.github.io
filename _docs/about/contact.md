@@ -14,7 +14,8 @@ to get in touch.
 
 ## <i class="fal fa-hashtag"></i> IRC
 
-Join the [#omnios channel on Libera.chat](https://web.libera.chat/#omnios).
+Join the [#omnios channel on Libera.chat](https://web.libera.chat/#omnios)
+or [read the chat logs](https://log.omnios.org/).
 
 ## <i class="fal fa-comments"></i> Gitter
 
