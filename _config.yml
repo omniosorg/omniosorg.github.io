@@ -15,7 +15,7 @@ omnios_stable_suffix:
 omnios_oldstable: r151036
 omnios_lts_date: the 3rd of May, 2021
 omnios_lts: r151038
-omnios_lts_suffix:
+omnios_lts_suffix: k
 omnios_bloody: 20210427
 owner:
     email: info@omnios.org
