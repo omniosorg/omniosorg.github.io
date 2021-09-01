@@ -34,7 +34,7 @@ service.
 <form class="patron_form">
 <div class="row">
 <div class="input-field col s6 offset-m1 m5 offset-l2 l2 offset-xl3 xl2">
-    <input placeholder="Amount" name="amount" id="amount_fld" type="text" class="validate">
+    <input placeholder="Amount" name="amount" id="amount_fld" type="number" placeholder="50" class="validate">
     <label for="amount">Amount</label>
 </div>
 <div class="input-field col s6 m5 l3 xl2">
