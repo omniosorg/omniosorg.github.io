@@ -31,7 +31,7 @@ Archives of the previous mailing list
 ## <i class="fal fa-newspaper"></i> Newsletter
 
 If you would just like to stay up to date regarding all things OmniOS,
-consider subscribing to our [Newsletter](http://eepurl.com/dL1z7k).
+consider subscribing to our [Newsletter](https://list.omnios.org/subscription/form).
 
 ## <i class="fab fa-twitter"></i> Twitter
 
