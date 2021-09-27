@@ -34,8 +34,10 @@ to be able to communicate with you about your contract and matters related
 to that.
 
 If you subscribe to the OmniOS Newsletter, your mail adderess will be
-stored at MailChimp who have their own GDPR compliant [Privacy
-Policy](https://mailchimp.com/legal/privacy/)
+stored in a postgres database on our server in Zurich. You have the option
+of both downloading all your stored data as well as whiping your entry from
+our database. The Newsletter is managed with a self-hosted copy of
+Listmonk.
 
 It is our intention that our processing of personal data shall always be
 in line with the General Data Protection Regulation (GDPR), and in accordance
