@@ -11,11 +11,11 @@ useast_path: https://us-east.mirror.omnios.org/downloads/media
 download_prefix: omnios-
 omnios_stable_date: the 3rd of May, 2021
 omnios_stable: r151038
-omnios_stable_suffix:
+omnios_stable_suffix: v
 omnios_oldstable: r151036
 omnios_lts_date: the 3rd of May, 2021
 omnios_lts: r151038
-omnios_lts_suffix: k
+omnios_lts_suffix: v
 omnios_bloody: 20210819
 owner:
     email: info@omnios.org
