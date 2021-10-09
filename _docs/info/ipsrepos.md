@@ -41,7 +41,7 @@ _{{site.omnios_stable}}_ with the release you are running:
 {:.bordered .responsive-table}
 | URL	| Publisher	| Maintainer	| Notes	|
 | ---	| ---		| ---		| ---	|
-| <http://sfe.opencsw.org/localhostomnios><br>[(build scripts)](https://sourceforge.net/p/pkgbuild/code/HEAD/tree/spec-files-extra/trunk/) | localhostomnios   | @sfepackages and 3 more from SFE Community | Blog: https://sfe.opencsw.org; open for contribution and actively maintained, weekly updates |
+| <http://sfe.opencsw.org/localhostomnios><br>[(build scripts)](https://sourceforge.net/p/pkgbuild/code/HEAD/tree/spec-files-extra/trunk/) | localhostomnios   | @sfepackages and 3 more from SFE Community | Blog: <https://sfe.opencsw.org>; open for contribution and actively maintained, weekly updates |
 
 Note that you as a user of these extra repositories are encouraged to get in
 touch with the maintainers of these repos. In many cases you can contribute and
