@@ -100,10 +100,6 @@ _No files to update in this repository; just create the new branch._
 
 * `lib/config.sh`
 
-### omnios-extra
-
-* `lib/config.sh`
-
 # Release Testing Checklist
 
 ### Installation
