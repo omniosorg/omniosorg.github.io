@@ -56,7 +56,7 @@ Security information can be sent to <security@omnios.org>
 If desired, email can be encrypted with the OmniOS Security Team key
 <br>
 (key ID
-[0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2](https://sks-keyservers.net/pks/lookup?op=get&search=0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2))
+[0x514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2](https://keys.openpgp.org/vks/v1/by-fingerprint/514CBAFA6533A3AC4BCF037B796F7C4C3FC646C2))
 
 ## <i class="fal fa-building"></i> Impressum
 
