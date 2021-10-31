@@ -33,7 +33,7 @@ configuration use the `-m` option to `set-publisher` as shown below, replacing
 _{{site.omnios_stable}}_ with the release you are running:
 
 ```terminal
-# pkg set-publisher -m https://us-east.mirror.omnios.org/{{site.omnios_stable}}/core/ omnios
+# pkg set-publisher -m https://us-west.mirror.omnios.org/{{site.omnios_stable}}/core/ omnios
 ```
 
 ## Packages by the OmniOS Community
