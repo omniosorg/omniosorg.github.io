@@ -134,7 +134,7 @@ You can also use traditional banking transactions to send us your
 contributions by paying directly to our account here in Switzerland.
 
 IBAN CH22 0900 0000 6188 9767 7<br/>
-BIC POFICHBEXX<br/>
+BIC POFICHBEXXX<br/>
 Verein OmniOS Community Edition
 
 If you have questions regarding your subscription, or if you want to
