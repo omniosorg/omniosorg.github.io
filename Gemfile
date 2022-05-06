@@ -8,3 +8,5 @@ gem 'sass'
 gem "html-proofer"
 gem 'kramdown'
 gem 'rouge'
+
+gem "webrick", "~> 1.7"
