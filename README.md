@@ -6,7 +6,7 @@ This is the source code for our main website.
 
 To build this website locally, run
 
-```cosole
+```console
 gem install bundler
 bundler
 bundler exec jekyll s
