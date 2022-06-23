@@ -16,7 +16,7 @@ omnios_oldstable: r151040
 omnios_lts_date: the 3rd of May, 2021
 omnios_lts: r151038
 omnios_lts_suffix: an
-omnios_bloody: 20220408
+omnios_bloody: 20220623
 owner:
     email: info@omnios.org
     facebook:
