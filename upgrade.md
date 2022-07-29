@@ -14,7 +14,7 @@ The following table shows the supported upgrade paths between OmniOS versions.
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
-| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omniosce-ca-certificate)
+| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omnios-ca-certificate)
 | r151022 (LTS)			| &#8594;	| r151024, r151026, r151028 (stable), r151030 (LTS)
 | r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
 | r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
