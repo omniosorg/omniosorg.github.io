@@ -23,7 +23,7 @@ jobs:
     - name: Generate Site
       run: |
         bundle exec jekyll build
-        bundle exec htmlproofer ./_site --disable-external --url-ignore "/#.*/"
+        bundle exec htmlproofer ./_site --enforce-https=false --disable-external=true
 
     - name: Publish to OOCE Web Server
       if: ${{github.event_name}} == "push" && ${{github.ref}} == "refs/heads/master"
