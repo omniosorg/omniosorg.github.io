@@ -21,7 +21,7 @@ releases are supported for three years** and therefore overlap for a year to
 allow time for validation and upgrade even in complex environments. Regular
 stable releases overlap for six months.
 
-<img class="responsive-img" src="/release-plan-r30-x4.png" alt="OmniOS Release Plan" />
+<img class="responsive-img" src="/release-plan-r38@2x.png" alt="OmniOS Release Plan" />
 
 In the table below, currently supported releases are **emboldened**.
 
