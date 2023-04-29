@@ -9,13 +9,13 @@ paginate_path: "/news/page:num/"
 download_path: https://downloads.omnios.org/media
 uswest_path: https://us-west.mirror.omnios.org/downloads/media
 download_prefix: omnios-
-omnios_stable_date: the 7th of November, 2022
-omnios_stable: r151044
-omnios_stable_suffix: k
-omnios_oldstable: r151042
-omnios_lts_date: the 3rd of May, 2021
-omnios_lts: r151038
-omnios_lts_suffix: an
+omnios_stable_date: the 1st of May, 2023
+omnios_stable: r151046
+omnios_stable_suffix:
+omnios_oldstable: r151044
+omnios_lts_date: the 1st of May, 2023
+omnios_lts: r151046
+omnios_lts_suffix:
 omnios_bloody: 20230127
 owner:
     email: info@omnios.org
