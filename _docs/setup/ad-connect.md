@@ -41,7 +41,7 @@ Setup Kerberos for MS Active Directory (ms_ad)
 # kinit -V administrator         
 ```
 
-### Enabeling SMB Filesharing
+### Enabling SMB Filesharing
 
 To make sure we have the same user id numbers everywhere we want to keep them in Active Direcory. 
 
@@ -54,7 +54,7 @@ Make sure you have the following properties configured for every user in your ac
 
     * uid (username)
     * uidNumber 
-    * gitNumber
+    * gidNumber
     * homeDirectory
     * loginShell
     * gecos
