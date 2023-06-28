@@ -22,6 +22,30 @@ body {
     flex-direction: column;
 }
 
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+        body {
+            background-color: #000;
+            color: white;
+        }
+        img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+
+        }
+        img:hover {
+            opacity: 1;
+        }
+}
+
 main {
     flex: 1 0 auto;
 
