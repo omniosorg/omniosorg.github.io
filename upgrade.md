@@ -92,6 +92,19 @@ the _lipkg_ and _sparse_ brands do **not** need to be detached):
   # zoneadm -z <zonename> attach -u
   ```
 
+### Troubleshooting
+
+In case a boot environment (BE) is not updating to the latest release, try to enable an older BE (in the example below `omnios-r151044`) and reboot. Then, update the BE. 
+Make sure to use a new BE for the update. 
+
+For example:
+
+```terminal
+# beadm activate omnios-r151044
+# init 6
+# pkg update -f -r --be-name={{site.omnios_stable}} 
+```
+
 ## Installing the OmniOS CA Certificate
 
 **If upgrading from OmniTI OmniOS** first install the OmniOS CA certificate:
@@ -101,4 +114,5 @@ the _lipkg_ and _sparse_ brands do **not** need to be detached):
 # openssl x509 -fingerprint -in /etc/ssl/pkg/omniosce-ca.cert.pem -noout
 SHA1 Fingerprint=8D:CD:F9:D0:76:CD:AF:C1:62:AF:89:51:AF:8A:0E:35:24:4C:66:6D
 ```
+
 
