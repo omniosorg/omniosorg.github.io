@@ -47,6 +47,15 @@ r151034.
     src="https://asciinema.org/a/xYYPdt7feg41q53cOPIl1IeMO.js" async>
 </script>
 
+## Using zadm to boot the experimental aarch64 image in an emu-branded zone
+
+The experimental OmniOS aarch64/arm64 distribution can be installed and
+booted using the emu zone brand.
+
+<script id="asciicast-595580"
+    src="https://asciinema.org/a/595580.js" async>
+</script>
+
 ---
 
 <i class="fab fa-lg fa-pull-left fa-github"></i> [zadm](https://github.com/omniosorg/zadm) is open source and hosted on Github. Feedback and pull requests
