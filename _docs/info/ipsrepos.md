@@ -27,10 +27,10 @@ version number for the release you are running.
 
 ### Mirrors
 
-There are is also a US mirror for the core OmniOS packages, kindly hosted by
-[Joyent](https://www.joyent.com/). To add this mirror to the publisher
-configuration use the `-m` option to `set-publisher` as shown below, replacing
-_{{site.omnios_stable}}_ with the release you are running:
+There is also a US mirror for the core OmniOS packages.
+To add this mirror to the publisher configuration use the `-m` option to
+`set-publisher` as shown below, replacing _{{site.omnios_stable}}_ with the
+release you are running:
 
 ```terminal
 # pkg set-publisher -m https://us-west.mirror.omnios.org/{{site.omnios_stable}}/core/ omnios
