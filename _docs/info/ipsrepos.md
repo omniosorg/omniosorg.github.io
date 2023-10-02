@@ -27,13 +27,14 @@ version number for the release you are running.
 
 ### Mirrors
 
-There is also a US mirror for the core OmniOS packages.
+There is also a US mirror for the core and extra OmniOS package repositories.
 To add this mirror to the publisher configuration use the `-m` option to
 `set-publisher` as shown below, replacing _{{site.omnios_stable}}_ with the
 release you are running:
 
 ```terminal
 # pkg set-publisher -m https://us-west.mirror.omnios.org/{{site.omnios_stable}}/core/ omnios
+# pkg set-publisher -m https://us-west.mirror.omnios.org/{{site.omnios_stable}}/extra/ extra.omnios
 ```
 
 ## Packages by the OmniOS Community
