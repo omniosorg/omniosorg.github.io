@@ -32,7 +32,7 @@ The image must contain a Linux userland. For example, CentOS 6.8, or
 Ubuntu 16.04.
 
 These can be found at various places. The bottom entries of the
-[Joyent image list](https://images.joyent.com/images) are the most recent.
+[SmartOS image list](https://images.smartos.org/images) are the most recent.
 Search for `Container-native`.
 
 For example:
