@@ -113,7 +113,7 @@ ssh -p 66 server-console-ip
 ## Console Resizing
 
 If you tried vim on your new serial console, you were probably in for a
-disapointed &emdash; somehow it jumbled up the screen.  The reason for this is,
+disapointed &mdash; somehow it jumbled up the screen.  The reason for this is,
 that over the serial console connection stty does not seem to get properly
 informed about screen size and screen size changes.  Run `stty` and it will report rows and cols as
 0 which is not ideal.  There is a way to fix this though.
