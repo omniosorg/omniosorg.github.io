@@ -27,8 +27,9 @@ The following table shows the supported upgrade paths between OmniOS versions.
 | r151040 (stable)		| &#8594;	| r151042, r151044 (stable), r151046 (LTS)
 | r151042 (stable)		| &#8594;	| r151044 (stable), r151046 (LTS)
 | r151044 (stable)		| &#8594;	| r151046 (LTS)
-| r151046 (LTS)			| &#8594;	| r151048 (stable), r151050 (stable)
-| r151048 (stable)		| &#8594;	| r151050 (stable)
+| r151046 (LTS)			| &#8594;	| r151048 (stable), r151050 (stable), r151052 (stable)
+| r151048 (stable)		| &#8594;	| r151050 (stable), r151052 (stable)
+| r151050 (stable)		| &#8594;	| r151052 (stable)
 
 <div class="fa-orange" style="padding-top: 0.5em">
 <i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
