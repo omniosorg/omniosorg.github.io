@@ -11,7 +11,7 @@ uswest_path: https://us-west.mirror.omnios.org/downloads/media
 download_prefix: omnios-
 omnios_stable_date: the 4th of November, 2024
 omnios_stable: r151052
-omnios_stable_suffix:
+omnios_stable_suffix: b
 omnios_oldstable: r151050
 omnios_lts_date: the 1st of May, 2023
 omnios_lts: r151046
