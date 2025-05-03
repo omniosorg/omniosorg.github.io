@@ -1,6 +1,6 @@
 # Site settings
 title: OmniOS Community Edition
-description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, Bhyve, KVM and Linux zone support
+description: illumos based server OS with ZFS, Bhyve, DTrace, Crossbow, SMF and Linux zone support
 url: "https://omnios.org"
 baseurl: ""
 logo: OmniOS Community Edition
@@ -9,13 +9,13 @@ paginate_path: "/news/page:num/"
 download_path: https://downloads.omnios.org/media
 uswest_path: https://us-west.mirror.omnios.org/downloads/media
 download_prefix: omnios-
-omnios_stable_date: the 4th of November, 2024
-omnios_stable: r151052
-omnios_stable_suffix: b
-omnios_oldstable: r151050
-omnios_lts_date: the 1st of May, 2023
-omnios_lts: r151046
-omnios_lts_suffix: an
+omnios_stable_date: the 5th of May, 2025
+omnios_stable: r151054
+omnios_stable_suffix:
+omnios_oldstable: r151052
+omnios_lts_date: the 5th of May, 2025
+omnios_lts: r151054
+omnios_lts_suffix:
 omnios_bloody: 20250124
 owner:
     email: info@omnios.org
