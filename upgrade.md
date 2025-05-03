@@ -8,36 +8,38 @@ show_in_sidebar: true
 # Upgrading to a New OmniOS Release
 
 The following table shows the supported upgrade paths between OmniOS versions.
-> Upgrading from versions not listed below has not been tested and is
-**not supported**.
+Paths not shown have not been tested and are **not supported**.
+
+<div class="fa-orange" style="padding-top: 0.1em">
+<i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
+<h2>Upgrade notes:</h2>
+</div>
+* The grub boot loader is not supported as of the r151054 LTS release.
+  [Migrate to the replacement loader](/info/loader.html) prior to upgrading.
+* Before upgrading, check that you have
+  [removed any legacy options from your OpenSSH configuration file](/info/sunssh.html).
+  Failure to do so may result in the SSH service not starting after upgrade.
 
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
-| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omnios-ca-certificate)
-| r151022 (LTS)			| &#8594;	| r151024, r151026, r151028 (stable), r151030 (LTS)
-| r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
-| r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
-| r151028 (stable)		| &#8594;	| r151030 (LTS)
-| r151030 (LTS)			| &#8594;	| r151032, r151034, r151036 (stable), r151038 (LTS)
-| r151032 (stable)		| &#8594;	| r151034, r151036 (stable), r151038 (LTS)
-| r151034 (stable)		| &#8594;	| r151036 (stable), r151038 (LTS)
-| r151036 (stable)		| &#8594;	| r151038 (LTS)
-| r151038 (LTS)			| &#8594;	| r151040, r151042, r151044 (stable), r151046 (LTS)
-| r151040 (stable)		| &#8594;	| r151042, r151044 (stable), r151046 (LTS)
-| r151042 (stable)		| &#8594;	| r151044 (stable), r151046 (LTS)
+| r151052 (stable)		| &#8594;	| r151054 (LTS)
+| r151050 (stable)		| &#8594;	| r151052 (stable), r151054 (LTS)
+| r151048 (stable)		| &#8594;	| r151050 (stable), r151052 (stable), r151054 (LTS)
+| r151046 (LTS)			| &#8594;	| r151048 (stable), r151050 (stable), r151052 (stable), r151054 (LTS)
 | r151044 (stable)		| &#8594;	| r151046 (LTS)
-| r151046 (LTS)			| &#8594;	| r151048 (stable), r151050 (stable), r151052 (stable)
-| r151048 (stable)		| &#8594;	| r151050 (stable), r151052 (stable)
-| r151050 (stable)		| &#8594;	| r151052 (stable)
-
-<div class="fa-orange" style="padding-top: 0.5em">
-<i class="far fa-3x fa-pull-left fa-exclamation-triangle"></i>
-Before upgrading, check that you have <a href="/info/sunssh.html">
-removed any legacy options from your OpenSSH configuration file
-</a>.
-Failure to do so may result in the SSH service not starting after upgrade.
-</div>
+| r151042 (stable)		| &#8594;	| r151044 (stable), r151046 (LTS)
+| r151040 (stable)		| &#8594;	| r151042, r151044 (stable), r151046 (LTS)
+| r151038 (LTS)			| &#8594;	| r151040, r151042, r151044 (stable), r151046 (LTS)
+| r151036 (stable)		| &#8594;	| r151038 (LTS)
+| r151034 (stable)		| &#8594;	| r151036 (stable), r151038 (LTS)
+| r151032 (stable)		| &#8594;	| r151034, r151036 (stable), r151038 (LTS)
+| r151030 (LTS)			| &#8594;	| r151032, r151034, r151036 (stable), r151038 (LTS)
+| r151028 (stable)		| &#8594;	| r151030 (LTS)
+| r151026 (stable)		| &#8594;	| r151028 (stable), r151030 (LTS)
+| r151024 (stable)		| &#8594;	| r151026, r151028 (stable), r151030 (LTS)
+| r151022 (LTS)			| &#8594;	| r151024, r151026, r151028 (stable), r151030 (LTS)
+| r151022 (OmniTI version)	| &#8594;	| r151022 (LTS), r151024 (stable) [(See note below)](#installing-the-omnios-ca-certificate)
 
 ## Performing the Upgrade
 
