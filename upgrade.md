@@ -64,20 +64,8 @@ Paths not shown have not been tested and are **not supported**.
   # pkg set-publisher -r -O https://pkg.omnios.org/{{site.omnios_stable}}/extra extra.omnios
   ```
 
-* Shut down and detach any _ipkg_ branded zones (NB: linked zones such as
-the _lipkg_ and _sparse_ brands do **not** need to be detached):
-  ```terminal
-  # zoneadm -z <zonename> shutdown
-  ... use the following command to check when the zone has shut down ...
-  # zoneadm -z <zonename> list -v
-  # zoneadm -z <zonename> detach
-  ```
-  It is also a good idea to take a ZFS snapshot of the zone root in
-  case it's needed for rollback (such as if there are issues with the zone
-  upgrade.)
-  ```terminal
-  # zfs snapshot -r /path/to/zone@<old-release>
-  ```
+* If you have any _ipkg_ branded zones, detach them following the instructions
+  below.
 
 * Perform the update, optionally specifying the new boot-environment name:
   ```terminal
@@ -92,22 +80,39 @@ the _lipkg_ and _sparse_ brands do **not** need to be detached):
   # init 6
   ```
 
-* Re-attach any _ipkg_ zones:
+* If applicable, re-attach any _ipkg_ zones:
   ```terminal
   # zoneadm -z <zonename> attach -u
   ```
 
+### _ipkg_-branded zones **only** - detach procedure
+
+For _ipkg_ branded zones only, it is necessary to shut down and detach prior
+to upgrading:
+  ```terminal
+  # zoneadm -z <zonename> shutdown
+  ... use the following command to check when the zone has shut down ...
+  # zoneadm -z <zonename> list -v
+  # zoneadm -z <zonename> detach
+  ```
+  It is also a good idea to take a ZFS snapshot of the zone root in
+  case it's needed for rollback (such as if there are issues with the zone
+  upgrade.)
+  ```terminal
+  # zfs snapshot -r /path/to/zone@<old-release>
+  ```
+
 ### Troubleshooting
 
-In case a boot environment (BE) is not updating to the latest release, try to enable an older BE (in the example below `omnios-r151044`) and reboot. Then, update the BE. 
-Make sure to use a new BE for the update. 
+In case a boot environment (BE) is not updating to the latest release, try to enable an older BE (in the example below `omnios-r151044`) and reboot. Then, update the BE.
+Make sure to use a new BE for the update.
 
 For example:
 
 ```terminal
 # beadm activate omnios-r151044
 # init 6
-# pkg update -f -r --be-name={{site.omnios_stable}} 
+# pkg update -f -r --be-name={{site.omnios_stable}}
 ```
 
 ## Installing the OmniOS CA Certificate
