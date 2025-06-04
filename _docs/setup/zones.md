@@ -148,7 +148,7 @@ omnios# zfs create -o mountpoint=/zones rpool/zones
 * **ZFS root dataset** - each zone needs at least one ZFS dataset which is
   used as the root filesystem for the zone. This is created automatically
   during zone installation.
-* **Network interace** (optional) - it's generally useful to give the zone
+* **Network interface** (optional) - it's generally useful to give the zone
   access to a network and this is most often done using a crossbow
   virtual network interface card (VNIC). The VNIC can be attached to a real
   physical interface on the host machine, or to a virtual switch (etherstub).
