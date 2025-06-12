@@ -9,7 +9,7 @@ show_in_sidebar: true
 ### kvmadm utility
 
 The recommended way to configure and maintain KVM instances is to use the
-[kvmadm utility](http://www.kvmadm.org). This is available in the
+kvmadm utility. This is available in the
 OmniOS extra repository. Substitute `{{site.omnios_stable}}` below with
 the OmniOS release you are using
 

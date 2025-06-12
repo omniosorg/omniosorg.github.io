@@ -21,8 +21,8 @@ make the root pool unimportable and the new VM will just panic. The first step
 therefore is to manually set the serial number to the same as that which bhyve
 will create.
 
-The KVM machine was managed via [kvmadm](http://www.kvmadm.org)
-and so a number of kvmadm commands appear below.
+The KVM machine was managed via kvmadm and so a number of kvmadm commands
+appear below.
 
 bhyve constructs disk serial numbers based on their underlying physical
 path. Specifically `BHYVE-` followed by the first 12 characters from the MD5
