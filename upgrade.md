@@ -23,7 +23,8 @@ Paths not shown have not been tested and are **not supported**.
 {:.bordered .responsive-table}
 | From Release			| 	 	| To Release(s)
 | ------------			|		| -------------
-| r151054 (stable)		| &#8594;	| r151056 (stable)
+| r151056 (stable)		| &#8594;	| r151058 (stable)
+| r151054 (stable)		| &#8594;	| r151056 (stable), r151058 (stable)
 | r151052 (stable)		| &#8594;	| r151054 (LTS)
 | r151050 (stable)		| &#8594;	| r151052 (stable), r151054 (LTS)
 | r151048 (stable)		| &#8594;	| r151050 (stable), r151052 (stable), r151054 (LTS)
