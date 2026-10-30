@@ -12,12 +12,13 @@ of OmniOS is due and for how long it will be supported.
 
 ## OmniOS Community Edition
 
-* [r151058](https://github.com/omniosorg/omnios-build/blob/r151058/doc/ReleaseNotes.md) - current stable (support ends 2027-05-03)
-* [r151056](https://github.com/omniosorg/omnios-build/blob/r151056/doc/ReleaseNotes.md) - old stable (support ends 2026-11-02)
+* [r151060](https://github.com/omniosorg/omnios-build/blob/r151060/doc/ReleaseNotes.md) - current stable (support ends 2027-11-01)
+* [r151058](https://github.com/omniosorg/omnios-build/blob/r151058/doc/ReleaseNotes.md) - old stable (support ends 2027-05-03)
 * [r151054](https://github.com/omniosorg/omnios-build/blob/r151054/doc/ReleaseNotes.md) - current LTS
 
 ## OmniOS (archived)
 
+* [r151056](https://github.com/omniosorg/omnios-build/blob/r151056/doc/ReleaseNotes.md) - old stable (support ended 2026-11-02)
 * [r151052](https://github.com/omniosorg/omnios-build/blob/r151052/doc/ReleaseNotes.md) - old stable (support ended 2025-11-03)
 * [r151050](https://github.com/omniosorg/omnios-build/blob/r151050/doc/ReleaseNotes.md) - old stable (support ended 2025-05-05)
 * [r151048](https://github.com/omniosorg/omnios-build/blob/r151048/doc/ReleaseNotes.md) - old stable (support ended 2024-11-04)

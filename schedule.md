@@ -28,8 +28,9 @@ In the table below, currently supported releases are **emboldened**.
 {:.bordered .responsive-table}
 | Release	| Type		| Release Date		| End of support
 | -------	| ----		| ------------		| --------------
+| **r151060**	| **stable**	| **2026-11-02**	| **2027-11-01**
 | **r151058**	| **stable**	| **2026-05-04**	| **2027-05-03**
-| **r151056**	| **stable**	| **2025-11-03**	| **2026-11-02**
+| _r151056_	| _stable_	| _2025-11-03_		| _2026-11-02 (ended)_
 | **r151054**	| **LTS**	| **2025-05-05**	| **2028-05-01**
 | _r151052_	| _stable_	| _2024-11-04_		| _2025-11-03 (ended)_
 | _r151050_	| _stable_	| _2024-05-06_		| _2025-05-05 (ended)_
